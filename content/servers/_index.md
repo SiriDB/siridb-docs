@@ -7,4 +7,6 @@ chapter = true
 
 # Servers
 
-Lorem Ipsum.
+Everything that has to do with server management within SiriDB.
+
+![SiriDB cluster](/images/siridb-cluster.png)

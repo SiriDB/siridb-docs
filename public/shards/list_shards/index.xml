@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>list shards on SiriDB documentation</title>
+    <link>http://example.org/shards/list_shards/</link>
+    <description>Recent content in list shards on SiriDB documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Sep 2019 15:46:45 +0200</lastBuildDate>
+    
+	<atom:link href="http://example.org/shards/list_shards/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

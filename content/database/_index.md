@@ -7,4 +7,4 @@ chapter = true
 
 # Database
 
-Lorem Ipsum.
+Everything that has to do with database configuration within SiriDB.

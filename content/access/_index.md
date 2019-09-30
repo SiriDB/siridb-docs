@@ -7,4 +7,4 @@ chapter = true
 
 # Access
 
-Lorem Ipsum.
+Everything that has to do has access rights within SiriDB.

@@ -4,7 +4,7 @@ date: 2019-09-27T15:46:45+02:00
 weight: 1
 ---
 
-syntax
+Syntax:
 
 	list shards [columns] [where ...] [limit ...]
 

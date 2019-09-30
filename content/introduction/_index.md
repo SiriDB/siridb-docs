@@ -7,4 +7,4 @@ chapter = true
 
 # Introduction
 
-Lorem Ipsum.
+General information about SiriDB.

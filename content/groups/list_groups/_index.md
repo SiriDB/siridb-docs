@@ -4,7 +4,7 @@ date: 2019-09-27T15:47:47+02:00
 weight: 3
 ---
 
-syntax
+Syntax:
 
 	list groups [columns] [where ...] [limit ...]
 

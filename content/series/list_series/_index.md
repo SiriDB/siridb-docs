@@ -4,7 +4,7 @@ date: 2019-09-27T15:46:00+02:00
 weight: 1
 ---
 
-syntax
+Syntax:
 
 	list series [columns] [match_series] [where ...] [limit ...]
 
@@ -26,8 +26,7 @@ match series
 
 Series can be matched using different methods. Groups can help to quickly get the required series even in a database with millions of unique series.
 
-
-syntax:
+Syntax:
 
 	<series_name | regular_expression | group> [update_function <match_series>]
 

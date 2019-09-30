@@ -1,5 +1,5 @@
 ---
-title: "getting started"
+title: "Getting Started"
 date: 2019-09-27T15:33:02+02:00
 ---
 

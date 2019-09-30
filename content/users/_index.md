@@ -7,4 +7,4 @@ chapter = true
 
 # Users
 
-Lorem Ipsum.
+Everything that has to do with user management within SiriDB.

@@ -4,7 +4,7 @@ date: 2019-09-27T15:52:39+02:00
 weight: 3
 ---
 
-Syntax
+Syntax:
 
 	show [<option> [,<option> [...]]
 

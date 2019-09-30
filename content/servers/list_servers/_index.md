@@ -4,7 +4,7 @@ date: 2019-09-27T15:49:16+02:00
 weight: 4
 ---
 
-syntax
+Syntax:
 
 	list servers [columns] [where ...] [limit ...]
 

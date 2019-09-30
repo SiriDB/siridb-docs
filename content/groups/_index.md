@@ -7,4 +7,6 @@ chapter = true
 
 # Groups
 
-Lorem Ipsum.
+Everything about Groups is discussed here.
+
+**Groups** are selections of a number of series that meet a certain regular expression.

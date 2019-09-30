@@ -7,4 +7,6 @@ chapter = true
 
 # Query data
 
-Lorem Ipsum.
+Everything that has to do with querying data within SiriDB.
+
+![Query SiriDB](/images/query-siridb.png)
