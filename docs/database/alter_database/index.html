@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.58.3" />
+    <meta name="description" content="">
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <title>alter database :: SiriDB documentation</title>
+
+    
+    <link href="/css/nucleus.css?1569849646" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1569849646" rel="stylesheet">
+    <link href="/css/hybrid.css?1569849646" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1569849646" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1569849646" rel="stylesheet">
+    <link href="/css/auto-complete.css?1569849646" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1569849646" rel="stylesheet">
+    <link href="/css/theme.css?1569849646" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1569849646" rel="stylesheet">
+    
+      <link href="/css/theme-mine.css?1569849646" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1569849646"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/database/alter_database/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <img src="/images/siridb-lg.png" alt="Logo" >
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1569849646"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1569849646"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/docs.siridb.net\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1569849646"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/introduction/" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/introduction/">
+          Introduction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/introduction/getting_started/" title="Getting Started" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/introduction/getting_started/">
+          Getting Started
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/query_data/" title="Query data" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/query_data/">
+          Query data
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/query_data/select/" title="select" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/query_data/select/">
+          select
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/query_data/aggregate_functions/" title="aggregate functions" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/query_data/aggregate_functions/">
+          aggregate functions
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/query_data/debug/" title="debug (timeit)" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/query_data/debug/">
+          debug (timeit)
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/series/" title="Series" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/series/">
+          Series
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/series/list_series/" title="list series" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/series/list_series/">
+          list series
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/series/count_series/" title="count series" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/series/count_series/">
+          count series
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/series/drop_series/" title="drop series" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/series/drop_series/">
+          drop series
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/shards/" title="Shards" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/shards/">
+          Shards
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/shards/list_shards/" title="list shards" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/shards/list_shards/">
+          list shards
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/shards/count_shards/" title="count shards" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/shards/count_shards/">
+          count shards
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/shards/drop_shards/" title="drop shards" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/shards/drop_shards/">
+          drop shards
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/groups/" title="Groups" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/groups/">
+          Groups
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/groups/create_group/" title="create group" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/groups/create_group/">
+          create group
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/groups/count_groups/" title="count groups" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/groups/count_groups/">
+          count groups
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/groups/list_groups/" title="list groups" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/groups/list_groups/">
+          list groups
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/groups/alter_group/" title="alter group" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/groups/alter_group/">
+          alter group
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/groups/drop_groups/" title="drop groups" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/groups/drop_groups/">
+          drop groups
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/servers/" title="Servers" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/servers/">
+          Servers
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/servers/alter_server/" title="alter server" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/servers/alter_server/">
+          alter server
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/servers/alter_servers/" title="alter servers" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/servers/alter_servers/">
+          alter servers
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/servers/count_servers/" title="count servers" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/servers/count_servers/">
+          count servers
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/servers/list_servers/" title="list servers" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/servers/list_servers/">
+          list servers
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/servers/drop_server/" title="drop server" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/servers/drop_server/">
+          drop server
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/access/" title="Access" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/access/">
+          Access
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/access/help_access/" title="help access" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/access/help_access/">
+          help access
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/access/grant_access/" title="grant access" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/access/grant_access/">
+          grant access
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/access/revoke_access/" title="revoke access" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/access/revoke_access/">
+          revoke access
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/access/restore_access/" title="restore access" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/access/restore_access/">
+          restore access
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/users/" title="Users" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/users/">
+          Users
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/users/create_user/" title="create user" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/users/create_user/">
+          create user
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/users/count_users/" title="count users" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/users/count_users/">
+          count users
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/users/list_users/" title="list users" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/users/list_users/">
+          list users
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/users/alter_user/" title="alter user" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/users/alter_user/">
+          alter user
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/database/" title="Database" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/database/">
+          Database
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/database/alter_database/" title="alter database" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/database/alter_database/">
+          alter database
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/database/timezones/" title="timezones" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/database/timezones/">
+          timezones
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/database/status_information/" title="status information" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/database/status_information/">
+          status information
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/database/'>Database</a> > alter database
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#drop-threshold">drop_threshold</a></li>
+<li><a href="#set-timezone">set timezone</a></li>
+<li><a href="#select-points-limit">select_points_limit</a></li>
+<li><a href="#list-limit">list_limit</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              alter database
+            </h1>
+          
+
+        
+
+
+
+
+	
+
+<p>Syntax:</p>
+
+<pre><code>alter database set &lt;option&gt;
+</code></pre>
+
+<p>Valid options are <em>drop_threshold</em>, <em>timezone</em>, <em>select_points_limit</em> and <em>list_limit</em>.</p>
+
+<h2 id="drop-threshold">drop_threshold</h2>
+
+<p>This value is used to protect you from accidentally dropping data from SiriDB.
+The threshold is a value between 0 and 1 (0/100%). The threshold value is only
+checked against the pool receiving your query. The default threshold value is
+1 (100%) but it might be a good idea to change this to a lower value.</p>
+
+<blockquote>
+<p><strong>Note</strong></p>
+
+<p>Currently the drop_threshold is only used for dropping series and shards
+because these are the only queries where we allow to drop multiple
+entries at once.</p>
+</blockquote>
+
+<p>Example:</p>
+
+<pre><code># Do not allow dropping more than 10% series or shards at once
+alter database set drop_threshold 0.1
+
+# View the current threshold
+show drop_threshold
+</code></pre>
+
+<h2 id="set-timezone">set timezone</h2>
+
+<p>Change the timezone for the database. When using a date/time in a query SiriDB
+needs to convert the given date to a timestamp. Default <strong>NAIVE</strong> is used which
+means SiriDB is naive about the time zone and acts as if it&rsquo;s a local time.</p>
+
+<blockquote>
+<p><strong>Warning</strong></p>
+
+<p>When using a SiriDB database over multiple time zones it&rsquo;s probably best to
+set the time zone to anything other than <em>NAIVE</em> since with <em>NAIVE</em> the server
+<em>receiving</em> the query will convert the date to a local time-stamp. This means that
+sending the same query to a server in another time zone could respond with
+a different result.</p>
+
+<p>However, it&rsquo;s always possible in the query to specify
+a UTC date by adding &lsquo;Z&rsquo; to the date. For example: &lsquo;2016-01-11 16:00Z&rsquo; will
+use UTC as it&rsquo;s time zone, no matter what time zone the database has configured.</p>
+</blockquote>
+
+<p>For a list of valid time zones see <code>help timezones</code></p>
+
+<p>Example:</p>
+
+<pre><code># Set the default time zone to UTC
+alter database set timezone 'UTC'
+
+# Set the default time zone to NAIVE
+alter database set timezone 'NAIVE'
+
+# Set the default time zone to Europe/Amsterdam
+alter database set timezone 'Europe/Amsterdam'
+</code></pre>
+
+<h2 id="select-points-limit">select_points_limit</h2>
+
+<p>Change the maximum points which can be returned by a select query. The default and recommended value is set to one million points. This value is chosen to prevent a single query for taking to much memory and ensures SiriDB can respond to almost any query in a reasonable amount of time.</p>
+
+<p>Example:</p>
+
+<pre><code># Increase the select points limit to 5 million
+alter database set select_points_limit 5000000
+</code></pre>
+
+<h2 id="list-limit">list_limit</h2>
+
+<p>Change the maximum value which can be used as a limit for a list statement. The default and recommended value is set to ten thousand to prevent queries which could take a large amount of memory. The value must be greater than or equal to 1000.</p>
+
+<p>Example:</p>
+
+<pre><code># Set the list limit to 50 thousand.
+alter database set list_limit 50000
+</code></pre>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/database/" title="Database"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/database/timezones/" title="timezones" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1569849646"></script>
+    <script src="/js/perfect-scrollbar.min.js?1569849646"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1569849646"></script>
+    <script src="/js/jquery.sticky.js?1569849646"></script>
+    <script src="/js/featherlight.min.js?1569849646"></script>
+    <script src="/js/highlight.pack.js?1569849646"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1569849646"></script>
+    <script src="/js/learn.js?1569849646"></script>
+    <script src="/js/hugo-learn.js?1569849646"></script>
+
+    <link href="/mermaid/mermaid.css?1569849646" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1569849646"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>

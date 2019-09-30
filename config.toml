@@ -1,6 +1,7 @@
-baseURL = "http://example.org/"
+baseURL = "http://docs.siridb.net/"
 languageCode = "en-us"
 title = "SiriDB documentation"
+publishDir = "docs"
 
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
