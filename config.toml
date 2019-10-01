@@ -1,4 +1,4 @@
-baseURL = "http://docs.siridb.net/"
+baseURL = "https://transceptor-technology.github.io/siridb-docs/"
 languageCode = "en-us"
 title = "SiriDB documentation"
 publishDir = "docs"
@@ -15,4 +15,3 @@ theme = "hugo-theme-learn"
   themeVariant = "mine"
   # Description of the site, will be used in meta information
   description = "SiriDB documentation"
-  

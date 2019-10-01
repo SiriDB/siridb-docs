@@ -3,216 +3,216 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://docs.siridb.net/database/alter_database/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/database/alter_database/</loc>
     <lastmod>2019-09-27T15:52:05+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/users/create_user/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/users/create_user/</loc>
     <lastmod>2019-09-27T15:51:17+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/access/help_access/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/access/help_access/</loc>
     <lastmod>2019-09-27T15:50:02+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/servers/alter_server/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/servers/alter_server/</loc>
     <lastmod>2019-09-27T15:48:54+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/groups/create_group/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/groups/create_group/</loc>
     <lastmod>2019-09-27T15:47:18+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/shards/list_shards/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/shards/list_shards/</loc>
     <lastmod>2019-09-27T15:46:45+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/series/list_series/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/series/list_series/</loc>
     <lastmod>2019-09-27T15:46:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/query_data/select/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/query_data/select/</loc>
     <lastmod>2019-09-27T15:44:21+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/introduction/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/introduction/</loc>
     <lastmod>2019-09-27T15:34:48+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/database/timezones/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/database/timezones/</loc>
     <lastmod>2019-09-27T15:52:14+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/users/count_users/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/users/count_users/</loc>
     <lastmod>2019-09-27T15:51:34+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/access/grant_access/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/access/grant_access/</loc>
     <lastmod>2019-09-27T15:50:08+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/servers/alter_servers/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/servers/alter_servers/</loc>
     <lastmod>2019-09-27T15:48:59+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/groups/count_groups/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/groups/count_groups/</loc>
     <lastmod>2019-09-27T15:47:32+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/shards/count_shards/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/shards/count_shards/</loc>
     <lastmod>2019-09-27T15:46:52+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/series/count_series/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/series/count_series/</loc>
     <lastmod>2019-09-27T15:46:09+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/query_data/aggregate_functions/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/query_data/aggregate_functions/</loc>
     <lastmod>2019-09-27T15:44:47+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/query_data/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/query_data/</loc>
     <lastmod>2019-09-27T15:39:27+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/database/status_information/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/database/status_information/</loc>
     <lastmod>2019-09-27T15:52:39+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/users/list_users/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/users/list_users/</loc>
     <lastmod>2019-09-27T15:51:42+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/access/revoke_access/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/access/revoke_access/</loc>
     <lastmod>2019-09-27T15:50:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/servers/count_servers/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/servers/count_servers/</loc>
     <lastmod>2019-09-27T15:49:06+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/groups/list_groups/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/groups/list_groups/</loc>
     <lastmod>2019-09-27T15:47:47+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/shards/drop_shards/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/shards/drop_shards/</loc>
     <lastmod>2019-09-27T15:46:58+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/series/drop_series/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/series/drop_series/</loc>
     <lastmod>2019-09-27T15:46:17+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/query_data/debug/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/query_data/debug/</loc>
     <lastmod>2019-09-27T15:45:14+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/series/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/series/</loc>
     <lastmod>2019-09-27T15:39:36+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/users/alter_user/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/users/alter_user/</loc>
     <lastmod>2019-09-27T15:51:49+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/access/restore_access/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/access/restore_access/</loc>
     <lastmod>2019-09-27T15:50:25+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/servers/list_servers/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/servers/list_servers/</loc>
     <lastmod>2019-09-27T15:49:16+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/groups/alter_group/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/groups/alter_group/</loc>
     <lastmod>2019-09-27T15:48:03+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/shards/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/shards/</loc>
     <lastmod>2019-09-27T15:39:45+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/servers/drop_server/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/servers/drop_server/</loc>
     <lastmod>2019-09-27T15:49:40+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/groups/drop_groups/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/groups/drop_groups/</loc>
     <lastmod>2019-09-27T15:48:11+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/groups/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/groups/</loc>
     <lastmod>2019-09-27T15:39:54+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/servers/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/servers/</loc>
     <lastmod>2019-09-27T15:40:06+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/access/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/access/</loc>
     <lastmod>2019-09-27T15:40:14+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/users/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/users/</loc>
     <lastmod>2019-09-27T15:40:24+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/database/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/database/</loc>
     <lastmod>2019-09-27T15:40:37+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/introduction/getting_started/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/introduction/getting_started/</loc>
     <lastmod>2019-09-27T15:33:02+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/categories/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/categories/</loc>
   </url>
   
   <url>
-    <loc>http://docs.siridb.net/tags/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/tags/</loc>
   </url>
   
 </urlset>

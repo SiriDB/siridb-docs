@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>status information on SiriDB documentation</title>
-    <link>http://docs.siridb.net/database/status_information/</link>
+    <link>https://transceptor-technology.github.io/siridb-docs/database/status_information/</link>
     <description>Recent content in status information on SiriDB documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 27 Sep 2019 15:52:39 +0200</lastBuildDate>
     
-	<atom:link href="http://docs.siridb.net/database/status_information/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://transceptor-technology.github.io/siridb-docs/database/status_information/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
