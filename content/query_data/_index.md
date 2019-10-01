@@ -9,4 +9,4 @@ chapter = true
 
 Everything that has to do with querying data within SiriDB.
 
-![Query SiriDB](/images/query-siridb.PNG)
+![Query SiriDB](siridb-docs/images/query-siridb.png)
