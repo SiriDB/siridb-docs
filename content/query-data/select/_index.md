@@ -27,7 +27,7 @@ Example:
 	# Select both the min and max grouped by 5 minutes from "series-001"
 	select min(5m) prefix "min-", max (5m) prefix "max-" from "series-001"
 
-For more help on aggregate functions see `help functions`.
+For more help on aggregate functions see [aggregate functions](../aggregate_functions).
 
 Combine functions
 -----------------
@@ -42,7 +42,7 @@ Example:
 
 match_series
 ------------
-see `help list series` on how to match series.
+See [list series](../../series/list_series) on how to match series.
 
 time_range
 ----------

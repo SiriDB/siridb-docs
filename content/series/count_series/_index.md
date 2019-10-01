@@ -9,7 +9,7 @@ Syntax:
 	count series [length] [match_series] [where ...]
 
 Count series in the SiriDB cluster. For more information about how to select
-series see `help list series`
+series see [list series](../list_series).
 
 Count series length gives the total number of points for the selected series.
 

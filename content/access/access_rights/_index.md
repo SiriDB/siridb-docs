@@ -1,5 +1,5 @@
 ---
-title: "help access"
+title: "access rights"
 date: 2019-09-27T15:50:02+02:00
 weight: 1
 ---

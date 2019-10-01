@@ -8,7 +8,7 @@
 
 
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
-    <title>count shards :: SiriDB documentation</title>
+    <title>no access :: SiriDB documentation</title>
 
     
     <link href="/siridb-docs/css/nucleus.css?1569935891" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/siridb-docs/shards/count_shards/">
+  <body class="" data-url="/siridb-docs/access/no_access/">
     <nav id="sidebar" class="">
 
 
@@ -344,7 +344,7 @@
   
     
     <li data-nav-id="/siridb-docs/shards/" title="Shards" class="dd-item 
-        parent
+        
         
         
         ">
@@ -395,8 +395,8 @@
   
     
     <li data-nav-id="/siridb-docs/shards/count_shards/" title="count shards" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/siridb-docs/shards/count_shards/">
@@ -758,7 +758,7 @@
   
     
     <li data-nav-id="/siridb-docs/access/" title="Access" class="dd-item 
-        
+        parent
         
         
         ">
@@ -881,8 +881,8 @@
   
     
     <li data-nav-id="/siridb-docs/access/no_access/" title="no access" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/siridb-docs/access/no_access/">
@@ -1190,7 +1190,7 @@
             
           
           
-            <a href='/siridb-docs/'></a> > <a href='/siridb-docs/shards/'>Shards</a> > count shards
+            <a href='/siridb-docs/'></a> > <a href='/siridb-docs/access/'>Access</a> > no access
           
          
           
@@ -1219,7 +1219,7 @@
           
             <h1>
               
-              count shards
+              no access
             </h1>
           
 
@@ -1228,39 +1228,33 @@
 
 
 
-	<p>Syntax:</p>
+	<p>Read/use this section when accidentally all access rights to a database are
+gone. Follow the steps below to recover the default user.
+(username: <em>iris</em>, password: <em>siri</em>)</p>
 
-<pre><code>count shards [size] [where ...]
+<p>Stop <strong>all servers</strong> in the SiriDB cluster.</p>
+
+<pre><code># Assume you use systemd to start SiriDB...
+&gt; sudo systemctl stop siridb-server.service
 </code></pre>
 
-<p>Count shards returns the number of shards on all <em>online</em> servers in a SiriDB
-cluster. This means that offline servers are ignored and replica servers are
-included in the query.
-It&rsquo;s also possible to count the shards size in case you want to see the amount
-of disk-space shards are using.</p>
+<blockquote>
+<p><strong>Warning</strong></p>
 
-<p>Example:</p>
+<p>It&rsquo;s really important to stop all servers in a SiriDB cluster to prevent
+database inconsistency.</p>
+</blockquote>
 
-<pre><code># Get number of shards
-count shards
+<p>Remove the appropriate file on <strong>all servers</strong> in the SiriDB cluster.</p>
 
-# Get number of shards for the current points. (assuming you have
-# no shards for points in the future)
-count shards where end &gt; now
-
-# Get the amount of disk space (in bytes) which shards are using
-# on server01.
-count shards size where server == 'server01'
+<pre><code># Restore the default user
+&gt; rm my_database_folder/users.dat
 </code></pre>
 
-<p>Example output (count shards):</p>
+<p>Start <strong>all servers</strong> in the SiriDB cluster.</p>
 
-<pre><code>{&quot;shards&quot;: 51}
-</code></pre>
-
-<p>Example output (count shards size):</p>
-
-<pre><code>{&quot;shards_size&quot;: 355243846}
+<pre><code># Assume systemd is used to start SiriDB...
+&gt; sudo systemctl start siridb-server.service
 </code></pre>
 
 
@@ -1471,7 +1465,6 @@ count shards size where server == 'server01'
             
                 
                     
-                    
                 
                 
 
@@ -1486,9 +1479,6 @@ count shards size where server == 'server01'
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1506,7 +1496,6 @@ count shards size where server == 'server01'
             
                 
                     
-                    
                 
                 
 
@@ -1522,9 +1511,6 @@ count shards size where server == 'server01'
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1741,6 +1727,7 @@ count shards size where server == 'server01'
             
                 
                     
+                    
                 
                 
 
@@ -1755,6 +1742,9 @@ count shards size where server == 'server01'
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1820,6 +1810,7 @@ count shards size where server == 'server01'
             
                 
                     
+                    
                 
                 
 
@@ -1838,6 +1829,9 @@ count shards size where server == 'server01'
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1991,10 +1985,10 @@ count shards size where server == 'server01'
 	 
 	 
 		
-			<a class="nav nav-prev" href="/siridb-docs/shards/list_shards/" title="list shards"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/siridb-docs/access/restore_access/" title="restore access"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/siridb-docs/shards/drop_shards/" title="drop shards" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/siridb-docs/users/" title="Users" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -13,7 +13,7 @@
   </url>
   
   <url>
-    <loc>https://transceptor-technology.github.io/siridb-docs/access/help_access/</loc>
+    <loc>https://transceptor-technology.github.io/siridb-docs/access/access_rights/</loc>
     <lastmod>2019-09-27T15:50:02+02:00</lastmod>
   </url>
   
@@ -160,6 +160,11 @@
   <url>
     <loc>https://transceptor-technology.github.io/siridb-docs/shards/</loc>
     <lastmod>2019-09-27T15:39:45+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://transceptor-technology.github.io/siridb-docs/access/no_access/</loc>
+    <lastmod>2019-10-01T15:14:46+02:00</lastmod>
   </url>
   
   <url>

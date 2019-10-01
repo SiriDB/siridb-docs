@@ -8,7 +8,7 @@
 
 
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
-    <title>count shards :: SiriDB documentation</title>
+    <title>access rights :: SiriDB documentation</title>
 
     
     <link href="/siridb-docs/css/nucleus.css?1569935891" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/siridb-docs/shards/count_shards/">
+  <body class="" data-url="/siridb-docs/access/access_rights/">
     <nav id="sidebar" class="">
 
 
@@ -344,7 +344,7 @@
   
     
     <li data-nav-id="/siridb-docs/shards/" title="Shards" class="dd-item 
-        parent
+        
         
         
         ">
@@ -395,8 +395,8 @@
   
     
     <li data-nav-id="/siridb-docs/shards/count_shards/" title="count shards" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/siridb-docs/shards/count_shards/">
@@ -758,7 +758,7 @@
   
     
     <li data-nav-id="/siridb-docs/access/" title="Access" class="dd-item 
-        
+        parent
         
         
         ">
@@ -785,8 +785,8 @@
   
     
     <li data-nav-id="/siridb-docs/access/access_rights/" title="access rights" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/siridb-docs/access/access_rights/">
@@ -1190,7 +1190,7 @@
             
           
           
-            <a href='/siridb-docs/'></a> > <a href='/siridb-docs/shards/'>Shards</a> > count shards
+            <a href='/siridb-docs/'></a> > <a href='/siridb-docs/access/'>Access</a> > access rights
           
          
           
@@ -1219,7 +1219,7 @@
           
             <h1>
               
-              count shards
+              access rights
             </h1>
           
 
@@ -1228,40 +1228,37 @@
 
 
 
-	<p>Syntax:</p>
+	<p>SiriDB knows the following access rights:</p>
 
-<pre><code>count shards [size] [where ...]
-</code></pre>
+<ul>
+<li>select</li>
+<li>show</li>
+<li>list</li>
+<li>count</li>
+<li>create</li>
+<li>insert</li>
+<li>drop</li>
+<li>alter</li>
+<li>grant</li>
+<li>revoke</li>
+</ul>
 
-<p>Count shards returns the number of shards on all <em>online</em> servers in a SiriDB
-cluster. This means that offline servers are ignored and replica servers are
-included in the query.
-It&rsquo;s also possible to count the shards size in case you want to see the amount
-of disk-space shards are using.</p>
+<p>The most obvious ones are combined into access profiles which can be used to grant
+or revoke multiple access rights at once.</p>
 
-<p>Example:</p>
+<ul>
+<li>read:  (select, show, list and count)</li>
+<li>write: <em>read</em> + (create and insert)</li>
+<li>modify: <em>write</em> + (drop and alter)</li>
+<li>full: <em>modify</em> + (grant, revoke)</li>
+</ul>
 
-<pre><code># Get number of shards
-count shards
+<blockquote>
+<p><strong>Warning</strong></p>
 
-# Get number of shards for the current points. (assuming you have
-# no shards for points in the future)
-count shards where end &gt; now
-
-# Get the amount of disk space (in bytes) which shards are using
-# on server01.
-count shards size where server == 'server01'
-</code></pre>
-
-<p>Example output (count shards):</p>
-
-<pre><code>{&quot;shards&quot;: 51}
-</code></pre>
-
-<p>Example output (count shards size):</p>
-
-<pre><code>{&quot;shards_size&quot;: 355243846}
-</code></pre>
+<p>Changes to access rights are active immediately, so be careful when revoking
+access rights from users.</p>
+</blockquote>
 
 
 
@@ -1471,7 +1468,6 @@ count shards size where server == 'server01'
             
                 
                     
-                    
                 
                 
 
@@ -1486,9 +1482,6 @@ count shards size where server == 'server01'
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1506,7 +1499,6 @@ count shards size where server == 'server01'
             
                 
                     
-                    
                 
                 
 
@@ -1522,9 +1514,6 @@ count shards size where server == 'server01'
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1741,6 +1730,7 @@ count shards size where server == 'server01'
             
                 
                     
+                    
                 
                 
 
@@ -1755,6 +1745,7 @@ count shards size where server == 'server01'
             
             
                 
+                    
                     
                 
                 
@@ -1771,6 +1762,9 @@ count shards size where server == 'server01'
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1991,10 +1985,10 @@ count shards size where server == 'server01'
 	 
 	 
 		
-			<a class="nav nav-prev" href="/siridb-docs/shards/list_shards/" title="list shards"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/siridb-docs/access/" title="Access"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/siridb-docs/shards/drop_shards/" title="drop shards" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/siridb-docs/access/grant_access/" title="grant access" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

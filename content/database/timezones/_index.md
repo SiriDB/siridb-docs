@@ -4,7 +4,7 @@ date: 2019-09-27T15:52:14+02:00
 weight: 2
 ---
 
-For information on how to change the time zone see `help alter database`
+For information on how to change the time zone see [alter database](../alter_database).
 
 >**Note**
 >

@@ -11,20 +11,20 @@
     <title>drop series :: SiriDB documentation</title>
 
     
-    <link href="/siridb-docs/css/nucleus.css?1569922751" rel="stylesheet">
-    <link href="/siridb-docs/css/fontawesome-all.min.css?1569922751" rel="stylesheet">
-    <link href="/siridb-docs/css/hybrid.css?1569922751" rel="stylesheet">
-    <link href="/siridb-docs/css/featherlight.min.css?1569922751" rel="stylesheet">
-    <link href="/siridb-docs/css/perfect-scrollbar.min.css?1569922751" rel="stylesheet">
-    <link href="/siridb-docs/css/auto-complete.css?1569922751" rel="stylesheet">
-    <link href="/siridb-docs/css/atom-one-dark-reasonable.css?1569922751" rel="stylesheet">
-    <link href="/siridb-docs/css/theme.css?1569922751" rel="stylesheet">
-    <link href="/siridb-docs/css/hugo-theme.css?1569922751" rel="stylesheet">
+    <link href="/siridb-docs/css/nucleus.css?1569935891" rel="stylesheet">
+    <link href="/siridb-docs/css/fontawesome-all.min.css?1569935891" rel="stylesheet">
+    <link href="/siridb-docs/css/hybrid.css?1569935891" rel="stylesheet">
+    <link href="/siridb-docs/css/featherlight.min.css?1569935891" rel="stylesheet">
+    <link href="/siridb-docs/css/perfect-scrollbar.min.css?1569935891" rel="stylesheet">
+    <link href="/siridb-docs/css/auto-complete.css?1569935891" rel="stylesheet">
+    <link href="/siridb-docs/css/atom-one-dark-reasonable.css?1569935891" rel="stylesheet">
+    <link href="/siridb-docs/css/theme.css?1569935891" rel="stylesheet">
+    <link href="/siridb-docs/css/hugo-theme.css?1569935891" rel="stylesheet">
     
-      <link href="/siridb-docs/css/theme-mine.css?1569922751" rel="stylesheet">
+      <link href="/siridb-docs/css/theme-mine.css?1569935891" rel="stylesheet">
     
 
-    <script src="/siridb-docs/js/jquery-3.3.1.min.js?1569922751"></script>
+    <script src="/siridb-docs/js/jquery-3.3.1.min.js?1569935891"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -50,14 +50,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/siridb-docs/js/lunr.min.js?1569922751"></script>
-<script type="text/javascript" src="/siridb-docs/js/auto-complete.js?1569922751"></script>
+<script type="text/javascript" src="/siridb-docs/js/lunr.min.js?1569935891"></script>
+<script type="text/javascript" src="/siridb-docs/js/auto-complete.js?1569935891"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/transceptor-technology.github.io\/siridb-docs\/";
     
 </script>
-<script type="text/javascript" src="/siridb-docs/js/search.js?1569922751"></script>
+<script type="text/javascript" src="/siridb-docs/js/search.js?1569935891"></script>
 
     
   </div>
@@ -784,13 +784,13 @@
  
   
     
-    <li data-nav-id="/siridb-docs/access/help_access/" title="help access" class="dd-item 
+    <li data-nav-id="/siridb-docs/access/access_rights/" title="access rights" class="dd-item 
         
         
         
         ">
-      <a href="/siridb-docs/access/help_access/">
-          help access
+      <a href="/siridb-docs/access/access_rights/">
+          access rights
           
       </a>
       
@@ -863,6 +863,30 @@
         ">
       <a href="/siridb-docs/access/restore_access/">
           restore access
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/siridb-docs/access/no_access/" title="no access" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/siridb-docs/access/no_access/">
+          no access
           
       </a>
       
@@ -1211,14 +1235,14 @@
 
 <p>Drops series from SiriDB. Optionally you can use a match and/or where statement
 to filter the series you want to drop. For more information about how to match
-series look at <code>help list series</code>.</p>
+series look at <a href="../list_series">list series</a>.</p>
 
 <p>SiriDB has a mechanism to protect you from accidentally dropping all (or many)
 series. This is done with a <em>threshold</em> value. If the server receiving your drop
 request finds more series to drop than the threshold, the request
 is denied and you receive an <em>error_msg</em> about trying to delete more series than
 the threshold value. The <em>drop_threshold</em> value will not be checked by other
-servers in the cluster. You can view the current <em>drop_threshold</em> with <code>show drop_threshold</code> or look up <code>help alter database</code> for how to change this value. If you want to ignore the <em>drop_threshold</em> for one request you can
+servers in the cluster. You can view the current <em>drop_threshold</em> with <code>show drop_threshold</code> or look up <a href="../../database/alter_database">alter database</a> for how to change this value. If you want to ignore the <em>drop_threshold</em> for one request you can
 add <em>set ignore_threshold true</em>. The default drop threshold is set to 1 (100%)
 which means you cannot drop <em>all</em> series but any other amount will pass. Any
 value between 0 and 1 will work. For example a value of 0.5 means you cannot
@@ -1793,6 +1817,22 @@ drop series set ignore_threshold true
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1966,19 +2006,19 @@ drop series set ignore_threshold true
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/siridb-docs/js/clipboard.min.js?1569922751"></script>
-    <script src="/siridb-docs/js/perfect-scrollbar.min.js?1569922751"></script>
-    <script src="/siridb-docs/js/perfect-scrollbar.jquery.min.js?1569922751"></script>
-    <script src="/siridb-docs/js/jquery.sticky.js?1569922751"></script>
-    <script src="/siridb-docs/js/featherlight.min.js?1569922751"></script>
-    <script src="/siridb-docs/js/highlight.pack.js?1569922751"></script>
+    <script src="/siridb-docs/js/clipboard.min.js?1569935891"></script>
+    <script src="/siridb-docs/js/perfect-scrollbar.min.js?1569935891"></script>
+    <script src="/siridb-docs/js/perfect-scrollbar.jquery.min.js?1569935891"></script>
+    <script src="/siridb-docs/js/jquery.sticky.js?1569935891"></script>
+    <script src="/siridb-docs/js/featherlight.min.js?1569935891"></script>
+    <script src="/siridb-docs/js/highlight.pack.js?1569935891"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/siridb-docs/js/modernizr.custom-3.6.0.js?1569922751"></script>
-    <script src="/siridb-docs/js/learn.js?1569922751"></script>
-    <script src="/siridb-docs/js/hugo-learn.js?1569922751"></script>
+    <script src="/siridb-docs/js/modernizr.custom-3.6.0.js?1569935891"></script>
+    <script src="/siridb-docs/js/learn.js?1569935891"></script>
+    <script src="/siridb-docs/js/hugo-learn.js?1569935891"></script>
 
-    <link href="/siridb-docs/mermaid/mermaid.css?1569922751" rel="stylesheet" />
-    <script src="/siridb-docs/mermaid/mermaid.js?1569922751"></script>
+    <link href="/siridb-docs/mermaid/mermaid.css?1569935891" rel="stylesheet" />
+    <script src="/siridb-docs/mermaid/mermaid.js?1569935891"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

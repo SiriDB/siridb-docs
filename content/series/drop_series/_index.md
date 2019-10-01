@@ -10,14 +10,14 @@ Syntax:
 
 Drops series from SiriDB. Optionally you can use a match and/or where statement
 to filter the series you want to drop. For more information about how to match
-series look at `help list series`.
+series look at [list series](../list_series).
 
 SiriDB has a mechanism to protect you from accidentally dropping all (or many)
 series. This is done with a *threshold* value. If the server receiving your drop
 request finds more series to drop than the threshold, the request
 is denied and you receive an *error_msg* about trying to delete more series than
 the threshold value. The *drop_threshold* value will not be checked by other
-servers in the cluster. You can view the current *drop_threshold* with `show drop_threshold` or look up `help alter database` for how to change this value. If you want to ignore the *drop_threshold* for one request you can
+servers in the cluster. You can view the current *drop_threshold* with `show drop_threshold` or look up [alter database](../../database/alter_database) for how to change this value. If you want to ignore the *drop_threshold* for one request you can
 add *set ignore_threshold true*. The default drop threshold is set to 1 (100%)
 which means you cannot drop *all* series but any other amount will pass. Any
 value between 0 and 1 will work. For example a value of 0.5 means you cannot

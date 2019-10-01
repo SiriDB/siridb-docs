@@ -9,7 +9,7 @@ Syntax:
 	grant <access> to user 'username'
 
 Grants access rights to a user. For information about access rights
-see `help access`.
+see [access rights](../access_rights).
 
 Example:
 

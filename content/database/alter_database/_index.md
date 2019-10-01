@@ -49,7 +49,7 @@ means SiriDB is naive about the time zone and acts as if it's a local time.
 >a UTC date by adding 'Z' to the date. For example: '2016-01-11 16:00Z' will
 >use UTC as it's time zone, no matter what time zone the database has configured.
 
-For a list of valid time zones see `help timezones`
+For a list of valid time zones see [timezones](../timezones).
 
 Example:
 

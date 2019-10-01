@@ -4,7 +4,7 @@ date: 2019-09-27T15:44:47+02:00
 weight: 2
 ---
 
-SiriDB supports multiple build-in aggregation and filter functions. Using these functions can be useful to reduce network traffic. Note that multiple functions can be combined using the arrow `=>` sign. (see `help select` for more information on how to use and combine functions)
+SiriDB supports multiple build-in aggregation and filter functions. Using these functions can be useful to reduce network traffic. Note that multiple functions can be combined using the arrow `=>` sign. (see [select](../select) for more information on how to use and combine functions)
 
 Most aggregation function accept an optional `ts` argument. When not providing the `ts` argument, SiriDB will usually return the last timestamp in the result. One exception is the `first()` function which will return the first timestamp instead.
 

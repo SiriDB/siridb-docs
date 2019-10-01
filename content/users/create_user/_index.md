@@ -9,7 +9,7 @@ Syntax:
 	create user 'my-username' set password 'my-password'
 
 Create a new user. This will create a new user without access to SiriDB.
-For more information on how to grant access to a user see `help grant`.
+For more information on how to grant access to a user see [grant access](../../access/grant_access).
 
 Example:
 

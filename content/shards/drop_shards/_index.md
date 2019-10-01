@@ -17,8 +17,7 @@ which includes shards on replica servers as well.
 
 >**Note**
 >
->This statement is protected with a *threshold*. See `help drop series` and
->`help alter database` for more information about this threshold value.
+>This statement is protected with a *threshold*. See [drop series](../../series/drop_series) and [alter database](../../database/alter_database) for more information about this threshold value.
 
 Example:
 
