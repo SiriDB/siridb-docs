@@ -13,3 +13,6 @@ theme = "hugo-theme-learn"
 [params]
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
   themeVariant = "mine"
+  # Description of the site, will be used in meta information
+  description = "SiriDB documentation"
+  
