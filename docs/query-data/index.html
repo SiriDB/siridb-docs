@@ -8,7 +8,7 @@
 
 
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
-    <title>drop shards :: SiriDB documentation</title>
+    <title>Query data :: SiriDB documentation</title>
 
     
     <link href="/siridb-docs/css/nucleus.css?1569922751" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/siridb-docs/shards/drop_shards/">
+  <body class="" data-url="/siridb-docs/query-data/">
     <nav id="sidebar" class="">
 
 
@@ -132,8 +132,8 @@
   
     
     <li data-nav-id="/siridb-docs/query-data/" title="Query data" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/siridb-docs/query-data/">
@@ -344,7 +344,7 @@
   
     
     <li data-nav-id="/siridb-docs/shards/" title="Shards" class="dd-item 
-        parent
+        
         
         
         ">
@@ -419,8 +419,8 @@
   
     
     <li data-nav-id="/siridb-docs/shards/drop_shards/" title="drop shards" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/siridb-docs/shards/drop_shards/">
@@ -1150,8 +1150,6 @@
                         </a>
                     </span>
                   
-                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
-                  
                   <span class="links">
                  
                  
@@ -1162,13 +1160,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/siridb-docs/'></a> > <a href='/siridb-docs/shards/'>Shards</a> > drop shards
-          
-         
+            <a href='/siridb-docs/'></a> > Query data
           
          
           
@@ -1177,13 +1169,6 @@
                   </span>
                 </div>
                 
-                    <div class="progress">
-    <div class="wrapper">
-
-    </div>
-</div>
-
-                
               </div>
             </div>
             
@@ -1191,12 +1176,9 @@
         
         </div>
         
+          <div id="chapter">
+        
         <div id="body-inner">
-          
-            <h1>
-              
-              drop shards
-            </h1>
           
 
         
@@ -1204,30 +1186,13 @@
 
 
 
-	<p>Syntax:</p>
+	
 
-<pre><code>drop shards [where ...] [set ignore_threshold true/false]
-</code></pre>
+<h1 id="query-data">Query data</h1>
 
-<p>Drops an existing shard using the shard id (sid). Use <code>list shards</code> for an
-overview of the current shards. This statement requires all pools to have at
-least one online server. The number of dropped shard in the result message
-only contains the dropped shards by one member of a pool, not the shards which
-are dropped by a replica. This is different from the <code>count shards</code> statement
-which includes shards on replica servers as well.</p>
+<p>Everything that has to do with querying data within SiriDB.</p>
 
-<blockquote>
-<p><strong>Note</strong></p>
-
-<p>This statement is protected with a <em>threshold</em>. See <code>help drop series</code> and
-<code>help alter database</code> for more information about this threshold value.</p>
-</blockquote>
-
-<p>Example:</p>
-
-<pre><code># Drop shards for points which are older than one year
-drop shards where end &lt; now - 52w
-</code></pre>
+<p><img src="../images/query-siridb.png" alt="Query SiriDB" /></p>
 
 
 
@@ -1237,6 +1202,8 @@ drop shards where end &lt; now - 52w
 	
 </footer>
 
+        
+            </div> 
         
         </div> 
         
@@ -1305,6 +1272,76 @@ drop shards where end &lt; now - 52w
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -1436,80 +1473,6 @@ drop shards where end &lt; now - 52w
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -1941,10 +1904,10 @@ drop shards where end &lt; now - 52w
 	 
 	 
 		
-			<a class="nav nav-prev" href="/siridb-docs/shards/count_shards/" title="count shards"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/siridb-docs/introduction/getting_started/" title="Getting Started"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/siridb-docs/groups/" title="Groups" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/siridb-docs/query-data/select/" title="select" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

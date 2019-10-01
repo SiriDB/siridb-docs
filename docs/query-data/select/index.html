@@ -8,7 +8,7 @@
 
 
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
-    <title>drop shards :: SiriDB documentation</title>
+    <title>select :: SiriDB documentation</title>
 
     
     <link href="/siridb-docs/css/nucleus.css?1569922751" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/siridb-docs/shards/drop_shards/">
+  <body class="" data-url="/siridb-docs/query-data/select/">
     <nav id="sidebar" class="">
 
 
@@ -132,7 +132,7 @@
   
     
     <li data-nav-id="/siridb-docs/query-data/" title="Query data" class="dd-item 
-        
+        parent
         
         
         ">
@@ -159,8 +159,8 @@
   
     
     <li data-nav-id="/siridb-docs/query-data/select/" title="select" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/siridb-docs/query-data/select/">
@@ -344,7 +344,7 @@
   
     
     <li data-nav-id="/siridb-docs/shards/" title="Shards" class="dd-item 
-        parent
+        
         
         
         ">
@@ -419,8 +419,8 @@
   
     
     <li data-nav-id="/siridb-docs/shards/drop_shards/" title="drop shards" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/siridb-docs/shards/drop_shards/">
@@ -1166,7 +1166,7 @@
             
           
           
-            <a href='/siridb-docs/'></a> > <a href='/siridb-docs/shards/'>Shards</a> > drop shards
+            <a href='/siridb-docs/'></a> > <a href='/siridb-docs/query-data/'>Query data</a> > select
           
          
           
@@ -1179,7 +1179,18 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#functions">functions</a></li>
+<li><a href="#combine-functions">Combine functions</a></li>
+<li><a href="#match-series">match_series</a></li>
+<li><a href="#time-range">time_range</a></li>
+<li><a href="#merge-data">merge_data</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -1195,7 +1206,7 @@
           
             <h1>
               
-              drop shards
+              select
             </h1>
           
 
@@ -1204,29 +1215,142 @@
 
 
 
-	<p>Syntax:</p>
+	
 
-<pre><code>drop shards [where ...] [set ignore_threshold true/false]
+<p>Syntax:</p>
+
+<pre><code>select &lt;points/functions&gt; from &lt;match_series [&lt;where&gt;]&gt; [&lt;time_range&gt;] [&lt;merge_data&gt;]
 </code></pre>
 
-<p>Drops an existing shard using the shard id (sid). Use <code>list shards</code> for an
-overview of the current shards. This statement requires all pools to have at
-least one online server. The number of dropped shard in the result message
-only contains the dropped shards by one member of a pool, not the shards which
-are dropped by a replica. This is different from the <code>count shards</code> statement
-which includes shards on replica servers as well.</p>
+<p>Example:</p>
+
+<pre><code># Select points from &quot;series-001&quot;
+select * from &quot;series-001&quot;
+</code></pre>
+
+<h2 id="functions">functions</h2>
+
+<p>It&rsquo;s possible to select multiple aggregate functions in one query. This has some
+advantages over performing multiple queries since the database in this case only
+needs to search for the series and points once. To find the requested aggregate
+in the result we must add a prefix and/or suffix to the series name to make the
+name unique. Note that a prefix and/or suffix is only required when querying
+multiple aggregates.</p>
+
+<p>Example:</p>
+
+<pre><code># Select both the min and max grouped by 5 minutes from &quot;series-001&quot;
+select min(5m) prefix &quot;min-&quot;, max (5m) prefix &quot;max-&quot; from &quot;series-001&quot;
+</code></pre>
+
+<p>For more help on aggregate functions see <code>help functions</code>.</p>
+
+<h2 id="combine-functions">Combine functions</h2>
+
+<p>The aggregate functions can be used together by parsing the result of one function
+to the next. It&rsquo;s also possible to use the same function twice which can be
+useful with for example difference.</p>
+
+<p>Example:</p>
+
+<pre><code># Select the median grouped by 1 minute and return the difference for that result
+select median (1m) =&gt; difference () from &quot;series-001&quot;
+</code></pre>
+
+<h2 id="match-series">match_series</h2>
+
+<p>see <code>help list series</code> on how to match series.</p>
+
+<h2 id="time-range">time_range</h2>
+
+<p>An optional time range can be given to select only a part of the series data.
+If no time range is provided SiriDB returns all the data available. As a time
+range we can use <em>before</em>, <em>after</em> or <em>between .. and ..</em></p>
+
+<p>When using <em>after</em> you basically set a <em>start</em> time, with <em>before</em> a <em>end</em> time
+and when using <em>between .. and ..</em> you set both a <em>start</em> and <em>end</em> time.
+Points having the exact the start time are <em>included</em> in the result, points
+with the exact end time are <em>excluded</em> from the result.</p>
 
 <blockquote>
 <p><strong>Note</strong></p>
 
-<p>This statement is protected with a <em>threshold</em>. See <code>help drop series</code> and
-<code>help alter database</code> for more information about this threshold value.</p>
+<p>It&rsquo;s safe to use <em>now</em> multiple times in query. SiriDB only calculates <em>now</em> one
+time while processing a query. This way you can be sure that <em>now</em> has the
+same value.</p>
 </blockquote>
 
-<p>Example:</p>
+<p>Examples:</p>
 
-<pre><code># Drop shards for points which are older than one year
-drop shards where end &lt; now - 52w
+<pre><code># Select all points from &quot;series-001&quot; in the last 24h
+select * from &quot;series-001&quot; after now - 1d
+
+# Select all points from &quot;series-001&quot; today
+select * from &quot;series-001&quot; between now - (now % 1d) and now - (now % 1d) + 1d
+
+# Select all points from &quot;series-001&quot; before November, 2015
+select * from &quot;series-001&quot; before &quot;2015-11&quot;
+</code></pre>
+
+<h2 id="merge-data">merge_data</h2>
+
+<p>When selecting points from multiple series you can merge the data together in
+result. Most of the time you also want to provide an aggregate function with the
+merge so series get really merged into one series. Even with merge it&rsquo;s still
+possible to use aggregate functions on the series before they are merged.</p>
+
+<blockquote>
+<p><strong>Note</strong></p>
+
+<p>Sometimes it does not matter for the end result if you use an aggregate
+function on the series or only while merging. However, if you have multiple
+pools it can be an advantage to aggregate the series and the merge. This is
+an advantage because each pool can do some aggregate work and only send the
+aggregated result to the server processing the query.</p>
+
+<p>For example:</p>
+
+<p><code>select * from /series.*/ merge as &quot;series&quot; using sum(1h)</code></p>
+
+<p>will have the exact same result as</p>
+
+<p><code>select sum(1h) from /series.*/ merge as &quot;series&quot; using sum(1h)</code></p>
+
+<p>but the last one will be faster, assuming you are using a SiriDB cluster and
+/series.*/ contains multiple series spread out over multiple pools.</p>
+</blockquote>
+
+<p>Examples:</p>
+
+<blockquote>
+<p><strong>Note</strong></p>
+
+<p>In the examples below we assume there are no points in the future. If you have
+points in the future and only want points from 7 days ago up till now you can
+use between now - 7d and now. Since we assume our series have no points in the
+future we use after now - 7d.</p>
+</blockquote>
+
+<pre><code># We want the average value per 1 hour over the last 7 days over s01
+# and s02. The series should weight equal to each other but s01 has
+# a point each 2 seconds while s02 only has a point each 5 seconds.
+# We solve this by first getting the mean value for each series
+# by 1 hour before merging the series.
+#
+# Note that we use mean(1) while merging. This means we group by 1 second or
+# millisecond depending on the time precision. We can do this because the
+# series are already grouped by 1h and therefore have re-indexed timestamps
+# at precisely each hour.
+select mean(1h) from &quot;s01&quot;, &quot;s02&quot; after now - 7d merge as &quot;merged_s&quot; using mean(1)
+
+# We want the number of points s01 and s02 have over the last 7 days.
+# Note: when having no timestamps after now this will result in one
+#       value with timestamp *now*
+select count(now) from &quot;s01&quot;, &quot;s02&quot; after now - 7d merge as &quot;merged_s&quot; using sum(1)
+
+# We have s01 and s02 representing counter data. We want to sum the
+# values per 4 hours over January, 2015 and show this as one series.
+select sum(4h) from &quot;s01&quot;, &quot;s01&quot; between &quot;2015-01&quot; and &quot;2015-02&quot; merge as &quot;merged_s&quot; using sum(1)
 </code></pre>
 
 
@@ -1305,6 +1429,77 @@ drop shards where end &lt; now - 52w
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -1436,80 +1631,6 @@ drop shards where end &lt; now - 52w
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -1941,10 +2062,10 @@ drop shards where end &lt; now - 52w
 	 
 	 
 		
-			<a class="nav nav-prev" href="/siridb-docs/shards/count_shards/" title="count shards"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/siridb-docs/query-data/" title="Query data"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/siridb-docs/groups/" title="Groups" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/siridb-docs/query-data/aggregate_functions/" title="aggregate functions" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
