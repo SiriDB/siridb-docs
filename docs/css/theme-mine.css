@@ -15,10 +15,10 @@
 
     --MENU-SECTIONS-ACTIVE-BG-color:#5a8291; /* Background color of the active section and its childs */
     --MENU-SECTIONS-BG-color:#316376; /* Background color of other sections */
-    --MENU-SECTIONS-LINK-color: #ffffff; /* Color of links in menu */
-    --MENU-SECTIONS-LINK-HOVER-color: #ffffff;  /* Color of links in menu, when hovered */
+    --MENU-SECTIONS-LINK-color: #f8f9fa; /* Color of links in menu */
+    --MENU-SECTIONS-LINK-HOVER-color: #f8f9fa;  /* Color of links in menu, when hovered */
     --MENU-SECTION-ACTIVE-CATEGORY-color: #316376; /* Color of active category text */
-    --MENU-SECTION-ACTIVE-CATEGORY-BG-color: #ffffff; /* Color of background for the active category (only) */
+    --MENU-SECTION-ACTIVE-CATEGORY-BG-color: #f8f9fa; /* Color of background for the active category (only) */
 
     --MENU-VISITED-color: #316376; /* Color of 'page visited' icons in menu */
     --MENU-SECTION-HR-color: #181717; /* Color of <hr> separator in menu */
