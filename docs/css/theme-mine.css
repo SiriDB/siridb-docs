@@ -19,6 +19,7 @@
     --MENU-SECTIONS-LINK-HOVER-color: #f8f9fa;  /* Color of links in menu, when hovered */
     --MENU-SECTION-ACTIVE-CATEGORY-color: #316376; /* Color of active category text */
     --MENU-SECTION-ACTIVE-CATEGORY-BG-color: #f8f9fa; /* Color of background for the active category (only) */
+    --MENU-SHORTCUTS-TITLE-color: #c7e5ee; /* Color of the Shortcuts Title */
 
     --MENU-VISITED-color: #316376; /* Color of 'page visited' icons in menu */
     --MENU-SECTION-HR-color: #181717; /* Color of <hr> separator in menu */
@@ -99,4 +100,8 @@ a:hover {
 
 #sidebar hr {
     border-color: var(--MENU-SECTION-HR-color);
+}
+
+#sidebar #shortcuts h3 {
+    color: var(--MENU-SHORTCUTS-TITLE-color) !important;
 }

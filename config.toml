@@ -15,3 +15,14 @@ theme = "hugo-theme-learn"
   themeVariant = "mine"
   # Description of the site, will be used in meta information
   description = "SiriDB documentation"
+
+[[menu.shortcuts]]
+name = "<i class='far fa-window-maximize'></i> Website"
+url = "https://transceptor-technology.github.io/siridb-website-prototype/"
+weight = 10
+
+[[menu.shortcuts]]
+name = "<i class='fab fa-github'></i> Github repo"
+identifier = "ds"
+url = "https://github.com/SiriDB/siridb-server"
+weight = 20
