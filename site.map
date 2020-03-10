@@ -1,0 +1,41 @@
+introduction
+    getting_started
+query-data
+    select
+    aggregate_functions
+    debug
+series
+    list_series
+    count_series
+    drop_series
+shards
+    list_shards
+    count_shards
+    drop_shards
+groups
+    create_group
+    count_groups
+    list_groups
+    alter_group
+    drop_groups
+servers
+    alter_server
+    alter_servers
+    count_servers
+    list_servers
+    drop_server
+access
+    access_rights
+    grant_access
+    revoke_access
+    restore_access
+    no_access
+users
+    create_user
+    count_users
+    list_users
+    alter_user
+database
+    alter_database
+    timezones
+    status_information
