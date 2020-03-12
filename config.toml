@@ -1,4 +1,4 @@
-baseURL = "https://transceptor-technology.github.io/siridb-docs/"
+baseURL = "https://docs.siridb.net/"
 languageCode = "en-us"
 title = "SiriDB documentation"
 publishDir = "docs"
@@ -18,7 +18,7 @@ theme = "hugo-theme-learn"
 
 [[menu.shortcuts]]
 name = "<i class='far fa-window-maximize'></i> Website"
-url = "https://transceptor-technology.github.io/siridb-website-prototype/"
+url = "https://siridb.net/"
 weight = 10
 
 [[menu.shortcuts]]
