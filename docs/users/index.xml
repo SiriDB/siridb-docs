@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Users on SiriDB documentation</title>
+    <link>https://transceptor-technology.github.io/siridb-docs/users/</link>
+    <description>Recent content in Users on SiriDB documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Sep 2019 15:40:24 +0200</lastBuildDate>
+    
+	<atom:link href="https://transceptor-technology.github.io/siridb-docs/users/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>create user</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/users/create_user/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/users/create_user/</guid>
+      <description>Syntax:
+create user &#39;my-username&#39; set password &#39;my-password&#39;  Create a new user. This will create a new user without access to SiriDB. For more information on how to grant access to a user see grant access.
+Example:
+# This will create a new user &#39;iris&#39; with password &#39;siri&#39; create user &#39;iris&#39; set password &#39;siri&#39; # Grant &amp;quot;read&amp;quot; access to &amp;quot;iris&amp;quot; grant read to user &amp;quot;iris&amp;quot;  </description>
+    </item>
+    
+    <item>
+      <title>count users</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/users/count_users/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/users/count_users/</guid>
+      <description>Syntax:
+count users [where ...]  Count users returns the number of users.
+Examples:
+# Get number of users count users # Get number of users not equal to &#39;iris&#39; count users where name != &#39;iris&#39;  Example output:
+{&amp;quot;users&amp;quot;: 6}  </description>
+    </item>
+    
+    <item>
+      <title>list users</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/users/list_users/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/users/list_users/</guid>
+      <description>Syntax:
+list users [columns] [where ...] [limit ...]  columns Valid columns are:
+ name: User name. access: Access rights assigned to the user.  When no columns are provided the default is used. (name, access)
+Example:
+# List all users list users # List users with full access list users where access == full  </description>
+    </item>
+    
+    <item>
+      <title>alter user</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/users/alter_user/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/users/alter_user/</guid>
+      <description>Syntax:
+alter user &#39;username&#39; set &amp;lt;option&amp;gt;  Valid options are password and name.
+Change a user name or password.
+Example:
+# Change the password for &amp;quot;iris&amp;quot; to &amp;quot;siri&amp;quot; alter user &#39;iris&#39; set password &#39;siri&#39;  </description>
+    </item>
+    
+  </channel>
+</rss>

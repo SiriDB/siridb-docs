@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Groups on SiriDB documentation</title>
+    <link>https://transceptor-technology.github.io/siridb-docs/groups/</link>
+    <description>Recent content in Groups on SiriDB documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Sep 2019 15:39:54 +0200</lastBuildDate>
+    
+	<atom:link href="https://transceptor-technology.github.io/siridb-docs/groups/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>create group</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/groups/create_group/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/groups/create_group/</guid>
+      <description>Syntax:
+create group `groupname` for /regular_expression/  Groups should be between backticks to make them different from strings. Since a group is basically a cached regular expression we need to provide the regular expression we want to use for the group.
+If you want to drop an existing group see drop groups.
+Example:
+# Create a group linux create group `linux` for /linux.*/  </description>
+    </item>
+    
+    <item>
+      <title>count groups</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/groups/count_groups/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/groups/count_groups/</guid>
+      <description>Syntax:
+count groups [where ...]  Count groups returns the number of groups defined in the database.
+Example:
+# Get number of groups count groups # Get number of groups with more than 100 series count groups where series &amp;gt; 100  Example output:
+{&amp;quot;groups&amp;quot;: 23} </description>
+    </item>
+    
+    <item>
+      <title>list groups</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/groups/list_groups/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/groups/list_groups/</guid>
+      <description>Syntax:
+list groups [columns] [where ...] [limit ...]  columns Valid columns are:
+ name: Group name series: Number of series in the group. expression: Show the expression used for this group.  When no columns are provided the default is used. (name)
+Examples:
+# View all groups list groups # View groups and the expression used list groups name, expression # sample output (list groups) { &amp;quot;columns&amp;quot;: [&amp;quot;name&amp;quot;], &amp;quot;groups&amp;quot;: [ [&amp;quot;linux&amp;quot;], [&amp;quot;windows&amp;quot;] ] }  </description>
+    </item>
+    
+    <item>
+      <title>alter group</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/groups/alter_group/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/groups/alter_group/</guid>
+      <description>Syntax:
+alter group `groupname` set &amp;lt;option&amp;gt;  Valid options are expression and name.
+set expression Change the regular expression for a group.
+Example:
+# Create group `linux` create group `linux` for /linux.*/ # Change expression so we will match case insensitive alter group `linux` set expression /linux.*/i  set name Change the name for a group.
+ Note
+This statement expects a normal string using single or double quotes. The reason is that &amp;lsquo;set name&amp;rsquo; expects a string and not a group.</description>
+    </item>
+    
+    <item>
+      <title>drop groups</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/groups/drop_groups/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/groups/drop_groups/</guid>
+      <description>Syntax:
+drop group `groupname`  Drops an existing group.
+Example:
+# Drop group `linux` drop group `linux` </description>
+    </item>
+    
+  </channel>
+</rss>

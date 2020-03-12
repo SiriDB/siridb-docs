@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SiriDB documentation</title>
+    <link>https://transceptor-technology.github.io/siridb-docs/</link>
+    <description>Recent content on SiriDB documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Sep 2019 15:40:37 +0200</lastBuildDate>
+    
+	<atom:link href="https://transceptor-technology.github.io/siridb-docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Getting Started</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/introduction/getting_started/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/introduction/getting_started/</guid>
+      <description>For information on how to install SiriDB, please visit the SiriDB Server github page.
+  For information on how to create a new database or expand an existing database, please visit the SiriDB Admin github page.
+  Other SiriDB projects:
+ SiriDB Prompt is a terminal based SiriDB client with auto-completion support. SiriDB HTTP provides an optional web interface and HTTP API for SiriDB. SiriDB Connector C (libsiridb) is a native SiriDB connector for the C language.</description>
+    </item>
+    
+    <item>
+      <title>select</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/query-data/select/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/query-data/select/</guid>
+      <description>Syntax:
+select &amp;lt;points/functions&amp;gt; from &amp;lt;match_series [&amp;lt;where&amp;gt;]&amp;gt; [&amp;lt;time_range&amp;gt;] [&amp;lt;merge_data&amp;gt;]  Example:
+# Select points from &amp;quot;series-001&amp;quot; select * from &amp;quot;series-001&amp;quot;  functions It&amp;rsquo;s possible to select multiple aggregate functions in one query. This has some advantages over performing multiple queries since the database in this case only needs to search for the series and points once. To find the requested aggregate in the result we must add a prefix and/or suffix to the series name to make the name unique.</description>
+    </item>
+    
+    <item>
+      <title>aggregate functions</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/query-data/aggregate_functions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/query-data/aggregate_functions/</guid>
+      <description>SiriDB supports multiple build-in aggregation and filter functions. Using these functions can be useful to reduce network traffic. Note that multiple functions can be combined using the arrow =&amp;gt; sign. (see select for more information on how to use and combine functions)
+Most aggregation function accept an optional ts argument. When not providing the ts argument, SiriDB will usually return the last timestamp in the result. One exception is the first() function which will return the first timestamp instead.</description>
+    </item>
+    
+    <item>
+      <title>debug (timeit)</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/query-data/debug/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/query-data/debug/</guid>
+      <description>Can be placed in front of any query and will return information about the time it took to process the query.
+Syntax:
+timeit &amp;lt;any_query&amp;gt;  Example result:
+{ &amp;quot;__timeit__&amp;quot;: [ { &amp;quot;time&amp;quot;: 0.001156334212755393, &amp;quot;server&amp;quot;: &amp;quot;server04.siridb.net:9010&amp;quot; }, { &amp;quot;time&amp;quot;: 0.001481771469116211, &amp;quot;server&amp;quot;: &amp;quot;server01.siridb.net:9010&amp;quot; } ] }  Here __timeit__ is an array containing response data from each server involved in processing the query. The last server in this list is the server who has received the query.</description>
+    </item>
+    
+    <item>
+      <title>list series</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/series/list_series/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/series/list_series/</guid>
+      <description>Syntax:
+list series [columns] [match_series] [where ...] [limit ...]  columns Valid columns are:
+ name: Series name pool: Pool where the series is assigned to start: Time-stamp of the first value in the series end: Time-stamp of the last value in the series length: The number of points in a series type: The series type. (&amp;ldquo;integer&amp;rdquo; or &amp;ldquo;float&amp;rdquo;)  When no columns are provided the default is used. (name)</description>
+    </item>
+    
+    <item>
+      <title>count series</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/series/count_series/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/series/count_series/</guid>
+      <description>Syntax:
+count series [length] [match_series] [where ...]  Count series in the SiriDB cluster. For more information about how to select series see list series.
+Count series length gives the total number of points for the selected series.
+Examples:
+# Get number of series count series # Get the total number of points in the database count series length # Get number of series in group `group_server01` count series `group_server01` # Get number of points for series in pool 0 count series length where pool == 0 # Get the number of series which started in the last week count series where start &amp;gt; now - 1w and start &amp;lt;= now  Example output (series):</description>
+    </item>
+    
+    <item>
+      <title>drop series</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/series/drop_series/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/series/drop_series/</guid>
+      <description>Syntax:
+drop series [series_match] [where ...] [set ignore_threshold true/false]  Drops series from SiriDB. Optionally you can use a match and/or where statement to filter the series you want to drop. For more information about how to match series look at list series.
+SiriDB has a mechanism to protect you from accidentally dropping all (or many) series. This is done with a threshold value. If the server receiving your drop request finds more series to drop than the threshold, the request is denied and you receive an error_msg about trying to delete more series than the threshold value.</description>
+    </item>
+    
+    <item>
+      <title>list shards</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/shards/list_shards/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/shards/list_shards/</guid>
+      <description>Syntax:
+list shards [columns] [where ...] [limit ...]  columns Valid columns are:
+ start: Start timestamp for the shard end: End timestamp for the shard sid: Shard identifier (the same sid usually exist on multiple servers). server: Server name on which the shard exists. pool: Pool where the shard in exists. status: Status flags for the shard. type: Type of the shard (number or log). size: Size of the shard.</description>
+    </item>
+    
+    <item>
+      <title>count shards</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/shards/count_shards/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/shards/count_shards/</guid>
+      <description>Syntax:
+count shards [size] [where ...]  Count shards returns the number of shards on all online servers in a SiriDB cluster. This means that offline servers are ignored and replica servers are included in the query. It&amp;rsquo;s also possible to count the shards size in case you want to see the amount of disk-space shards are using.
+Example:
+# Get number of shards count shards # Get number of shards for the current points.</description>
+    </item>
+    
+    <item>
+      <title>drop shards</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/shards/drop_shards/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/shards/drop_shards/</guid>
+      <description>Syntax:
+drop shards [where ...] [set ignore_threshold true/false]  Drops an existing shard using the shard id (sid). Use list shards for an overview of the current shards. This statement requires all pools to have at least one online server. The number of dropped shard in the result message only contains the dropped shards by one member of a pool, not the shards which are dropped by a replica. This is different from the count shards statement which includes shards on replica servers as well.</description>
+    </item>
+    
+    <item>
+      <title>create group</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/groups/create_group/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/groups/create_group/</guid>
+      <description>Syntax:
+create group `groupname` for /regular_expression/  Groups should be between backticks to make them different from strings. Since a group is basically a cached regular expression we need to provide the regular expression we want to use for the group.
+If you want to drop an existing group see drop groups.
+Example:
+# Create a group linux create group `linux` for /linux.*/  </description>
+    </item>
+    
+    <item>
+      <title>count groups</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/groups/count_groups/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/groups/count_groups/</guid>
+      <description>Syntax:
+count groups [where ...]  Count groups returns the number of groups defined in the database.
+Example:
+# Get number of groups count groups # Get number of groups with more than 100 series count groups where series &amp;gt; 100  Example output:
+{&amp;quot;groups&amp;quot;: 23} </description>
+    </item>
+    
+    <item>
+      <title>list groups</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/groups/list_groups/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/groups/list_groups/</guid>
+      <description>Syntax:
+list groups [columns] [where ...] [limit ...]  columns Valid columns are:
+ name: Group name series: Number of series in the group. expression: Show the expression used for this group.  When no columns are provided the default is used. (name)
+Examples:
+# View all groups list groups # View groups and the expression used list groups name, expression # sample output (list groups) { &amp;quot;columns&amp;quot;: [&amp;quot;name&amp;quot;], &amp;quot;groups&amp;quot;: [ [&amp;quot;linux&amp;quot;], [&amp;quot;windows&amp;quot;] ] }  </description>
+    </item>
+    
+    <item>
+      <title>alter group</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/groups/alter_group/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/groups/alter_group/</guid>
+      <description>Syntax:
+alter group `groupname` set &amp;lt;option&amp;gt;  Valid options are expression and name.
+set expression Change the regular expression for a group.
+Example:
+# Create group `linux` create group `linux` for /linux.*/ # Change expression so we will match case insensitive alter group `linux` set expression /linux.*/i  set name Change the name for a group.
+ Note
+This statement expects a normal string using single or double quotes. The reason is that &amp;lsquo;set name&amp;rsquo; expects a string and not a group.</description>
+    </item>
+    
+    <item>
+      <title>drop groups</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/groups/drop_groups/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/groups/drop_groups/</guid>
+      <description>Syntax:
+drop group `groupname`  Drops an existing group.
+Example:
+# Drop group `linux` drop group `linux` </description>
+    </item>
+    
+    <item>
+      <title>alter server</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/servers/alter_server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/servers/alter_server/</guid>
+      <description>Syntax:
+alter server &amp;lt;server_uuid / server_name&amp;gt; set &amp;lt;option&amp;gt;  Valid options are address, port, backup_mode and log_level. We can use both, a servers name or uuid to change a server. To view the current servers names and uuids use the command: list servers name, uuid
+set address/port Usually its not required to change the servers address or port using this command but instead you should change the address/port in the configuration file (default /etc/siridb/siridb.</description>
+    </item>
+    
+    <item>
+      <title>alter servers</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/servers/alter_servers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/servers/alter_servers/</guid>
+      <description>Syntax:
+alter servers [where...] set log_level &amp;lt;option&amp;gt;  Valid options are debug, info, warning, error and critical.
+This command will change the log level for n servers at once. Changing the log level is explained in more detail at alter server.</description>
+    </item>
+    
+    <item>
+      <title>count servers</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/servers/count_servers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/servers/count_servers/</guid>
+      <description>Syntax:
+count servers [received_points/selected_points] [where ...]  Count servers returns the number of servers in a SiriDB cluster. Received points are the number of points received by a server since uptime. After a restart the received points counters are reset to zero.
+ Info
+Received points only shows the number of points after uptime. For the total number of points you can use count series length
+ Examples:
+# Get number of servers count servers # Get number of servers in pool 0 count servers where pool == 0 # Get total received points since uptime count servers received_points # Get total number of selected (queried) points since uptime count servers selected_points  Example output (count servers):</description>
+    </item>
+    
+    <item>
+      <title>list servers</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/servers/list_servers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/servers/list_servers/</guid>
+      <description>Syntax:
+list servers [columns] [where ...] [limit ...]  List servers in a SiriDB Cluster. This command can be useful to view status information about a server.
+columns Valid columns are:
+ active_handles: Returns the active handles which can be used as an indicator on how busy a server is. active_tasks: Returns the active tasks for the current database. address: Server address. buffer_path: Path where this server keeps the buffer file.</description>
+    </item>
+    
+    <item>
+      <title>drop server</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/servers/drop_server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/servers/drop_server/</guid>
+      <description>Syntax:
+drop server &amp;lt;server_uuid / server_name&amp;gt;  Can be used to remove a server. We only allow dropping a server which has a replica since scaling down in number of pools is currently not supported. A server needs to be turned off before it can be dropped.
+ Note
+When having two servers in a pool, let&amp;rsquo;s call them siri1 and siri2 and for some reason siri2 is broken and does not start.</description>
+    </item>
+    
+    <item>
+      <title>access rights</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/access/access_rights/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/access/access_rights/</guid>
+      <description>SiriDB knows the following access rights:
+ select show list count create insert drop alter grant revoke  The most obvious ones are combined into access profiles which can be used to grant or revoke multiple access rights at once.
+ read: (select, show, list and count) write: read + (create and insert) modify: write + (drop and alter) full: modify + (grant, revoke)   Warning
+Changes to access rights are active immediately, so be careful when revoking access rights from users.</description>
+    </item>
+    
+    <item>
+      <title>grant access</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/access/grant_access/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/access/grant_access/</guid>
+      <description>Syntax:
+grant &amp;lt;access&amp;gt; to user &#39;username&#39;  Grants access rights to a user. For information about access rights see access rights.
+Example:
+# Grant drop and create to user &amp;quot;iris&amp;quot; grant drop, create to user &amp;quot;iris&amp;quot;  Output:
+{&amp;quot;success_msg&amp;quot;: &amp;quot;Successfully granted permissions to user ...&amp;quot;}  </description>
+    </item>
+    
+    <item>
+      <title>revoke access</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/access/revoke_access/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/access/revoke_access/</guid>
+      <description>Syntax:
+revoke &amp;lt;access&amp;gt; from &#39;username&#39;  Revokes access rights from a user. For information about access rights see access rights.
+ Warning
+If accidentally all access rights for all users are gone, you need to recover the default user. See no access for how to recover from a situation not having access to SiriDB.
+ Example:
+# Revoke drop and create from user &amp;quot;iris&amp;quot; revoke drop, create from user &amp;quot;iris&amp;quot;  Output:</description>
+    </item>
+    
+    <item>
+      <title>restore access</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/access/restore_access/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/access/restore_access/</guid>
+      <description>Read/use this section when accidentally all access rights to a database are gone. Follow the steps below to recover the default user. (username: iris, password: siri)
+Stop all servers in the SiriDB cluster.
+# Assume you use systemd to start SiriDB... &amp;gt; sudo systemctl stop siridb-server.service   Warning
+It&amp;rsquo;s really important to stop all servers in a SiriDB cluster to prevent database inconsistency.
+ Remove the appropriate file on all servers in the SiriDB cluster.</description>
+    </item>
+    
+    <item>
+      <title>no access</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/access/no_access/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/access/no_access/</guid>
+      <description>Read/use this section when accidentally all access rights to a database are gone. Follow the steps below to recover the default user. (username: iris, password: siri)
+Stop all servers in the SiriDB cluster.
+# Assume you use systemd to start SiriDB... &amp;gt; sudo systemctl stop siridb-server.service   Warning
+It&amp;rsquo;s really important to stop all servers in a SiriDB cluster to prevent database inconsistency.
+ Remove the appropriate file on all servers in the SiriDB cluster.</description>
+    </item>
+    
+    <item>
+      <title>create user</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/users/create_user/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/users/create_user/</guid>
+      <description>Syntax:
+create user &#39;my-username&#39; set password &#39;my-password&#39;  Create a new user. This will create a new user without access to SiriDB. For more information on how to grant access to a user see grant access.
+Example:
+# This will create a new user &#39;iris&#39; with password &#39;siri&#39; create user &#39;iris&#39; set password &#39;siri&#39; # Grant &amp;quot;read&amp;quot; access to &amp;quot;iris&amp;quot; grant read to user &amp;quot;iris&amp;quot;  </description>
+    </item>
+    
+    <item>
+      <title>count users</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/users/count_users/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/users/count_users/</guid>
+      <description>Syntax:
+count users [where ...]  Count users returns the number of users.
+Examples:
+# Get number of users count users # Get number of users not equal to &#39;iris&#39; count users where name != &#39;iris&#39;  Example output:
+{&amp;quot;users&amp;quot;: 6}  </description>
+    </item>
+    
+    <item>
+      <title>list users</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/users/list_users/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/users/list_users/</guid>
+      <description>Syntax:
+list users [columns] [where ...] [limit ...]  columns Valid columns are:
+ name: User name. access: Access rights assigned to the user.  When no columns are provided the default is used. (name, access)
+Example:
+# List all users list users # List users with full access list users where access == full  </description>
+    </item>
+    
+    <item>
+      <title>alter user</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/users/alter_user/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/users/alter_user/</guid>
+      <description>Syntax:
+alter user &#39;username&#39; set &amp;lt;option&amp;gt;  Valid options are password and name.
+Change a user name or password.
+Example:
+# Change the password for &amp;quot;iris&amp;quot; to &amp;quot;siri&amp;quot; alter user &#39;iris&#39; set password &#39;siri&#39;  </description>
+    </item>
+    
+    <item>
+      <title>alter database</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/database/alter_database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/database/alter_database/</guid>
+      <description>Syntax:
+alter database set &amp;lt;option&amp;gt;  Valid options are drop_threshold, timezone, select_points_limit and list_limit.
+drop_threshold This value is used to protect you from accidentally dropping data from SiriDB. The threshold is a value between 0 and 1 (0/100%). The threshold value is only checked against the pool receiving your query. The default threshold value is 1 (100%) but it might be a good idea to change this to a lower value.</description>
+    </item>
+    
+    <item>
+      <title>timezones</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/database/timezones/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/database/timezones/</guid>
+      <description>For information on how to change the time zone see alter database.
+ Note
+There is one special time-zone, named NAIVE which is the default time-zone when creating a database. When this time-zone is used, a SiriDB server handles a given date as a local time. All other time zones can be found below.
+  Africa/Abidjan Africa/Accra Africa/Addis_Ababa Africa/Algiers Africa/Asmara Africa/Bamako Africa/Bangui Africa/Banjul Africa/Bissau Africa/Blantyre Africa/Brazzaville Africa/Bujumbura Africa/Cairo Africa/Casablanca Africa/Ceuta Africa/Conakry Africa/Dakar Africa/Dar_es_Salaam Africa/Djibouti Africa/Douala Africa/El_Aaiun Africa/Freetown Africa/Gaborone Africa/Harare Africa/Johannesburg Africa/Juba Africa/Kampala Africa/Khartoum Africa/Kigali Africa/Kinshasa Africa/Lagos Africa/Libreville Africa/Lome Africa/Luanda Africa/Lubumbashi Africa/Lusaka Africa/Malabo Africa/Maputo Africa/Maseru Africa/Mbabane Africa/Mogadishu Africa/Monrovia Africa/Nairobi Africa/Ndjamena Africa/Niamey Africa/Nouakchott Africa/Ouagadougou Africa/Porto-Novo Africa/Sao_Tome Africa/Tripoli Africa/Tunis Africa/Windhoek America/Adak America/Anchorage America/Anguilla America/Antigua America/Araguaina America/Argentina/Buenos_Aires America/Argentina/Catamarca America/Argentina/Cordoba America/Argentina/Jujuy America/Argentina/La_Rioja America/Argentina/Mendoza America/Argentina/Rio_Gallegos America/Argentina/Salta America/Argentina/San_Juan America/Argentina/San_Luis America/Argentina/Tucuman America/Argentina/Ushuaia America/Aruba America/Asuncion America/Atikokan America/Bahia America/Bahia_Banderas America/Barbados America/Belem America/Belize America/Blanc-Sablon America/Boa_Vista America/Bogota America/Boise America/Cambridge_Bay America/Campo_Grande America/Cancun America/Caracas America/Cayenne America/Cayman America/Chicago America/Chihuahua America/Costa_Rica America/Creston America/Cuiaba America/Curacao America/Danmarkshavn America/Dawson America/Dawson_Creek America/Denver America/Detroit America/Dominica America/Edmonton America/Eirunepe America/El_Salvador America/Fort_Nelson America/Fortaleza America/Glace_Bay America/Godthab America/Goose_Bay America/Grand_Turk America/Grenada America/Guadeloupe America/Guatemala America/Guayaquil America/Guyana America/Halifax America/Havana America/Hermosillo America/Indiana/Indianapolis America/Indiana/Knox America/Indiana/Marengo America/Indiana/Petersburg America/Indiana/Tell_City America/Indiana/Vevay America/Indiana/Vincennes America/Indiana/Winamac America/Inuvik America/Iqaluit America/Jamaica America/Juneau America/Kentucky/Louisville America/Kentucky/Monticello America/Kralendijk America/La_Paz America/Lima America/Los_Angeles America/Lower_Princes America/Maceio America/Managua America/Manaus America/Marigot America/Martinique America/Matamoros America/Mazatlan America/Menominee America/Merida America/Metlakatla America/Mexico_City America/Miquelon America/Moncton America/Monterrey America/Montevideo America/Montserrat America/Nassau America/New_York America/Nipigon America/Nome America/Noronha America/North_Dakota/Beulah America/North_Dakota/Center America/North_Dakota/New_Salem America/Ojinaga America/Panama America/Pangnirtung America/Paramaribo America/Phoenix America/Port-au-Prince America/Port_of_Spain America/Porto_Velho America/Puerto_Rico America/Rainy_River America/Rankin_Inlet America/Recife America/Regina America/Resolute America/Rio_Branco America/Santa_Isabel America/Santarem America/Santiago America/Santo_Domingo America/Sao_Paulo America/Scoresbysund America/Sitka America/St_Barthelemy America/St_Johns America/St_Kitts America/St_Lucia America/St_Thomas America/St_Vincent America/Swift_Current America/Tegucigalpa America/Thule America/Thunder_Bay America/Tijuana America/Toronto America/Tortola America/Vancouver America/Whitehorse America/Winnipeg America/Yakutat America/Yellowknife Antarctica/Casey Antarctica/Davis Antarctica/DumontDUrville Antarctica/Macquarie Antarctica/Mawson Antarctica/McMurdo Antarctica/Palmer Antarctica/Rothera Antarctica/Syowa Antarctica/Troll Antarctica/Vostok Arctic/Longyearbyen Asia/Aden Asia/Almaty Asia/Amman Asia/Anadyr Asia/Aqtau Asia/Aqtobe Asia/Ashgabat Asia/Baghdad Asia/Bahrain Asia/Baku Asia/Bangkok Asia/Beirut Asia/Bishkek Asia/Brunei Asia/Chita Asia/Choibalsan Asia/Colombo Asia/Damascus Asia/Dhaka Asia/Dili Asia/Dubai Asia/Dushanbe Asia/Gaza Asia/Hebron Asia/Ho_Chi_Minh Asia/Hong_Kong Asia/Hovd Asia/Irkutsk Asia/Jakarta Asia/Jayapura Asia/Jerusalem Asia/Kabul Asia/Kamchatka Asia/Karachi Asia/Kathmandu Asia/Khandyga Asia/Kolkata Asia/Krasnoyarsk Asia/Kuala_Lumpur Asia/Kuching Asia/Kuwait Asia/Macau Asia/Magadan Asia/Makassar Asia/Manila Asia/Muscat Asia/Nicosia Asia/Novokuznetsk Asia/Novosibirsk Asia/Omsk Asia/Oral Asia/Phnom_Penh Asia/Pontianak Asia/Pyongyang Asia/Qatar Asia/Qyzylorda Asia/Rangoon Asia/Riyadh Asia/Sakhalin Asia/Samarkand Asia/Seoul Asia/Shanghai Asia/Singapore Asia/Srednekolymsk Asia/Taipei Asia/Tashkent Asia/Tbilisi Asia/Tehran Asia/Thimphu Asia/Tokyo Asia/Ulaanbaatar Asia/Urumqi Asia/Ust-Nera Asia/Vientiane Asia/Vladivostok Asia/Yakutsk Asia/Yekaterinburg Asia/Yerevan Atlantic/Azores Atlantic/Bermuda Atlantic/Canary Atlantic/Cape_Verde Atlantic/Faroe Atlantic/Madeira Atlantic/Reykjavik Atlantic/South_Georgia Atlantic/St_Helena Atlantic/Stanley Australia/Adelaide Australia/Brisbane Australia/Broken_Hill Australia/Currie Australia/Darwin Australia/Eucla Australia/Hobart Australia/Lindeman Australia/Lord_Howe Australia/Melbourne Australia/Perth Australia/Sydney Canada/Atlantic Canada/Central Canada/Eastern Canada/Mountain Canada/Newfoundland Canada/Pacific Europe/Amsterdam Europe/Andorra Europe/Athens Europe/Belgrade Europe/Berlin Europe/Bratislava Europe/Brussels Europe/Bucharest Europe/Budapest Europe/Busingen Europe/Chisinau Europe/Copenhagen Europe/Dublin Europe/Gibraltar Europe/Guernsey Europe/Helsinki Europe/Isle_of_Man Europe/Istanbul Europe/Jersey Europe/Kaliningrad Europe/Kiev Europe/Lisbon Europe/Ljubljana Europe/London Europe/Luxembourg Europe/Madrid Europe/Malta Europe/Mariehamn Europe/Minsk Europe/Monaco Europe/Moscow Europe/Oslo Europe/Paris Europe/Podgorica Europe/Prague Europe/Riga Europe/Rome Europe/Samara Europe/San_Marino Europe/Sarajevo Europe/Simferopol Europe/Skopje Europe/Sofia Europe/Stockholm Europe/Tallinn Europe/Tirane Europe/Uzhgorod Europe/Vaduz Europe/Vatican Europe/Vienna Europe/Vilnius Europe/Volgograd Europe/Warsaw Europe/Zagreb Europe/Zaporozhye Europe/Zurich GMT Indian/Antananarivo Indian/Chagos Indian/Christmas Indian/Cocos Indian/Comoro Indian/Kerguelen Indian/Mahe Indian/Maldives Indian/Mauritius Indian/Mayotte Indian/Reunion Pacific/Apia Pacific/Auckland Pacific/Bougainville Pacific/Chatham Pacific/Chuuk Pacific/Easter Pacific/Efate Pacific/Enderbury Pacific/Fakaofo Pacific/Fiji Pacific/Funafuti Pacific/Galapagos Pacific/Gambier Pacific/Guadalcanal Pacific/Guam Pacific/Honolulu Pacific/Johnston Pacific/Kiritimati Pacific/Kosrae Pacific/Kwajalein Pacific/Majuro Pacific/Marquesas Pacific/Midway Pacific/Nauru Pacific/Niue Pacific/Norfolk Pacific/Noumea Pacific/Pago_Pago Pacific/Palau Pacific/Pitcairn Pacific/Pohnpei Pacific/Port_Moresby Pacific/Rarotonga Pacific/Saipan Pacific/Tahiti Pacific/Tarawa Pacific/Tongatapu Pacific/Wake Pacific/Wallis US/Alaska US/Arizona US/Central US/Eastern US/Hawaii US/Mountain US/Pacific UTC  </description>
+    </item>
+    
+    <item>
+      <title>status information</title>
+      <link>https://transceptor-technology.github.io/siridb-docs/database/status_information/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://transceptor-technology.github.io/siridb-docs/database/status_information/</guid>
+      <description>Syntax:
+show [&amp;lt;option&amp;gt; [,&amp;lt;option&amp;gt; [...]]  See available options for more info on each show command:
+ show active_handles: Returns the active handles which can be used as an indicator for how busy a server is. show active_tasks: Returns the active tasks for the current database. show buffer_path: Returns the local buffer path on this server. show buffer_size: Returns the buffer size in bytes on this server. show dbname: Returns the database name.</description>
+    </item>
+    
+  </channel>
+</rss>
