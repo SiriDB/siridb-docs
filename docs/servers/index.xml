@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Servers on SiriDB documentation</title>
-    <link>https://transceptor-technology.github.io/siridb-docs/servers/</link>
+    <link>https://docs.siridb.net/servers/</link>
     <description>Recent content in Servers on SiriDB documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 27 Sep 2019 15:40:06 +0200</lastBuildDate>
     
-	<atom:link href="https://transceptor-technology.github.io/siridb-docs/servers/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://docs.siridb.net/servers/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>alter server</title>
-      <link>https://transceptor-technology.github.io/siridb-docs/servers/alter_server/</link>
+      <link>https://docs.siridb.net/servers/alter_server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://transceptor-technology.github.io/siridb-docs/servers/alter_server/</guid>
+      <guid>https://docs.siridb.net/servers/alter_server/</guid>
       <description>Syntax:
 alter server &amp;lt;server_uuid / server_name&amp;gt; set &amp;lt;option&amp;gt;  Valid options are address, port, backup_mode and log_level. We can use both, a servers name or uuid to change a server. To view the current servers names and uuids use the command: list servers name, uuid
 set address/port Usually its not required to change the servers address or port using this command but instead you should change the address/port in the configuration file (default /etc/siridb/siridb.</description>
@@ -24,10 +24,10 @@ set address/port Usually its not required to change the servers address or port 
     
     <item>
       <title>alter servers</title>
-      <link>https://transceptor-technology.github.io/siridb-docs/servers/alter_servers/</link>
+      <link>https://docs.siridb.net/servers/alter_servers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://transceptor-technology.github.io/siridb-docs/servers/alter_servers/</guid>
+      <guid>https://docs.siridb.net/servers/alter_servers/</guid>
       <description>Syntax:
 alter servers [where...] set log_level &amp;lt;option&amp;gt;  Valid options are debug, info, warning, error and critical.
 This command will change the log level for n servers at once. Changing the log level is explained in more detail at alter server.</description>
@@ -35,10 +35,10 @@ This command will change the log level for n servers at once. Changing the log l
     
     <item>
       <title>count servers</title>
-      <link>https://transceptor-technology.github.io/siridb-docs/servers/count_servers/</link>
+      <link>https://docs.siridb.net/servers/count_servers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://transceptor-technology.github.io/siridb-docs/servers/count_servers/</guid>
+      <guid>https://docs.siridb.net/servers/count_servers/</guid>
       <description>Syntax:
 count servers [received_points/selected_points] [where ...]  Count servers returns the number of servers in a SiriDB cluster. Received points are the number of points received by a server since uptime. After a restart the received points counters are reset to zero.
  Info
@@ -49,10 +49,10 @@ Received points only shows the number of points after uptime. For the total numb
     
     <item>
       <title>list servers</title>
-      <link>https://transceptor-technology.github.io/siridb-docs/servers/list_servers/</link>
+      <link>https://docs.siridb.net/servers/list_servers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://transceptor-technology.github.io/siridb-docs/servers/list_servers/</guid>
+      <guid>https://docs.siridb.net/servers/list_servers/</guid>
       <description>Syntax:
 list servers [columns] [where ...] [limit ...]  List servers in a SiriDB Cluster. This command can be useful to view status information about a server.
 columns Valid columns are:
@@ -61,10 +61,10 @@ columns Valid columns are:
     
     <item>
       <title>drop server</title>
-      <link>https://transceptor-technology.github.io/siridb-docs/servers/drop_server/</link>
+      <link>https://docs.siridb.net/servers/drop_server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://transceptor-technology.github.io/siridb-docs/servers/drop_server/</guid>
+      <guid>https://docs.siridb.net/servers/drop_server/</guid>
       <description>Syntax:
 drop server &amp;lt;server_uuid / server_name&amp;gt;  Can be used to remove a server. We only allow dropping a server which has a replica since scaling down in number of pools is currently not supported. A server needs to be turned off before it can be dropped.
  Note

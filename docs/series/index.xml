@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on SiriDB documentation</title>
-    <link>https://transceptor-technology.github.io/siridb-docs/series/</link>
+    <link>https://docs.siridb.net/series/</link>
     <description>Recent content in Series on SiriDB documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 27 Sep 2019 15:39:36 +0200</lastBuildDate>
     
-	<atom:link href="https://transceptor-technology.github.io/siridb-docs/series/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://docs.siridb.net/series/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>list series</title>
-      <link>https://transceptor-technology.github.io/siridb-docs/series/list_series/</link>
+      <link>https://docs.siridb.net/series/list_series/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://transceptor-technology.github.io/siridb-docs/series/list_series/</guid>
+      <guid>https://docs.siridb.net/series/list_series/</guid>
       <description>Syntax:
 list series [columns] [match_series] [where ...] [limit ...]  columns Valid columns are:
  name: Series name pool: Pool where the series is assigned to start: Time-stamp of the first value in the series end: Time-stamp of the last value in the series length: The number of points in a series type: The series type. (&amp;ldquo;integer&amp;rdquo; or &amp;ldquo;float&amp;rdquo;)  When no columns are provided the default is used. (name)</description>
@@ -24,10 +24,10 @@ list series [columns] [match_series] [where ...] [limit ...]  columns Valid colu
     
     <item>
       <title>count series</title>
-      <link>https://transceptor-technology.github.io/siridb-docs/series/count_series/</link>
+      <link>https://docs.siridb.net/series/count_series/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://transceptor-technology.github.io/siridb-docs/series/count_series/</guid>
+      <guid>https://docs.siridb.net/series/count_series/</guid>
       <description>Syntax:
 count series [length] [match_series] [where ...]  Count series in the SiriDB cluster. For more information about how to select series see list series.
 Count series length gives the total number of points for the selected series.
@@ -37,10 +37,10 @@ Examples:
     
     <item>
       <title>drop series</title>
-      <link>https://transceptor-technology.github.io/siridb-docs/series/drop_series/</link>
+      <link>https://docs.siridb.net/series/drop_series/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://transceptor-technology.github.io/siridb-docs/series/drop_series/</guid>
+      <guid>https://docs.siridb.net/series/drop_series/</guid>
       <description>Syntax:
 drop series [series_match] [where ...] [set ignore_threshold true/false]  Drops series from SiriDB. Optionally you can use a match and/or where statement to filter the series you want to drop. For more information about how to match series look at list series.
 SiriDB has a mechanism to protect you from accidentally dropping all (or many) series. This is done with a threshold value. If the server receiving your drop request finds more series to drop than the threshold, the request is denied and you receive an error_msg about trying to delete more series than the threshold value.</description>
