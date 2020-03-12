@@ -7,10 +7,18 @@ Syntax:
 
 	alter database set <option>
 
-Valid options are *drop_threshold*, *timezone*, *select_points_limit* and *list_limit*.
+Valid options are:
 
-drop_threshold
---------------
+ - [drop_threshold](#drop_threshold)
+ - [expiration_log](#expiration_log)
+ - [expiration_num](#expiration_num)
+ - [timezone](#timezone)
+ - [select_points_limit](#select_points_limit)
+ - [list_limit](#list_limit)
+
+
+## drop_threshold
+
 This value is used to protect you from accidentally dropping data from SiriDB.
 The threshold is a value between 0 and 1 (0/100%). The threshold value is only
 checked against the pool receiving your query. The default threshold value is
@@ -30,8 +38,8 @@ Example:
 	# View the current threshold
 	show drop_threshold
 
-set timezone
-------------
+## set timezone
+
 Change the timezone for the database. When using a date/time in a query SiriDB
 needs to convert the given date to a timestamp. Default **NAIVE** is used which
 means SiriDB is naive about the time zone and acts as if it's a local time.
@@ -61,8 +69,8 @@ Example:
 	# Set the default time zone to Europe/Amsterdam
 	alter database set timezone 'Europe/Amsterdam'
 
-select\_points_limit
--------------------
+## select\_points_limit
+
 Change the maximum points which can be returned by a select query. The default and recommended value is set to one million points. This value is chosen to prevent a single query for taking to much memory and ensures SiriDB can respond to almost any query in a reasonable amount of time.
 
 Example:
@@ -70,8 +78,8 @@ Example:
     # Increase the select points limit to 5 million
     alter database set select_points_limit 5000000
 
-list_limit
-----------
+## list_limit
+
 Change the maximum value which can be used as a limit for a list statement. The default and recommended value is set to ten thousand to prevent queries which could take a large amount of memory. The value must be greater than or equal to 1000.
 
 Example:
