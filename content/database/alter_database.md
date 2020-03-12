@@ -38,6 +38,30 @@ Example:
 	# View the current threshold
 	show drop_threshold
 
+## expiration_log
+
+This settings should be an integer value with the time precision of the database.
+
+For example:
+
+```siridb
+# Suppose we have a second precision database,
+# then this will drop log shards, older than 4 weeks
+alter database set expiration_log 3600*24*7*4
+```
+
+## expiration_num
+
+This settings should be an integer value with the time precision of the database.
+
+For example:
+
+```siridb
+# Suppose we have a second precision database,
+# then this will drop number shards, older than 4 weeks
+alter database set expiration_num 3600*24*7*4
+```
+
 ## set timezone
 
 Change the timezone for the database. When using a date/time in a query SiriDB
