@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on SiriDB documentation</title>
-    <link>https://transceptor-technology.github.io/siridb-docs/categories/</link>
+    <link>https://docs.siridb.net/categories/</link>
     <description>Recent content in Categories on SiriDB documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://transceptor-technology.github.io/siridb-docs/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://docs.siridb.net/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

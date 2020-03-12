@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Access on SiriDB documentation</title>
-    <link>https://transceptor-technology.github.io/siridb-docs/access/</link>
+    <link>https://docs.siridb.net/access/</link>
     <description>Recent content in Access on SiriDB documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://transceptor-technology.github.io/siridb-docs/access/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://docs.siridb.net/access/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>access rights</title>
-      <link>https://transceptor-technology.github.io/siridb-docs/access/access_rights/</link>
+      <link>https://docs.siridb.net/access/access_rights/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://transceptor-technology.github.io/siridb-docs/access/access_rights/</guid>
+      <guid>https://docs.siridb.net/access/access_rights/</guid>
       <description>SiriDB knows the following access rights:
  select show list count create insert drop alter grant revoke  The most obvious ones are combined into access profiles which can be used to grant or revoke multiple access rights at once.
  read: (select, show, list and count) write: read + (create and insert) modify: write + (drop and alter) full: modify + (grant, revoke)   Warning
@@ -24,10 +24,10 @@ Changes to access rights are active immediately, so be careful when revoking acc
     
     <item>
       <title>grant access</title>
-      <link>https://transceptor-technology.github.io/siridb-docs/access/grant_access/</link>
+      <link>https://docs.siridb.net/access/grant_access/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://transceptor-technology.github.io/siridb-docs/access/grant_access/</guid>
+      <guid>https://docs.siridb.net/access/grant_access/</guid>
       <description>Syntax:
 grant &amp;lt;access&amp;gt; to user &#39;username&#39;  Grants access rights to a user. For information about access rights see access rights.
 Example:
@@ -37,10 +37,10 @@ Example:
     
     <item>
       <title>revoke access</title>
-      <link>https://transceptor-technology.github.io/siridb-docs/access/revoke_access/</link>
+      <link>https://docs.siridb.net/access/revoke_access/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://transceptor-technology.github.io/siridb-docs/access/revoke_access/</guid>
+      <guid>https://docs.siridb.net/access/revoke_access/</guid>
       <description>Syntax:
 revoke &amp;lt;access&amp;gt; from &#39;username&#39;  Revokes access rights from a user. For information about access rights see access rights.
  Warning
@@ -51,10 +51,10 @@ If accidentally all access rights for all users are gone, you need to recover th
     
     <item>
       <title>restore access</title>
-      <link>https://transceptor-technology.github.io/siridb-docs/access/restore_access/</link>
+      <link>https://docs.siridb.net/access/restore_access/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://transceptor-technology.github.io/siridb-docs/access/restore_access/</guid>
+      <guid>https://docs.siridb.net/access/restore_access/</guid>
       <description>Read/use this section when accidentally all access rights to a database are gone. Follow the steps below to recover the default user. (username: iris, password: siri)
 Stop all servers in the SiriDB cluster.
 # Assume you use systemd to start SiriDB... &amp;gt; sudo systemctl stop siridb-server.service   Warning
@@ -64,10 +64,10 @@ It&amp;rsquo;s really important to stop all servers in a SiriDB cluster to preve
     
     <item>
       <title>no access</title>
-      <link>https://transceptor-technology.github.io/siridb-docs/access/no_access/</link>
+      <link>https://docs.siridb.net/access/no_access/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://transceptor-technology.github.io/siridb-docs/access/no_access/</guid>
+      <guid>https://docs.siridb.net/access/no_access/</guid>
       <description>Read/use this section when accidentally all access rights to a database are gone. Follow the steps below to recover the default user. (username: iris, password: siri)
 Stop all servers in the SiriDB cluster.
 # Assume you use systemd to start SiriDB... &amp;gt; sudo systemctl stop siridb-server.service   Warning

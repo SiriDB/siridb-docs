@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Database on SiriDB documentation</title>
-    <link>https://transceptor-technology.github.io/siridb-docs/database/</link>
+    <link>https://docs.siridb.net/database/</link>
     <description>Recent content in Database on SiriDB documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 27 Sep 2019 15:40:37 +0200</lastBuildDate>
     
-	<atom:link href="https://transceptor-technology.github.io/siridb-docs/database/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://docs.siridb.net/database/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>alter database</title>
-      <link>https://transceptor-technology.github.io/siridb-docs/database/alter_database/</link>
+      <link>https://docs.siridb.net/database/alter_database/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://transceptor-technology.github.io/siridb-docs/database/alter_database/</guid>
+      <guid>https://docs.siridb.net/database/alter_database/</guid>
       <description>Syntax:
-alter database set &amp;lt;option&amp;gt;  Valid options are drop_threshold, timezone, select_points_limit and list_limit.
-drop_threshold This value is used to protect you from accidentally dropping data from SiriDB. The threshold is a value between 0 and 1 (0/100%). The threshold value is only checked against the pool receiving your query. The default threshold value is 1 (100%) but it might be a good idea to change this to a lower value.</description>
+alter database set &amp;lt;option&amp;gt;  Valid options are:
+ drop_threshold expiration_log expiration_num timezone select_points_limit list_limit  drop_threshold This value is used to protect you from accidentally dropping data from SiriDB. The threshold is a value between 0 and 1 (0/100%). The threshold value is only checked against the pool receiving your query. The default threshold value is 1 (100%) but it might be a good idea to change this to a lower value.</description>
     </item>
     
     <item>
       <title>timezones</title>
-      <link>https://transceptor-technology.github.io/siridb-docs/database/timezones/</link>
+      <link>https://docs.siridb.net/database/timezones/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://transceptor-technology.github.io/siridb-docs/database/timezones/</guid>
+      <guid>https://docs.siridb.net/database/timezones/</guid>
       <description>For information on how to change the time zone see alter database.
  Note
 There is one special time-zone, named NAIVE which is the default time-zone when creating a database. When this time-zone is used, a SiriDB server handles a given date as a local time. All other time zones can be found below.
@@ -36,10 +36,10 @@ There is one special time-zone, named NAIVE which is the default time-zone when 
     
     <item>
       <title>status information</title>
-      <link>https://transceptor-technology.github.io/siridb-docs/database/status_information/</link>
+      <link>https://docs.siridb.net/database/status_information/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://transceptor-technology.github.io/siridb-docs/database/status_information/</guid>
+      <guid>https://docs.siridb.net/database/status_information/</guid>
       <description>Syntax:
 show [&amp;lt;option&amp;gt; [,&amp;lt;option&amp;gt; [...]]  See available options for more info on each show command:
  show active_handles: Returns the active handles which can be used as an indicator for how busy a server is. show active_tasks: Returns the active tasks for the current database. show buffer_path: Returns the local buffer path on this server. show buffer_size: Returns the buffer size in bytes on this server. show dbname: Returns the database name.</description>
