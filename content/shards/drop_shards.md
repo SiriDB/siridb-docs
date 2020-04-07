@@ -1,11 +1,11 @@
 ---
 title: "drop shards"
-weight: 10
+weight: 47
 ---
 
 Syntax:
 
-	drop shards [where ...] [set ignore_threshold true/false]
+    drop shards [where ...] [set ignore_threshold true/false]
 
 Drops an existing shard using the shard id (sid). Use `list shards` for an
 overview of the current shards. This statement requires all pools to have at
@@ -20,5 +20,5 @@ which includes shards on replica servers as well.
 
 Example:
 
-	# Drop shards for points which are older than one year
-	drop shards where end < now - 52w
+    # Drop shards for points which are older than one year
+    drop shards where end < now - 52w

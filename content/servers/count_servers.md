@@ -1,16 +1,15 @@
 ---
 title: "count servers"
-weight: 18
+weight: 63
 ---
 
 Syntax:
 
-	count servers [received_points/selected_points] [where ...]
+    count servers [received_points/selected_points] [where ...]
 
 Count servers returns the number of servers in a SiriDB cluster.
 Received points are the number of points received by a server since uptime.
 After a restart the received points counters are reset to zero.
-
 
 >**Info**
 >
@@ -19,21 +18,21 @@ After a restart the received points counters are reset to zero.
 
 Examples:
 
-	# Get number of servers
-	count servers
+    # Get number of servers
+    count servers
 
-	# Get number of servers in pool 0
-	count servers where pool == 0
+    # Get number of servers in pool 0
+    count servers where pool == 0
 
-	# Get total received points since uptime
-	count servers received_points
+    # Get total received points since uptime
+    count servers received_points
 
-	# Get total number of selected (queried) points since uptime
-	count servers selected_points
+    # Get total number of selected (queried) points since uptime
+    count servers selected_points
 
 Example output (count servers):
 
-	{"servers": 6}
+    {"servers": 6}
 
 Example output (count servers received_points):
 

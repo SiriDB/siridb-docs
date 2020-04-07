@@ -1,41 +1,88 @@
-introduction
-    getting_started
-query-data
-    select
+getting_started
+    ubuntu
+    build_from_source
+    configuration
+connect
+    http_api
+    python
+    go
+    libsuv
+        libsiridb
+    nodejs
+    java
+    php
+    r
+select
     aggregate_functions
-    debug
+        count
+        derivative
+        difference
+        filter
+        first
+        last
+        limit
+        max
+        mean
+        median
+        median_high
+        median_low
+        min
+        pvariance
+        stddev
+        sum
+        variance
+    merge_data
+    time_range
+    timeit_debugging
 series
     list_series
+        columns
+        match_series
     count_series
     drop_series
 shards
     list_shards
+        columns
     count_shards
     drop_shards
 groups
     create_group
     count_groups
     list_groups
+        columns
     alter_group
+        set_expression
+        set_name
     drop_groups
 servers
     alter_server
+        backup_mode
+        log_level
+        set_address_port
     alter_servers
     count_servers
     list_servers
-    drop_server
+        columns
+    drop_servers
+users
+    create_user
+    count_users
+    list_users
+        columns
+    alter_user
+database
+    alter_database
+        drop_threshold
+        expiration_log
+        expiration_num
+        list_limit
+        select_points_limit
+        set_timezone
+    timezones
+    status_information
 access
     access_rights
     grant_access
     revoke_access
     restore_access
     no_access
-users
-    create_user
-    count_users
-    list_users
-    alter_user
-database
-    alter_database
-    timezones
-    status_information

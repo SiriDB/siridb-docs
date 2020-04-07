@@ -1,11 +1,11 @@
 ---
 title: "drop series"
-weight: 7
+weight: 42
 ---
 
 Syntax:
 
-	drop series [series_match] [where ...] [set ignore_threshold true/false]
+    drop series [series_match] [where ...] [set ignore_threshold true/false]
 
 Drops series from SiriDB. Optionally you can use a match and/or where statement
 to filter the series you want to drop. For more information about how to match
@@ -30,8 +30,8 @@ drop more than 50% of the available series.
 
 Examples:
 
-	# Drop series "series-001"
-	drop series "series-001"
+    # Drop series "series-001"
+    drop series "series-001"
 
-	# Drop all series
-	drop series set ignore_threshold true
+    # Drop all series
+    drop series set ignore_threshold true
