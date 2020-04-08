@@ -1,12 +1,30 @@
 ---
 title: "median high"
-weight: 27
+weight: 30
 ---
+
+
+The high median is always a member of the data set. When the number of data points is odd, the middle value is returned. When it is even, the larger of the two middle values is returned.
+
+If no time window is provided it returns the median_high of the series.
+
+### Function
 
 Syntax:
 
-   median_high([ts])
+    median_high([ts])
 
-Returns an integer or float value depending on the series data type.
+### Arguments
 
-The high median is always a member of the data set. When the number of data points is odd, the middle value is returned. When it is even, the larger of the two middle values is returned.
+ Arguments   | Description
+ ----------- | -----------
+ts (optional) | Time window.
+
+### Return value
+
+An integer or float value depending on the series data type.
+
+### Example
+
+    # Select the median_high grouped by 1 minute and return the difference for that result
+    select median_high(1m) => difference() from "series-001"

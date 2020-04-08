@@ -1,15 +1,28 @@
 ---
 title: "last"
-weight: 22
+weight: 25
 ---
+
+
+Returns the last value in each `ts` time window. Or if no time window is provided it just returns the last value of the series.
+
+### Function
 
 Syntax:
 
     last([ts])
 
-Returns the last value in each `ts` time window. (Or just the last value)
+### Arguments
 
-Example:
+ Arguments   | Description
+ ----------- | -----------
+ts (optional) | Time window.
+
+### Return value
+
+The last value in each `ts` time window or just the last value if no time window is provided.
+
+### Example
 
     # Select the last value from 'series-001'
     select last() from 'series-001'

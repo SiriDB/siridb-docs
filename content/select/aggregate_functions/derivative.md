@@ -1,20 +1,30 @@
 ---
 title: "derivative"
-weight: 18
+weight: 21
 ---
+
+The derivative can be used to get the difference per time unit. When no optional arguments
+are used the difference per one unit is returned. For example, in a database with second
+precision the return value will be the difference per second.
+
+### Function
 
 Syntax:
 
    derivative([ts [, ts]])
 
-Returns a float value.
+### Arguments
 
-The derivative can be used to get the difference per time unit. When no optional arguments
-are used we return the difference per one unit. For example, in a database with second
-precision the return value will be the difference per second. Optionally another time unit can
-be used. A second argument can be used to set a time period. This time period will be used to get the difference between the first and last value within the time window.
+ Arguments   | Description
+ ----------- | -----------
+ ts (optional) | Time unit; difference per given time unit
+ second ts (optional) | Time window; used to get the difference between the first and last value within the given time window.
 
-Example:
+### Return value
+
+A float value.
+
+### Example
 
     # Select the difference per second for values in series-001.
     select derivative(1s) from 'series-001'

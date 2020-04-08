@@ -1,6 +1,6 @@
 ---
 title: "list series"
-weight: 38
+weight: 41
 ---
 
 Syntax:

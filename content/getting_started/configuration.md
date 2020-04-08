@@ -3,9 +3,7 @@ title: "Configuration"
 weight: 4
 ---
 
-SiriDB can start with a configuration file and/or with environment variables. However be aware that the environment variables will overwrite the configuration file settings if both apply to the same setting.
-
-By default SiriDB will search for the configuration file in `/etc/siridb/siridb.conf` but alternatively you can specify a custom path by using the `-c/--config` argument.
+SiriDB can start with environment variables and/or with a configuration file. By default SiriDB will search for the configuration file in `/etc/siridb/siridb.conf` but alternatively you can specify a custom path by using the `-c/--config` argument.
 
 ```
 $ siridb-server -c /my/path/siridb.conf
@@ -13,6 +11,10 @@ $ siridb-server -c /my/path/siridb.conf
 An example configuration file can be found here:
 [https://github.com/SiriDB/siridb-server/blob/master/siridb.conf](https://github.com/SiriDB/siridb-server/blob/master/siridb.conf)
 
+
+However be aware that the environment variables will overwrite the configuration file settings if both apply to the same setting.
+
+Environmental variables:
 
 Variable | Default | Description
 -------- | ------- | -----------
@@ -31,10 +33,3 @@ Variable | Default | Description
 `SIRIDB_PIPE_CLIENT_NAME` | `siridb_client.sock` | SiriDB will bind the client named pipe in this location.
 `HTTP_STATUS_PORT` | `0` | When the HTTP status port is not set (or 0), the service will not start. Otherwise the HTTP requests `/status`, `/ready` and `/healthy` are available which can be used for readiness and liveness requests. Example usage using wget: wget -q -O - http://siridb-server.local:8080/status
 `SIRIDB_HTTP_API_PORT` | `0` | When the HTTP API port is not set (or 0), the API service will not start. Otherwise the HTTP POST requests can be user to insert or query data points.
-
-
-## Service account
-Service accounts are used for managing databases. A service account is a user on a SiriDB server that never has access to a SiriDB database. We call users with access to a database 'database users'. We keep these accounts seperate because database accounts exist in a database which possible extends over multiple SiriDB servers.
-
-## Database user
-

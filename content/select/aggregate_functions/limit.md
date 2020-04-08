@@ -1,16 +1,29 @@
 ---
 title: "limit"
-weight: 23
+weight: 26
 ---
+
+Returns no more than the provided number of points and in case more points are found the aggregation function is used to reduce the number of points.
+
+### Function
 
 Syntax:
 
     limit(max_points, aggr_function)
 
+### Arguments
+
+ Arguments   | Description
+ ----------- | -----------
+max_points | Maximum number of points that gets returned.
+aggr_function | Aggregation function used if needed.
+
+### Return value
+
 Returns at most `max_points` and uses a given aggregation function to reduce
 the number of points if needed.
 
-Example:
+### Example
 
     # Returns at most 100 points for 'my-series'. The original values are
     # returned in case hundred or less points are found. In case more points

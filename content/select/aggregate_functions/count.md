@@ -1,9 +1,11 @@
 ---
 title: "count"
-weight: 17
+weight: 20
 ---
 
-Returns the number of points.
+Returns the number of points over a time window.
+
+If no time window is provided it returns the total number of points in the series.
 
 ### Function
 
@@ -15,7 +17,7 @@ Syntax:
 
  Arguments   | Description
  ----------- | -----------
- ts (optional) | A timestamp. It determines the end of the time span over which the number of point are counted. If there are points beyond the end point, they will be captured in a second time span that ends at `ts+(ts-1970)`.
+ ts (optional) | Time window. It can also be a timestamp that determines the end of the first time bucket starting at 1970-01-01.
 
 ### Return value
 

@@ -2,6 +2,9 @@ getting_started
     ubuntu
     build_from_source
     configuration
+overview
+    service_account
+    database_user
 connect
     http_api
     python

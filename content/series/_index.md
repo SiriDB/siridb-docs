@@ -1,6 +1,6 @@
 ---
 title: "Series"
-weight: 37
+weight: 40
 chapter: true
 ---
 

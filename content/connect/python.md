@@ -1,6 +1,6 @@
 ---
-title: "python"
-weight: 7
+title: "Python"
+weight: 10
 ---
 
 

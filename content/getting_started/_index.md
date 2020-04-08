@@ -6,3 +6,4 @@ chapter: true
 
 # Getting started
 
+In this section we are going to explain how to install and configure SiriDB.

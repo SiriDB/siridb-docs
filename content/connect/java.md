@@ -1,6 +1,6 @@
 ---
 title: "Java"
-weight: 12
+weight: 15
 ---
 
 This manual describes how to install and configure SiriDB Connector for Java, a self-contained Java driver for communicating with SiriDB servers, and how to use it for developing database applications.

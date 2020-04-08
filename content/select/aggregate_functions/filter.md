@@ -1,17 +1,27 @@
 ---
 title: "filter"
-weight: 20
+weight: 23
 ---
-
-Syntax:
-
-    filter(<operator> <value>)
-
-Returns an integer, float or string value depending on the series data type.
 
 Filter is used to filter the result by values.
 
-Example:
+### Function
+
+Syntax:
+
+    filter(val_regex_or_condition)
+
+### Arguments
+
+ Arguments   | Description
+ ----------- | -----------
+val_regex_or_condition | A value, regular expression or condition
+
+### Return value
+
+An integer, float or string value depending on the series data type.
+
+### Example
 
     # Select all values from 'series-001' except where the value is 0
     select filter(!= 0) from 'series-001'

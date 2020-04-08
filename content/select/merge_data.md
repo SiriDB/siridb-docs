@@ -1,6 +1,6 @@
 ---
 title: "merge data"
-weight: 34
+weight: 37
 ---
 
 When selecting points from multiple series you can merge the data together in

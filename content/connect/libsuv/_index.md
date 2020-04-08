@@ -1,6 +1,6 @@
 ---
-title: "libsuv (C/C++)"
-weight: 9
+title: "Libsuv (C/C++)"
+weight: 12
 ---
 
 SiriDB Connector using libuv and libsiridb.

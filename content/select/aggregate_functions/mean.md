@@ -1,17 +1,29 @@
 ---
 title: "mean"
-weight: 25
+weight: 28
 ---
+
+Mean is used to calculate the average values per selected time window.
+
+If no time window is provided it returns the mean of the series.
+
+### Function
 
 Syntax:
 
     mean([ts])
 
-Returns a float value.
+### Arguments
 
-Mean is used to calculate the average values per selected time window.
+ Arguments   | Description
+ ----------- | -----------
+ts (optional) | Time window.
 
-Example:
+### Return value
+
+A float value.
+
+### Example
 
     # Get average value of 'series-001' up until now.
     select mean(now) from "series-001" before now

@@ -1,6 +1,6 @@
 ---
-title: "libsiridb (library)"
-weight: 10
+title: "Libsiridb (library)"
+weight: 13
 ---
 
 Libsiridb is a library which can be used to communicate

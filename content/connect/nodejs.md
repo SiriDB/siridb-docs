@@ -1,6 +1,6 @@
 ---
 title: "Node.js"
-weight: 11
+weight: 14
 ---
 
 
@@ -38,6 +38,6 @@ siridb.connect(err => {
 
 ### More info
 
-A more complete description of the node.js-connector can be found via the link below.
+A more complete description of the node.js add-on can be found via the link below.
 
 - https://github.com/SiriDB/siridb-nodejs-addon#readme

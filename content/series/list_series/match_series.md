@@ -1,6 +1,6 @@
 ---
 title: "match series"
-weight: 40
+weight: 43
 ---
 
 Series can be matched using different methods. Groups can help to quickly get the required series even in a database with millions of unique series.

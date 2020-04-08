@@ -1,6 +1,6 @@
 ---
 title: "backup mode"
-weight: 59
+weight: 62
 ---
 
 When a backup_mode is enabled on a SiriDB server, all files in the database

@@ -1,18 +1,28 @@
 ---
 title: "difference"
-weight: 19
+weight: 22
 ---
+
+
+Difference without arguments is used to get the difference between values.
+
+### Function
 
 Syntax:
 
     difference([ts])
 
-Returns an integer or float value depending on the series data type.
+### Arguments
 
-Difference without arguments is used to get the difference between values.
-As an optional argument you can specify a time period. In this case the function returns the difference between the first value and the last value within the time window.
+ Arguments   | Description
+ ----------- | -----------
+ ts (optional) | Time window; the difference between the first value and the last value within the time window.
 
-Example:
+### Return value
+
+An integer or float value depending on the series data type.
+
+### Example
 
     # Select difference between values in series-001.
     select difference() from 'series-001'

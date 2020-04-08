@@ -1,6 +1,6 @@
 ---
 title: "count series"
-weight: 41
+weight: 44
 ---
 
 Syntax:

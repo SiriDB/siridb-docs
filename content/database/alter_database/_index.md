@@ -1,6 +1,6 @@
 ---
 title: "alter database"
-weight: 74
+weight: 77
 ---
 
 Syntax:

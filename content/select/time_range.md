@@ -1,6 +1,6 @@
 ---
 title: "time range"
-weight: 35
+weight: 38
 ---
 
 An optional time range can be given to select only a part of the series data.
