@@ -1,6 +1,6 @@
 ---
 title: "PHP"
-weight: 16
+weight: 21
 ---
 
 An C extension for PHP. Gives access to commands in PHP code to connect to SiriDB Server and query/insert.
@@ -10,7 +10,7 @@ An C extension for PHP. Gives access to commands in PHP code to connect to SiriD
 #### MacOS and Linux
 
 Make sure you have `libsiridb` and `libqpack` insatalled on your system.
-Make sure you have `phpize` available as command
+Make sure you have `phpize` available as command.
 
 Run:
 ```

@@ -1,6 +1,6 @@
 ---
 title: "no access"
-weight: 91
+weight: 96
 ---
 
 Read/use this section when accidentally all access rights to a database are

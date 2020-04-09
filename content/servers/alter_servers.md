@@ -1,6 +1,6 @@
 ---
 title: "alter servers"
-weight: 65
+weight: 70
 ---
 
 Syntax:

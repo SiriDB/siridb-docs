@@ -5,7 +5,7 @@ weight: 4
 
 SiriDB can start with environment variables and/or with a configuration file. By default SiriDB will search for the configuration file in `/etc/siridb/siridb.conf` but alternatively you can specify a custom path by using the `-c/--config` argument.
 
-```
+```bash
 $ siridb-server -c /my/path/siridb.conf
 ```
 An example configuration file can be found here:

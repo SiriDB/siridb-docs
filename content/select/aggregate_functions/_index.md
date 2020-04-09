@@ -1,6 +1,6 @@
 ---
 title: "aggregate functions"
-weight: 19
+weight: 24
 ---
 
 
@@ -54,7 +54,7 @@ Example:
 
 ### Time span argument
 
-Most aggregation functions accept an optional `ts` (time span) argument. When you take a time span of 1w for example. Then there will be 'buckets' created with a length of 1 week. Be aware that the start is always at 1970-01-01. So if you have a time series between 2020-04-06 and 2020-04-21, a `ts` of 1w will result in 3 buckets that end at 2020-04-09, followed by 2020-04-16 and 2020-04-23. So the first bucket does not end a week from April 6th, as you may expect.
+Most aggregation functions accept an optional `ts` (time span) argument. A time span of `1w` for example will create 'buckets' with a length of 1 week. Be aware that the start is always at 1970-01-01. So if you have a time series between 2020-04-06 and 2020-04-21, a `ts` of `1w` will result in 3 buckets that end at 2020-04-09, 2020-04-16 and 2020-04-23. So the first bucket does not end a week from April 6th, as you might expect.
 
 `ts` can also be a timestamp where you can use `now` for example. This determines the end of the first bucket. The beginning starts at 1970-01-01. If there are points beyond that timestamp, they will be captured in subsequent buckets.
 

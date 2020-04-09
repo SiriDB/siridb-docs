@@ -1,6 +1,6 @@
 ---
 title: "Users"
-weight: 70
+weight: 75
 chapter: true
 ---
 

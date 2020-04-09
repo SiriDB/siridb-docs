@@ -1,6 +1,6 @@
 ---
 title: "revoke access"
-weight: 89
+weight: 94
 ---
 
 Syntax:

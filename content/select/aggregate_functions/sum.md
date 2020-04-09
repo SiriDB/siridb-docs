@@ -1,6 +1,6 @@
 ---
 title: "sum"
-weight: 35
+weight: 40
 ---
 
 Sum can be used when you want to know the sum of the values over a period of time.

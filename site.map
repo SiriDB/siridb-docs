@@ -2,9 +2,14 @@ getting_started
     ubuntu
     build_from_source
     configuration
+    start_up_server
 overview
     service_account
     database_user
+    series
+    server_pool_replica
+    buffer
+    shards
 connect
     http_api
     python
@@ -34,8 +39,8 @@ select
         stddev
         sum
         variance
-    merge_data
     time_range
+    merge_data
     timeit_debugging
 series
     list_series

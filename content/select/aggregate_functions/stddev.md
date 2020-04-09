@@ -1,6 +1,6 @@
 ---
 title: "stddev"
-weight: 34
+weight: 39
 ---
 
 Returns the standard deviation which is the square root of its variance.

@@ -1,19 +1,19 @@
 ---
 title: "count shards"
-weight: 49
+weight: 54
 ---
-
-Syntax:
-
-    count shards [size] [where ...]
 
 Count shards returns the number of shards on all *online* servers in a SiriDB
 cluster. This means that offline servers are ignored and replica servers are
 included in the query.
 It's also possible to count the shards size in case you want to see the amount
-of disk-space shards are using.
+of disk-space the shards are using.
 
-Example:
+### Syntax
+
+    count shards [size] [where ...]
+
+### Example
 
     # Get number of shards
     count shards

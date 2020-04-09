@@ -1,23 +1,22 @@
 ---
 title: "Python"
-weight: 10
+weight: 15
 ---
 
 
 The SiriDB Connector is a self-contained Python driver for communicating with SiriDB servers.
-This manual describes how to install and configure SiriDB Connector for Python 3, and how to use it to develop database applications.
 
 ### Installation
 
 From PyPI (recommended)
 
-```
+```bash
 pip install siridb-connector
 ```
 
 From source code
 
-```
+```bash
 python setup.py install
 ```
 

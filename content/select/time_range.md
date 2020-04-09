@@ -1,20 +1,20 @@
 ---
 title: "time range"
-weight: 38
+weight: 42
 ---
 
 An optional time range can be given to select only a part of the series data.
 If no time range is provided SiriDB returns all the data available. As a time
 range we can use *before*, *after* or *between .. and ..*
 
-When using *after* you basically set a *start* time, with *before* a *end* time
-and when using *between .. and ..* you set both a *start* and *end* time.
-Points having the exact the start time are *included* in the result, points
+When using `after` you basically set a *start* time, with `before` an *end* time
+and when using `between .. and ..` you set both a *start* and *end* time.
+Points that have the exact start time are *included* in the result, points
 with the exact end time are *excluded* from the result.
 
 >**Note**
 >
->It's safe to use *now* multiple times in query. SiriDB only calculates *now* one
+>It's safe to use *now* multiple times in a query. SiriDB only calculates *now* one
 >time while processing a query. This way you can be sure that *now* has the
 >same value.
 

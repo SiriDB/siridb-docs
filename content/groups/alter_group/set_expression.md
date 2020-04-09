@@ -1,11 +1,11 @@
 ---
 title: "set expression"
-weight: 57
+weight: 62
 ---
 
 Change the regular expression for a group.
 
-Example:
+### Example
 
 	# Create group `linux`
 	create group `linux` for /linux.*/

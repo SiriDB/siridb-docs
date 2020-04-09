@@ -1,6 +1,6 @@
 ---
 title: "alter user"
-weight: 75
+weight: 80
 ---
 
 Syntax:

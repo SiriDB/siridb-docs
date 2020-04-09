@@ -1,6 +1,6 @@
 ---
 title: "Connect"
-weight: 8
+weight: 13
 chapter: true
 ---
 

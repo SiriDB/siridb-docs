@@ -1,13 +1,15 @@
 ---
 title: "list shards"
-weight: 47
+weight: 52
 ---
 
-Syntax:
+Lists shards in the SiriDB cluster.
+
+### Syntax
 
     list shards [columns] [where ...] [limit ...]
 
-Example:
+### Example
 
     # List all shards
     list shards

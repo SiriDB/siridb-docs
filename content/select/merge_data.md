@@ -1,9 +1,9 @@
 ---
 title: "merge data"
-weight: 37
+weight: 43
 ---
 
-When selecting points from multiple series you can merge the data together in
+When selecting points from multiple series you can merge the data together in one
 result. Most of the time you also want to provide an aggregate function with the
 merge so series get really merged into one series. Even with merge it's still
 possible to use aggregate functions on the series before they are merged.
@@ -27,7 +27,7 @@ possible to use aggregate functions on the series before they are merged.
 >but the last one will be faster, assuming you are using a SiriDB cluster and
 >/series.*/ contains multiple series spread out over multiple pools.
 
-Examples:
+## Example
 
 >**Note**
 >

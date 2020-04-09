@@ -1,18 +1,18 @@
 ---
 title: "count series"
-weight: 44
+weight: 49
 ---
-
-Syntax:
-
-    count series [length] [match_series] [where ...]
 
 Count series in the SiriDB cluster. For more information about how to select
 series see [list series](../list_series).
 
 Count series length gives the total number of points for the selected series.
 
-Examples:
+### Syntax
+
+    count series [length] [match_series] [where ...]
+
+### Example
 
     # Get number of series
     count series

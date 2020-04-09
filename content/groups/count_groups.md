@@ -1,15 +1,15 @@
 ---
 title: "count groups"
-weight: 53
+weight: 58
 ---
-
-Syntax:
-
-	count groups [where ...]
 
 Count groups returns the number of groups defined in the database.
 
-Example:
+### Syntax
+
+	count groups [where ...]
+
+### Example
 
 	# Get number of groups
 	count groups

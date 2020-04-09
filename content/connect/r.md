@@ -1,6 +1,6 @@
 ---
 title: "R"
-weight: 17
+weight: 22
 ---
 
 R-connector for communicating with a SiriDB Database
@@ -37,6 +37,6 @@ siridb$connect(function(err) {
 
 ### More info
 
-A more complete description of the java-connector can be found via the link below.
+A more complete description of the R-connector can be found via the link below.
 
 - https://github.com/SiriDB/siridb-connector-r#readme

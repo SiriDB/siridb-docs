@@ -1,15 +1,16 @@
 ---
 title: "drop groups"
-weight: 59
+weight: 64
 ---
-
-Syntax:
-
-	drop group `groupname`
 
 Drops an existing group.
 
-Example:
+### Syntax
+
+	drop group `groupname`
+
+
+### Example
 
 	# Drop group `linux`
 	drop group `linux`

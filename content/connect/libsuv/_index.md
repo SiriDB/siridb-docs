@@ -1,9 +1,9 @@
 ---
 title: "Libsuv (C/C++)"
-weight: 12
+weight: 17
 ---
 
-SiriDB Connector using libuv and libsiridb.
+SiriDB Connector using [libuv](http://libuv.org/) and [libsiridb](./libsiridb).
 
 ### Installation
 

@@ -1,6 +1,6 @@
 ---
 title: "set name"
-weight: 58
+weight: 63
 ---
 
 Change the name for a group.
@@ -10,7 +10,7 @@ Change the name for a group.
 >This statement expects a normal string using single or double quotes.
 >The reason is that 'set name' expects a string and not a group.
 
-Example:
+### Example
 
 	# Rename group `linux` to `ubuntu`
 	alter group `linux` set name 'ubuntu'

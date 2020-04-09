@@ -1,6 +1,6 @@
 ---
 title: "min"
-weight: 32
+weight: 37
 ---
 
 Min is the opposite of max, you identify the lowest value in the selected time window. If no time window is provided it returns the lowest value of the series.

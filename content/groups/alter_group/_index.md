@@ -1,13 +1,15 @@
 ---
 title: "alter group"
-weight: 56
+weight: 61
 ---
 
-Syntax:
+Alter the name or regular expression of a group.
+
+### Syntax
 
 	alter group `groupname` set <option>
 
-Valid options are:
+See:
 
  - [set_expression](./set_expression)
  - [set_name](./set_name)

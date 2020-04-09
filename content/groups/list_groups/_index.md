@@ -1,9 +1,15 @@
 ---
 title: "list groups"
-weight: 54
+weight: 59
 ---
 
-Syntax:
+Lists groups in the SiriDB cluster.
+
+### Syntax
 
 	list groups [columns] [where ...] [limit ...]
 
+### Example
+
+	# List all groups
+	list groups

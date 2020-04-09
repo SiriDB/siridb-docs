@@ -1,23 +1,24 @@
 ---
 title: "HTTP"
-weight: 9
+weight: 14
 ---
 
 Before using the HTTP API, make sure at least one node has the HTTP API port enabled.
-By default the API port is disabled, this can changed
-with the `http_api_port` in the [configuration file](https://github.com/thingsdb/ThingsDB/blob/master/thingsdb.example.conf)
-or with the `SIRIDB_HTTP_API_PORT` environment variable.
+By default the API port is disabled, this can be changed
+by setting `http_api_port` in the [configuration file](https://github.com/thingsdb/ThingsDB/blob/master/thingsdb.example.conf)
+or by setting the `SIRIDB_HTTP_API_PORT` environment variable.
 
-The API has support for [JSON](https://www.json.org) and can be used to perform queries.
+The API has support for both [JSON](https://www.json.org) and [qpack](https://github.com/transceptor-technology/qpack) and can be used to perform service requests, inserts and queries.
 
 ## Headers
 
-The header field `Content-Type` is required and needs `application/json`.
+The header field `Content-Type` is required and needs `application/json` or `application/qpack`.
 
 ## Authentication
 
 The HTTP API has supports for **basic** authentication: `--header 'Authorization: Basic c2E6c2lyaQ=='`.
-The `Basic c2E6c2lyaQ==` stands for the default service account `sa` with password `siri` base64 encoded.
+
+`c2E6c2lyaQ==` translates to the default service account `sa:siri` base64 decoded. Or in case of an insert or query request you need to authenticate using your username:password; in case of the default database user `iris:siri`, this would be `aXJpczpzaXJp` base64 encoded.
 
 ## URIs
 
@@ -75,14 +76,22 @@ curl --location --request POST 'http://localhost:9020/query/dbtest' \
 --header 'Authorization: Basic aXJpczpzaXJp' \
 --header 'Content-Type: text/plain' \
 --data-raw '{
-	"q": "select * from '\''aggr'\''",
+	"q": "select count() from '\''aggr'\''",
 	"t": "ms"
 }'
 ```
 
-An optional `{"t": "<TIME_PRECISION>"}` may be used, where `<TIME_PRECISION>` may be one of s, ms, us or ns. (seconds, milliseconds, microseconds or nanoseconds)
-If it is not provided then the timestamp precision is set to the database default.
+> Possible response
 
+```json
+    {"aggr":[
+            [1588450390000,23]
+        ]
+    }
+```
+
+An optional `{"t": "<TIME_PRECISION>"}` may be used, where `<TIME_PRECISION>` may be one of s, ms, us or ns. (seconds, milliseconds, microseconds or nanoseconds).
+If it is not provided then the timestamp precision is set to the database default.
 
 ### Insert request
 
@@ -97,3 +106,10 @@ curl --location --request POST 'http://localhost:9020/insert/dbtest' \
         [1578933223, 123]
     ]
 }'
+```
+
+> Possible response
+
+```json
+    {"success_msg":"Successfully inserted 2 point(s)."}
+```

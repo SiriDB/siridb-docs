@@ -1,6 +1,6 @@
 ---
 title: "first"
-weight: 24
+weight: 29
 ---
 
 Returns the first value in each `ts` time window. Or if no time window is provided it just returns the first value of the series.

@@ -1,15 +1,12 @@
 ---
 title: "Libsiridb (library)"
-weight: 13
+weight: 18
 ---
 
 Libsiridb is a library which can be used to communicate
 with [SiriDB](https://github.com/transceptor-technology/siridb-server) using
 the C program language. This library contains useful functions but does not
-handle the connection itself. When using
-[libuv](http://libuv.org/) you should look at
-[libsuv](https://github.com/SiriDB/libsuv#readme) which is a SiriDB
-connector build on top of libuv and libsiridb.
+handle the connection itself.
 
 ### Installation
 

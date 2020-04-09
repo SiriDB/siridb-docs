@@ -1,13 +1,13 @@
 ---
 title: "Golang"
-weight: 11
+weight: 16
 ---
 
 A SiriDB-Connector for the Go language
 
 ### Installation
 
-Simple install the package to your [$GOPATH](https://github.com/golang/go/wiki/GOPATH "GOPATH") with the [go tool](https://golang.org/cmd/go/ "go command") from shell:
+Install the package to your [$GOPATH](https://github.com/golang/go/wiki/GOPATH "GOPATH") with the [go tool](https://golang.org/cmd/go/ "go command") from shell:
 ```bash
 $ go get github.com/SiriDB/go-siridb-connector
 ```
@@ -143,40 +143,6 @@ func main() {
 	// wait for the channel
 	<-ok
 }
-```
-
-#### Logging
-Both a `Connection` and a `Client` can send logging to the standard output *or* to a channel for custom log handling.
-
-For example you can create you own log handler like this:
-```go
-func printLogs(logCh chan string) {
-	for {
-		msg := <-logCh
-		fmt.Printf("Log: %s\n", msg)
-	}
-}
-```
-And set-up the channel like this:
-```go
-logCh := make(chan string)
-go printLogs(logCh)
-```
-
-If you plan to use the log channel with a `Connection` you should use the `.LogCh` property. For example:
-```go
-conn := siridb.NewConnection(...) // create a new connection
-conn.LogCh = logCh // set-up custom log channel
-```
-The `Client` simple accepts the channel as argument. For example:
-```go
-client := siridb.NewClient(
-	"user",
-	"password",
-	"database",
-	[][]interface{}{...}, // array of servers, see SiriDB client for more info
-	logCh, // logCh is allowed to be nil for logging to the standard output
-)
 ```
 
 ### More info
