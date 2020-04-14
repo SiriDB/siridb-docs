@@ -1,14 +1,13 @@
 ---
 title: "difference"
-weight: 27
+weight: 30
 ---
 
+The difference between the first value and the last value within the time window.
 
-Difference without arguments is used to get the difference between values.
+Difference without a time span argument will return the difference between values.
 
 ### Function
-
-Syntax:
 
     difference([ts])
 

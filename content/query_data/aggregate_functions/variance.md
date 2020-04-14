@@ -1,6 +1,6 @@
 ---
 title: "variance"
-weight: 41
+weight: 44
 ---
 
 Returns the sample variance of data, an iterable of at least two real-valued numbers. Variance is a measure of the variability (spread or dispersion) of data. A large variance indicates that the data is spread out; a small variance indicates it is clustered closely around the mean.
@@ -8,8 +8,6 @@ Returns the sample variance of data, an iterable of at least two real-valued num
 If no time window is provided it returns the variance of the series.
 
 ### Function
-
-Syntax:
 
      variance([ts])
 

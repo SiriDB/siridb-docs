@@ -1,13 +1,11 @@
 ---
 title: "max"
-weight: 32
+weight: 35
 ---
 
 Max can be used to identify the highest value in the selected time window. If no time window is provided it returns the highest value of the series.
 
 ### Function
-
-Syntax:
 
     max([ts])
 

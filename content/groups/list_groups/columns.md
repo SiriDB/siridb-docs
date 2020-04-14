@@ -1,6 +1,6 @@
 ---
 title: "columns"
-weight: 60
+weight: 61
 ---
 
 Valid columns are:
@@ -11,7 +11,7 @@ Valid columns are:
 
 When no columns are provided the default is used. (name)
 
-Examples:
+### Examples
 
 	# View all groups
 	list groups

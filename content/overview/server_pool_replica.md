@@ -4,7 +4,7 @@ weight: 10
 ---
 
 
-SiriDB can distribute time series across multiple pools and for redundancy each pool can have two servers. If one server in a pool fails; the other server, which is a replica, will still be able to handle all requests so the database can still be used. This is also helpful in case you want to install a new version of SiriDB. By upgrading one server in each pool at the time, upgrading can be done without any downtime.
+SiriDB can distribute time series across multiple **pools** and for redundancy each pool can have two **servers**. If one server in a pool fails; the other server, which is a **replica**, will still be able to handle all requests so the database can still be used. This is also helpful in case you want to install a new version of SiriDB. By upgrading one server in each pool at a time, upgrading can be done without any downtime.
 
 ![SiriDB cluster](../../images/siridb-cluster.png)
 

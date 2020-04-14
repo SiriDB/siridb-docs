@@ -1,6 +1,6 @@
 ---
 title: "drop threshold"
-weight: 83
+weight: 89
 ---
 
 This value is used to protect you from accidentally dropping data from SiriDB.
@@ -14,7 +14,7 @@ checked against the pool receiving your query. The default threshold value is
 >because these are the only queries where we allow to drop multiple
 >entries at once.
 
-Example:
+### Examples
 
 	# Do not allow dropping more than 10% series or shards at once
 	alter database set drop_threshold 0.1

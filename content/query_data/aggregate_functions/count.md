@@ -1,6 +1,6 @@
 ---
 title: "count"
-weight: 25
+weight: 28
 ---
 
 Returns the number of points over a time window.
@@ -8,8 +8,6 @@ Returns the number of points over a time window.
 If no time window is provided it returns the total number of points in the series.
 
 ### Function
-
-Syntax:
 
     count([ts])
 

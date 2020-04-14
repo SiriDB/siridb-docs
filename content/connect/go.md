@@ -91,7 +91,7 @@ func main() {
 ```
 
 #### SiriDB client
-And one example for using the client. A client can be used for connecting to multiple siridb servers. Queries and inserts will be send to a random siridb server. When a connection is lost, it will retry to setup the connection each 30 seconds.
+And one example for using the client. A client can be used for connecting to multiple SiriDB servers. Queries and inserts will be send to a random SiriDB server. When a connection is lost, it will retry to setup the connection each 30 seconds.
 ```go
 package main
 

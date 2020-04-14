@@ -1,13 +1,11 @@
 ---
 title: "limit"
-weight: 31
+weight: 34
 ---
 
 Returns no more than the provided number of points and in case more points are found the aggregation function is used to reduce the number of points.
 
 ### Function
-
-Syntax:
 
     limit(max_points, aggr_function)
 

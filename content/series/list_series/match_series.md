@@ -1,11 +1,11 @@
 ---
 title: "match series"
-weight: 48
+weight: 49
 ---
 
 Series can be matched using different methods. [Groups](../../../groups) can help to quickly get the required series even in a database with millions of unique series.
 
-Syntax:
+### Syntax
 
     <series_name | regular_expression | group> [update_function <match_series>]
 
@@ -44,7 +44,7 @@ Example:
 #### Group
 
 [Groups](../../../groups) are basically cached regular expression and can be used together with normal
-regular expressions. When you use a regular expression to match series in a group it's
+regular expressions. When you use a regular expression to match series in a group, it's
 best to first select the group and then the regular expression. This way the regular
 expression only needs to validate series inside the group.
 

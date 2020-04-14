@@ -1,6 +1,6 @@
 ---
 title: "drop shards"
-weight: 55
+weight: 56
 ---
 
 Drops an existing shard using the shard id (sid). Use `list shards` for an

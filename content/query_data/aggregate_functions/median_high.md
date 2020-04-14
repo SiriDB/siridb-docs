@@ -1,6 +1,6 @@
 ---
 title: "median high"
-weight: 35
+weight: 38
 ---
 
 
@@ -9,8 +9,6 @@ The high median is always a member of the data set. When the number of data poin
 If no time window is provided it returns the median_high of the series.
 
 ### Function
-
-Syntax:
 
     median_high([ts])
 

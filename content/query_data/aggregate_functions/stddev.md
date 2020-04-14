@@ -1,15 +1,11 @@
 ---
 title: "stddev"
-weight: 39
+weight: 42
 ---
 
-Returns the standard deviation which is the square root of its variance.
-
-If no time window is provided it returns the standard deviation of the series.
+Returns the standard deviation which is the square root of its variance. If no time window is provided it returns the standard deviation of the series.
 
 ### Function
-
-Syntax:
 
     stddev([ts])
 

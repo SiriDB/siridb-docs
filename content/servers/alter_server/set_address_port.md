@@ -1,9 +1,9 @@
 ---
 title: "set address/port"
-weight: 69
+weight: 70
 ---
 
-Usually its not required to change the servers address or port using this
+Usually it's not required to change the server's address or port using this
 command but instead you should change the address/port in the configuration
 file (default /etc/siridb/siridb.conf). When the server gets online it will
 contact all SiriDB servers and they will automatically update to the new
@@ -12,7 +12,7 @@ updated at once, we need to tell at least one SiriDB server where to find the
 other server(s). This should be the only situation when this command is
 required.
 
-Example:
+### Example
 
     # srv1 and srv2 both have changed to another address so
     # they are not able find each other. The command below

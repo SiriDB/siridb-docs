@@ -1,16 +1,16 @@
 ---
 title: "grant access"
-weight: 93
+weight: 99
 ---
-
-Syntax:
-
-	grant <access> to user 'username'
 
 Grants access rights to a user. For information about access rights
 see [access rights](../access_rights).
 
-Example:
+### Syntax
+
+	grant <access> to user 'username'
+
+### Example
 
 	# Grant drop and create to user "iris"
 	grant drop, create to user "iris"

@@ -1,6 +1,6 @@
 ---
 title: "columns"
-weight: 79
+weight: 85
 ---
 
 Valid columns are:
@@ -10,7 +10,7 @@ Valid columns are:
 
 When no columns are provided the default is used. (name, access)
 
-Example:
+### Examples
 
     # List all users
     list users

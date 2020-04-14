@@ -1,6 +1,6 @@
 ---
 title: "count shards"
-weight: 54
+weight: 55
 ---
 
 Count shards returns the number of shards on all *online* servers in a SiriDB
@@ -13,7 +13,7 @@ of disk-space the shards are using.
 
     count shards [size] [where ...]
 
-### Example
+### Examples
 
     # Get number of shards
     count shards

@@ -1,15 +1,11 @@
 ---
 title: "mean"
-weight: 33
+weight: 36
 ---
 
-Mean is used to calculate the average values per selected time window.
-
-If no time window is provided it returns the mean of the series.
+Mean is used to calculate the average values per selected time window. If no time window is provided it returns the mean of the series.
 
 ### Function
-
-Syntax:
 
     mean([ts])
 

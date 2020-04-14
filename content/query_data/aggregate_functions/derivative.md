@@ -1,6 +1,6 @@
 ---
 title: "derivative"
-weight: 26
+weight: 29
 ---
 
 The derivative can be used to get the difference per time unit. When no optional arguments
@@ -8,8 +8,6 @@ are used the difference per one unit is returned. For example, in a database wit
 precision the return value will be the difference per second.
 
 ### Function
-
-Syntax:
 
    derivative([ts [, ts]])
 

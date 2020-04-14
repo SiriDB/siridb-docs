@@ -1,6 +1,6 @@
 ---
 title: "drop series"
-weight: 50
+weight: 51
 ---
 
 Drops series from SiriDB. Optionally you can use a match and/or where statement
@@ -17,7 +17,7 @@ You can view the current *drop_threshold* with `show drop_threshold`. See [alter
 
 It is also possible to ignore the *drop_threshold* for one request by adding *set ignore_threshold true*.
 
->**Warning**
+>**Tip**
 >
 >Before using a regular expression to drop series, you can check the
 >expression first using `count series` and/or `list series` and see if your
@@ -27,7 +27,7 @@ It is also possible to ignore the *drop_threshold* for one request by adding *se
 
     drop series [series_match] [where ...] [set ignore_threshold true/false]
 
-### Example
+### Examples
 
     # Drop series "series-001"
     drop series "series-001"

@@ -18,7 +18,7 @@ The header field `Content-Type` is required and needs `application/json` or `app
 
 The HTTP API has supports for **basic** authentication: `--header 'Authorization: Basic c2E6c2lyaQ=='`.
 
-`c2E6c2lyaQ==` translates to the default service account `sa:siri` base64 decoded. Or in case of an insert or query request you need to authenticate using your username:password; in case of the default database user `iris:siri`, this would be `aXJpczpzaXJp` base64 encoded.
+`c2E6c2lyaQ==` translates to the default service account `sa:siri`, when base64 decoded. Or in case of an insert or query request you need to authenticate using your username:password; in case of the default database user `iris:siri`, this would be `aXJpczpzaXJp`, when base64 encoded.
 
 ## URIs
 
@@ -70,6 +70,8 @@ curl --location --request POST 'http://localhost:9020/new-database' \
 
 ### Query request
 
+Selecting the number of points in a certain series called 'aggr'.
+
 ```bash
 curl --location --request POST 'http://localhost:9020/query/dbtest' \
 --header 'Content-Type: application/json' \
@@ -90,10 +92,12 @@ curl --location --request POST 'http://localhost:9020/query/dbtest' \
     }
 ```
 
-An optional `{"t": "<TIME_PRECISION>"}` may be used, where `<TIME_PRECISION>` may be one of s, ms, us or ns. (seconds, milliseconds, microseconds or nanoseconds).
+An optional `{"t": "<TIME_PRECISION>"}` may be used, where `<TIME_PRECISION>` can be s, ms, us or ns. (seconds, milliseconds, microseconds or nanoseconds).
 If it is not provided then the timestamp precision is set to the database default.
 
 ### Insert request
+
+Inserting two points in a series.
 
 ```bash
 curl --location --request POST 'http://localhost:9020/insert/dbtest' \

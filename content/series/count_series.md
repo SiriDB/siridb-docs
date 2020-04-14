@@ -1,6 +1,6 @@
 ---
 title: "count series"
-weight: 49
+weight: 50
 ---
 
 Count series in the SiriDB cluster. For more information about how to select
@@ -12,7 +12,7 @@ Count series length gives the total number of points for the selected series.
 
     count series [length] [match_series] [where ...]
 
-### Example
+### Examples
 
     # Get number of series
     count series

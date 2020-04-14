@@ -1,9 +1,9 @@
 ---
 title: "timezones"
-weight: 89
+weight: 95
 ---
 
-For information on how to change the time zone see [alter database](../alter_database).
+For information on how to change the time zone see [alter database](../alter_database/set_timezone).
 
 >**Note**
 >

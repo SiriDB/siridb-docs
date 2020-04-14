@@ -1,14 +1,12 @@
 ---
 title: "last"
-weight: 30
+weight: 33
 ---
 
 
 Returns the last value in each `ts` time window. Or if no time window is provided it just returns the last value of the series.
 
 ### Function
-
-Syntax:
 
     last([ts])
 
@@ -20,7 +18,7 @@ ts (optional) | Time window.
 
 ### Return value
 
-The last value in each `ts` time window or just the last value if no time window is provided.
+An integer, float or string value depending on the series data type.
 
 ### Example
 

@@ -7,4 +7,4 @@ Service accounts are used for managing databases. A service account is a user on
 
 You can manage the server account(s) and database(s) via the [SiriDB Admin tool](https://github.com/SiriDB/siridb-admin) or using the [HTTP API](../../connect/http_api).
 
-Every SiriDB server has already one default service account installed on it:  **sa** user with password **siri**.
+Every SiriDB server has already one default service account installed:  **sa** user with password **siri**.

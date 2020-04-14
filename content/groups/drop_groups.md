@@ -1,6 +1,6 @@
 ---
 title: "drop groups"
-weight: 64
+weight: 65
 ---
 
 Drops an existing group.

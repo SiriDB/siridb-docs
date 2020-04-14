@@ -1,6 +1,6 @@
 ---
 title: "time range"
-weight: 42
+weight: 25
 ---
 
 An optional time range can be given to select only a part of the series data.
@@ -18,7 +18,7 @@ with the exact end time are *excluded* from the result.
 >time while processing a query. This way you can be sure that *now* has the
 >same value.
 
-Examples:
+### Examples
 
     # Select all points from "series-001" in the last 24h
     select * from "series-001" after now - 1d

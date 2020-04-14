@@ -1,15 +1,15 @@
 ---
 title: "count users"
-weight: 77
+weight: 83
 ---
-
-Syntax:
-
-    count users [where ...]
 
 Count users returns the number of users.
 
-Examples:
+### Syntax
+
+    count users [where ...]
+
+### Examples
 
     # Get number of users
     count users

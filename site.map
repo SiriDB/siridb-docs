@@ -20,7 +20,10 @@ connect
     java
     php
     r
-select
+query_data
+    select
+        time_range
+        merge_data
     aggregate_functions
         count
         derivative
@@ -39,8 +42,6 @@ select
         stddev
         sum
         variance
-    time_range
-    merge_data
     timeit_debugging
 series
     list_series
@@ -67,11 +68,16 @@ servers
         backup_mode
         log_level
         set_address_port
+        set_tee_pipe_name
     alter_servers
     count_servers
     list_servers
         columns
     drop_servers
+pools
+    count_pools
+    list_pools
+        columns
 users
     create_user
     count_users
@@ -93,4 +99,3 @@ access
     grant_access
     revoke_access
     restore_access
-    no_access

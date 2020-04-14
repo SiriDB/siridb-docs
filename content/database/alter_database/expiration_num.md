@@ -1,11 +1,13 @@
 ---
 title: "expiration num"
-weight: 85
+weight: 91
 ---
 
-This settings should be an integer value with the time precision of the database.
+When the *expiration_num* is enabled than number shards that are older than the provided value will be dropped. This setting should be an integer value with the time precision of the database.
 
-For example:
+By default this setting is disabled.
+
+### Examples
 
 ```siridb
 # Suppose we have a second precision database,
@@ -13,12 +15,11 @@ For example:
 alter database set expiration_num 3600*24*7*4
 
 # Disable shard expiration:
-    alter database set expiration_num 0
+alter database set expiration_num 0
 ```
 
-When setting the expiration so that more than the drop_threshold of the current shards will be dropped, an error is displayed and set ignore_threshold true may be added to ignore this warning.
+After setting the expiration_num that results in more shards being dropped than the drop_threshold allows, an error is displayed and *set ignore_threshold true* may be added to ignore this warning.
 
-Example:
 ```siridb
-set expiration_num 52w set ignore_threshold true
+alter database set expiration_num 52w set ignore_threshold true
 ```

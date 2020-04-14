@@ -1,6 +1,6 @@
 ---
 title: "columns"
-weight: 53
+weight: 54
 ---
 
 Valid columns are:
@@ -19,7 +19,7 @@ Valid columns are:
 
 When no columns are provided the default is used. (sid, pool, server, start, end)
 
-Example:
+### Examples
 
     # List all shards
     list shards

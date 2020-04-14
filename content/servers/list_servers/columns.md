@@ -1,6 +1,6 @@
 ---
 title: "columns"
-weight: 73
+weight: 75
 ---
 
 Valid columns are:
@@ -30,13 +30,14 @@ Valid columns are:
 - startup_time: Time it takes to start the server.
 - status: Current server status.
 - sync_progress: Return synchronization status while creating a new replica server.
+- tee_pipe_name:
 - uptime: Uptime in seconds.
 - uuid: Server UUID (unique ID)
 - version: SiriDB version
 
 When no columns are provided the default is used. (name, pool, version, online, status)
 
-examples
+### Examples
 --------
 
     # list all servers in a SiriDB cluster.

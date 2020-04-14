@@ -1,9 +1,9 @@
 ---
 title: "set timezone"
-weight: 88
+weight: 94
 ---
 
-Change the timezone for the database. When using a date/time in a query SiriDB
+Change the timezone for the database. When using a date/time in a query, SiriDB
 needs to convert the given date to a timestamp. Default **NAIVE** is used which
 means SiriDB is naive about the time zone and acts as if it's a local time.
 
@@ -21,7 +21,7 @@ means SiriDB is naive about the time zone and acts as if it's a local time.
 
 For a list of valid time zones see [timezones](../timezones).
 
-Example:
+### Examples
 
 	# Set the default time zone to UTC
 	alter database set timezone 'UTC'

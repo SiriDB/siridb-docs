@@ -1,13 +1,10 @@
 ---
 title: "list users"
-weight: 78
+weight: 84
 ---
 
-Syntax:
+List the users of SiriDB.
+
+### Syntax
 
     list users [columns] [where ...] [limit ...]
-
-Example:
-
-    # List all users
-     list users

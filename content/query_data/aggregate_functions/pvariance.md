@@ -1,6 +1,6 @@
 ---
 title: "pvariance"
-weight: 38
+weight: 41
 ---
 
 Returns the population variance of data, a non-empty iterable of real-valued numbers. Variance is a measure of the variability (spread or dispersion) of data. A large variance indicates that the data is spread out; a small variance indicates it is clustered closely around the mean.
@@ -8,8 +8,6 @@ Returns the population variance of data, a non-empty iterable of real-valued num
 If no time window is provided it returns the pvariance of the series.
 
 ### Function
-
-Syntax:
 
     pvariance([ts])
 

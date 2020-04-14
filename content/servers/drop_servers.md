@@ -1,11 +1,7 @@
 ---
 title: "drop servers"
-weight: 74
+weight: 76
 ---
-
-Syntax:
-
-    drop server <server_uuid / server_name>
 
 Can be used to remove a server. We only allow dropping a server which has a
 replica since scaling down in number of pools is currently not supported.
@@ -19,7 +15,11 @@ A server needs to be turned off before it can be dropped.
 >servers are not working in this case but when dropping **siri2**, **siri1** removes
 >the *'wait for synchronization'* status and starts accepting inserts and queries.
 
-Example:
+### Syntax
+
+    drop server <server_uuid / server_name>
+
+### Example
 
     # Drop server 'siri2:9010'. We first need to turn off
     # this server and make sure the server has a replica.

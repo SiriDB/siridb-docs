@@ -1,6 +1,6 @@
 ---
 title: "columns"
-weight: 47
+weight: 48
 ---
 
 Valid columns are:
@@ -14,7 +14,7 @@ Valid columns are:
 
 When no columns are provided the default is used. (name)
 
-Examples:
+### Examples
 
     # list all series starting with "linux" by name
     list series /linux.*/

@@ -1,13 +1,11 @@
 ---
 title: "filter"
-weight: 28
+weight: 31
 ---
 
-Filter is used to filter the result by values.
+Filter is used to filter the result by testing it to a value, regular expression or condition.
 
 ### Function
-
-Syntax:
 
     filter(val_regex_or_condition)
 
