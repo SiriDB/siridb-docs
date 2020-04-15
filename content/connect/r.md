@@ -1,6 +1,6 @@
 ---
 title: "R"
-weight: 22
+weight: 23
 ---
 
 R-connector for communicating with a SiriDB Database

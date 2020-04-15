@@ -1,6 +1,6 @@
 ---
 title: "count pools"
-weight: 78
+weight: 79
 ---
 
 Count pools in the SiriDB cluster.

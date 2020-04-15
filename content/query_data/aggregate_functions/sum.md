@@ -1,6 +1,6 @@
 ---
 title: "sum"
-weight: 43
+weight: 44
 ---
 
 Sum can be used when you want to know the sum of the values over a period of time. If no time window is provided it returns the sum of the values in the series.

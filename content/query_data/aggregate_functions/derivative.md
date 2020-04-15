@@ -1,6 +1,6 @@
 ---
 title: "derivative"
-weight: 29
+weight: 30
 ---
 
 The derivative can be used to get the difference per time unit. When no optional arguments

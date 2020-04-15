@@ -1,6 +1,6 @@
 ---
 title: "set timezone"
-weight: 94
+weight: 95
 ---
 
 Change the timezone for the database. When using a date/time in a query, SiriDB

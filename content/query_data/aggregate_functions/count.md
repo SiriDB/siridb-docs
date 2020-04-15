@@ -1,6 +1,6 @@
 ---
 title: "count"
-weight: 28
+weight: 29
 ---
 
 Returns the number of points over a time window.

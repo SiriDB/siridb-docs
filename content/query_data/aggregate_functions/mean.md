@@ -1,6 +1,6 @@
 ---
 title: "mean"
-weight: 36
+weight: 37
 ---
 
 Mean is used to calculate the average values per selected time window. If no time window is provided it returns the mean of the series.

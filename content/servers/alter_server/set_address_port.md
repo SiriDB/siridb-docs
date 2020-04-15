@@ -1,6 +1,6 @@
 ---
 title: "set address/port"
-weight: 70
+weight: 71
 ---
 
 Usually it's not required to change the server's address or port using this

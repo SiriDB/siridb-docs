@@ -1,6 +1,6 @@
 ---
 title: "Select"
-weight: 24
+weight: 25
 ---
 
 Selecting data from SiriDB.

@@ -1,6 +1,6 @@
 ---
 title: "filter"
-weight: 31
+weight: 32
 ---
 
 Filter is used to filter the result by testing it to a value, regular expression or condition.

@@ -26,22 +26,22 @@ The following URIs are available.
 
 Service requests:
 
-- /new-database
-- /new-account
-- /change-password
-- /drop-account
-- /new-pool
-- /new-replica
-- /drop-database
-- /get-version
-- /get-accounts
-- /get-databases
+- [/new-database](#new-database)
+- [/new-account](#new-account)
+- [/change-password](#change-password)
+- [/drop-account](#drop-account)
+- [/new-pool](#new-pool)
+- [/new-replica](#new-replica)
+- [/drop-database](#drop-database)
+- [/get-version](#get-version)
+- [/get-accounts](#get-accounts)
+- [/get-databases](#get-databases)
 
 Query request:
-- /query/DBNAME
+- [/query/DBNAME](#query-request)
 
 Insert request:
-- /insert/DBNAME
+- [/insert/DBNAME](#insert-request)
 
 ## Examples
 
@@ -49,10 +49,12 @@ Insert request:
 
 Creating a new database using *curl* with *basic* authentication:
 
+#### new-database
 ```bash
-curl --location --request POST 'http://localhost:9020/new-database' \
+curl --location --request POST 'http://siridb-server-1:9020/new-database' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Basic c2E6c2lyaQ==' \
+--header 'Content-Type: text/plain' \
 --data-raw '{
 	"dbname": "sampledb",
 	"time_precision": "s",
@@ -65,7 +67,167 @@ curl --location --request POST 'http://localhost:9020/new-database' \
 > Possible response
 
 ```json
-"OK"
+    "OK"
+```
+
+#### new-account
+
+```bash
+curl --location --request POST 'http://siridb-server-1:9020/new-account' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Basic c2E6c2lyaQ==' \
+--header 'Content-Type: text/plain' \
+--data-raw '{
+	"account": "bob",
+    "password": "passwd4bob"
+}'
+```
+> Possible response
+
+```json
+    "OK"
+```
+
+#### change-password
+
+```bash
+curl --location --request POST 'http://siridb-server-1:9020/change-password' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Basic c2E6c2lyaQ==' \
+--header 'Content-Type: text/plain' \
+--data-raw '{
+	"account": "bob",
+    "password": "pass"
+}'
+```
+> Possible response
+
+```json
+    "OK"
+```
+
+#### drop-account
+
+```bash
+curl --location --request POST 'http://siridb-server-1:9020/drop-account' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Basic c2E6c2lyaQ==' \
+--header 'Content-Type: text/plain' \
+--data-raw '{
+	"account": "bob"
+}'
+```
+
+> Possible response
+
+```json
+    "OK"
+```
+
+#### new-pool
+
+```bash
+curl --location --request POST 'http://siridb-server-3:9020/new-pool' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Basic c2E6c2lyaQ==' \
+--header 'Content-Type: text/plain' \
+--data-raw '{
+	"dbname": "sampledb",
+    "username": "iris",
+    "password": "siri",
+    "host": "siridb-server-1",
+    "port": 9000
+}'
+```
+
+> Possible response
+
+```json
+    "OK"
+```
+
+#### new-replica
+
+```bash
+curl --location --request POST 'http://siridb-server-2:9020/new-replica' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Basic c2E6c2lyaQ==' \
+--header 'Content-Type: text/plain' \
+--data-raw '{
+	"dbname": "sampledb",
+    "username": "iris",
+    "password": "siri",
+    "host": "siridb-server-1",
+    "port": 9000,
+    "pool": 0
+}'
+```
+
+> Possible response
+
+```json
+    "OK"
+```
+
+#### drop-database
+
+```bash
+curl --location --request POST 'http://siridb-server-1:9020/drop-database' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Basic c2E6c2lyaQ==' \
+--header 'Content-Type: text/plain' \
+--data-raw '{
+	"database": "sampledb",
+    "ignore_offline": false
+}'
+```
+
+> Possible response
+
+```json
+    "OK"
+```
+
+#### get-version
+
+```bash
+curl --location --request GET 'http://siridb-server-1:9020/get-version' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Basic c2E6c2lyaQ=='
+```
+
+> Possible response
+
+```json
+    ["2.0.36-alpha-0"]
+```
+
+#### get-accounts
+
+```bash
+curl --location --request GET 'http://siridb-server-1:9020/get-accounts' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Basic c2E6c2lyaQ=='
+```
+
+> Possible response
+
+```json
+    ["sa","bob"]
+```
+
+#### get-databases
+
+```bash
+curl --location --request GET 'http://siridb-server-1:9020/get-databases' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Basic c2E6c2lyaQ=='
+```
+
+> Possible response
+
+```json
+    ["sampledb"]
 ```
 
 ### Query request
@@ -73,7 +235,7 @@ curl --location --request POST 'http://localhost:9020/new-database' \
 Selecting the number of points in a certain series called 'aggr'.
 
 ```bash
-curl --location --request POST 'http://localhost:9020/query/dbtest' \
+curl --location --request POST 'http://siridb-server-1:9020/query/dbtest' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Basic aXJpczpzaXJp' \
 --header 'Content-Type: text/plain' \
@@ -100,7 +262,7 @@ If it is not provided then the timestamp precision is set to the database defaul
 Inserting two points in a series.
 
 ```bash
-curl --location --request POST 'http://localhost:9020/insert/dbtest' \
+curl --location --request POST 'http://siridb-server-1:9020/insert/dbtest' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Basic aXJpczpzaXJp' \
 --header 'Content-Type: text/plain' \

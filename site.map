@@ -12,6 +12,7 @@ overview
     shards
 connect
     http_api
+    grafana
     python
     go
     libsuv
@@ -99,3 +100,5 @@ access
     grant_access
     revoke_access
     restore_access
+related_projects
+    enodo

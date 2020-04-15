@@ -1,6 +1,6 @@
 ---
 title: "columns"
-weight: 75
+weight: 76
 ---
 
 Valid columns are:
@@ -30,7 +30,7 @@ Valid columns are:
 - startup_time: Time it takes to start the server.
 - status: Current server status.
 - sync_progress: Return synchronization status while creating a new replica server.
-- tee_pipe_name:
+- tee_pipe_name: Name of an existing file to where SiriDB can dump its data.
 - uptime: Uptime in seconds.
 - uuid: Server UUID (unique ID)
 - version: SiriDB version

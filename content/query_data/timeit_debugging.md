@@ -1,6 +1,6 @@
 ---
 title: "timeit (debugging)"
-weight: 45
+weight: 46
 ---
 
 Can be placed in front of any query and will return information about the time it took to process the query.

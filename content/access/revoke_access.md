@@ -1,6 +1,6 @@
 ---
 title: "revoke access"
-weight: 100
+weight: 101
 ---
 
 Revokes access rights from a user. For information about access rights

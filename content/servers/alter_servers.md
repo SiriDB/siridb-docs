@@ -1,11 +1,9 @@
 ---
 title: "alter servers"
-weight: 72
+weight: 73
 ---
 
-You can alter the *tee_pipe_name* and/or *log_level* for *n* servers at once. Changing the
-log level is explained in more detail at [alter server log level](../alter_server/log_level). Changing the
-tee_pipe_name is explained in more detail at [alter server tee_pipe_name](../alter_server/tee_pipe_name).
+You can alter the *tee_pipe_name* and/or *log_level* for *n* servers at once. Changing the tee pipe name and log level is explained in more detail at [alter server](../alter_server).
 
 ### Syntax
 
