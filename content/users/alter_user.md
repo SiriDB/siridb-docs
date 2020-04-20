@@ -1,17 +1,15 @@
 ---
 title: "alter user"
-weight: 30
+weight: 87
 ---
 
-Syntax:
+Change the *name*  or *password* of a user.
 
-	alter user 'username' set <option>
+### Syntax
 
-Valid options are *password* and *name*.
+    alter user 'username' set <option>
 
-Change a user name or password.
+### Example
 
-Example:
-
-	# Change the password for "iris" to "siri"
-	alter user 'iris' set password 'siri'
+    # Change the password for "iris" to "siri"
+    alter user 'iris' set password 'siri'

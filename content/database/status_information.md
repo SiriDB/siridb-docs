@@ -1,9 +1,9 @@
 ---
 title: "status information"
-weight: 33
+weight: 97
 ---
 
-Syntax:
+### Syntax
 
 	show [<option> [,<option> [...]]
 
@@ -44,8 +44,8 @@ See available options for more info on each show command:
 - `show version`: Returns the SiriDB version running on *this* server.
 - `show who_am_i`: Returns the user who is running *this* request.
 
-examples
---------
+
+### Example
 
 	# show the database name and time precision
 	show dbname, time_precision
