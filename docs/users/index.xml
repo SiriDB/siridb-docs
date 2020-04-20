@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Users on SiriDB documentation</title>
+    <link>https://docs.siridb.net/users/</link>
+    <description>Recent content in Users on SiriDB documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://docs.siridb.net/users/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>create user</title>
+      <link>https://docs.siridb.net/users/create_user/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/users/create_user/</guid>
+      <description>Create a new user. This will create a new user without access to SiriDB. For more information on how to grant access to a user see grant access.
+Syntax create user &#39;my-username&#39; set password &#39;my-password&#39;  Examples # This will create a new user &#39;iris&#39; with password &#39;siri&#39; create user &#39;iris&#39; set password &#39;siri&#39; # Grant &amp;quot;read&amp;quot; access to &amp;quot;iris&amp;quot; grant read to user &amp;quot;iris&amp;quot;  </description>
+    </item>
+    
+    <item>
+      <title>count users</title>
+      <link>https://docs.siridb.net/users/count_users/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/users/count_users/</guid>
+      <description>Count users returns the number of users.
+Syntax count users [where ...]  Examples # Get number of users count users # Get number of users not equal to &#39;iris&#39; count users where name != &#39;iris&#39;  Example output:
+{&amp;quot;users&amp;quot;: 6}  </description>
+    </item>
+    
+    <item>
+      <title>alter user</title>
+      <link>https://docs.siridb.net/users/alter_user/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/users/alter_user/</guid>
+      <description>Change the name or password of a user.
+Syntax alter user &#39;username&#39; set &amp;lt;option&amp;gt;  Example # Change the password for &amp;quot;iris&amp;quot; to &amp;quot;siri&amp;quot; alter user &#39;iris&#39; set password &#39;siri&#39;  </description>
+    </item>
+    
+  </channel>
+</rss>

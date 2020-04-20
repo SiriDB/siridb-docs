@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on SiriDB documentation</title>
+    <link>https://docs.siridb.net/series/</link>
+    <description>Recent content in Series on SiriDB documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://docs.siridb.net/series/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>count series</title>
+      <link>https://docs.siridb.net/series/count_series/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/series/count_series/</guid>
+      <description>Count series in the SiriDB cluster. For more information about how to select series see list series.
+Count series length gives the total number of points for the selected series.
+Syntax count series [length] [match_series] [where ...]  Examples # Get number of series count series # Get the total number of points in the database count series length # Get number of series in group `group_server01` count series `group_server01` # Get number of points for series in pool 0 count series length where pool == 0 # Get the number of series which started in the last week count series where start &amp;gt; now - 1w and start &amp;lt;= now  Example output (series):</description>
+    </item>
+    
+    <item>
+      <title>drop series</title>
+      <link>https://docs.siridb.net/series/drop_series/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/series/drop_series/</guid>
+      <description>Drops series from SiriDB. Optionally you can use a match and/or where statement to filter the series you want to drop. For more information about how to match series look at list series.
+SiriDB has a mechanism to protect you from accidentally dropping all (or many) series. This is done with a threshold value. If the server receives a drop request that contains more series than the threshold, the request is denied and you receive an error_msg.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>list users on SiriDB documentation</title>
+    <link>https://docs.siridb.net/users/list_users/</link>
+    <description>Recent content in list users on SiriDB documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://docs.siridb.net/users/list_users/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>columns</title>
+      <link>https://docs.siridb.net/users/list_users/columns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/users/list_users/columns/</guid>
+      <description>Valid columns are:
+ name: User name. access: Access rights assigned to the user.  When no columns are provided the default is used. (name, access)
+Examples # List all users list users # List users with full access list users where access == full  </description>
+    </item>
+    
+  </channel>
+</rss>
