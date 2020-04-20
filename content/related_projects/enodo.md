@@ -21,3 +21,5 @@ The Enodo worker executes fitting and forecasting models/algorithms. It can crea
 
 The Enodo hub communicates and guides both the listener and the worker. It tells the listener to which series it needs to pay attention to, and it tells the worker which series should be analysed.
 Clients can connect to the hub for receiving updates, and polling for data. Also a client can use the hub to alter the data about which series should be watched.
+
+![Enodo overview](../../images/enodo-overview.png)
