@@ -1,0 +1,2777 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.69.0" />
+    <meta name="description" content="SiriDB documentation">
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <title>HTTP :: SiriDB documentation</title>
+
+    
+    <link href="/css/nucleus.css?1587381455" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1587381455" rel="stylesheet">
+    <link href="/css/hybrid.css?1587381455" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1587381455" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1587381455" rel="stylesheet">
+    <link href="/css/auto-complete.css?1587381455" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1587381455" rel="stylesheet">
+    <link href="/css/theme.css?1587381455" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1587381455" rel="stylesheet">
+    
+      <link href="/css/theme-mine.css?1587381455" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1587381455"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/connect/http_api/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a href="/">
+    <img src="/images/siridb-lg.png" alt="Logo">
+</a>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1587381455"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1587381455"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/docs.siridb.net\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1587381455"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/getting_started/" title="Getting started" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/getting_started/">
+          Getting started
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting_started/ubuntu/" title="Ubuntu" class="dd-item ">
+        <a href="/getting_started/ubuntu/">
+        Ubuntu
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting_started/build_from_source/" title="Build from source" class="dd-item ">
+        <a href="/getting_started/build_from_source/">
+        Build from source
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting_started/configuration/" title="Configuration" class="dd-item ">
+        <a href="/getting_started/configuration/">
+        Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting_started/start_up_server/" title="Start up server" class="dd-item ">
+        <a href="/getting_started/start_up_server/">
+        Start up server
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/overview/" title="Overview" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/overview/">
+          Overview
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/overview/service_account/" title="Service account" class="dd-item ">
+        <a href="/overview/service_account/">
+        Service account
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/overview/database_user/" title="Database user" class="dd-item ">
+        <a href="/overview/database_user/">
+        Database user
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/overview/series/" title="Series" class="dd-item ">
+        <a href="/overview/series/">
+        Series
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/overview/server_pool_replica/" title="Server, Pool &amp; Replica" class="dd-item ">
+        <a href="/overview/server_pool_replica/">
+        Server, Pool &amp; Replica
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/overview/buffer/" title="Buffer" class="dd-item ">
+        <a href="/overview/buffer/">
+        Buffer
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/overview/shards/" title="Shards" class="dd-item ">
+        <a href="/overview/shards/">
+        Shards
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/connect/" title="Connect" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/connect/">
+          Connect
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/connect/http_api/" title="HTTP" class="dd-item active">
+        <a href="/connect/http_api/">
+        HTTP
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/connect/grafana/" title="Grafana SiriDB HTTP datasource" class="dd-item ">
+        <a href="/connect/grafana/">
+        Grafana SiriDB HTTP datasource
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/connect/python/" title="Python" class="dd-item ">
+        <a href="/connect/python/">
+        Python
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/connect/go/" title="Golang" class="dd-item ">
+        <a href="/connect/go/">
+        Golang
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/connect/libsuv/" title="Libsuv (C/C&#43;&#43;)" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/connect/libsuv/">
+          Libsuv (C/C&#43;&#43;)
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/connect/libsuv/libsiridb/" title="Libsiridb (library)" class="dd-item ">
+        <a href="/connect/libsuv/libsiridb/">
+        Libsiridb (library)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/connect/nodejs/" title="Node.js" class="dd-item ">
+        <a href="/connect/nodejs/">
+        Node.js
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/connect/java/" title="Java" class="dd-item ">
+        <a href="/connect/java/">
+        Java
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/connect/php/" title="PHP" class="dd-item ">
+        <a href="/connect/php/">
+        PHP
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/connect/r/" title="R" class="dd-item ">
+        <a href="/connect/r/">
+        R
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/query_data/" title="Query data" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/query_data/">
+          Query data
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/query_data/select/" title="Select" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/query_data/select/">
+          Select
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/select/time_range/" title="time range" class="dd-item ">
+        <a href="/query_data/select/time_range/">
+        time range
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/select/merge_data/" title="merge data" class="dd-item ">
+        <a href="/query_data/select/merge_data/">
+        merge data
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/query_data/aggregate_functions/" title="Aggregate functions" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/query_data/aggregate_functions/">
+          Aggregate functions
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/count/" title="count" class="dd-item ">
+        <a href="/query_data/aggregate_functions/count/">
+        count
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/derivative/" title="derivative" class="dd-item ">
+        <a href="/query_data/aggregate_functions/derivative/">
+        derivative
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/difference/" title="difference" class="dd-item ">
+        <a href="/query_data/aggregate_functions/difference/">
+        difference
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/filter/" title="filter" class="dd-item ">
+        <a href="/query_data/aggregate_functions/filter/">
+        filter
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/first/" title="first" class="dd-item ">
+        <a href="/query_data/aggregate_functions/first/">
+        first
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/last/" title="last" class="dd-item ">
+        <a href="/query_data/aggregate_functions/last/">
+        last
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/limit/" title="limit" class="dd-item ">
+        <a href="/query_data/aggregate_functions/limit/">
+        limit
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/max/" title="max" class="dd-item ">
+        <a href="/query_data/aggregate_functions/max/">
+        max
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/mean/" title="mean" class="dd-item ">
+        <a href="/query_data/aggregate_functions/mean/">
+        mean
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/median/" title="median" class="dd-item ">
+        <a href="/query_data/aggregate_functions/median/">
+        median
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/median_high/" title="median high" class="dd-item ">
+        <a href="/query_data/aggregate_functions/median_high/">
+        median high
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/median_low/" title="median low" class="dd-item ">
+        <a href="/query_data/aggregate_functions/median_low/">
+        median low
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/min/" title="min" class="dd-item ">
+        <a href="/query_data/aggregate_functions/min/">
+        min
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/pvariance/" title="pvariance" class="dd-item ">
+        <a href="/query_data/aggregate_functions/pvariance/">
+        pvariance
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/stddev/" title="stddev" class="dd-item ">
+        <a href="/query_data/aggregate_functions/stddev/">
+        stddev
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/sum/" title="sum" class="dd-item ">
+        <a href="/query_data/aggregate_functions/sum/">
+        sum
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/variance/" title="variance" class="dd-item ">
+        <a href="/query_data/aggregate_functions/variance/">
+        variance
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/timeit_debugging/" title="timeit (debugging)" class="dd-item ">
+        <a href="/query_data/timeit_debugging/">
+        timeit (debugging)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/series/" title="Series" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/series/">
+          Series
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/series/list_series/" title="list series" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/series/list_series/">
+          list series
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/series/list_series/columns/" title="columns" class="dd-item ">
+        <a href="/series/list_series/columns/">
+        columns
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/series/list_series/match_series/" title="match series" class="dd-item ">
+        <a href="/series/list_series/match_series/">
+        match series
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/series/count_series/" title="count series" class="dd-item ">
+        <a href="/series/count_series/">
+        count series
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/series/drop_series/" title="drop series" class="dd-item ">
+        <a href="/series/drop_series/">
+        drop series
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/shards/" title="Shards" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/shards/">
+          Shards
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/shards/list_shards/" title="list shards" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/shards/list_shards/">
+          list shards
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/shards/list_shards/columns/" title="columns" class="dd-item ">
+        <a href="/shards/list_shards/columns/">
+        columns
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/shards/count_shards/" title="count shards" class="dd-item ">
+        <a href="/shards/count_shards/">
+        count shards
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/shards/drop_shards/" title="drop shards" class="dd-item ">
+        <a href="/shards/drop_shards/">
+        drop shards
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/groups/" title="Groups" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/groups/">
+          Groups
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/groups/create_group/" title="create group" class="dd-item ">
+        <a href="/groups/create_group/">
+        create group
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/groups/count_groups/" title="count groups" class="dd-item ">
+        <a href="/groups/count_groups/">
+        count groups
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/groups/list_groups/" title="list groups" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/groups/list_groups/">
+          list groups
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/groups/list_groups/columns/" title="columns" class="dd-item ">
+        <a href="/groups/list_groups/columns/">
+        columns
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/groups/alter_group/" title="alter group" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/groups/alter_group/">
+          alter group
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/groups/alter_group/set_expression/" title="set expression" class="dd-item ">
+        <a href="/groups/alter_group/set_expression/">
+        set expression
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/groups/alter_group/set_name/" title="set name" class="dd-item ">
+        <a href="/groups/alter_group/set_name/">
+        set name
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/groups/drop_groups/" title="drop groups" class="dd-item ">
+        <a href="/groups/drop_groups/">
+        drop groups
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/servers/" title="Servers" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/servers/">
+          Servers
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/servers/alter_server/" title="alter server" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/servers/alter_server/">
+          alter server
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/servers/alter_server/backup_mode/" title="set backup mode" class="dd-item ">
+        <a href="/servers/alter_server/backup_mode/">
+        set backup mode
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/servers/alter_server/log_level/" title="set log level" class="dd-item ">
+        <a href="/servers/alter_server/log_level/">
+        set log level
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/servers/alter_server/set_address_port/" title="set address/port" class="dd-item ">
+        <a href="/servers/alter_server/set_address_port/">
+        set address/port
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/servers/alter_server/set_tee_pipe_name/" title="set tee pipe name" class="dd-item ">
+        <a href="/servers/alter_server/set_tee_pipe_name/">
+        set tee pipe name
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/servers/alter_servers/" title="alter servers" class="dd-item ">
+        <a href="/servers/alter_servers/">
+        alter servers
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/servers/count_servers/" title="count servers" class="dd-item ">
+        <a href="/servers/count_servers/">
+        count servers
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/servers/list_servers/" title="list servers" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/servers/list_servers/">
+          list servers
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/servers/list_servers/columns/" title="columns" class="dd-item ">
+        <a href="/servers/list_servers/columns/">
+        columns
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/servers/drop_servers/" title="drop servers" class="dd-item ">
+        <a href="/servers/drop_servers/">
+        drop servers
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/pools/" title="Pools" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/pools/">
+          Pools
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pools/count_pools/" title="count pools" class="dd-item ">
+        <a href="/pools/count_pools/">
+        count pools
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/pools/list_pools/" title="list pools" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/pools/list_pools/">
+          list pools
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pools/list_pools/columns/" title="columns" class="dd-item ">
+        <a href="/pools/list_pools/columns/">
+        columns
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/users/" title="Users" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/users/">
+          Users
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/users/create_user/" title="create user" class="dd-item ">
+        <a href="/users/create_user/">
+        create user
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/users/count_users/" title="count users" class="dd-item ">
+        <a href="/users/count_users/">
+        count users
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/users/list_users/" title="list users" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/users/list_users/">
+          list users
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/users/list_users/columns/" title="columns" class="dd-item ">
+        <a href="/users/list_users/columns/">
+        columns
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/users/alter_user/" title="alter user" class="dd-item ">
+        <a href="/users/alter_user/">
+        alter user
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/database/" title="Database" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/database/">
+          Database
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/database/alter_database/" title="alter database" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/database/alter_database/">
+          alter database
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/database/alter_database/drop_threshold/" title="drop threshold" class="dd-item ">
+        <a href="/database/alter_database/drop_threshold/">
+        drop threshold
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/database/alter_database/expiration_log/" title="expiration log" class="dd-item ">
+        <a href="/database/alter_database/expiration_log/">
+        expiration log
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/database/alter_database/expiration_num/" title="expiration num" class="dd-item ">
+        <a href="/database/alter_database/expiration_num/">
+        expiration num
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/database/alter_database/list_limit/" title="list limit" class="dd-item ">
+        <a href="/database/alter_database/list_limit/">
+        list limit
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/database/alter_database/select_points_limit/" title="select points limit" class="dd-item ">
+        <a href="/database/alter_database/select_points_limit/">
+        select points limit
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/database/alter_database/set_timezone/" title="set timezone" class="dd-item ">
+        <a href="/database/alter_database/set_timezone/">
+        set timezone
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/database/timezones/" title="timezones" class="dd-item ">
+        <a href="/database/timezones/">
+        timezones
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/database/status_information/" title="status information" class="dd-item ">
+        <a href="/database/status_information/">
+        status information
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/access/" title="Access" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/access/">
+          Access
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/access/access_rights/" title="access rights" class="dd-item ">
+        <a href="/access/access_rights/">
+        access rights
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/access/grant_access/" title="grant access" class="dd-item ">
+        <a href="/access/grant_access/">
+        grant access
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/access/revoke_access/" title="revoke access" class="dd-item ">
+        <a href="/access/revoke_access/">
+        revoke access
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/access/restore_access/" title="restore access" class="dd-item ">
+        <a href="/access/restore_access/">
+        restore access
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/related_projects/" title="Related projects" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/related_projects/">
+          Related projects
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/related_projects/enodo/" title="Enodo" class="dd-item ">
+        <a href="/related_projects/enodo/">
+        Enodo
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://siridb.net/"><i class='far fa-window-maximize'></i> Website</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/SiriDB/siridb-server"><i class='fab fa-github'></i> Github repo</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/connect/'>Connect</a> > HTTP
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#headers">Headers</a></li>
+    <li><a href="#authentication">Authentication</a></li>
+    <li><a href="#uris">URIs</a></li>
+    <li><a href="#examples">Examples</a>
+      <ul>
+        <li><a href="#service-request">Service request</a></li>
+        <li><a href="#query-request">Query request</a></li>
+        <li><a href="#insert-request">Insert request</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              HTTP
+            </h1>
+          
+
+        
+
+
+
+<p>Before using the HTTP API, make sure at least one node has the HTTP API port enabled.
+By default the API port is disabled, this can be changed
+by setting <code>http_api_port</code> in the <a href="https://github.com/thingsdb/ThingsDB/blob/master/thingsdb.example.conf">configuration file</a>
+or by setting the <code>SIRIDB_HTTP_API_PORT</code> environment variable.</p>
+<p>The API has support for both <a href="https://www.json.org">JSON</a> and <a href="https://github.com/transceptor-technology/qpack">qpack</a> and can be used to perform service requests, inserts and queries.</p>
+<h2 id="headers">Headers</h2>
+<p>The header field <code>Content-Type</code> is required and needs <code>application/json</code> or <code>application/qpack</code>.</p>
+<h2 id="authentication">Authentication</h2>
+<p>The HTTP API has supports for <strong>basic</strong> authentication: <code>--header 'Authorization: Basic c2E6c2lyaQ=='</code>.</p>
+<p><code>c2E6c2lyaQ==</code> translates to the default service account <code>sa:siri</code>, when base64 decoded. Or in case of an insert or query request you need to authenticate using your username:password; in case of the default database user <code>iris:siri</code>, this would be <code>aXJpczpzaXJp</code>, when base64 encoded.</p>
+<h2 id="uris">URIs</h2>
+<p>The following URIs are available.</p>
+<p>Service requests:</p>
+<ul>
+<li><a href="#new-database">/new-database</a></li>
+<li><a href="#new-account">/new-account</a></li>
+<li><a href="#change-password">/change-password</a></li>
+<li><a href="#drop-account">/drop-account</a></li>
+<li><a href="#new-pool">/new-pool</a></li>
+<li><a href="#new-replica">/new-replica</a></li>
+<li><a href="#drop-database">/drop-database</a></li>
+<li><a href="#get-version">/get-version</a></li>
+<li><a href="#get-accounts">/get-accounts</a></li>
+<li><a href="#get-databases">/get-databases</a></li>
+</ul>
+<p>Query request:</p>
+<ul>
+<li><a href="#query-request">/query/DBNAME</a></li>
+</ul>
+<p>Insert request:</p>
+<ul>
+<li><a href="#insert-request">/insert/DBNAME</a></li>
+</ul>
+<h2 id="examples">Examples</h2>
+<h3 id="service-request">Service request</h3>
+<p>Creating a new database using <em>curl</em> with <em>basic</em> authentication:</p>
+<h4 id="new-database">new-database</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl --location --request POST <span style="color:#e6db74">&#39;http://siridb-server-1:9020/new-database&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Authorization: Basic c2E6c2lyaQ==&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Content-Type: text/plain&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--data-raw <span style="color:#e6db74">&#39;{
+</span><span style="color:#e6db74">	&#34;dbname&#34;: &#34;sampledb&#34;,
+</span><span style="color:#e6db74">	&#34;time_precision&#34;: &#34;s&#34;,
+</span><span style="color:#e6db74">	&#34;buffer_size&#34;: 8192,
+</span><span style="color:#e6db74">	&#34;duration_num&#34;: &#34;1w&#34;,
+</span><span style="color:#e6db74">	&#34;duration_log&#34;: &#34;3d&#34;
+</span><span style="color:#e6db74">}&#39;</span>
+</code></pre></div><blockquote>
+<p>Possible response</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    <span style="color:#e6db74">&#34;OK&#34;</span>
+</code></pre></div><h4 id="new-account">new-account</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl --location --request POST <span style="color:#e6db74">&#39;http://siridb-server-1:9020/new-account&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Authorization: Basic c2E6c2lyaQ==&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Content-Type: text/plain&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--data-raw <span style="color:#e6db74">&#39;{
+</span><span style="color:#e6db74">	&#34;account&#34;: &#34;bob&#34;,
+</span><span style="color:#e6db74">    &#34;password&#34;: &#34;passwd4bob&#34;
+</span><span style="color:#e6db74">}&#39;</span>
+</code></pre></div><blockquote>
+<p>Possible response</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    <span style="color:#e6db74">&#34;OK&#34;</span>
+</code></pre></div><h4 id="change-password">change-password</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl --location --request POST <span style="color:#e6db74">&#39;http://siridb-server-1:9020/change-password&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Authorization: Basic c2E6c2lyaQ==&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Content-Type: text/plain&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--data-raw <span style="color:#e6db74">&#39;{
+</span><span style="color:#e6db74">	&#34;account&#34;: &#34;bob&#34;,
+</span><span style="color:#e6db74">    &#34;password&#34;: &#34;pass&#34;
+</span><span style="color:#e6db74">}&#39;</span>
+</code></pre></div><blockquote>
+<p>Possible response</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    <span style="color:#e6db74">&#34;OK&#34;</span>
+</code></pre></div><h4 id="drop-account">drop-account</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl --location --request POST <span style="color:#e6db74">&#39;http://siridb-server-1:9020/drop-account&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Authorization: Basic c2E6c2lyaQ==&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Content-Type: text/plain&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--data-raw <span style="color:#e6db74">&#39;{
+</span><span style="color:#e6db74">	&#34;account&#34;: &#34;bob&#34;
+</span><span style="color:#e6db74">}&#39;</span>
+</code></pre></div><blockquote>
+<p>Possible response</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    <span style="color:#e6db74">&#34;OK&#34;</span>
+</code></pre></div><h4 id="new-pool">new-pool</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl --location --request POST <span style="color:#e6db74">&#39;http://siridb-server-3:9020/new-pool&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Authorization: Basic c2E6c2lyaQ==&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Content-Type: text/plain&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--data-raw <span style="color:#e6db74">&#39;{
+</span><span style="color:#e6db74">	&#34;dbname&#34;: &#34;sampledb&#34;,
+</span><span style="color:#e6db74">    &#34;username&#34;: &#34;iris&#34;,
+</span><span style="color:#e6db74">    &#34;password&#34;: &#34;siri&#34;,
+</span><span style="color:#e6db74">    &#34;host&#34;: &#34;siridb-server-1&#34;,
+</span><span style="color:#e6db74">    &#34;port&#34;: 9000
+</span><span style="color:#e6db74">}&#39;</span>
+</code></pre></div><blockquote>
+<p>Possible response</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    <span style="color:#e6db74">&#34;OK&#34;</span>
+</code></pre></div><h4 id="new-replica">new-replica</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl --location --request POST <span style="color:#e6db74">&#39;http://siridb-server-2:9020/new-replica&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Authorization: Basic c2E6c2lyaQ==&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Content-Type: text/plain&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--data-raw <span style="color:#e6db74">&#39;{
+</span><span style="color:#e6db74">	&#34;dbname&#34;: &#34;sampledb&#34;,
+</span><span style="color:#e6db74">    &#34;username&#34;: &#34;iris&#34;,
+</span><span style="color:#e6db74">    &#34;password&#34;: &#34;siri&#34;,
+</span><span style="color:#e6db74">    &#34;host&#34;: &#34;siridb-server-1&#34;,
+</span><span style="color:#e6db74">    &#34;port&#34;: 9000,
+</span><span style="color:#e6db74">    &#34;pool&#34;: 0
+</span><span style="color:#e6db74">}&#39;</span>
+</code></pre></div><blockquote>
+<p>Possible response</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    <span style="color:#e6db74">&#34;OK&#34;</span>
+</code></pre></div><h4 id="drop-database">drop-database</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl --location --request POST <span style="color:#e6db74">&#39;http://siridb-server-1:9020/drop-database&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Authorization: Basic c2E6c2lyaQ==&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Content-Type: text/plain&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--data-raw <span style="color:#e6db74">&#39;{
+</span><span style="color:#e6db74">	&#34;database&#34;: &#34;sampledb&#34;,
+</span><span style="color:#e6db74">    &#34;ignore_offline&#34;: false
+</span><span style="color:#e6db74">}&#39;</span>
+</code></pre></div><blockquote>
+<p>Possible response</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    <span style="color:#e6db74">&#34;OK&#34;</span>
+</code></pre></div><h4 id="get-version">get-version</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl --location --request GET <span style="color:#e6db74">&#39;http://siridb-server-1:9020/get-version&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Authorization: Basic c2E6c2lyaQ==&#39;</span>
+</code></pre></div><blockquote>
+<p>Possible response</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    [<span style="color:#e6db74">&#34;2.0.36-alpha-0&#34;</span>]
+</code></pre></div><h4 id="get-accounts">get-accounts</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl --location --request GET <span style="color:#e6db74">&#39;http://siridb-server-1:9020/get-accounts&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Authorization: Basic c2E6c2lyaQ==&#39;</span>
+</code></pre></div><blockquote>
+<p>Possible response</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    [<span style="color:#e6db74">&#34;sa&#34;</span>,<span style="color:#e6db74">&#34;bob&#34;</span>]
+</code></pre></div><h4 id="get-databases">get-databases</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl --location --request GET <span style="color:#e6db74">&#39;http://siridb-server-1:9020/get-databases&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Authorization: Basic c2E6c2lyaQ==&#39;</span>
+</code></pre></div><blockquote>
+<p>Possible response</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    [<span style="color:#e6db74">&#34;sampledb&#34;</span>]
+</code></pre></div><h3 id="query-request">Query request</h3>
+<p>Selecting the number of points in a certain series called &lsquo;aggr&rsquo;.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl --location --request POST <span style="color:#e6db74">&#39;http://siridb-server-1:9020/query/dbtest&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Authorization: Basic aXJpczpzaXJp&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Content-Type: text/plain&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--data-raw <span style="color:#e6db74">&#39;{
+</span><span style="color:#e6db74">	&#34;q&#34;: &#34;select count() from &#39;</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">&#39;aggr&#39;</span><span style="color:#ae81ff">\&#39;</span><span style="color:#e6db74">&#39;&#34;,
+</span><span style="color:#e6db74">	&#34;t&#34;: &#34;ms&#34;
+</span><span style="color:#e6db74">}&#39;</span>
+</code></pre></div><blockquote>
+<p>Possible response</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    {<span style="color:#f92672">&#34;aggr&#34;</span>:[
+            [<span style="color:#ae81ff">1588450390000</span>,<span style="color:#ae81ff">23</span>]
+        ]
+    }
+</code></pre></div><p>An optional <code>{&quot;t&quot;: &quot;&lt;TIME_PRECISION&gt;&quot;}</code> may be used, where <code>&lt;TIME_PRECISION&gt;</code> can be s, ms, us or ns. (seconds, milliseconds, microseconds or nanoseconds).
+If it is not provided then the timestamp precision is set to the database default.</p>
+<h3 id="insert-request">Insert request</h3>
+<p>Inserting two points in a series.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl --location --request POST <span style="color:#e6db74">&#39;http://siridb-server-1:9020/insert/dbtest&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Authorization: Basic aXJpczpzaXJp&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Content-Type: text/plain&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>--data-raw <span style="color:#e6db74">&#39;{
+</span><span style="color:#e6db74">    &#34;my-example-serie&#34;: [
+</span><span style="color:#e6db74">        [1578933215, 42],
+</span><span style="color:#e6db74">        [1578933223, 123]
+</span><span style="color:#e6db74">    ]
+</span><span style="color:#e6db74">}&#39;</span>
+</code></pre></div><blockquote>
+<p>Possible response</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    {<span style="color:#f92672">&#34;success_msg&#34;</span>:<span style="color:#e6db74">&#34;Successfully inserted 2 point(s).&#34;</span>}
+</code></pre></div>
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+    
+        
+            <a class="nav nav-prev" href="/connect/" title="Connect"> <i class="fa fa-chevron-left"></i></a>
+        
+        
+            <a class="nav nav-next" href="/connect/grafana/" title="Grafana SiriDB HTTP datasource" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
+    
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1587381455"></script>
+    <script src="/js/perfect-scrollbar.min.js?1587381455"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1587381455"></script>
+    <script src="/js/jquery.sticky.js?1587381455"></script>
+    <script src="/js/featherlight.min.js?1587381455"></script>
+    <script src="/js/highlight.pack.js?1587381455"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1587381455"></script>
+    <script src="/js/learn.js?1587381455"></script>
+    <script src="/js/hugo-learn.js?1587381455"></script>
+
+    <link href="/mermaid/mermaid.css?1587381455" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1587381455"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

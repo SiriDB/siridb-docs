@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>list series on SiriDB documentation</title>
+    <link>https://docs.siridb.net/series/list_series/</link>
+    <description>Recent content in list series on SiriDB documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://docs.siridb.net/series/list_series/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>columns</title>
+      <link>https://docs.siridb.net/series/list_series/columns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/series/list_series/columns/</guid>
+      <description>Valid columns are:
+ name: Series name pool: Pool where the series is assigned to start: Time-stamp of the first value in the series end: Time-stamp of the last value in the series length: The number of points in a series type: The series type. (&amp;ldquo;integer&amp;rdquo;, &amp;ldquo;float&amp;rdquo; or &amp;ldquo;string&amp;rdquo;)  When no columns are provided the default is used. (name)
+Examples # list all series starting with &amp;quot;linux&amp;quot; by name list series /linux.</description>
+    </item>
+    
+    <item>
+      <title>match series</title>
+      <link>https://docs.siridb.net/series/list_series/match_series/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/series/list_series/match_series/</guid>
+      <description>Series can be matched using different methods. Groups can help to quickly get the required series even in a database with millions of unique series.
+Syntax &amp;lt;series_name | regular_expression | group&amp;gt; [update_function &amp;lt;match_series&amp;gt;]  Series name A series name is a string containing the series name.
+An advantage of using series names in a SiriDB cluster is that we know in which pool the series exists, because SiriDB sends data to a pool based on the series name.</description>
+    </item>
+    
+  </channel>
+</rss>

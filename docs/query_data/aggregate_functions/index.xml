@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aggregate functions on SiriDB documentation</title>
+    <link>https://docs.siridb.net/query_data/aggregate_functions/</link>
+    <description>Recent content in Aggregate functions on SiriDB documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://docs.siridb.net/query_data/aggregate_functions/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>count</title>
+      <link>https://docs.siridb.net/query_data/aggregate_functions/count/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/query_data/aggregate_functions/count/</guid>
+      <description>Returns the number of points over a time window.
+If no time window is provided it returns the total number of points in the series.
+Function count([ts])  Arguments    Arguments Description     ts (optional) Time window. It can also be a timestamp that determines the end of the first time bucket starting at 1970-01-01.    Return value An integer value.
+Example Count can be used to calculate points over a period of time.</description>
+    </item>
+    
+    <item>
+      <title>derivative</title>
+      <link>https://docs.siridb.net/query_data/aggregate_functions/derivative/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/query_data/aggregate_functions/derivative/</guid>
+      <description>The derivative can be used to get the difference per time unit. When no optional arguments are used the difference per one unit is returned. For example, in a database with second precision the return value will be the difference per second.
+Function derivative([ts [, ts]])
+Arguments    Arguments Description     ts (optional) Time unit; difference per given time unit   second ts (optional) Time window; used to get the difference between the first and last value within the given time window.</description>
+    </item>
+    
+    <item>
+      <title>difference</title>
+      <link>https://docs.siridb.net/query_data/aggregate_functions/difference/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/query_data/aggregate_functions/difference/</guid>
+      <description>The difference between the first value and the last value within the time window.
+Difference without a time span argument will return the difference between values.
+Function difference([ts])  Arguments    Arguments Description     ts (optional) Time window; the difference between the first value and the last value within the time window.    Return value An integer or float value depending on the series data type.</description>
+    </item>
+    
+    <item>
+      <title>filter</title>
+      <link>https://docs.siridb.net/query_data/aggregate_functions/filter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/query_data/aggregate_functions/filter/</guid>
+      <description>Filter is used to filter the result by testing it to a value, regular expression or condition.
+Function filter(val_regex_or_condition)  Arguments    Arguments Description     val_regex_or_condition A value, regular expression or condition    Return value An integer, float or string value depending on the series data type.
+Example # Select all values from &#39;series-001&#39; except where the value is 0 select filter(!= 0) from &#39;series-001&#39; # Select all positive values from &#39;series-001&#39; select filter(&amp;gt; 0) from &#39;series-001&#39; # Select all values containing &#39;error&#39; and not &#39;unavailable select filter(~&#39;error&#39;) =&amp;gt; filter(!</description>
+    </item>
+    
+    <item>
+      <title>first</title>
+      <link>https://docs.siridb.net/query_data/aggregate_functions/first/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/query_data/aggregate_functions/first/</guid>
+      <description>Returns the first value in each ts time window. Or if no time window is provided it just returns the first value of the series.
+Function first([ts])  Arguments    Arguments Description     ts (optional) Time window.    Return value An integer, float or string value depending on the series data type.
+Example # Select the first value from &#39;series-001&#39; select first() from &#39;series-001&#39; # Select the first value per day from &#39;series-001&#39; select first(1d) from &#39;series-001&#39; # Select the first value in 2018 from &#39;series-001&#39; select first() from &#39;series-001&#39; after &#39;2018&#39;  </description>
+    </item>
+    
+    <item>
+      <title>last</title>
+      <link>https://docs.siridb.net/query_data/aggregate_functions/last/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/query_data/aggregate_functions/last/</guid>
+      <description>Returns the last value in each ts time window. Or if no time window is provided it just returns the last value of the series.
+Function last([ts])  Arguments    Arguments Description     ts (optional) Time window.    Return value An integer, float or string value depending on the series data type.
+Example # Select the last value from &#39;series-001&#39; select last() from &#39;series-001&#39; # Select the last value per day from &#39;series-001&#39; select last(1d) from &#39;series-001&#39; # Select the last value in 2017 from &#39;series-001&#39; select last() from &#39;series-001&#39; before &#39;2018&#39;  </description>
+    </item>
+    
+    <item>
+      <title>limit</title>
+      <link>https://docs.siridb.net/query_data/aggregate_functions/limit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/query_data/aggregate_functions/limit/</guid>
+      <description>Returns no more than the provided number of points and in case more points are found the aggregation function is used to reduce the number of points.
+Function limit(max_points, aggr_function)  Arguments    Arguments Description     max_points Maximum number of points that gets returned.   aggr_function Aggregation function used if needed.    Return value Returns at most max_points and uses a given aggregation function to reduce the number of points if needed.</description>
+    </item>
+    
+    <item>
+      <title>max</title>
+      <link>https://docs.siridb.net/query_data/aggregate_functions/max/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/query_data/aggregate_functions/max/</guid>
+      <description>Max can be used to identify the highest value in the selected time window. If no time window is provided it returns the highest value of the series.
+Function max([ts])  Arguments    Arguments Description     ts (optional) Time window.    Return value An integer or float value depending on the series data type.
+Example # Get the maximum value in &#39;series-001&#39; over the last week.</description>
+    </item>
+    
+    <item>
+      <title>mean</title>
+      <link>https://docs.siridb.net/query_data/aggregate_functions/mean/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/query_data/aggregate_functions/mean/</guid>
+      <description>Mean is used to calculate the average values per selected time window. If no time window is provided it returns the mean of the series.
+Function mean([ts])  Arguments    Arguments Description     ts (optional) Time window.    Return value A float value.
+Example # Get average value of &#39;series-001&#39; up until now. select mean(now) from &amp;quot;series-001&amp;quot; before now  </description>
+    </item>
+    
+    <item>
+      <title>median</title>
+      <link>https://docs.siridb.net/query_data/aggregate_functions/median/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/query_data/aggregate_functions/median/</guid>
+      <description>The median is a robust measure of central location, and is less affected by the presence of outliers in your data. When the number of data points is odd, the middle data point is returned as float value. When the number of data points is even, the median is interpolated by taking the average of the two middle values.
+If no time window is provided it returns the median of the series.</description>
+    </item>
+    
+    <item>
+      <title>median high</title>
+      <link>https://docs.siridb.net/query_data/aggregate_functions/median_high/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/query_data/aggregate_functions/median_high/</guid>
+      <description>The high median is always a member of the data set. When the number of data points is odd, the middle value is returned. When it is even, the larger of the two middle values is returned.
+If no time window is provided it returns the median_high of the series.
+Function median_high([ts])  Arguments    Arguments Description     ts (optional) Time window.    Return value An integer or float value depending on the series data type.</description>
+    </item>
+    
+    <item>
+      <title>median low</title>
+      <link>https://docs.siridb.net/query_data/aggregate_functions/median_low/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/query_data/aggregate_functions/median_low/</guid>
+      <description>The low median is always a member of the data set. When the number of data points is odd, the middle value is returned. When it is even, the smaller of the two middle values is returned.
+If no time window is provided it returns the median_low of the series.
+Function median_low([ts])  Arguments    Arguments Description     ts (optional) Time window.    Return value An integer or float value depending on the series data type.</description>
+    </item>
+    
+    <item>
+      <title>min</title>
+      <link>https://docs.siridb.net/query_data/aggregate_functions/min/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/query_data/aggregate_functions/min/</guid>
+      <description>Min is the opposite of max, you identify the lowest value in the selected time window. If no time window is provided it returns the lowest value of the series.
+Function min([ts])  Arguments    Arguments Description     ts (optional) Time window.    Return value An integer or float value depending on the series data type.
+Example # Get the minimum value per day from &#39;series-001&#39; between two dates.</description>
+    </item>
+    
+    <item>
+      <title>pvariance</title>
+      <link>https://docs.siridb.net/query_data/aggregate_functions/pvariance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/query_data/aggregate_functions/pvariance/</guid>
+      <description>Returns the population variance of data, a non-empty iterable of real-valued numbers. Variance is a measure of the variability (spread or dispersion) of data. A large variance indicates that the data is spread out; a small variance indicates it is clustered closely around the mean.
+If no time window is provided it returns the pvariance of the series.
+Function pvariance([ts])  Arguments    Arguments Description     ts (optional) Time window.</description>
+    </item>
+    
+    <item>
+      <title>stddev</title>
+      <link>https://docs.siridb.net/query_data/aggregate_functions/stddev/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/query_data/aggregate_functions/stddev/</guid>
+      <description>Returns the standard deviation which is the square root of its variance. If no time window is provided it returns the standard deviation of the series.
+Function stddev([ts])  Arguments    Arguments Description     ts (optional) Time window.    Return value A float value.
+Example # Select standard deviation grouped by 1 hour. select stddev(1h) from &#39;series-001&#39;  </description>
+    </item>
+    
+    <item>
+      <title>sum</title>
+      <link>https://docs.siridb.net/query_data/aggregate_functions/sum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/query_data/aggregate_functions/sum/</guid>
+      <description>Sum can be used when you want to know the sum of the values over a period of time. If no time window is provided it returns the sum of the values in the series.
+Function sum([ts])  Arguments    Arguments Description     ts (optional) Time window.    Return value An integer or float value depending on the series data type.
+Example # Get the sum of the values collected over the last 24 hours per hour.</description>
+    </item>
+    
+    <item>
+      <title>variance</title>
+      <link>https://docs.siridb.net/query_data/aggregate_functions/variance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/query_data/aggregate_functions/variance/</guid>
+      <description>Returns the sample variance of data, an iterable of at least two real-valued numbers. Variance is a measure of the variability (spread or dispersion) of data. A large variance indicates that the data is spread out; a small variance indicates it is clustered closely around the mean.
+If no time window is provided it returns the variance of the series.
+Function  variance([ts])  Arguments    Arguments Description     ts (optional) Time window.</description>
+    </item>
+    
+  </channel>
+</rss>

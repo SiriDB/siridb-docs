@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>list groups on SiriDB documentation</title>
+    <link>https://docs.siridb.net/groups/list_groups/</link>
+    <description>Recent content in list groups on SiriDB documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://docs.siridb.net/groups/list_groups/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>columns</title>
+      <link>https://docs.siridb.net/groups/list_groups/columns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/groups/list_groups/columns/</guid>
+      <description>Valid columns are:
+ name: Group name series: Number of series in the group. expression: Show the expression used for this group.  When no columns are provided the default is used. (name)
+Examples # View all groups list groups # View groups and the expression used list groups name, expression # sample output (list groups) { &amp;quot;columns&amp;quot;: [&amp;quot;name&amp;quot;], &amp;quot;groups&amp;quot;: [ [&amp;quot;linux&amp;quot;], [&amp;quot;windows&amp;quot;]  </description>
+    </item>
+    
+  </channel>
+</rss>

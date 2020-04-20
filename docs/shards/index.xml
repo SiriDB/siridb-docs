@@ -6,21 +6,9 @@
     <description>Recent content in Shards on SiriDB documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Sep 2019 15:39:45 +0200</lastBuildDate>
     
 	<atom:link href="https://docs.siridb.net/shards/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>list shards</title>
-      <link>https://docs.siridb.net/shards/list_shards/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.siridb.net/shards/list_shards/</guid>
-      <description>Syntax:
-list shards [columns] [where ...] [limit ...]  columns Valid columns are:
- start: Start timestamp for the shard end: End timestamp for the shard sid: Shard identifier (the same sid usually exist on multiple servers). server: Server name on which the shard exists. pool: Pool where the shard in exists. status: Status flags for the shard. type: Type of the shard (number or log). size: Size of the shard.</description>
-    </item>
     
     <item>
       <title>count shards</title>
@@ -28,10 +16,8 @@ list shards [columns] [where ...] [limit ...]  columns Valid columns are:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.siridb.net/shards/count_shards/</guid>
-      <description>Syntax:
-count shards [size] [where ...]  Count shards returns the number of shards on all online servers in a SiriDB cluster. This means that offline servers are ignored and replica servers are included in the query. It&amp;rsquo;s also possible to count the shards size in case you want to see the amount of disk-space shards are using.
-Example:
-# Get number of shards count shards # Get number of shards for the current points.</description>
+      <description>Count shards returns the number of shards on all online servers in a SiriDB cluster. This means that offline servers are ignored and replica servers are included in the query. It&amp;rsquo;s also possible to count the shards size in case you want to see the amount of disk-space the shards are using.
+Syntax count shards [size] [where ...]  Examples # Get number of shards count shards # Get number of shards for the current points.</description>
     </item>
     
     <item>
@@ -40,8 +26,7 @@ Example:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.siridb.net/shards/drop_shards/</guid>
-      <description>Syntax:
-drop shards [where ...] [set ignore_threshold true/false]  Drops an existing shard using the shard id (sid). Use list shards for an overview of the current shards. This statement requires all pools to have at least one online server. The number of dropped shard in the result message only contains the dropped shards by one member of a pool, not the shards which are dropped by a replica. This is different from the count shards statement which includes shards on replica servers as well.</description>
+      <description>Drops an existing shard using the shard id (sid). Use list shards for an overview of the current shards. This statement requires all pools to have at least one online server. The number of dropped shard in the result message only contains the dropped shards of one member of a pool, not the shards which are dropped by a replica. This is different from the count shards statement which includes the shards on replica servers as well.</description>
     </item>
     
   </channel>

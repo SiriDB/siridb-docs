@@ -1,22 +1,22 @@
 ---
 title: "count users"
-weight: 28
+weight: 84
 ---
-
-Syntax:
-
-	count users [where ...]
 
 Count users returns the number of users.
 
-Examples:
+### Syntax
 
-	# Get number of users
-	count users
+    count users [where ...]
 
-	# Get number of users not equal to 'iris'
-	count users where name != 'iris'
+### Examples
+
+    # Get number of users
+    count users
+
+    # Get number of users not equal to 'iris'
+    count users where name != 'iris'
 
 Example output:
 
-	{"users": 6}
+    {"users": 6}

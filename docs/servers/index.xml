@@ -6,21 +6,9 @@
     <description>Recent content in Servers on SiriDB documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Sep 2019 15:40:06 +0200</lastBuildDate>
     
 	<atom:link href="https://docs.siridb.net/servers/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>alter server</title>
-      <link>https://docs.siridb.net/servers/alter_server/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.siridb.net/servers/alter_server/</guid>
-      <description>Syntax:
-alter server &amp;lt;server_uuid / server_name&amp;gt; set &amp;lt;option&amp;gt;  Valid options are address, port, backup_mode and log_level. We can use both, a servers name or uuid to change a server. To view the current servers names and uuids use the command: list servers name, uuid
-set address/port Usually its not required to change the servers address or port using this command but instead you should change the address/port in the configuration file (default /etc/siridb/siridb.</description>
-    </item>
     
     <item>
       <title>alter servers</title>
@@ -28,9 +16,8 @@ set address/port Usually its not required to change the servers address or port 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.siridb.net/servers/alter_servers/</guid>
-      <description>Syntax:
-alter servers [where...] set log_level &amp;lt;option&amp;gt;  Valid options are debug, info, warning, error and critical.
-This command will change the log level for n servers at once. Changing the log level is explained in more detail at alter server.</description>
+      <description>You can alter the tee_pipe_name and/or log_level for n servers at once. Changing the tee pipe name and log level is explained in more detail at alter server.
+Syntax alter servers [where...] set &amp;lt;option&amp;gt;  Example # Change the log-level to &amp;quot;debug&amp;quot; alter servers where uuid == &#39;f851c6a4-820e-11e5-9661-080027f37001&#39; set log_level debug  </description>
     </item>
     
     <item>
@@ -39,36 +26,22 @@ This command will change the log level for n servers at once. Changing the log l
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.siridb.net/servers/count_servers/</guid>
-      <description>Syntax:
-count servers [received_points/selected_points] [where ...]  Count servers returns the number of servers in a SiriDB cluster. Received points are the number of points received by a server since uptime. After a restart the received points counters are reset to zero.
+      <description>Count servers returns the number of servers in a SiriDB cluster.
+Received_points are the number of points received by a server since uptime. And the selected points are the total number of queried points since uptime After a restart these counters are reset to zero.
  Info
 Received points only shows the number of points after uptime. For the total number of points you can use count series length
- Examples:
-# Get number of servers count servers # Get number of servers in pool 0 count servers where pool == 0 # Get total received points since uptime count servers received_points # Get total number of selected (queried) points since uptime count servers selected_points  Example output (count servers):</description>
+ Syntax count servers [received_points/selected_points] [where .</description>
     </item>
     
     <item>
-      <title>list servers</title>
-      <link>https://docs.siridb.net/servers/list_servers/</link>
+      <title>drop servers</title>
+      <link>https://docs.siridb.net/servers/drop_servers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://docs.siridb.net/servers/list_servers/</guid>
-      <description>Syntax:
-list servers [columns] [where ...] [limit ...]  List servers in a SiriDB Cluster. This command can be useful to view status information about a server.
-columns Valid columns are:
- active_handles: Returns the active handles which can be used as an indicator on how busy a server is. active_tasks: Returns the active tasks for the current database. address: Server address. buffer_path: Path where this server keeps the buffer file.</description>
-    </item>
-    
-    <item>
-      <title>drop server</title>
-      <link>https://docs.siridb.net/servers/drop_server/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.siridb.net/servers/drop_server/</guid>
-      <description>Syntax:
-drop server &amp;lt;server_uuid / server_name&amp;gt;  Can be used to remove a server. We only allow dropping a server which has a replica since scaling down in number of pools is currently not supported. A server needs to be turned off before it can be dropped.
+      <guid>https://docs.siridb.net/servers/drop_servers/</guid>
+      <description>Can be used to remove a server. We only allow dropping a server which has a replica since scaling down in number of pools is currently not supported. A server needs to be turned off before it can be dropped.
  Note
-When having two servers in a pool, let&amp;rsquo;s call them siri1 and siri2 and for some reason siri2 is broken and does not start.</description>
+When having two servers in a pool, let&amp;rsquo;s call them siri1 and siri2 and for some reason siri2 is broken and does not start. You might be in a situation where siri1 is waiting for siri2 to connect and start to synchronize data.</description>
     </item>
     
   </channel>

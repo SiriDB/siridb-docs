@@ -28,10 +28,8 @@ Changes to access rights are active immediately, so be careful when revoking acc
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.siridb.net/access/grant_access/</guid>
-      <description>Syntax:
-grant &amp;lt;access&amp;gt; to user &#39;username&#39;  Grants access rights to a user. For information about access rights see access rights.
-Example:
-# Grant drop and create to user &amp;quot;iris&amp;quot; grant drop, create to user &amp;quot;iris&amp;quot;  Output:
+      <description>Grants access rights to a user. For information about access rights see access rights.
+Syntax grant &amp;lt;access&amp;gt; to user &#39;username&#39;  Example # Grant drop and create to user &amp;quot;iris&amp;quot; grant drop, create to user &amp;quot;iris&amp;quot;  Output:
 {&amp;quot;success_msg&amp;quot;: &amp;quot;Successfully granted permissions to user ...&amp;quot;}  </description>
     </item>
     
@@ -41,12 +39,11 @@ Example:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.siridb.net/access/revoke_access/</guid>
-      <description>Syntax:
-revoke &amp;lt;access&amp;gt; from &#39;username&#39;  Revokes access rights from a user. For information about access rights see access rights.
+      <description>Revokes access rights from a user. For information about access rights see access rights.
  Warning
-If accidentally all access rights for all users are gone, you need to recover the default user. See no access for how to recover from a situation not having access to SiriDB.
- Example:
-# Revoke drop and create from user &amp;quot;iris&amp;quot; revoke drop, create from user &amp;quot;iris&amp;quot;  Output:</description>
+If accidentally all access rights for all users are gone, you need to recover the default user. See restore access for how to recover from such a situation.
+ Syntax revoke &amp;lt;access&amp;gt; from &#39;username&#39;  Example # Revoke drop and create from user &amp;quot;iris&amp;quot; revoke drop, create from user &amp;quot;iris&amp;quot;  Output:
+{&amp;quot;success_msg&amp;quot;: &amp;quot;Successfully revoked permissions from .</description>
     </item>
     
     <item>
@@ -55,19 +52,6 @@ If accidentally all access rights for all users are gone, you need to recover th
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.siridb.net/access/restore_access/</guid>
-      <description>Read/use this section when accidentally all access rights to a database are gone. Follow the steps below to recover the default user. (username: iris, password: siri)
-Stop all servers in the SiriDB cluster.
-# Assume you use systemd to start SiriDB... &amp;gt; sudo systemctl stop siridb-server.service   Warning
-It&amp;rsquo;s really important to stop all servers in a SiriDB cluster to prevent database inconsistency.
- Remove the appropriate file on all servers in the SiriDB cluster.</description>
-    </item>
-    
-    <item>
-      <title>no access</title>
-      <link>https://docs.siridb.net/access/no_access/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.siridb.net/access/no_access/</guid>
       <description>Read/use this section when accidentally all access rights to a database are gone. Follow the steps below to recover the default user. (username: iris, password: siri)
 Stop all servers in the SiriDB cluster.
 # Assume you use systemd to start SiriDB... &amp;gt; sudo systemctl stop siridb-server.service   Warning

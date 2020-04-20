@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>list shards on SiriDB documentation</title>
+    <link>https://docs.siridb.net/shards/list_shards/</link>
+    <description>Recent content in list shards on SiriDB documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://docs.siridb.net/shards/list_shards/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>columns</title>
+      <link>https://docs.siridb.net/shards/list_shards/columns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/shards/list_shards/columns/</guid>
+      <description>Valid columns are:
+ start: Start timestamp for the shard end: End timestamp for the shard sid: Shard identifier (the same sid usually exist on multiple servers). server: Server name on which the shard exists. pool: Pool where the shard in exists. status: Status flags for the shard. type: Type of the shard (number or log). size: Size of the shard. This is the total shard size over all pools. When a pool has more servers (replicas) the displayed size can vary when running this query multiple times because servers are responsible for optimizing their own shards and this could result in different shard sizes.</description>
+    </item>
+    
+  </channel>
+</rss>

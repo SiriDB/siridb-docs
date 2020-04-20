@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.67.0" />
+    <meta name="generator" content="Hugo 0.69.0" />
     <meta name="description" content="SiriDB documentation">
 
 
@@ -11,25 +11,29 @@
     <title>grant access :: SiriDB documentation</title>
 
     
-    <link href="/css/nucleus.css?1584026475" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1584026475" rel="stylesheet">
-    <link href="/css/hybrid.css?1584026475" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1584026475" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1584026475" rel="stylesheet">
-    <link href="/css/auto-complete.css?1584026475" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1584026475" rel="stylesheet">
-    <link href="/css/theme.css?1584026475" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1584026475" rel="stylesheet">
+    <link href="/css/nucleus.css?1587381455" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1587381455" rel="stylesheet">
+    <link href="/css/hybrid.css?1587381455" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1587381455" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1587381455" rel="stylesheet">
+    <link href="/css/auto-complete.css?1587381455" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1587381455" rel="stylesheet">
+    <link href="/css/theme.css?1587381455" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1587381455" rel="stylesheet">
     
-      <link href="/css/theme-mine.css?1584026475" rel="stylesheet">
+      <link href="/css/theme-mine.css?1587381455" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1584026475"></script>
+    <script src="/js/jquery-3.3.1.min.js?1587381455"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
           display:none !important;
       }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
       
     </style>
     
@@ -52,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1584026475"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1584026475"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1587381455"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1587381455"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/docs.siridb.net\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1584026475"></script>
+<script type="text/javascript" src="/js/search.js?1587381455"></script>
 
     
   </div>
@@ -75,13 +79,13 @@
  
   
     
-    <li data-nav-id="/introduction/" title="Introduction" class="dd-item 
+    <li data-nav-id="/getting_started/" title="Getting started" class="dd-item 
         
         
         
         ">
-      <a href="/introduction/">
-          Introduction
+      <a href="/getting_started/">
+          Getting started
           
       </a>
       
@@ -100,9 +104,66 @@
  
   
     
-      <li data-nav-id="/introduction/getting_started/" title="Getting Started" class="dd-item ">
-        <a href="/introduction/getting_started/">
-        Getting Started
+      <li data-nav-id="/getting_started/ubuntu/" title="Ubuntu" class="dd-item ">
+        <a href="/getting_started/ubuntu/">
+        Ubuntu
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting_started/build_from_source/" title="Build from source" class="dd-item ">
+        <a href="/getting_started/build_from_source/">
+        Build from source
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting_started/configuration/" title="Configuration" class="dd-item ">
+        <a href="/getting_started/configuration/">
+        Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting_started/start_up_server/" title="Start up server" class="dd-item ">
+        <a href="/getting_started/start_up_server/">
+        Start up server
         
         </a>
     </li>
@@ -126,13 +187,13 @@
  
   
     
-    <li data-nav-id="/query-data/" title="Query data" class="dd-item 
+    <li data-nav-id="/overview/" title="Overview" class="dd-item 
         
         
         
         ">
-      <a href="/query-data/">
-          Query data
+      <a href="/overview/">
+          Overview
           
       </a>
       
@@ -151,9 +212,9 @@
  
   
     
-      <li data-nav-id="/query-data/select/" title="select" class="dd-item ">
-        <a href="/query-data/select/">
-        select
+      <li data-nav-id="/overview/service_account/" title="Service account" class="dd-item ">
+        <a href="/overview/service_account/">
+        Service account
         
         </a>
     </li>
@@ -170,9 +231,9 @@
  
   
     
-      <li data-nav-id="/query-data/aggregate_functions/" title="aggregate functions" class="dd-item ">
-        <a href="/query-data/aggregate_functions/">
-        aggregate functions
+      <li data-nav-id="/overview/database_user/" title="Database user" class="dd-item ">
+        <a href="/overview/database_user/">
+        Database user
         
         </a>
     </li>
@@ -189,9 +250,787 @@
  
   
     
-      <li data-nav-id="/query-data/debug/" title="debug (timeit)" class="dd-item ">
-        <a href="/query-data/debug/">
-        debug (timeit)
+      <li data-nav-id="/overview/series/" title="Series" class="dd-item ">
+        <a href="/overview/series/">
+        Series
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/overview/server_pool_replica/" title="Server, Pool &amp; Replica" class="dd-item ">
+        <a href="/overview/server_pool_replica/">
+        Server, Pool &amp; Replica
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/overview/buffer/" title="Buffer" class="dd-item ">
+        <a href="/overview/buffer/">
+        Buffer
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/overview/shards/" title="Shards" class="dd-item ">
+        <a href="/overview/shards/">
+        Shards
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/connect/" title="Connect" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/connect/">
+          Connect
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/connect/http_api/" title="HTTP" class="dd-item ">
+        <a href="/connect/http_api/">
+        HTTP
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/connect/grafana/" title="Grafana SiriDB HTTP datasource" class="dd-item ">
+        <a href="/connect/grafana/">
+        Grafana SiriDB HTTP datasource
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/connect/python/" title="Python" class="dd-item ">
+        <a href="/connect/python/">
+        Python
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/connect/go/" title="Golang" class="dd-item ">
+        <a href="/connect/go/">
+        Golang
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/connect/libsuv/" title="Libsuv (C/C&#43;&#43;)" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/connect/libsuv/">
+          Libsuv (C/C&#43;&#43;)
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/connect/libsuv/libsiridb/" title="Libsiridb (library)" class="dd-item ">
+        <a href="/connect/libsuv/libsiridb/">
+        Libsiridb (library)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/connect/nodejs/" title="Node.js" class="dd-item ">
+        <a href="/connect/nodejs/">
+        Node.js
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/connect/java/" title="Java" class="dd-item ">
+        <a href="/connect/java/">
+        Java
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/connect/php/" title="PHP" class="dd-item ">
+        <a href="/connect/php/">
+        PHP
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/connect/r/" title="R" class="dd-item ">
+        <a href="/connect/r/">
+        R
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/query_data/" title="Query data" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/query_data/">
+          Query data
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/query_data/select/" title="Select" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/query_data/select/">
+          Select
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/select/time_range/" title="time range" class="dd-item ">
+        <a href="/query_data/select/time_range/">
+        time range
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/select/merge_data/" title="merge data" class="dd-item ">
+        <a href="/query_data/select/merge_data/">
+        merge data
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/query_data/aggregate_functions/" title="Aggregate functions" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/query_data/aggregate_functions/">
+          Aggregate functions
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/count/" title="count" class="dd-item ">
+        <a href="/query_data/aggregate_functions/count/">
+        count
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/derivative/" title="derivative" class="dd-item ">
+        <a href="/query_data/aggregate_functions/derivative/">
+        derivative
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/difference/" title="difference" class="dd-item ">
+        <a href="/query_data/aggregate_functions/difference/">
+        difference
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/filter/" title="filter" class="dd-item ">
+        <a href="/query_data/aggregate_functions/filter/">
+        filter
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/first/" title="first" class="dd-item ">
+        <a href="/query_data/aggregate_functions/first/">
+        first
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/last/" title="last" class="dd-item ">
+        <a href="/query_data/aggregate_functions/last/">
+        last
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/limit/" title="limit" class="dd-item ">
+        <a href="/query_data/aggregate_functions/limit/">
+        limit
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/max/" title="max" class="dd-item ">
+        <a href="/query_data/aggregate_functions/max/">
+        max
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/mean/" title="mean" class="dd-item ">
+        <a href="/query_data/aggregate_functions/mean/">
+        mean
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/median/" title="median" class="dd-item ">
+        <a href="/query_data/aggregate_functions/median/">
+        median
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/median_high/" title="median high" class="dd-item ">
+        <a href="/query_data/aggregate_functions/median_high/">
+        median high
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/median_low/" title="median low" class="dd-item ">
+        <a href="/query_data/aggregate_functions/median_low/">
+        median low
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/min/" title="min" class="dd-item ">
+        <a href="/query_data/aggregate_functions/min/">
+        min
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/pvariance/" title="pvariance" class="dd-item ">
+        <a href="/query_data/aggregate_functions/pvariance/">
+        pvariance
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/stddev/" title="stddev" class="dd-item ">
+        <a href="/query_data/aggregate_functions/stddev/">
+        stddev
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/sum/" title="sum" class="dd-item ">
+        <a href="/query_data/aggregate_functions/sum/">
+        sum
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/aggregate_functions/variance/" title="variance" class="dd-item ">
+        <a href="/query_data/aggregate_functions/variance/">
+        variance
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/query_data/timeit_debugging/" title="timeit (debugging)" class="dd-item ">
+        <a href="/query_data/timeit_debugging/">
+        timeit (debugging)
         
         </a>
     </li>
@@ -229,6 +1068,8 @@
         <ul>
           
           
+            
+          
           
           
         
@@ -240,13 +1081,66 @@
  
   
     
-      <li data-nav-id="/series/list_series/" title="list series" class="dd-item ">
-        <a href="/series/list_series/">
-        list series
+    <li data-nav-id="/series/list_series/" title="list series" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/series/list_series/">
+          list series
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/series/list_series/columns/" title="columns" class="dd-item ">
+        <a href="/series/list_series/columns/">
+        columns
         
         </a>
     </li>
      
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/series/list_series/match_series/" title="match series" class="dd-item ">
+        <a href="/series/list_series/match_series/">
+        match series
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
   
  
 
@@ -318,6 +1212,8 @@
         <ul>
           
           
+            
+          
           
           
         
@@ -329,13 +1225,47 @@
  
   
     
-      <li data-nav-id="/shards/list_shards/" title="list shards" class="dd-item ">
-        <a href="/shards/list_shards/">
-        list shards
+    <li data-nav-id="/shards/list_shards/" title="list shards" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/shards/list_shards/">
+          list shards
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/shards/list_shards/columns/" title="columns" class="dd-item ">
+        <a href="/shards/list_shards/columns/">
+        columns
         
         </a>
     </li>
      
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
   
  
 
@@ -407,6 +1337,8 @@
         <ul>
           
           
+            
+          
           
           
         
@@ -456,9 +1388,87 @@
  
   
     
-      <li data-nav-id="/groups/list_groups/" title="list groups" class="dd-item ">
-        <a href="/groups/list_groups/">
-        list groups
+    <li data-nav-id="/groups/list_groups/" title="list groups" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/groups/list_groups/">
+          list groups
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/groups/list_groups/columns/" title="columns" class="dd-item ">
+        <a href="/groups/list_groups/columns/">
+        columns
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/groups/alter_group/" title="alter group" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/groups/alter_group/">
+          alter group
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/groups/alter_group/set_expression/" title="set expression" class="dd-item ">
+        <a href="/groups/alter_group/set_expression/">
+        set expression
         
         </a>
     </li>
@@ -475,13 +1485,22 @@
  
   
     
-      <li data-nav-id="/groups/alter_group/" title="alter group" class="dd-item ">
-        <a href="/groups/alter_group/">
-        alter group
+      <li data-nav-id="/groups/alter_group/set_name/" title="set name" class="dd-item ">
+        <a href="/groups/alter_group/set_name/">
+        set name
         
         </a>
     </li>
      
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
   
  
 
@@ -534,6 +1553,8 @@
         <ul>
           
           
+            
+          
           
           
         
@@ -545,13 +1566,104 @@
  
   
     
-      <li data-nav-id="/servers/alter_server/" title="alter server" class="dd-item ">
-        <a href="/servers/alter_server/">
-        alter server
+    <li data-nav-id="/servers/alter_server/" title="alter server" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/servers/alter_server/">
+          alter server
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/servers/alter_server/backup_mode/" title="set backup mode" class="dd-item ">
+        <a href="/servers/alter_server/backup_mode/">
+        set backup mode
         
         </a>
     </li>
      
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/servers/alter_server/log_level/" title="set log level" class="dd-item ">
+        <a href="/servers/alter_server/log_level/">
+        set log level
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/servers/alter_server/set_address_port/" title="set address/port" class="dd-item ">
+        <a href="/servers/alter_server/set_address_port/">
+        set address/port
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/servers/alter_server/set_tee_pipe_name/" title="set tee pipe name" class="dd-item ">
+        <a href="/servers/alter_server/set_tee_pipe_name/">
+        set tee pipe name
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
   
  
 
@@ -602,9 +1714,115 @@
  
   
     
-      <li data-nav-id="/servers/list_servers/" title="list servers" class="dd-item ">
-        <a href="/servers/list_servers/">
-        list servers
+    <li data-nav-id="/servers/list_servers/" title="list servers" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/servers/list_servers/">
+          list servers
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/servers/list_servers/columns/" title="columns" class="dd-item ">
+        <a href="/servers/list_servers/columns/">
+        columns
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/servers/drop_servers/" title="drop servers" class="dd-item ">
+        <a href="/servers/drop_servers/">
+        drop servers
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/pools/" title="Pools" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/pools/">
+          Pools
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pools/count_pools/" title="count pools" class="dd-item ">
+        <a href="/pools/count_pools/">
+        count pools
         
         </a>
     </li>
@@ -621,13 +1839,47 @@
  
   
     
-      <li data-nav-id="/servers/drop_server/" title="drop server" class="dd-item ">
-        <a href="/servers/drop_server/">
-        drop server
+    <li data-nav-id="/pools/list_pools/" title="list pools" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/pools/list_pools/">
+          list pools
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/pools/list_pools/columns/" title="columns" class="dd-item ">
+        <a href="/pools/list_pools/columns/">
+        columns
         
         </a>
     </li>
      
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
   
  
 
@@ -660,6 +1912,8 @@
       
         <ul>
           
+          
+            
           
           
           
@@ -710,13 +1964,47 @@
  
   
     
-      <li data-nav-id="/users/list_users/" title="list users" class="dd-item ">
-        <a href="/users/list_users/">
-        list users
+    <li data-nav-id="/users/list_users/" title="list users" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/users/list_users/">
+          list users
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/users/list_users/columns/" title="columns" class="dd-item ">
+        <a href="/users/list_users/columns/">
+        columns
         
         </a>
     </li>
      
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
   
  
 
@@ -769,6 +2057,8 @@
         <ul>
           
           
+            
+          
           
           
         
@@ -780,13 +2070,142 @@
  
   
     
-      <li data-nav-id="/database/alter_database/" title="alter database" class="dd-item ">
-        <a href="/database/alter_database/">
-        alter database
+    <li data-nav-id="/database/alter_database/" title="alter database" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/database/alter_database/">
+          alter database
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/database/alter_database/drop_threshold/" title="drop threshold" class="dd-item ">
+        <a href="/database/alter_database/drop_threshold/">
+        drop threshold
         
         </a>
     </li>
      
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/database/alter_database/expiration_log/" title="expiration log" class="dd-item ">
+        <a href="/database/alter_database/expiration_log/">
+        expiration log
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/database/alter_database/expiration_num/" title="expiration num" class="dd-item ">
+        <a href="/database/alter_database/expiration_num/">
+        expiration num
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/database/alter_database/list_limit/" title="list limit" class="dd-item ">
+        <a href="/database/alter_database/list_limit/">
+        list limit
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/database/alter_database/select_points_limit/" title="select points limit" class="dd-item ">
+        <a href="/database/alter_database/select_points_limit/">
+        select points limit
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/database/alter_database/set_timezone/" title="set timezone" class="dd-item ">
+        <a href="/database/alter_database/set_timezone/">
+        set timezone
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
   
  
 
@@ -938,6 +2357,38 @@
 
             
           
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/related_projects/" title="Related projects" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/related_projects/">
+          Related projects
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
             
             
 
@@ -945,9 +2396,9 @@
  
   
     
-      <li data-nav-id="/access/no_access/" title="no access" class="dd-item ">
-        <a href="/access/no_access/">
-        no access
+      <li data-nav-id="/related_projects/enodo/" title="Enodo" class="dd-item ">
+        <a href="/related_projects/enodo/">
+        Enodo
         
         </a>
     </li>
@@ -1042,7 +2493,16 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#syntax">Syntax</a></li>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1066,12 +2526,12 @@
 
 
 
-<p>Syntax:</p>
-<pre><code>grant &lt;access&gt; to user 'username'
-</code></pre>
 <p>Grants access rights to a user. For information about access rights
 see <a href="../access_rights">access rights</a>.</p>
-<p>Example:</p>
+<h3 id="syntax">Syntax</h3>
+<pre><code>grant &lt;access&gt; to user 'username'
+</code></pre>
+<h3 id="example">Example</h3>
 <pre><code># Grant drop and create to user &quot;iris&quot;
 grant drop, create to user &quot;iris&quot;
 </code></pre>
@@ -1085,733 +2545,41 @@ grant drop, create to user &quot;iris&quot;
 </footer>
 
         
-        </div> 
+        </div>
         
 
       </div>
 
     <div id="navigation">
         
+    
+        
+            <a class="nav nav-prev" href="/access/access_rights/" title="access rights"> <i class="fa fa-chevron-left"></i></a>
         
         
+            <a class="nav nav-next" href="/access/revoke_access/" title="revoke access" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-        
-        
-
-
-	 
-	 
-		
-			<a class="nav nav-prev" href="/access/access_rights/" title="access rights"> <i class="fa fa-chevron-left"></i></a>
-		
-		
-			<a class="nav nav-next" href="/access/revoke_access/" title="revoke access" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
-		
-	
+    
     </div>
 
     </section>
-    
+
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1584026475"></script>
-    <script src="/js/perfect-scrollbar.min.js?1584026475"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1584026475"></script>
-    <script src="/js/jquery.sticky.js?1584026475"></script>
-    <script src="/js/featherlight.min.js?1584026475"></script>
-    <script src="/js/highlight.pack.js?1584026475"></script>
+    <script src="/js/clipboard.min.js?1587381455"></script>
+    <script src="/js/perfect-scrollbar.min.js?1587381455"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1587381455"></script>
+    <script src="/js/jquery.sticky.js?1587381455"></script>
+    <script src="/js/featherlight.min.js?1587381455"></script>
+    <script src="/js/highlight.pack.js?1587381455"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1584026475"></script>
-    <script src="/js/learn.js?1584026475"></script>
-    <script src="/js/hugo-learn.js?1584026475"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1587381455"></script>
+    <script src="/js/learn.js?1587381455"></script>
+    <script src="/js/hugo-learn.js?1587381455"></script>
 
-    <link href="/mermaid/mermaid.css?1584026475" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1584026475"></script>
+    <link href="/mermaid/mermaid.css?1587381455" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1587381455"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

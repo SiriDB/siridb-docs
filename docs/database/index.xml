@@ -6,21 +6,9 @@
     <description>Recent content in Database on SiriDB documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Sep 2019 15:40:37 +0200</lastBuildDate>
     
 	<atom:link href="https://docs.siridb.net/database/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>alter database</title>
-      <link>https://docs.siridb.net/database/alter_database/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.siridb.net/database/alter_database/</guid>
-      <description>Syntax:
-alter database set &amp;lt;option&amp;gt;  Valid options are:
- drop_threshold expiration_log expiration_num timezone select_points_limit list_limit  drop_threshold This value is used to protect you from accidentally dropping data from SiriDB. The threshold is a value between 0 and 1 (0/100%). The threshold value is only checked against the pool receiving your query. The default threshold value is 1 (100%) but it might be a good idea to change this to a lower value.</description>
-    </item>
     
     <item>
       <title>timezones</title>
@@ -40,8 +28,7 @@ There is one special time-zone, named NAIVE which is the default time-zone when 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.siridb.net/database/status_information/</guid>
-      <description>Syntax:
-show [&amp;lt;option&amp;gt; [,&amp;lt;option&amp;gt; [...]]  See available options for more info on each show command:
+      <description>Syntax show [&amp;lt;option&amp;gt; [,&amp;lt;option&amp;gt; [...]]  See available options for more info on each show command:
  show active_handles: Returns the active handles which can be used as an indicator for how busy a server is. show active_tasks: Returns the active tasks for the current database. show buffer_path: Returns the local buffer path on this server. show buffer_size: Returns the buffer size in bytes on this server. show dbname: Returns the database name.</description>
     </item>
     
