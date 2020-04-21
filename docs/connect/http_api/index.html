@@ -11,20 +11,20 @@
     <title>HTTP :: SiriDB documentation</title>
 
     
-    <link href="/css/nucleus.css?1587385562" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1587385562" rel="stylesheet">
-    <link href="/css/hybrid.css?1587385562" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1587385562" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1587385562" rel="stylesheet">
-    <link href="/css/auto-complete.css?1587385562" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1587385562" rel="stylesheet">
-    <link href="/css/theme.css?1587385562" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1587385562" rel="stylesheet">
+    <link href="/css/nucleus.css?1587455482" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1587455482" rel="stylesheet">
+    <link href="/css/hybrid.css?1587455482" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1587455482" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1587455482" rel="stylesheet">
+    <link href="/css/auto-complete.css?1587455482" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1587455482" rel="stylesheet">
+    <link href="/css/theme.css?1587455482" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1587455482" rel="stylesheet">
     
-      <link href="/css/theme-mine.css?1587385562" rel="stylesheet">
+      <link href="/css/theme-mine.css?1587455482" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1587385562"></script>
+    <script src="/js/jquery-3.3.1.min.js?1587455482"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1587385562"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1587385562"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1587455482"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1587455482"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/docs.siridb.net\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1587385562"></script>
+<script type="text/javascript" src="/js/search.js?1587455482"></script>
 
     
   </div>
@@ -2538,8 +2538,8 @@ or by setting the <code>SIRIDB_HTTP_API_PORT</code> environment variable.</p>
 <h2 id="headers">Headers</h2>
 <p>The header field <code>Content-Type</code> is required and needs <code>application/json</code> or <code>application/qpack</code>.</p>
 <h2 id="authentication">Authentication</h2>
-<p>The HTTP API has supports for <strong>basic</strong> authentication: <code>--header 'Authorization: Basic c2E6c2lyaQ=='</code>.</p>
-<p><code>c2E6c2lyaQ==</code> translates to the default service account <code>sa:siri</code>, when base64 decoded. Or in case of an insert or query request you need to authenticate using your username:password; in case of the default database user <code>iris:siri</code>, this would be <code>aXJpczpzaXJp</code>, when base64 encoded.</p>
+<p>The HTTP API has supports for <a href="https://en.wikipedia.org/wiki/Basic_access_authentication">basic authentication</a>.</p>
+<p>In the <a href="#examples">examples</a> below we use the default service account <code>sa:siri</code> (<code>c2E6c2lyaQ==</code> when base64 encoded) and the default database user <code>iris:siri</code> (<code>aXJpczpzaXJp</code> when base64 encoded)</p>
 <h2 id="uris">URIs</h2>
 <p>The following URIs are available.</p>
 <p>Service requests:</p>
@@ -2673,7 +2673,7 @@ or by setting the <code>SIRIDB_HTTP_API_PORT</code> environment variable.</p>
 </code></pre></div><blockquote>
 <p>Possible response</p>
 </blockquote>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    [<span style="color:#e6db74">&#34;2.0.36-alpha-0&#34;</span>]
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    [<span style="color:#e6db74">&#34;2.0.36&#34;</span>]
 </code></pre></div><h4 id="get-accounts">get-accounts</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl --location --request GET <span style="color:#e6db74">&#39;http://siridb-server-1:9020/get-accounts&#39;</span> <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>--header <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> <span style="color:#ae81ff">\
@@ -2754,19 +2754,19 @@ If it is not provided then the timestamp precision is set to the database defaul
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1587385562"></script>
-    <script src="/js/perfect-scrollbar.min.js?1587385562"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1587385562"></script>
-    <script src="/js/jquery.sticky.js?1587385562"></script>
-    <script src="/js/featherlight.min.js?1587385562"></script>
-    <script src="/js/highlight.pack.js?1587385562"></script>
+    <script src="/js/clipboard.min.js?1587455483"></script>
+    <script src="/js/perfect-scrollbar.min.js?1587455483"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1587455483"></script>
+    <script src="/js/jquery.sticky.js?1587455483"></script>
+    <script src="/js/featherlight.min.js?1587455483"></script>
+    <script src="/js/highlight.pack.js?1587455483"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1587385562"></script>
-    <script src="/js/learn.js?1587385562"></script>
-    <script src="/js/hugo-learn.js?1587385562"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1587455483"></script>
+    <script src="/js/learn.js?1587455483"></script>
+    <script src="/js/hugo-learn.js?1587455483"></script>
 
-    <link href="/mermaid/mermaid.css?1587385562" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1587385562"></script>
+    <link href="/mermaid/mermaid.css?1587455483" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1587455483"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
