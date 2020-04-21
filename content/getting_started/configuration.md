@@ -31,5 +31,5 @@ Variable | Default | Description
 `SIRIDB_ENABLE_SHARD_COMPRESSION` | `1` | Use shard compression for storing data points. Set value 0 to disable shard compression.
 `SIRIDB_ENABLE_PIPE_SUPPORT` | `0` | Enable named pipe support for client connections.
 `SIRIDB_PIPE_CLIENT_NAME` | `siridb_client.sock` | SiriDB will bind the client named pipe in this location.
-`HTTP_STATUS_PORT` | `0` | When the HTTP status port is not set (or 0), the service will not start. Otherwise the HTTP requests `/status`, `/ready` and `/healthy` are available which can be used for readiness and liveness requests. Example usage using wget: wget -q -O - http://siridb-server.local:8080/status
+`SIRIDB_HTTP_STATUS_PORT` | `0` | When the HTTP status port is not set (or 0), the service will not start. Otherwise the HTTP requests `/status`, `/ready` and `/healthy` are available which can be used for readiness and liveness requests. Example usage using wget: wget -q -O - http://siridb-server.local:8080/status
 `SIRIDB_HTTP_API_PORT` | `0` | When the HTTP API port is not set (or 0), the API service will not start. Otherwise the HTTP POST requests can be user to insert or query data points.
