@@ -64,7 +64,7 @@ $ siridb-server -c /my/path/siridb.conf Flag information    Flag Description    
       
       <guid>https://docs.siridb.net/overview/service_account/</guid>
       <description>Service accounts are used for managing databases. A service account is a user on a SiriDB server, which should not be confused with a database user. A service account has no access to a SiriDB database. The reason for separating these accounts is that a database can extend over multiple servers, while a service account only gives access to a single server.
-You can manage the server account(s) and database(s) via the SiriDB Admin tool or using the HTTP API.</description>
+You can manage the service account(s) and database(s) via the SiriDB Admin tool or using the HTTP API.</description>
     </item>
     
     <item>
@@ -134,10 +134,11 @@ Headers The header field Content-Type is required and needs application/json or 
       
       <guid>https://docs.siridb.net/connect/grafana/</guid>
       <description>A SiriDB data source plugin for Grafana.
-Requirements SiriDB HTTP is required for this plugin. If you do not have a SiriDB HTTP instance running then it might be a good choice to install SiriDB HTTP on your Grafana server.
-https://github.com/SiriDB/siridb-http
-Make sure to configure SiriDB HTTP to allow Basic Authentication. Optionally you can also choose to disable authentication.
- Note: at least SiriDB server version 2.0.14 is required since this plugin makes use of the limit aggregation function.</description>
+Installation Go to the Grafana plugins folder. (usually this is /var/lib/grafana/plugins/)
+cd /var/lib/grafana/plugins/ Clone the git project into the plugins folder:
+git clone https://github.com/SiriDB/grafana-siridb-http-datasource.git Restart Grafana
+sudo systemctl restart grafana-server.service Quick usage See the following blog article on how to configure and use this plugin: https://github.com/SiriDB/grafana-siridb-http-example.
+More info A more complete description of the SiriDB data source plugin for Grafana can be found via the link below.</description>
     </item>
     
     <item>
