@@ -16,9 +16,9 @@ The header field `Content-Type` is required and needs `application/json` or `app
 
 ## Authentication
 
-The HTTP API has supports for **basic** authentication: `--header 'Authorization: Basic c2E6c2lyaQ=='`.
+The HTTP API has supports for [basic authentication](https://en.wikipedia.org/wiki/Basic_access_authentication).
 
-`c2E6c2lyaQ==` translates to the default service account `sa:siri`, when base64 decoded. Or in case of an insert or query request you need to authenticate using your username:password; in case of the default database user `iris:siri`, this would be `aXJpczpzaXJp`, when base64 encoded.
+In the [examples](#examples) below we use the default service account `sa:siri` (`c2E6c2lyaQ==` when base64 encoded) and the default database user `iris:siri` (`aXJpczpzaXJp` when base64 encoded)
 
 ## URIs
 
@@ -199,7 +199,7 @@ curl --location --request GET 'http://siridb-server-1:9020/get-version' \
 > Possible response
 
 ```json
-    ["2.0.36-alpha-0"]
+    ["2.0.36"]
 ```
 
 #### get-accounts
