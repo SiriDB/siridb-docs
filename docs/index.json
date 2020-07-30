@@ -487,7 +487,7 @@
 	"title": "Tagging",
 	"tags": [],
 	"description": "",
-	"content": "Tagging Tags are used to create a fixed selection of series. This section contains documentation on count, list and drop tags.\nSee alert series for tagging and un-tagging series.\n"
+	"content": "Tagging Tags are used to create a fixed selection of series. This section contains documentation on count, list and drop tags.\nSee alert series for tagging and un-tagging series.\nTagging requires SiriDB version 2.0.38 or higher\n "
 },
 {
 	"uri": "https://docs.siridb.net/tagging/count_tags/",
