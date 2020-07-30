@@ -357,6 +357,27 @@
 	"content": "Count series in the SiriDB cluster. For more information about how to select series see list series.\nCount series length gives the total number of points for the selected series.\nSyntax count series [length] [match_series] [where ...]  Examples # Get number of series count series # Get the total number of points in the database count series length # Get number of series in group `group_server01` count series `group_server01` # Get number of points for series in pool 0 count series length where pool == 0 # Get the number of series which started in the last week count series where start \u0026gt; now - 1w and start \u0026lt;= now  Example output (series):\n{\u0026quot;series\u0026quot;: 1105946}  Example output (series length):\n{\u0026quot;series_length\u0026quot;: 77450345251}  "
 },
 {
+	"uri": "https://docs.siridb.net/series/alter_series/",
+	"title": "alter series",
+	"tags": [],
+	"description": "",
+	"content": "Use alter series to tag or untag series.\nSyntax alter series match_series [where] tag/untag `tagname`  See:\n tag untag Tagging  "
+},
+{
+	"uri": "https://docs.siridb.net/series/alter_series/tag/",
+	"title": "tag",
+	"tags": [],
+	"description": "",
+	"content": "Examples # Tag series alter series 'my-series-001', 'my-series-002' tag `my-series` # Another tag example alter series /linux.*/ where type == float tag `linux-float`  "
+},
+{
+	"uri": "https://docs.siridb.net/series/alter_series/untag/",
+	"title": "untag",
+	"tags": [],
+	"description": "",
+	"content": "Examples # Untag series alter series 'my-series-001', 'my-series-002' untag `my-series`  "
+},
+{
 	"uri": "https://docs.siridb.net/series/drop_series/",
 	"title": "drop series",
 	"tags": [],
@@ -431,7 +452,7 @@
 	"title": "columns",
 	"tags": [],
 	"description": "",
-	"content": "Valid columns are:\n name: Group name series: Number of series in the group. expression: Show the expression used for this group.  When no columns are provided the default is used. (name)\nExamples # View all groups list groups # View groups and the expression used list groups name, expression # sample output (list groups) { \u0026quot;columns\u0026quot;: [\u0026quot;name\u0026quot;], \u0026quot;groups\u0026quot;: [ [\u0026quot;linux\u0026quot;], [\u0026quot;windows\u0026quot;]  "
+	"content": "Valid columns are:\n name: Group name series: Number of series in the group. expression: Show the expression used for this group.  When no columns are provided the default is used. (name)\nExamples # View all groups list groups # View groups and the expression used list groups name, expression # sample output (list groups) { \u0026quot;columns\u0026quot;: [\u0026quot;name\u0026quot;], \u0026quot;groups\u0026quot;: [ [\u0026quot;linux\u0026quot;], [\u0026quot;windows\u0026quot;] ] }  "
 },
 {
 	"uri": "https://docs.siridb.net/groups/alter_group/",
@@ -462,11 +483,67 @@
 	"content": "Drops an existing group.\nSyntax drop group `groupname`  Example # Drop group `linux` drop group `linux` "
 },
 {
+	"uri": "https://docs.siridb.net/tagging/",
+	"title": "Tagging",
+	"tags": [],
+	"description": "",
+	"content": "Tagging Tags are used to create a fixed selection of series. This section contains documentation on count, list and drop tags.\nSee alert series for tagging and un-tagging series.\n"
+},
+{
+	"uri": "https://docs.siridb.net/tagging/count_tags/",
+	"title": "count tags",
+	"tags": [],
+	"description": "",
+	"content": "Count tags returns the number of tags defined in the database.\nSyntax count tags [where ...]  Examples # Get number of tags count tags # Get number of tags with more than 100 series count tags where series \u0026gt; 100  Example output:\n{\u0026quot;tags\u0026quot;: 23}  "
+},
+{
+	"uri": "https://docs.siridb.net/tagging/list_tags/",
+	"title": "list tags",
+	"tags": [],
+	"description": "",
+	"content": "Lists tags in the SiriDB cluster.\nSyntax list tags [columns] [where ...] [limit ...]  "
+},
+{
+	"uri": "https://docs.siridb.net/tagging/list_tags/columns/",
+	"title": "columns",
+	"tags": [],
+	"description": "",
+	"content": "Valid columns are:\n name: Tag name series: Number of series in the tag.  When no columns are provided the default is used. (name)\nExamples # View all tags list tags # View tags and the number of series tagged list tags name, series # sample output (list tags) { \u0026quot;columns\u0026quot;: [\u0026quot;name\u0026quot;, \u0026quot;series\u0026quot;], \u0026quot;tags\u0026quot;: [ [\u0026quot;linux\u0026quot;, 52042], [\u0026quot;windows\u0026quot;, 7] ] }  "
+},
+{
+	"uri": "https://docs.siridb.net/tagging/drop_tag/",
+	"title": "drop tag",
+	"tags": [],
+	"description": "",
+	"content": "Drops an existing tag.\nSyntax drop tag `tagname`  Example # Drop tag `linux` drop tag `linux`  "
+},
+{
 	"uri": "https://docs.siridb.net/servers/",
 	"title": "Servers",
 	"tags": [],
 	"description": "",
 	"content": "Servers Everything that has to do with server management within SiriDB.\n"
+},
+{
+	"uri": "https://docs.siridb.net/servers/count_servers/",
+	"title": "count servers",
+	"tags": [],
+	"description": "",
+	"content": "Count servers returns the number of servers in a SiriDB cluster.\nReceived_points are the number of points received by a server since uptime. And the selected points are the total number of queried points since uptime After a restart these counters are reset to zero.\n Info\nReceived points only shows the number of points after uptime. For the total number of points you can use count series length\n Syntax count servers [received_points/selected_points] [where ...]  Example # Get number of servers count servers # Get number of servers in pool 0 count servers where pool == 0 # Get total received points since uptime count servers received_points # Get total number of selected (queried) points since uptime count servers selected_points  Example output (count servers):\n{\u0026quot;servers\u0026quot;: 6}  Example output (count servers received_points):\n{\u0026quot;count\u0026quot;: 21573435683}  "
+},
+{
+	"uri": "https://docs.siridb.net/servers/list_servers/",
+	"title": "list servers",
+	"tags": [],
+	"description": "",
+	"content": "List servers in a SiriDB Cluster. This command can be useful to view status information about a server.\nSyntax list servers [columns] [where ...] [limit ...]  "
+},
+{
+	"uri": "https://docs.siridb.net/servers/list_servers/columns/",
+	"title": "columns",
+	"tags": [],
+	"description": "",
+	"content": "Valid columns are:\n active_handles: Returns the active handles which can be used as an indicator on how busy a server is. active_tasks: Returns the active tasks for the current database. address: Server address. buffer_path: Path where this server keeps the buffer file. buffer_size: Size the server uses for one series in the buffer. dbpath: Path where the server stores the database. fifo_files: Number of fifo files which are used to update the replica server. This value is 0 if the server has no replica. A value greater than 1 could be an indication that replication is not working. idle_percentage: Returns percentage of idle time since the database was loaded. idle_time: Returns the idle time in seconds since the database was loaded. ip_support: IP Support setting on the server. (ALL/ IPV4ONLY/ IPV6ONLY) libuv: Version of libuv library. log_level: Current loglevel for the server. max_open_files: Returns the maximum open files value used for sharding on this server. (If this value is lower than expected, please check the log files for SiriDB as startup time) mem_usage: Shows memory usage for the server in MB\u0026rsquo;s. name: Server name. online: True when the server is online. open_files: Number of open files for this database on the server. pool: Returns the pool ID for the server. port: Server port. received_points: Returns the number of received points by the server. On each restart of the SiriDB Server the counter will reset to 0. This value is only incremented when the server is receiving points from a client. reindex_progress: Returns the re-index status. Only available when the database is re-indexing series over pools. selected_points: Returns the selected points on the server. On each restart of the SiriDB Server the counter will reset to 0. This value includes all points which are read from the local shards and the points received from other servers to respond to a select query. The value is only incremented when the server received the select query from a client. startup_time: Time it takes to start the server. status: Current server status. sync_progress: Return synchronization status while creating a new replica server. tee_pipe_name: Returns the name of an existing file to where SiriDB can dump its data. uptime: Uptime in seconds. uuid: Server UUID (unique ID) version: SiriDB version  When no columns are provided the default is used. (name, pool, version, online, status)\nExamples  # list all servers in a SiriDB cluster. list servers # list all offline servers list servers where online == false # view memory usage and open files on all servers. list servers name, mem_usage, open_files # sample output (list servers) { \u0026quot;columns\u0026quot;: [\u0026quot;name\u0026quot;, \u0026quot;pool\u0026quot;, \u0026quot;version\u0026quot;, \u0026quot;online\u0026quot;, \u0026quot;status\u0026quot;], \u0026quot;servers\u0026quot;: [ [\u0026quot;siri1:9010\u0026quot;, 0, \u0026quot;2.0.10\u0026quot;, true, \u0026quot;running\u0026quot;], [\u0026quot;siri2:9010\u0026quot;, 1, \u0026quot;2.0.10\u0026quot;, true, \u0026quot;running\u0026quot;] ] }  "
 },
 {
 	"uri": "https://docs.siridb.net/servers/alter_server/",
@@ -509,27 +586,6 @@
 	"tags": [],
 	"description": "",
 	"content": "You can alter the tee_pipe_name and/or log_level for n servers at once. Changing the tee pipe name and log level is explained in more detail at alter server.\nSyntax alter servers [where...] set \u0026lt;option\u0026gt;  Example # Change the log-level to \u0026quot;debug\u0026quot; alter servers where uuid == 'f851c6a4-820e-11e5-9661-080027f37001' set log_level debug  "
-},
-{
-	"uri": "https://docs.siridb.net/servers/count_servers/",
-	"title": "count servers",
-	"tags": [],
-	"description": "",
-	"content": "Count servers returns the number of servers in a SiriDB cluster.\nReceived_points are the number of points received by a server since uptime. And the selected points are the total number of queried points since uptime After a restart these counters are reset to zero.\n Info\nReceived points only shows the number of points after uptime. For the total number of points you can use count series length\n Syntax count servers [received_points/selected_points] [where ...]  Example # Get number of servers count servers # Get number of servers in pool 0 count servers where pool == 0 # Get total received points since uptime count servers received_points # Get total number of selected (queried) points since uptime count servers selected_points  Example output (count servers):\n{\u0026quot;servers\u0026quot;: 6}  Example output (count servers received_points):\n{\u0026quot;count\u0026quot;: 21573435683}  "
-},
-{
-	"uri": "https://docs.siridb.net/servers/list_servers/",
-	"title": "list servers",
-	"tags": [],
-	"description": "",
-	"content": "List servers in a SiriDB Cluster. This command can be useful to view status information about a server.\nSyntax list servers [columns] [where ...] [limit ...]  "
-},
-{
-	"uri": "https://docs.siridb.net/servers/list_servers/columns/",
-	"title": "columns",
-	"tags": [],
-	"description": "",
-	"content": "Valid columns are:\n active_handles: Returns the active handles which can be used as an indicator on how busy a server is. active_tasks: Returns the active tasks for the current database. address: Server address. buffer_path: Path where this server keeps the buffer file. buffer_size: Size the server uses for one series in the buffer. dbpath: Path where the server stores the database. fifo_files: Number of fifo files which are used to update the replica server. This value is 0 if the server has no replica. A value greater than 1 could be an indication that replication is not working. idle_percentage: Returns percentage of idle time since the database was loaded. idle_time: Returns the idle time in seconds since the database was loaded. ip_support: IP Support setting on the server. (ALL/ IPV4ONLY/ IPV6ONLY) libuv: Version of libuv library. log_level: Current loglevel for the server. max_open_files: Returns the maximum open files value used for sharding on this server. (If this value is lower than expected, please check the log files for SiriDB as startup time) mem_usage: Shows memory usage for the server in MB\u0026rsquo;s. name: Server name. online: True when the server is online. open_files: Number of open files for this database on the server. pool: Returns the pool ID for the server. port: Server port. received_points: Returns the number of received points by the server. On each restart of the SiriDB Server the counter will reset to 0. This value is only incremented when the server is receiving points from a client. reindex_progress: Returns the re-index status. Only available when the database is re-indexing series over pools. selected_points: Returns the selected points on the server. On each restart of the SiriDB Server the counter will reset to 0. This value includes all points which are read from the local shards and the points received from other servers to respond to a select query. The value is only incremented when the server received the select query from a client. startup_time: Time it takes to start the server. status: Current server status. sync_progress: Return synchronization status while creating a new replica server. tee_pipe_name: Returns the name of an existing file to where SiriDB can dump its data. uptime: Uptime in seconds. uuid: Server UUID (unique ID) version: SiriDB version  When no columns are provided the default is used. (name, pool, version, online, status)\nExamples  # list all servers in a SiriDB cluster. list servers # list all offline servers list servers where online == false # view memory usage and open files on all servers. list servers name, mem_usage, open_files # sample output (list servers) { \u0026quot;columns\u0026quot;: [\u0026quot;name\u0026quot;, \u0026quot;pool\u0026quot;, \u0026quot;version\u0026quot;, \u0026quot;online\u0026quot;, \u0026quot;status\u0026quot;], \u0026quot;servers\u0026quot;: [ [\u0026quot;siri1:9010\u0026quot;, 0, \u0026quot;2.0.10\u0026quot;, true, \u0026quot;running\u0026quot;], [\u0026quot;siri2:9010\u0026quot;, 1, \u0026quot;2.0.10\u0026quot;, true, \u0026quot;running\u0026quot;] ] }  "
 },
 {
 	"uri": "https://docs.siridb.net/servers/drop_servers/",

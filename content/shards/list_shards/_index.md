@@ -1,6 +1,6 @@
 ---
 title: "list shards"
-weight: 54
+weight: 57
 ---
 
 Lists shards in the SiriDB cluster.

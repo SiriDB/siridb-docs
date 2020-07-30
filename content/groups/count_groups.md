@@ -1,6 +1,6 @@
 ---
 title: "count groups"
-weight: 60
+weight: 63
 ---
 
 Count groups returns the number of groups defined in the database.

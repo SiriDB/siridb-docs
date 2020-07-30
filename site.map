@@ -49,6 +49,9 @@ series
         columns
         match_series
     count_series
+    alter_series
+        tag
+        untag
     drop_series
 shards
     list_shards
@@ -64,16 +67,21 @@ groups
         set_expression
         set_name
     drop_groups
+tagging
+    count_tags
+    list_tags
+        columns
+    drop_tag
 servers
+    count_servers
+    list_servers
+        columns
     alter_server
         backup_mode
         log_level
         set_address_port
         set_tee_pipe_name
     alter_servers
-    count_servers
-    list_servers
-        columns
     drop_servers
 pools
     count_pools

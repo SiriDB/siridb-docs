@@ -1,6 +1,6 @@
 ---
 title: "create user"
-weight: 83
+weight: 91
 ---
 
 Create a new user. This will create a new user without access to SiriDB.

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>alter series on SiriDB documentation</title>
+    <link>https://docs.siridb.net/series/alter_series/</link>
+    <description>Recent content in alter series on SiriDB documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://docs.siridb.net/series/alter_series/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>tag</title>
+      <link>https://docs.siridb.net/series/alter_series/tag/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/series/alter_series/tag/</guid>
+      <description>Examples # Tag series alter series &#39;my-series-001&#39;, &#39;my-series-002&#39; tag `my-series` # Another tag example alter series /linux.*/ where type == float tag `linux-float`  </description>
+    </item>
+    
+    <item>
+      <title>untag</title>
+      <link>https://docs.siridb.net/series/alter_series/untag/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/series/alter_series/untag/</guid>
+      <description>Examples # Untag series alter series &#39;my-series-001&#39;, &#39;my-series-002&#39; untag `my-series`  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -11,16 +11,6 @@
     
     
     <item>
-      <title>alter servers</title>
-      <link>https://docs.siridb.net/servers/alter_servers/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docs.siridb.net/servers/alter_servers/</guid>
-      <description>You can alter the tee_pipe_name and/or log_level for n servers at once. Changing the tee pipe name and log level is explained in more detail at alter server.
-Syntax alter servers [where...] set &amp;lt;option&amp;gt;  Example # Change the log-level to &amp;quot;debug&amp;quot; alter servers where uuid == &#39;f851c6a4-820e-11e5-9661-080027f37001&#39; set log_level debug  </description>
-    </item>
-    
-    <item>
       <title>count servers</title>
       <link>https://docs.siridb.net/servers/count_servers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -31,6 +21,16 @@ Received_points are the number of points received by a server since uptime. And 
  Info
 Received points only shows the number of points after uptime. For the total number of points you can use count series length
  Syntax count servers [received_points/selected_points] [where .</description>
+    </item>
+    
+    <item>
+      <title>alter servers</title>
+      <link>https://docs.siridb.net/servers/alter_servers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/servers/alter_servers/</guid>
+      <description>You can alter the tee_pipe_name and/or log_level for n servers at once. Changing the tee pipe name and log level is explained in more detail at alter server.
+Syntax alter servers [where...] set &amp;lt;option&amp;gt;  Example # Change the log-level to &amp;quot;debug&amp;quot; alter servers where uuid == &#39;f851c6a4-820e-11e5-9661-080027f37001&#39; set log_level debug  </description>
     </item>
     
     <item>

@@ -207,6 +207,18 @@
   </url>
   
   <url>
+    <loc>https://docs.siridb.net/series/alter_series/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.siridb.net/series/alter_series/tag/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.siridb.net/series/alter_series/untag/</loc>
+  </url>
+  
+  <url>
     <loc>https://docs.siridb.net/series/drop_series/</loc>
   </url>
   
@@ -267,7 +279,39 @@
   </url>
   
   <url>
+    <loc>https://docs.siridb.net/tagging/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.siridb.net/tagging/count_tags/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.siridb.net/tagging/list_tags/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.siridb.net/tagging/list_tags/columns/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.siridb.net/tagging/drop_tag/</loc>
+  </url>
+  
+  <url>
     <loc>https://docs.siridb.net/servers/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.siridb.net/servers/count_servers/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.siridb.net/servers/list_servers/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.siridb.net/servers/list_servers/columns/</loc>
   </url>
   
   <url>
@@ -292,18 +336,6 @@
   
   <url>
     <loc>https://docs.siridb.net/servers/alter_servers/</loc>
-  </url>
-  
-  <url>
-    <loc>https://docs.siridb.net/servers/count_servers/</loc>
-  </url>
-  
-  <url>
-    <loc>https://docs.siridb.net/servers/list_servers/</loc>
-  </url>
-  
-  <url>
-    <loc>https://docs.siridb.net/servers/list_servers/columns/</loc>
   </url>
   
   <url>

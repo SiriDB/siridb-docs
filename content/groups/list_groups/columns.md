@@ -1,6 +1,6 @@
 ---
 title: "columns"
-weight: 62
+weight: 65
 ---
 
 Valid columns are:
@@ -25,3 +25,5 @@ When no columns are provided the default is used. (name)
 		"groups": [
 			["linux"],
 			["windows"]
+		]
+	}

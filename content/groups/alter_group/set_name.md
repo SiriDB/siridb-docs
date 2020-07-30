@@ -1,6 +1,6 @@
 ---
 title: "set name"
-weight: 65
+weight: 68
 ---
 
 Change the name for a group.

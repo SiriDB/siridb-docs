@@ -1,6 +1,6 @@
 ---
 title: "drop servers"
-weight: 77
+weight: 85
 ---
 
 Can be used to remove a server. We only allow dropping a server which has a
