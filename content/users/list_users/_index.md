@@ -1,6 +1,6 @@
 ---
 title: "list users"
-weight: 93
+weight: 95
 ---
 
 List the users of SiriDB.

@@ -1,6 +1,6 @@
 ---
 title: "count series"
-weight: 51
+weight: 53
 ---
 
 Count series in the SiriDB cluster. For more information about how to select

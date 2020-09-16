@@ -1,6 +1,6 @@
 ---
 title: "grant access"
-weight: 108
+weight: 110
 ---
 
 Grants access rights to a user. For information about access rights

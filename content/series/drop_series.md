@@ -1,6 +1,6 @@
 ---
 title: "drop series"
-weight: 55
+weight: 57
 ---
 
 Drops series from SiriDB. Optionally you can use a match and/or where statement

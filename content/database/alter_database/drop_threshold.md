@@ -1,6 +1,6 @@
 ---
 title: "drop threshold"
-weight: 98
+weight: 100
 ---
 
 This value is used to protect you from accidentally dropping data from SiriDB.

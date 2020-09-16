@@ -1,6 +1,6 @@
 ---
 title: "alter server"
-weight: 79
+weight: 81
 ---
 
 You can alter the *address*, *port*, *backup_mode*, *tee_pipe_name* and/or *log_level* of a server. You can use

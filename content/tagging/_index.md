@@ -1,6 +1,6 @@
 ---
 title: "Tagging"
-weight: 70
+weight: 72
 chapter: true
 ---
 

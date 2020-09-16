@@ -31,6 +31,7 @@ query_data
         difference
         filter
         first
+        interval
         last
         limit
         max
@@ -42,6 +43,7 @@ query_data
         pvariance
         stddev
         sum
+        timeval
         variance
     timeit_debugging
 series
