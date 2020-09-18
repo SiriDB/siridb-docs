@@ -27,5 +27,7 @@ Count can be used to calculate points over a period of time.
 
 Example:
 
-    # Get the number of points in 'series-001' over the past 24 hours.
-    select count(now) from "series-001" between now - 1d and now
+```siridb
+# Get the number of points in 'series-001' over the past 24 hours.
+select count(now) from "series-001" between now - 1d and now
+```
