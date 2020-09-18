@@ -302,6 +302,18 @@ Example # Select the first value from &#39;series-001&#39; select first() from &
     </item>
     
     <item>
+      <title>interval</title>
+      <link>https://docs.siridb.net/query_data/aggregate_functions/interval/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/query_data/aggregate_functions/interval/</guid>
+      <description>Returns the difference between the timestamps. This function will give the same result as timeval() =&amp;gt; difference() but is slightly faster. Since all timestamps are in order, the difference will always be a positive value.
+Function interval()  Arguments None
+Return value The returned series will contain the difference between timestamps as their values. The timestamp of the difference is the latest of the two compared timestamps.
+Example # Select the interval between timestamps from &#39;series-001&#39; select interval() from &#39;series-001&#39;  </description>
+    </item>
+    
+    <item>
       <title>last</title>
       <link>https://docs.siridb.net/query_data/aggregate_functions/last/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -421,6 +433,18 @@ Example # Get the sum of the values collected over the last 24 hours per hour.</
     </item>
     
     <item>
+      <title>timeval</title>
+      <link>https://docs.siridb.net/query_data/aggregate_functions/timeval/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/query_data/aggregate_functions/timeval/</guid>
+      <description>Returns the timestamp of series as their values. By itself this is not very useful but it might be combined with another aggregation function to get a specific result. SiriDB has function interval() for the common combination timeval() =&amp;gt; difference().
+Function timeval()  Arguments None
+Return value The returned series will contain points where each point will have a value equal to the timestamp.
+Example # Select the timestamps as values from &#39;series-001&#39; select timeval() from &#39;series-001&#39;  </description>
+    </item>
+    
+    <item>
       <title>variance</title>
       <link>https://docs.siridb.net/query_data/aggregate_functions/variance/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -448,8 +472,7 @@ Syntax timeit &amp;lt;any_query&amp;gt;  Example result { &amp;quot;__timeit__&a
       
       <guid>https://docs.siridb.net/series/list_series/columns/</guid>
       <description>Valid columns are:
- name: Series name pool: Pool where the series is assigned to start: Time-stamp of the first value in the series end: Time-stamp of the last value in the series length: The number of points in a series type: The series type. (&amp;ldquo;integer&amp;rdquo;, &amp;ldquo;float&amp;rdquo; or &amp;ldquo;string&amp;rdquo;)  When no columns are provided the default is used. (name)
-Examples # list all series starting with &amp;quot;linux&amp;quot; by name list series /linux.</description>
+ name: Series name pool: Pool where the series is assigned to start: Time-stamp of the first value in the series end: Time-stamp of the last value in the series length: The number of points in a series type: The series type. (&amp;ldquo;integer&amp;rdquo;, &amp;ldquo;float&amp;rdquo; or &amp;ldquo;string&amp;rdquo;) shard_duration: The shard duration for this series on this particular SiriDB server (0 for series which only use the buffer)  When no columns are provided the default is used.</description>
     </item>
     
     <item>

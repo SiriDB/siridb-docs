@@ -17,8 +17,7 @@
       
       <guid>https://docs.siridb.net/series/list_series/columns/</guid>
       <description>Valid columns are:
- name: Series name pool: Pool where the series is assigned to start: Time-stamp of the first value in the series end: Time-stamp of the last value in the series length: The number of points in a series type: The series type. (&amp;ldquo;integer&amp;rdquo;, &amp;ldquo;float&amp;rdquo; or &amp;ldquo;string&amp;rdquo;)  When no columns are provided the default is used. (name)
-Examples # list all series starting with &amp;quot;linux&amp;quot; by name list series /linux.</description>
+ name: Series name pool: Pool where the series is assigned to start: Time-stamp of the first value in the series end: Time-stamp of the last value in the series length: The number of points in a series type: The series type. (&amp;ldquo;integer&amp;rdquo;, &amp;ldquo;float&amp;rdquo; or &amp;ldquo;string&amp;rdquo;) shard_duration: The shard duration for this series on this particular SiriDB server (0 for series which only use the buffer)  When no columns are provided the default is used.</description>
     </item>
     
     <item>

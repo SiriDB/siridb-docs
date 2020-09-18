@@ -1,5 +1,5 @@
 /*
-  Highlight.js 10.0.0-beta.0 (8c248fd7)
+  Highlight.js 10.0.0-beta.0 (036b4f8e)
   License: BSD-3-Clause
   Copyright (c) 2006-2020, Ivan Sagalaev
 */
@@ -870,6 +870,8 @@
   return COMMON_KEYWORDS.includes(word.toLowerCase());
   }
 
+  var version = "10.0.0-beta.0";
+
   /*
   Syntax highlighting with language autodetection.
   https://highlightjs.org/
@@ -939,7 +941,7 @@
 
       return classes
         .split(/\s+/)
-        .find((_class) => shouldNotHighlight(_class) || getLanguage(_class))
+        .find((_class) => shouldNotHighlight(_class) || getLanguage(_class));
     }
 
     /**
@@ -1063,7 +1065,10 @@
       }
 
       function processBuffer() {
-        (top.subLanguage != null ? processSubLanguage() : processKeywords());
+        if (top.subLanguage != null)
+          processSubLanguage();
+        else
+          processKeywords();
         mode_buffer = '';
       }
 
@@ -1166,6 +1171,7 @@
       var lastMatch = {};
       function processLexeme(text_before_match, match) {
 
+        var err;
         var lexeme = match && match[0];
 
         // add non-matched text to the current mode buffer
@@ -1186,7 +1192,7 @@
           // spit the "skipped" character that our regex choked on back into the output sequence
           mode_buffer += codeToHighlight.slice(match.index, match.index + 1);
           if (!SAFE_MODE) {
-            var err = new Error('0 width match regex');
+            err = new Error('0 width match regex');
             err.languageName = languageName;
             err.badRule = lastMatch.rule;
             throw(err);
@@ -1199,7 +1205,7 @@
           return doBeginMatch(match);
         } else if (match.type==="illegal" && !ignore_illegals) {
           // illegal match, we do not continue processing
-          var err = new Error('Illegal lexeme "' + lexeme + '" for mode "' + (top.className || '<unnamed>') + '"');
+          err = new Error('Illegal lexeme "' + lexeme + '" for mode "' + (top.className || '<unnamed>') + '"');
           err.mode = top;
           throw err;
         } else if (match.type==="end") {
@@ -1537,6 +1543,7 @@
 
     hljs.debugMode = function() { SAFE_MODE = false; };
     hljs.safeMode = function() { SAFE_MODE = true; };
+    hljs.versionString = version;
 
     for (const key in MODES) {
       if (typeof MODES[key] === "object")
@@ -1760,93 +1767,113 @@ hljs.registerLanguage('json', function () {
 }());
 
 hljs.registerLanguage('siridb', function () {
-  'use strict';
+    'use strict';
 
-  /*
-  Language: SiriDB
-  Author: Jeroen van der Heijden <jeroen@transceptor.technology>
-  Category: common, scripting
-  Website: https://siridb.net
-  */
+    /*
+    Language: SiriDB
+    Author: Jeroen van der Heijden <jeroen@transceptor.technology>
+    Category: common
+    Website: https://siridb.net
+    */
 
-  function siridb(hljs) {
-      var STRINGS = {
-          className: 'string',
-          variants: [{
-              begin: '"', end: '"',
-              illegal: '\\n',
-          }, {
-              begin: '\'', end: '\'',
-              illegal: '\\n',
-          }]
-      };
+    function siridb(hljs) {
 
-      var NUMBERS = {
-        className: 'number',
-        variants: [
-          { begin: /[-+]?0b[01]+/ },
-          { begin: /[-+]?0o[0-8]+/ },
-          { begin: /([-+]?0x[0-9a-fA-F]+)/ },
-          { begin: /[-+]?[0-9]+/ },
-          { begin: /[-+]?((inf|nan)([^0-9A-Za-z_]|$)|[0-9]*\.[0-9]+(e[+-][0-9]+)?)/ },
-        ],
-        relevance: 0
-      };
+        var COMMENTS = {
+            className: 'doc',
+            variants: [
+                hljs.HASH_COMMENT_MODE,
+            ]
+        };
 
-      var COMMENTS = {
-          className: 'doc',
-          variants: [
-              hljs.HASH_COMMENT_MODE,
-          ]
-      };
+        var NUMBERS = {
+            className: 'number',
+            variants: [
+              { begin: /[-+]?0b[01]+/ },
+              { begin: /[-+]?0o[0-8]+/ },
+              { begin: /([-+]?0x[0-9a-fA-F]+)/ },
+              { begin: /[-+]?((inf|nan)([^0-9A-Za-z_]|$)|[0-9]*\.[0-9]+(e[+-][0-9]+)?)/ },
+              { begin: /[-+]?[0-9]+(w|d|h|m|s)?/ }
+            ],
+            relevance: 0
+        };
 
-      var REGEXP = {
-          className: 'regexp',
-          begin: new RegExp('(^\/[^\/\\\\\\n]+(?:\\\\.[^\/\\\\]*)*\/i?)'),
-          relevance: 0,
-      };
+        var REGEXP = {
+            className: 'regexp',
+            begin: new RegExp('(/[^/\\\\\\n]+(?:\\\\.[^/\\\\]*)*/i?)'),
+            relevance: 0,
+          };
 
-      return {
-          contains: [
-              COMMENTS,
-              STRINGS,
-              NUMBERS,
-              REGEXP,
+        var SUBST = {
+            className: 'subst',
+            begin: /\{/, end: /\}/,
+        };
+
+        var LITERAL_BRACKET = {
+            begin: /\{\{/,
+            relevance: 0
+        };
+
+        var STRINGS = {
+            className: 'string',
+            variants: [
               {
-                  className: 'symbol',
-                  begin: /#[0-9]+/
+                begin: '\'', end: '\'',
+                contains: [],
+                relevance: 10
               },
               {
-                  className: 'literal',
-                  beginKeywords: 'true false'
+                begin: '"', end: '"',
+                contains: [],
+                relevance: 10
               },
               {
-                  className: 'function',
-                  begin: new RegExp(
-                      '\\b(' +
-                      /* AGGREGATE FUNCTIONS */
-                      'limit|count|sum|max|min|mean|median|median_high|' +
-                      'median_low|variance|pvariance|stddev|difference|' +
-                      'derivative|filter|first|last' +
-                      /* end */
-                      ')\\s*(?=\\()'
-                  )
+                begin: '`', end: '`',
+                contains: [LITERAL_BRACKET, SUBST],
+                relevance: 10
               },
-              {
-                  className: 'attr',
-                  begin: /\.[A-Za-z_][0-9A-Za-z_]*/
-              },
-              {
-                  className: 'variable',
-                  begin: /[A-Za-z_][0-9A-Za-z_]*/
-              },
-          ],
-      };
+              hljs.APOS_STRING_MODE,
+              hljs.QUOTE_STRING_MODE
+            ]
+        };
+
+        return {
+            name: 'SiriDB',
+            contains: [
+                COMMENTS,
+                STRINGS,
+                NUMBERS,
+                REGEXP,
+                {
+                    className: 'function',
+                    begin: new RegExp(
+                        '\\b(' +
+                        'count|derivative|difference|filter|first|interval|' +
+                        'last|limit|max|mean|median|median_high|\median_low|min|pvariance|' +
+                        'stddev|sum|timeval|variance)\\s*(?=\\()'
+                    ),
+                },
+            ],
+            keywords: {
+                keyword:
+                    'timeit alter count create drop list select grant revoke ' +
+                    'from between before after and or merge as using where set to',
+                literal:
+                    'true false all now debug info warning error critical read write full',
+                built_in:
+                    'server servers shard shards series pool pools group groups tag tags ' +
+                    'access name active_handles time_precision received_points selected_points ' +
+                    'sync_progress tee_pipe_name uptime reindex_progress ' +
+                    'open_files mem_usage max_open_files log_level idle_time idle_percentage ' +
+                    'fifo_files active_tasks status shard_duration startup_time online version ' +
+                    'uuid port libuv ip_support dbpath buffer_size buffer_path address ' +
+                    'backup_mode start end size ignore_threshold user users password'
+            }
+        };
     }
 
-  return siridb;
+    return siridb;
 
-  return module.exports.definer || module.exports;
+    return module.exports.definer || module.exports;
 
 }());
 

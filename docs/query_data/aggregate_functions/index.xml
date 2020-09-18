@@ -67,6 +67,18 @@ Example # Select the first value from &#39;series-001&#39; select first() from &
     </item>
     
     <item>
+      <title>interval</title>
+      <link>https://docs.siridb.net/query_data/aggregate_functions/interval/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/query_data/aggregate_functions/interval/</guid>
+      <description>Returns the difference between the timestamps. This function will give the same result as timeval() =&amp;gt; difference() but is slightly faster. Since all timestamps are in order, the difference will always be a positive value.
+Function interval()  Arguments None
+Return value The returned series will contain the difference between timestamps as their values. The timestamp of the difference is the latest of the two compared timestamps.
+Example # Select the interval between timestamps from &#39;series-001&#39; select interval() from &#39;series-001&#39;  </description>
+    </item>
+    
+    <item>
       <title>last</title>
       <link>https://docs.siridb.net/query_data/aggregate_functions/last/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -183,6 +195,18 @@ Example # Select standard deviation grouped by 1 hour. select stddev(1h) from &#
       <description>Sum can be used when you want to know the sum of the values over a period of time. If no time window is provided it returns the sum of the values in the series.
 Function sum([ts])  Arguments    Arguments Description     ts (optional) Time window.    Return value An integer or float value depending on the series data type.
 Example # Get the sum of the values collected over the last 24 hours per hour.</description>
+    </item>
+    
+    <item>
+      <title>timeval</title>
+      <link>https://docs.siridb.net/query_data/aggregate_functions/timeval/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/query_data/aggregate_functions/timeval/</guid>
+      <description>Returns the timestamp of series as their values. By itself this is not very useful but it might be combined with another aggregation function to get a specific result. SiriDB has function interval() for the common combination timeval() =&amp;gt; difference().
+Function timeval()  Arguments None
+Return value The returned series will contain points where each point will have a value equal to the timestamp.
+Example # Select the timestamps as values from &#39;series-001&#39; select timeval() from &#39;series-001&#39;  </description>
     </item>
     
     <item>

@@ -8,23 +8,23 @@
 
 
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
-    <title>match series :: SiriDB documentation</title>
+    <title>interval :: SiriDB documentation</title>
 
     
-    <link href="/css/nucleus.css?1600420212" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1600420212" rel="stylesheet">
-    <link href="/css/hybrid.css?1600420212" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1600420212" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1600420212" rel="stylesheet">
-    <link href="/css/auto-complete.css?1600420212" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1600420212" rel="stylesheet">
-    <link href="/css/theme.css?1600420212" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1600420212" rel="stylesheet">
+    <link href="/css/nucleus.css?1600420211" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1600420211" rel="stylesheet">
+    <link href="/css/hybrid.css?1600420211" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1600420211" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1600420211" rel="stylesheet">
+    <link href="/css/auto-complete.css?1600420211" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1600420211" rel="stylesheet">
+    <link href="/css/theme.css?1600420211" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1600420211" rel="stylesheet">
     
-      <link href="/css/theme-mine.css?1600420212" rel="stylesheet">
+      <link href="/css/theme-mine.css?1600420211" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1600420212"></script>
+    <script src="/js/jquery-3.3.1.min.js?1600420211"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -38,7 +38,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/series/list_series/match_series/">
+  <body class="" data-url="/query_data/aggregate_functions/interval/">
     <nav id="sidebar" class="">
 
 
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1600420212"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1600420212"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1600420211"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1600420211"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/docs.siridb.net\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1600420212"></script>
+<script type="text/javascript" src="/js/search.js?1600420211"></script>
 
     
   </div>
@@ -573,7 +573,7 @@
   
     
     <li data-nav-id="/query_data/" title="Query data" class="dd-item 
-        
+        parent
         
         
         ">
@@ -672,7 +672,7 @@
   
     
     <li data-nav-id="/query_data/aggregate_functions/" title="Aggregate functions" class="dd-item 
-        
+        parent
         
         
         ">
@@ -791,7 +791,7 @@
  
   
     
-      <li data-nav-id="/query_data/aggregate_functions/interval/" title="interval" class="dd-item ">
+      <li data-nav-id="/query_data/aggregate_functions/interval/" title="interval" class="dd-item active">
         <a href="/query_data/aggregate_functions/interval/">
         interval
         
@@ -1093,7 +1093,7 @@
   
     
     <li data-nav-id="/series/" title="Series" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1120,7 +1120,7 @@
   
     
     <li data-nav-id="/series/list_series/" title="list series" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1163,7 +1163,7 @@
  
   
     
-      <li data-nav-id="/series/list_series/match_series/" title="match series" class="dd-item active">
+      <li data-nav-id="/series/list_series/match_series/" title="match series" class="dd-item ">
         <a href="/series/list_series/match_series/">
         match series
         
@@ -2719,7 +2719,7 @@
             
           
           
-            <a href='/'></a> > <a href='/series/'>Series</a> > <a href='/series/list_series/'>list series</a> > match series
+            <a href='/'></a> > <a href='/query_data/'>Query data</a> > <a href='/query_data/aggregate_functions/'>Aggregate functions</a> > interval
           
          
           
@@ -2738,7 +2738,10 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#syntax">Syntax</a></li>
+        <li><a href="#function">Function</a></li>
+        <li><a href="#arguments">Arguments</a></li>
+        <li><a href="#return-value">Return value</a></li>
+        <li><a href="#example">Example</a></li>
       </ul>
     </li>
   </ul>
@@ -2758,7 +2761,7 @@
           
             <h1>
               
-              match series
+              interval
             </h1>
           
 
@@ -2766,88 +2769,18 @@
 
 
 
-<p>Series can be matched using different methods. <a href="../../../groups">Groups</a> can help to quickly get the required series even in a database with millions of unique series.</p>
-<h3 id="syntax">Syntax</h3>
-<pre><code>&lt;series_name | regular_expression | group&gt; [update_function &lt;match_series&gt;]
+<p>Returns the difference between the timestamps. This function will give the same result as <code>timeval() =&gt; difference()</code> but is slightly faster.
+Since all timestamps are in order, the difference will always be a positive value.</p>
+<h3 id="function">Function</h3>
+<pre><code>interval()
 </code></pre>
-<h4 id="series-name">Series name</h4>
-<p>A series name is a string containing the series name.</p>
-<p>An advantage of using series names in a SiriDB cluster is that we know in which pool the series exists, because SiriDB sends data to a pool based on the series name. The given query will therefore only be send to the applicable pool(s). When using a regular expression or group match we don&rsquo;t know which pool contains the series, so each pool needs to be queried.</p>
-<p>Example:</p>
-<pre><code>list series 'series-001'
-</code></pre>
-<h4 id="regular-expression">Regular expression</h4>
-<p>Regular expressions can be used to select series.</p>
-<blockquote>
-<p><strong>Note</strong></p>
-<p>Each pool in a SiriDB cluster will look for matching series. If you plan to use a regular expression multiple times, you should consider creating a group for the expression.</p>
-</blockquote>
-<p>Example:</p>
-<pre><code># list all series starting with &quot;linux&quot;
-list series /linux.*/
-
-# list all series starting with &quot;linux&quot; (case-insensitive)
-list series /linux.*/i
-
-# list all series not starting with &quot;linux&quot;
-list series /(?!linux).*/
-
-# list all series not containing &quot;linux&quot;
-list series /((?!linux).)*/
-</code></pre>
-<h4 id="group">Group</h4>
-<p><a href="../../../groups">Groups</a> are basically cached regular expression and can be used together with normal
-regular expressions. When you use a regular expression to match series in a group, it&rsquo;s
-best to first select the group and then the regular expression. This way the regular
-expression only needs to validate series inside the group.</p>
-<p>Examples:</p>
-<pre><code># list all series in group &quot;linux&quot;
-list series `linux`
-
-# list all series in group &quot;linux&quot; with &quot;cpu&quot; in the name
-# note that we first select the group so the regular expression only
-# needs to be validated on series in the group.
-list series `linux` &amp; /.*cpu.*/
-</code></pre>
-<h4 id="update-functions">Update functions</h4>
-<p>When selecting series you can combine <em>series-names</em>, <em>regular-expressions</em> and <em>groups</em>. Update functions tell SiriDB how to combine the selection.
-SiriDB knows four update functions:</p>
-<ul>
-<li>difference (alias: <strong>-</strong>)</li>
-<li>symmentric_difference (alias: <strong>^</strong>)</li>
-<li>union (aliases: <strong>,</strong> and <strong>|</strong>)</li>
-<li>intersection (alias: <strong>&amp;</strong>)</li>
-</ul>
-<p>Examples:</p>
-<pre><code># list multiple series using union (we actually use the alias here)
-list series 'series-001', 'series-002', 'series-003'
-
-# list series in group &quot;linux&quot; except series which are also in group &quot;cpu&quot;
-list series `linux` - `cpu`
-
-# list series when member of group &quot;linux&quot; or group &quot;cpu&quot; but not both
-list series `linux` ^ `cpu`
-
-# list series that are both members of `linux` and `cpu` except when
-# a series name contains &quot;test&quot;.
-list series `linux` &amp; `cpu` - /.*test.*/
-
-# list series in group `linux` and view their length.
-list series name, length `linux`
-
-# list series in group `linux` which have their last data point more
-# than 100 days ago
-list series `linux` where end &lt; now - 100d
-
-
-# sample output (list series)
-{
-    &quot;columns&quot;: [&quot;name&quot;],
-    &quot;series&quot;: [
-        [&quot;series-001&quot;],
-        [&quot;series-002&quot;]
-    ]
-}
+<h3 id="arguments">Arguments</h3>
+<p>None</p>
+<h3 id="return-value">Return value</h3>
+<p>The returned series will contain the difference between timestamps as their values. The timestamp of the difference is the <em>latest</em> of the two compared timestamps.</p>
+<h3 id="example">Example</h3>
+<pre><code># Select the interval between timestamps from 'series-001'
+select interval() from 'series-001'
 </code></pre>
 
 
@@ -2865,10 +2798,10 @@ list series `linux` where end &lt; now - 100d
         
     
         
-            <a class="nav nav-prev" href="/series/list_series/columns/" title="columns"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/query_data/aggregate_functions/first/" title="first"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/series/count_series/" title="count series" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/query_data/aggregate_functions/last/" title="last" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     
     </div>

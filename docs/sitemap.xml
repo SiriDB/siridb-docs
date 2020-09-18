@@ -135,6 +135,10 @@
   </url>
   
   <url>
+    <loc>https://docs.siridb.net/query_data/aggregate_functions/interval/</loc>
+  </url>
+  
+  <url>
     <loc>https://docs.siridb.net/query_data/aggregate_functions/last/</loc>
   </url>
   
@@ -176,6 +180,10 @@
   
   <url>
     <loc>https://docs.siridb.net/query_data/aggregate_functions/sum/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.siridb.net/query_data/aggregate_functions/timeval/</loc>
   </url>
   
   <url>
