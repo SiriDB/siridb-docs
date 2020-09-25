@@ -525,6 +525,20 @@
 	"content": "Valid columns are:\n name: Tag name series: Number of series in the tag.  When no columns are provided the default is used. (name)\nExamples # View all tags list tags # View tags and the number of series tagged list tags name, series # sample output (list tags) { \u0026quot;columns\u0026quot;: [\u0026quot;name\u0026quot;, \u0026quot;series\u0026quot;], \u0026quot;tags\u0026quot;: [ [\u0026quot;linux\u0026quot;, 52042], [\u0026quot;windows\u0026quot;, 7] ] }  "
 },
 {
+	"uri": "https://docs.siridb.net/tagging/alter_tag/",
+	"title": "alter tag",
+	"tags": [],
+	"description": "",
+	"content": "Alter the name of a tag.\nSyntax alter tag `tagname` set \u0026lt;option\u0026gt;  See:\n set_name  "
+},
+{
+	"uri": "https://docs.siridb.net/tagging/alter_tag/set_name/",
+	"title": "set name",
+	"tags": [],
+	"description": "",
+	"content": "Change the name for a tag.\n Note\nThis statement expects a normal string using single or double quotes. The reason is that \u0026lsquo;set name\u0026rsquo; expects a string and not a tag.\n Example # Rename tag `linux` to `ubuntu` alter tag `linux` set name 'ubuntu'  "
+},
+{
 	"uri": "https://docs.siridb.net/tagging/drop_tag/",
 	"title": "drop tag",
 	"tags": [],

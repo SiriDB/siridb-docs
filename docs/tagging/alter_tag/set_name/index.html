@@ -8,7 +8,7 @@
 
 
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
-    <title>Shards :: SiriDB documentation</title>
+    <title>set name :: SiriDB documentation</title>
 
     
     <link href="/css/nucleus.css?1601044358" rel="stylesheet">
@@ -38,7 +38,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/shards/">
+  <body class="" data-url="/tagging/alter_tag/set_name/">
     <nav id="sidebar" class="">
 
 
@@ -1309,8 +1309,8 @@
   
     
     <li data-nav-id="/shards/" title="Shards" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/shards/">
@@ -1650,7 +1650,7 @@
   
     
     <li data-nav-id="/tagging/" title="Tagging" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1749,7 +1749,7 @@
   
     
     <li data-nav-id="/tagging/alter_tag/" title="alter tag" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1773,7 +1773,7 @@
  
   
     
-      <li data-nav-id="/tagging/alter_tag/set_name/" title="set name" class="dd-item ">
+      <li data-nav-id="/tagging/alter_tag/set_name/" title="set name" class="dd-item active">
         <a href="/tagging/alter_tag/set_name/">
         set name
         
@@ -2752,6 +2752,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -2762,7 +2764,19 @@
             
           
           
-            <a href='/'></a> > Shards
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/tagging/'>Tagging</a> > <a href='/tagging/alter_tag/'>alter tag</a> > set name
+          
+         
+          
+         
           
          
           
@@ -2771,6 +2785,21 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -2778,31 +2807,34 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              set name
+            </h1>
           
 
         
 
 
 
+<p>Change the name for a tag.</p>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>This statement expects a normal string using single or double quotes.
+The reason is that &lsquo;set name&rsquo; expects a string and not a tag.</p>
+</blockquote>
+<h3 id="example">Example</h3>
+<pre><code># Rename tag `linux` to `ubuntu`
+alter tag `linux` set name 'ubuntu'
+</code></pre>
 
-	<h1 id="shards">Shards</h1>
-<p>Everything about Shards is discussed here.</p>
-<p><strong>Shards</strong> are files for specific time-ranges within a time series. A shard can, for example, contain all data of a certain year / month / day / etc. On the initial setup of a SiriDB database the shard duration must be chosen.</p>
-<p><img src="../images/buffer-to-shards.png" alt="Buffer to Shards"></p>
 
-
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
-        
-            </div> 
         
         </div>
         
@@ -2813,10 +2845,10 @@
         
     
         
-            <a class="nav nav-prev" href="/series/drop_series/" title="drop series"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/tagging/alter_tag/" title="alter tag"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/shards/list_shards/" title="list shards" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/tagging/drop_tag/" title="drop tag" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     
     </div>
@@ -2846,3 +2878,4 @@
 
   </body>
 </html>
+

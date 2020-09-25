@@ -641,6 +641,18 @@ Examples # View all tags list tags # View tags and the number of series tagged l
     </item>
     
     <item>
+      <title>set name</title>
+      <link>https://docs.siridb.net/tagging/alter_tag/set_name/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.siridb.net/tagging/alter_tag/set_name/</guid>
+      <description>Change the name for a tag.
+ Note
+This statement expects a normal string using single or double quotes. The reason is that &amp;lsquo;set name&amp;rsquo; expects a string and not a tag.
+ Example # Rename tag `linux` to `ubuntu` alter tag `linux` set name &#39;ubuntu&#39;  </description>
+    </item>
+    
+    <item>
       <title>drop tag</title>
       <link>https://docs.siridb.net/tagging/drop_tag/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

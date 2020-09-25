@@ -303,6 +303,14 @@
   </url>
   
   <url>
+    <loc>https://docs.siridb.net/tagging/alter_tag/</loc>
+  </url>
+  
+  <url>
+    <loc>https://docs.siridb.net/tagging/alter_tag/set_name/</loc>
+  </url>
+  
+  <url>
     <loc>https://docs.siridb.net/tagging/drop_tag/</loc>
   </url>
   
