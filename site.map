@@ -73,6 +73,8 @@ tagging
     count_tags
     list_tags
         columns
+    alter_tag
+        set_name
     drop_tag
 servers
     count_servers

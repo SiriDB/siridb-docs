@@ -1,6 +1,6 @@
 ---
 title: "count servers"
-weight: 78
+weight: 80
 ---
 
 Count servers returns the number of servers in a SiriDB cluster.

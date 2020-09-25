@@ -1,6 +1,6 @@
 ---
 title: "timezones"
-weight: 106
+weight: 108
 ---
 
 For information on how to change the time zone see [alter database](../alter_database/set_timezone).

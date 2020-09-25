@@ -1,6 +1,6 @@
 ---
 title: "alter database"
-weight: 99
+weight: 101
 ---
 
 Settings of the database that can be altered:

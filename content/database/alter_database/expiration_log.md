@@ -1,6 +1,6 @@
 ---
 title: "expiration log"
-weight: 101
+weight: 103
 ---
 
 When the *expiration_log* is enabled than log shards that are older than the provided value will be dropped. This setting should be an integer value with the time precision of the database.

@@ -1,6 +1,6 @@
 ---
 title: "expiration num"
-weight: 102
+weight: 104
 ---
 
 When the *expiration_num* is enabled than number shards that are older than the provided value will be dropped. This setting should be an integer value with the time precision of the database.

@@ -1,6 +1,6 @@
 ---
 title: "alter user"
-weight: 97
+weight: 99
 ---
 
 Change the *name*  or *password* of a user.
