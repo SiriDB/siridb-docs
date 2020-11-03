@@ -26,9 +26,10 @@ Variable | Default | Description
 `SIRIDB_DEFAULT_DB_PATH` | `/var/lib/siridb` | SiriDB will load databases from, and create databases in this location.
 `SIRIDB_OPTIMIZING_INTERVAL` | `3600` | SiriDB will run an optimize task each X seconds. A value of 0 (zero) disables optimizing.
 `SIRIDB_HEARTBEAT_INTERVAL` | `30` | SiriDB uses a heart-beat interval to keep connections with other servers online.
-`SIRIDB_BUFFER_SYNC_INTERVAL` | `0` | SiriDB can run fsync on the buffer file on an interval in milliseconds. This value is set to 0 by default which tells SiriDB to run fsync after each insert request. When having many insert requests per second, it can be useful to use an interval like 500 milliseconds.
+`SIRIDB_BUFFER_SYNC_INTERVAL` | `0` | SiriDB can run fsync on the buffer file on an interval in milliseconds. This value is set to `0` by default which tells SiriDB to run fsync after each insert request. When having many insert requests per second, it can be useful to use an interval like `500` milliseconds.
 `SIRIDB_MAX_OPEN_FILES` | `32768` | SiriDB will not open more shard files than max_open_files. Note that the total number of open files can be sligtly higher since SiriDB also needs a few other files to write to.
-`SIRIDB_ENABLE_SHARD_COMPRESSION` | `1` | Use shard compression for storing data points. Set value 0 to disable shard compression.
+`SIRIDB_ENABLE_SHARD_COMPRESSION` | `0` | Use shard compression for storing data points. Set value `1` (recommended) to enable shard compression or `0` to disable compression.
+`SIRIDB_ENABLE_SHARD_AUTO_DURATION` | `0` | Let SiriDB control shard duration when possible. When enabled, the database configured shard duration for both *number* and *log* values are still used when SiriDB is not able to detect a sensible duration.
 `SIRIDB_ENABLE_PIPE_SUPPORT` | `0` | Enable named pipe support for client connections.
 `SIRIDB_PIPE_CLIENT_NAME` | `siridb_client.sock` | SiriDB will bind the client named pipe in this location.
 `SIRIDB_HTTP_STATUS_PORT` | `0` | When the HTTP status port is not set (or 0), the service will not start. Otherwise the HTTP requests `/status`, `/ready` and `/healthy` are available which can be used for readiness and liveness requests. Example usage using wget: wget -q -O - http://siridb-server.local:8080/status
