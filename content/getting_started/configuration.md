@@ -34,3 +34,4 @@ Variable | Default | Description
 `SIRIDB_PIPE_CLIENT_NAME` | `siridb_client.sock` | SiriDB will bind the client named pipe in this location.
 `SIRIDB_HTTP_STATUS_PORT` | `0` | When the HTTP status port is not set (or 0), the service will not start. Otherwise the HTTP requests `/status`, `/ready` and `/healthy` are available which can be used for readiness and liveness requests. Example usage using wget: wget -q -O - http://siridb-server.local:8080/status
 `SIRIDB_HTTP_API_PORT` | `0` | When the HTTP API port is not set (or 0), the API service will not start. Otherwise the HTTP POST requests can be user to insert or query data points.
+`SIRIDB_IGNORE_BROKEN_DATA` | `0` | SiriDB will ignore corrupted or broken shards and related database files even at the cost of losing some or all data. This option is useful especially for transient data on systems prone to power outage or frequent hard resets.
