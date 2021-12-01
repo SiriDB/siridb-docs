@@ -12,6 +12,15 @@ and when using `between .. and ..` you set both a *start* and *end* time.
 Points that have the exact start time are *included* in the result, points
 with the exact end time are *excluded* from the result.
 
+### Allowed formats
+
+The allowed formats for time ranges are:
+
+- **Integer values**: Number of time units after 1970-01-01. The time unit depends on the database time precision. For example, seconds.
+- **Time values**: `w` (week), `d` (day), `h` (hour), `m` (minute) and `s` (second). For example, `2w` is equal to two weeks.
+- **Date/time strings**: For example "2021", "2021-01-30", "2021-01-30 12:00", "2021-01-30 14:31:45Z", "2021-01-30T14:31:45+0200".
+- `now`.
+
 >**Note**
 >
 >It's safe to use *now* multiple times in a query. SiriDB only calculates *now* one
