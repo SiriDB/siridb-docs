@@ -467,12 +467,11 @@
   </url>
   
   <url>
-    <loc>https://docs.siridb.net/</loc>
-    <priority>0</priority>
+    <loc>https://docs.siridb.net/categories/</loc>
   </url>
   
   <url>
-    <loc>https://docs.siridb.net/categories/</loc>
+    <loc>https://docs.siridb.net/</loc>
   </url>
   
   <url>
