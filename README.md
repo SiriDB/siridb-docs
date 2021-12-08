@@ -38,16 +38,6 @@ Start development server
 hugo server --disableFastRender # This command starts the Hugo server and watches the site directory for changes.
 ```
 
-**Production**:
-
-Build for GitHub pages
-
-```bash
-hugo # This command generates the static website in the public/ directory. If you do not have a site, then it gives errors about missing layout files.
-```
-
-And upload to master
-
 ## Syntax highlighting
 
 The theme uses highlight.js for syntax highlighting.
