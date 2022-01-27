@@ -35,7 +35,7 @@
   }
 
 
-  
+
   function inherit(parent) {  // inherit(parent, override_obj, override_obj, ...)
     var key;
     var result = {};
@@ -1771,7 +1771,7 @@ hljs.registerLanguage('siridb', function () {
 
     /*
     Language: SiriDB
-    Author: Jeroen van der Heijden <jeroen@transceptor.technology>
+    Author: Jeroen van der Heijden <jeroen@cesbit.com>
     Category: common
     Website: https://siridb.net
     */
