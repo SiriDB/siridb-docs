@@ -5,7 +5,7 @@ weight: 3
 
 >From version 2.0.19 libcleri is not included as part of this source anymore
 >and needs to be installed separately. libcleri can be found here:
->[https://github.com/transceptor-technology/libcleri](https://github.com/transceptor-technology/libcleri)
+>[https://github.com/cesbit/libcleri](https://github.com/cesbit/libcleri)
 >or can be installed using `apt`.
 
 #### Linux
@@ -32,7 +32,7 @@ sudo make install
 ```
 
 #### OSX
->Make sure [libcleri](https://github.com/transceptor-technology/libcleri) is installed!
+>Make sure [libcleri](https://github.com/cesbit/libcleri) is installed!
 
 Install the following requirements:
 ```bash

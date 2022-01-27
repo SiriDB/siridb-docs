@@ -7,7 +7,7 @@ The SiriDB Connector for Java is a self-contained Java driver for communicating 
 
 ### Installation
 
-First you need to install the [Java-QPack](https://github.com/transceptor-technology/java-qpack) library. Add this library to your project.
+First you need to install the [Java-QPack](https://github.com/cesbit/java-qpack) library. Add this library to your project.
 
 Now you can install the connector. You can get a copy of the compiled jar file [here](https://github.com/SiriDB/java-siridb-connector/releases/latest) or clone the [repository](https://github.com/SiriDB/java-siridb-connector) and compile the code. Add the jar file as library to your project.
 

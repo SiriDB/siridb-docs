@@ -4,7 +4,7 @@ weight: 87
 ---
 
 Some projects like [Enodo project](../../../related_projects/enodo) may benefit from receiving all SiriDB data. Because these projects usually experience the same scaling problems as SiriDB does, we have chosen to support a *tee* option on each SiriDB server.
-Using this feature makes it possible to install a service on at least one SiriDB server in each pool. Such a service should install a UNIX Pipe server which accepts SiriDB data in [QPack](https://github.com/transceptor-technology/qpack) format.
+Using this feature makes it possible to install a service on at least one SiriDB server in each pool. Such a service should install a UNIX Pipe server which accepts SiriDB data in [QPack](https://github.com/cesbit/qpack) format.
 
 SiriDB will then try to connect to the pipe, and once a connection is established, all SiriDB data points with the SiriDB pool as target, will be forwarded to the pipe.
 

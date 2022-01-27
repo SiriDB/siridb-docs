@@ -4,13 +4,13 @@ weight: 19
 ---
 
 Libsiridb is a library which can be used to communicate
-with [SiriDB](https://github.com/transceptor-technology/siridb-server) using
+with [SiriDB](https://github.com/cesbit/siridb-server) using
 the C program language. This library contains useful functions but does not
 handle the connection itself.
 
 ### Installation
 
->Note: libsiridb requires [libqpack](https://github.com/transceptor-technology/libqpack)
+>Note: libsiridb requires [libqpack](https://github.com/cesbit/libqpack)
 
 Install debug or release version, in this example we will install the release version.
 ```

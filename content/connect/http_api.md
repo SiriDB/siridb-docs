@@ -8,7 +8,7 @@ By default the API port is disabled, this can be changed
 by setting `http_api_port` in the [configuration file](https://github.com/thingsdb/ThingsDB/blob/master/thingsdb.example.conf)
 or by setting the `SIRIDB_HTTP_API_PORT` environment variable.
 
-The API has support for both [JSON](https://www.json.org) and [qpack](https://github.com/transceptor-technology/qpack) and can be used to perform service requests, inserts and queries.
+The API has support for both [JSON](https://www.json.org) and [qpack](https://github.com/cesbit/qpack) and can be used to perform service requests, inserts and queries.
 
 ## Headers
 
