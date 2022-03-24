@@ -1,6 +1,6 @@
 getting_started
-    ubuntu
     build_from_source
+    docker
     configuration
     start_up_server
 overview

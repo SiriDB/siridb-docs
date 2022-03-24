@@ -20,7 +20,7 @@ theme = "hugo-theme-learn"
 
 [[menu.shortcuts]]
 name = "<i class='far fa-window-maximize'></i> Website"
-url = "https://siridb.net/"
+url = "https://siridb.com/"
 weight = 10
 
 [[menu.shortcuts]]
