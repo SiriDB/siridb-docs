@@ -6,17 +6,17 @@
 <meta name=description content="SiriDB documentation">
 <link rel="shortcut icon" href=/images/favicon.ico type=image/x-icon>
 <title>Build from source :: SiriDB documentation</title>
-<link href=/css/nucleus.css?1647868415 rel=stylesheet>
-<link href=/css/fontawesome-all.min.css?1647868415 rel=stylesheet>
-<link href=/css/hybrid.css?1647868415 rel=stylesheet>
-<link href=/css/featherlight.min.css?1647868415 rel=stylesheet>
-<link href=/css/perfect-scrollbar.min.css?1647868415 rel=stylesheet>
-<link href=/css/auto-complete.css?1647868415 rel=stylesheet>
-<link href=/css/atom-one-dark-reasonable.css?1647868415 rel=stylesheet>
-<link href=/css/theme.css?1647868415 rel=stylesheet>
-<link href=/css/hugo-theme.css?1647868415 rel=stylesheet>
-<link href=/css/theme-mine.css?1647868415 rel=stylesheet>
-<script src=/js/jquery-3.3.1.min.js?1647868415></script>
+<link href=/css/nucleus.css?1648126614 rel=stylesheet>
+<link href=/css/fontawesome-all.min.css?1648126614 rel=stylesheet>
+<link href=/css/hybrid.css?1648126614 rel=stylesheet>
+<link href=/css/featherlight.min.css?1648126614 rel=stylesheet>
+<link href=/css/perfect-scrollbar.min.css?1648126614 rel=stylesheet>
+<link href=/css/auto-complete.css?1648126614 rel=stylesheet>
+<link href=/css/atom-one-dark-reasonable.css?1648126614 rel=stylesheet>
+<link href=/css/theme.css?1648126614 rel=stylesheet>
+<link href=/css/hugo-theme.css?1648126614 rel=stylesheet>
+<link href=/css/theme-mine.css?1648126614 rel=stylesheet>
+<script src=/js/jquery-3.3.1.min.js?1648126614></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}:not(pre)>code+span.copy-to-clipboard{display:none}</style>
 </head>
 <body data-url=/getting_started/build_from_source/>
@@ -32,10 +32,10 @@
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=/js/lunr.min.js?1647868415></script>
-<script type=text/javascript src=/js/auto-complete.js?1647868415></script>
+<script type=text/javascript src=/js/lunr.min.js?1648126614></script>
+<script type=text/javascript src=/js/auto-complete.js?1648126614></script>
 <script type=text/javascript>var baseurl="https://docs.siridb.net/"</script>
-<script type=text/javascript src=/js/search.js?1647868415></script>
+<script type=text/javascript src=/js/search.js?1648126614></script>
 </div>
 <div class=highlightable>
 <ul class=topics>
@@ -45,14 +45,14 @@ parent">
 Getting started
 </a>
 <ul>
-<li data-nav-id=/getting_started/ubuntu/ title=Ubuntu class=dd-item>
-<a href=/getting_started/ubuntu/>
-Ubuntu
-</a>
-</li>
 <li data-nav-id=/getting_started/build_from_source/ title="Build from source" class="dd-item active">
 <a href=/getting_started/build_from_source/>
 Build from source
+</a>
+</li>
+<li data-nav-id=/getting_started/docker/ title=Docker class=dd-item>
+<a href=/getting_started/docker/>
+Docker
 </a>
 </li>
 <li data-nav-id=/getting_started/configuration/ title=Configuration class=dd-item>
@@ -683,7 +683,7 @@ Enodo
 <h3>More</h3>
 <ul>
 <li>
-<a class=padding href=https://siridb.net/><i class="far fa-window-maximize"></i> Website</a>
+<a class=padding href=https://siridb.com/><i class="far fa-window-maximize"></i> Website</a>
 </li>
 <li>
 <a class=padding href=https://github.com/SiriDB/siridb-server><i class="fab fa-github"></i> Github repo</a>
@@ -737,7 +737,8 @@ Enodo
 <ul>
 <li>
 <ul>
-<li></li>
+<li><a href=#linux>Linux</a></li>
+<li><a href=#osx>OSX</a></li>
 </ul>
 </li>
 </ul>
@@ -753,26 +754,29 @@ Enodo
 Build from source
 </h1>
 <blockquote>
-<p>From version 2.0.19 libcleri is not included as part of this source anymore
-and needs to be installed separately. libcleri can be found here:
+<p>As of version <code>2.0.19</code>, libcleri is no longer included as part of this source anymore and must be installed separately.
+Libcleri can be found here:
 <a href=https://github.com/cesbit/libcleri>https://github.com/cesbit/libcleri</a>
 or can be installed using <code>apt</code>.</p>
 </blockquote>
-<h4 id=linux>Linux</h4>
-<p>Install the following requirements: (Ubuntu 18.04)</p>
+<h3 id=linux>Linux</h3>
+<p>Install the following requirements (Ubuntu 20.04):</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sudo apt install libcleri-dev
 sudo apt install libpcre2-dev
 sudo apt install libuv1-dev
 sudo apt install libyajl-dev
 sudo apt install uuid-dev
-</code></pre></div><p>Compile (replace Release with Debug for a debug build):</p>
+</code></pre></div><p>Compile the source code:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cd ./Release
 make clean
 make test
 make
-</code></pre></div><p>Install</p>
+</code></pre></div><blockquote>
+<p><strong>Note</strong>: Replace <code>./Release</code> with <code>./Debug</code> for a debug build. It is less optimized, but shows more logging.</p>
+</blockquote>
+<p>And finally install the server:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sudo make install
-</code></pre></div><h4 id=osx>OSX</h4>
+</code></pre></div><h3 id=osx>OSX</h3>
 <blockquote>
 <p>Make sure <a href=https://github.com/cesbit/libcleri>libcleri</a> is installed!</p>
 </blockquote>
@@ -781,14 +785,17 @@ make
 brew install libuv
 brew install yajl
 brew install ossp-uuid
-</code></pre></div><p>Compile (replace Release with Debug for a debug build):</p>
+</code></pre></div><p>Compile the source code:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cd ./Release
 export CFLAGS<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;-I/usr/local/include&#34;</span>
 export LDFLAGS<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;-L/usr/local/lib&#34;</span>
 make clean
 make test
 make
-</code></pre></div><p>Install</p>
+</code></pre></div><blockquote>
+<p><strong>Note</strong>: Replace <code>./Release</code> with <code>./Debug</code> for a debug build. It is less optimized, but shows more logging.</p>
+</blockquote>
+<p>And finally install the server:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>sudo make install
 </code></pre></div>
 <footer class=footline>
@@ -796,25 +803,25 @@ make
 </div>
 </div>
 <div id=navigation>
-<a class="nav nav-prev" href=/getting_started/ubuntu/ title=Ubuntu> <i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/getting_started/configuration/ title=Configuration style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-prev" href=/getting_started/ title="Getting started"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/getting_started/docker/ title=Docker style=margin-right:0><i class="fa fa-chevron-right"></i></a>
 </div>
 </section>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/js/clipboard.min.js?1647868415></script>
-<script src=/js/perfect-scrollbar.min.js?1647868415></script>
-<script src=/js/perfect-scrollbar.jquery.min.js?1647868415></script>
-<script src=/js/jquery.sticky.js?1647868415></script>
-<script src=/js/featherlight.min.js?1647868415></script>
-<script src=/js/highlight.pack.js?1647868415></script>
+<script src=/js/clipboard.min.js?1648126614></script>
+<script src=/js/perfect-scrollbar.min.js?1648126614></script>
+<script src=/js/perfect-scrollbar.jquery.min.js?1648126614></script>
+<script src=/js/jquery.sticky.js?1648126614></script>
+<script src=/js/featherlight.min.js?1648126614></script>
+<script src=/js/highlight.pack.js?1648126614></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/js/modernizr.custom-3.6.0.js?1647868415></script>
-<script src=/js/learn.js?1647868415></script>
-<script src=/js/hugo-learn.js?1647868415></script>
-<link href=/mermaid/mermaid.css?1647868415 rel=stylesheet>
-<script src=/mermaid/mermaid.js?1647868415></script>
+<script src=/js/modernizr.custom-3.6.0.js?1648126614></script>
+<script src=/js/learn.js?1648126614></script>
+<script src=/js/hugo-learn.js?1648126614></script>
+<link href=/mermaid/mermaid.css?1648126614 rel=stylesheet>
+<script src=/mermaid/mermaid.js?1648126614></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>

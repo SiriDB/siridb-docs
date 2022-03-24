@@ -5,21 +5,21 @@
 <meta name=generator content="Hugo 0.90.0">
 <meta name=description content="SiriDB documentation">
 <link rel="shortcut icon" href=/images/favicon.ico type=image/x-icon>
-<title>Ubuntu :: SiriDB documentation</title>
-<link href=/css/nucleus.css?1647868415 rel=stylesheet>
-<link href=/css/fontawesome-all.min.css?1647868415 rel=stylesheet>
-<link href=/css/hybrid.css?1647868415 rel=stylesheet>
-<link href=/css/featherlight.min.css?1647868415 rel=stylesheet>
-<link href=/css/perfect-scrollbar.min.css?1647868415 rel=stylesheet>
-<link href=/css/auto-complete.css?1647868415 rel=stylesheet>
-<link href=/css/atom-one-dark-reasonable.css?1647868415 rel=stylesheet>
-<link href=/css/theme.css?1647868415 rel=stylesheet>
-<link href=/css/hugo-theme.css?1647868415 rel=stylesheet>
-<link href=/css/theme-mine.css?1647868415 rel=stylesheet>
-<script src=/js/jquery-3.3.1.min.js?1647868415></script>
+<title>Docker :: SiriDB documentation</title>
+<link href=/css/nucleus.css?1648126614 rel=stylesheet>
+<link href=/css/fontawesome-all.min.css?1648126614 rel=stylesheet>
+<link href=/css/hybrid.css?1648126614 rel=stylesheet>
+<link href=/css/featherlight.min.css?1648126614 rel=stylesheet>
+<link href=/css/perfect-scrollbar.min.css?1648126614 rel=stylesheet>
+<link href=/css/auto-complete.css?1648126614 rel=stylesheet>
+<link href=/css/atom-one-dark-reasonable.css?1648126614 rel=stylesheet>
+<link href=/css/theme.css?1648126614 rel=stylesheet>
+<link href=/css/hugo-theme.css?1648126614 rel=stylesheet>
+<link href=/css/theme-mine.css?1648126614 rel=stylesheet>
+<script src=/js/jquery-3.3.1.min.js?1648126614></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}:not(pre)>code+span.copy-to-clipboard{display:none}</style>
 </head>
-<body data-url=/getting_started/ubuntu/>
+<body data-url=/getting_started/docker/>
 <nav id=sidebar>
 <div id=header-wrapper>
 <div id=header>
@@ -32,10 +32,10 @@
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=/js/lunr.min.js?1647868415></script>
-<script type=text/javascript src=/js/auto-complete.js?1647868415></script>
+<script type=text/javascript src=/js/lunr.min.js?1648126614></script>
+<script type=text/javascript src=/js/auto-complete.js?1648126614></script>
 <script type=text/javascript>var baseurl="https://docs.siridb.net/"</script>
-<script type=text/javascript src=/js/search.js?1647868415></script>
+<script type=text/javascript src=/js/search.js?1648126614></script>
 </div>
 <div class=highlightable>
 <ul class=topics>
@@ -45,14 +45,14 @@ parent">
 Getting started
 </a>
 <ul>
-<li data-nav-id=/getting_started/ubuntu/ title=Ubuntu class="dd-item active">
-<a href=/getting_started/ubuntu/>
-Ubuntu
-</a>
-</li>
 <li data-nav-id=/getting_started/build_from_source/ title="Build from source" class=dd-item>
 <a href=/getting_started/build_from_source/>
 Build from source
+</a>
+</li>
+<li data-nav-id=/getting_started/docker/ title=Docker class="dd-item active">
+<a href=/getting_started/docker/>
+Docker
 </a>
 </li>
 <li data-nav-id=/getting_started/configuration/ title=Configuration class=dd-item>
@@ -683,7 +683,7 @@ Enodo
 <h3>More</h3>
 <ul>
 <li>
-<a class=padding href=https://siridb.net/><i class="far fa-window-maximize"></i> Website</a>
+<a class=padding href=https://siridb.com/><i class="far fa-window-maximize"></i> Website</a>
 </li>
 <li>
 <a class=padding href=https://github.com/SiriDB/siridb-server><i class="fab fa-github"></i> Github repo</a>
@@ -725,15 +725,24 @@ Enodo
 >
 <li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement>
 <meta itemprop=position content="1">
-<a itemprop=item href=/getting_started/ubuntu/ aria-disabled=true>
-<span itemprop=name>Ubuntu</span>
+<a itemprop=item href=/getting_started/docker/ aria-disabled=true>
+<span itemprop=name>Docker</span>
 </a>
 </li>
 </ol>
 </div>
 <div class=progress>
 <div class=wrapper>
-<nav id=TableOfContents></nav>
+<nav id=TableOfContents>
+<ul>
+<li>
+<ul>
+<li><a href=#images>Images</a></li>
+<li><a href=#getting-started>Getting started</a></li>
+</ul>
+</li>
+</ul>
+</nav>
 </div>
 </div>
 </div>
@@ -742,40 +751,64 @@ Enodo
 </div>
 <div id=body-inner>
 <h1>
-Ubuntu
+Docker
 </h1>
-<p>For Ubuntu we have a deb package available which can be downloaded <a href=https://github.com/SiriDB/siridb-server/releases/latest>here</a>.</p>
-<p>Note: SiriDB requires <em>libexpat1</em>, <em>libuv1</em>, <em>libpcre2-8-0</em> and <em>libcleri0</em> these libraries can be easily installed using apt:</p>
-<pre tabindex=0><code>apt install libexpat1 libuv1 libpcre2-8-0 libcleri0
-</code></pre><blockquote>
-<p>Library <code>libcleri0</code> is available from Ubuntu 18.04, for older versions a deb package can be found here:
-<a href=https://github.com/cesbit/libcleri/releases/latest>https://github.com/cesbit/libcleri/releases/latest</a></p>
+<h3 id=images>Images</h3>
+<p>Docker images of the siridb-server are available on <a href=https://github.com/SiriDB/siridb-server/pkgs/container/siridb-server>GitHub</a>.</p>
+<p><strong>Supported tags</strong>:</p>
+<p><code>ghcr.io/siridb/siridb-server:VERSION</code> <em>(Minimal SiriDB image based on Alpine Linux.)</em></p>
+<p><code>ghcr.io/siridb/siridb-server:latest</code> <em>(Latest SiriDB build from the <code>master</code> branch using a minimal Alpine Linux base image)</em></p>
+<h3 id=getting-started>Getting started</h3>
+<p>The basic steps required to run the SiriDB server in Docker are explained below.</p>
+<h4 id=pulling>Pulling</h4>
+<p>To get started, run the following command in your terminal:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ docker pull ghcr.io/siridb/siridb-server:latest
+</code></pre></div><blockquote>
+<p><strong>Note</strong>: Depending on how you&rsquo;ve installed docker on your system, you might see a permission denied error after running the above command. If you&rsquo;re on Linux, you may need to prefix your docker commands with <code>sudo</code>. Alternatively you can create a Docker group to get rid of this issue.</p>
 </blockquote>
-<p>The .deb package installs a <a href=../configuration>configuration file</a> at <code>/etc/siridb/siridb.conf</code>. You might want to view or change this file before starting SiriDB. See the section about <a href=../configuration>Configuration</a>.</p>
+<p>The pull command fetches the latest siridb-server image from the GitHub Container Registry and saves it in your system.</p>
+<h4 id=running>Running</h4>
+<p>Great! Let&rsquo;s now run a Docker container based on this image. To do that you are going to use the <code>docker run</code> command.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ docker run -d -p 9000:9000 siridb/siridb-server
+</code></pre></div><p>You’ll notice a few flags being used. Here’s some more info on them:</p>
+<ul>
+<li><code>-d</code> - Run the container in detached mode (in the background).</li>
+<li><code>-p 9000:9000</code> - Map port 9000 of the host to port 9000 (SiriDB port for client socket connections) in the container.</li>
+<li><code>siridb/siridb-server</code> - The image to use.</li>
+</ul>
+<p>To verify that the container is running, you can use the <code>docker ps</code> command.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ docker ps
+</code></pre></div><p>This command shows you all containers that are currently running and should display a similar output as this:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>CONTAINER ID   IMAGE                  COMMAND                  CREATED          STATUS         PORTS                                                                     NAMES
+f0169c9e7939   siridb/siridb-server   <span style=color:#e6db74>&#34;/usr/local/bin/siri…&#34;</span>   <span style=color:#ae81ff>11</span> seconds ago   Up <span style=color:#ae81ff>9</span> seconds   8080/tcp, 9010/tcp, 9080/tcp, 0.0.0.0:9000-&gt;9000/tcp, :::9000-&gt;9000/tcp   objective_tu
+</code></pre></div><h4 id=stopping>Stopping</h4>
+<p>To stop the active SiriDB container, run the <code>docker stop</code> command.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ docker stop siridb/siridb-server
+</code></pre></div>
 <footer class=footline>
 </footer>
 </div>
 </div>
 <div id=navigation>
-<a class="nav nav-prev" href=/getting_started/ title="Getting started"> <i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/getting_started/build_from_source/ title="Build from source" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-prev" href=/getting_started/build_from_source/ title="Build from source"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/getting_started/configuration/ title=Configuration style=margin-right:0><i class="fa fa-chevron-right"></i></a>
 </div>
 </section>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/js/clipboard.min.js?1647868415></script>
-<script src=/js/perfect-scrollbar.min.js?1647868415></script>
-<script src=/js/perfect-scrollbar.jquery.min.js?1647868415></script>
-<script src=/js/jquery.sticky.js?1647868415></script>
-<script src=/js/featherlight.min.js?1647868415></script>
-<script src=/js/highlight.pack.js?1647868415></script>
+<script src=/js/clipboard.min.js?1648126614></script>
+<script src=/js/perfect-scrollbar.min.js?1648126614></script>
+<script src=/js/perfect-scrollbar.jquery.min.js?1648126614></script>
+<script src=/js/jquery.sticky.js?1648126614></script>
+<script src=/js/featherlight.min.js?1648126614></script>
+<script src=/js/highlight.pack.js?1648126614></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/js/modernizr.custom-3.6.0.js?1647868415></script>
-<script src=/js/learn.js?1647868415></script>
-<script src=/js/hugo-learn.js?1647868415></script>
-<link href=/mermaid/mermaid.css?1647868415 rel=stylesheet>
-<script src=/mermaid/mermaid.js?1647868415></script>
+<script src=/js/modernizr.custom-3.6.0.js?1648126614></script>
+<script src=/js/learn.js?1648126614></script>
+<script src=/js/hugo-learn.js?1648126614></script>
+<link href=/mermaid/mermaid.css?1648126614 rel=stylesheet>
+<script src=/mermaid/mermaid.js?1648126614></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>
