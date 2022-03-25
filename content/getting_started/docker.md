@@ -9,9 +9,9 @@ Docker images of the siridb-server are available on [GitHub](https://github.com/
 
 **Supported tags**:
 
-`ghcr.io/siridb/siridb-server:VERSION` *(Minimal SiriDB image based on Alpine Linux.)*
+`ghcr.io/siridb/siridb-server:VERSION` _(Minimal SiriDB image based on Alpine Linux.)_
 
-`ghcr.io/siridb/siridb-server:latest` *(Latest SiriDB build from the `master` branch using a minimal Alpine Linux base image)*
+`ghcr.io/siridb/siridb-server:latest` _(Latest SiriDB build from the `master` branch using a minimal Alpine Linux base image)_
 
 ### Getting started
 
@@ -34,14 +34,15 @@ The pull command fetches the latest siridb-server image from the GitHub Containe
 Great! Let's now run a Docker container based on this image. To do that you are going to use the `docker run` command.
 
 ```bash
-$ docker run -d -p 9000:9000 siridb/siridb-server
+$ docker run -d -p 9000:9000 -v ~/siridb-data:/var/lib/siridb ghcr.io/siridb/siridb-server
 ```
 
 You’ll notice a few flags being used. Here’s some more info on them:
 
 - `-d` - Run the container in detached mode (in the background).
 - `-p 9000:9000` - Map port 9000 of the host to port 9000 (SiriDB port for client socket connections) in the container.
-- `siridb/siridb-server` - The image to use.
+- `-v ~/siridb-data:/var/lib/siridb` - Mount a volume for SiriDB data. (For data persistence)
+- `ghcr.io/siridb/siridb-server` - The image to use.
 
 To verify that the container is running, you can use the `docker ps` command.
 
@@ -52,8 +53,8 @@ $ docker ps
 This command shows you all containers that are currently running and should display a similar output as this:
 
 ```bash
-CONTAINER ID   IMAGE                  COMMAND                  CREATED          STATUS         PORTS                                                                     NAMES
-f0169c9e7939   siridb/siridb-server   "/usr/local/bin/siri…"   11 seconds ago   Up 9 seconds   8080/tcp, 9010/tcp, 9080/tcp, 0.0.0.0:9000->9000/tcp, :::9000->9000/tcp   objective_tu
+CONTAINER ID   IMAGE                          COMMAND                  CREATED         STATUS         PORTS                                                                     NAMES
+a57597077abb   ghcr.io/siridb/siridb-server   "/usr/local/bin/siri…"   4 seconds ago   Up 3 seconds   8080/tcp, 9010/tcp, 9080/tcp, 0.0.0.0:9000->9000/tcp, :::9000->9000/tcp   vibrant_burnell
 ```
 
 #### Stopping
@@ -61,5 +62,5 @@ f0169c9e7939   siridb/siridb-server   "/usr/local/bin/siri…"   11 seconds ago 
 To stop the active SiriDB container, run the `docker stop` command.
 
 ```bash
-$ docker stop siridb/siridb-server
+$ docker stop a57597077abb
 ```
