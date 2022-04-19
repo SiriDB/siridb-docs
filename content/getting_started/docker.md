@@ -34,7 +34,7 @@ The pull command fetches the latest siridb-server image from the GitHub Containe
 Great! Let's now run a Docker container based on this image. To do that you are going to use the `docker run` command.
 
 ```bash
-$ docker run -d -p 9000:9000 -v ~/siridb-data:/var/lib/siridb ghcr.io/siridb/siridb-server
+$ docker run --name siridb -d -p 9000:9000 -v ~/siridb-data:/var/lib/siridb ghcr.io/siridb/siridb-server
 ```
 
 You’ll notice a few flags being used. Here’s some more info on them:
@@ -54,7 +54,7 @@ This command shows you all containers that are currently running and should disp
 
 ```bash
 CONTAINER ID   IMAGE                          COMMAND                  CREATED         STATUS         PORTS                                                                     NAMES
-a57597077abb   ghcr.io/siridb/siridb-server   "/usr/local/bin/siri…"   4 seconds ago   Up 3 seconds   8080/tcp, 9010/tcp, 9080/tcp, 0.0.0.0:9000->9000/tcp, :::9000->9000/tcp   vibrant_burnell
+a57597077abb   ghcr.io/siridb/siridb-server   "/usr/local/bin/siri…"   4 seconds ago   Up 3 seconds   8080/tcp, 9010/tcp, 9080/tcp, 0.0.0.0:9000->9000/tcp, :::9000->9000/tcp   siridb
 ```
 
 #### Stopping
@@ -62,5 +62,5 @@ a57597077abb   ghcr.io/siridb/siridb-server   "/usr/local/bin/siri…"   4 secon
 To stop the active SiriDB container, run the `docker stop` command.
 
 ```bash
-$ docker stop a57597077abb
+$ docker stop siridb
 ```
