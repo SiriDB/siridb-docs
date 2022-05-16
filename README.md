@@ -83,7 +83,7 @@ After the file is added run the next command:
 
 Now the site.map is created. Open this file. You will see all the chapters and paragraphs. Check if the order from top to down is correct. Otherwise you can change it in this file.
 
-Next run the follwing command:
+Next run the following command:
 
 ```bash
 ./weight_map.py --apply site.map
