@@ -1,6 +1,6 @@
 ---
 title: "Shards"
-weight: 12
+weight: 13
 ---
 
 Shards are files for specific time-ranges. On the initial setup of a SiriDB database the shard duration must be chosen.

@@ -1,6 +1,6 @@
 ---
 title: "access rights"
-weight: 111
+weight: 112
 ---
 
 SiriDB knows the following access rights:

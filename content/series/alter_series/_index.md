@@ -1,6 +1,6 @@
 ---
 title: "alter series"
-weight: 54
+weight: 55
 ---
 
 Use alter series to tag or untag series.

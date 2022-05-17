@@ -1,6 +1,6 @@
 ---
 title: "HTTP"
-weight: 14
+weight: 15
 ---
 
 Before using the HTTP API, make sure at least one node has the HTTP API port enabled.

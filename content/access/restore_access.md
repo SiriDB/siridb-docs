@@ -1,6 +1,6 @@
 ---
 title: "restore access"
-weight: 114
+weight: 115
 ---
 
 Read/use this section when accidentally all access rights to a database are

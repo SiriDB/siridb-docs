@@ -1,6 +1,6 @@
 ---
 title: "alter group"
-weight: 68
+weight: 69
 ---
 
 Alter the name or regular expression of a group.

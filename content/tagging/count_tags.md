@@ -1,6 +1,6 @@
 ---
 title: "count tags"
-weight: 73
+weight: 74
 ---
 
 Count tags returns the number of tags defined in the database.

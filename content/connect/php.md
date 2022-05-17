@@ -1,6 +1,6 @@
 ---
 title: "PHP"
-weight: 22
+weight: 23
 ---
 
 An C extension for PHP. Gives access to commands in PHP code to connect to SiriDB Server and query/insert.

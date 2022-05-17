@@ -1,6 +1,6 @@
 ---
 title: "limit"
-weight: 36
+weight: 37
 ---
 
 Returns no more than the provided number of points and in case more points are found the aggregation function is used to reduce the number of points.

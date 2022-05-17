@@ -1,6 +1,6 @@
 ---
 title: "Enodo"
-weight: 116
+weight: 117
 ---
 
 Enodo is a time series data analysis platform made for SiriDB. Combining the power of storing and querying time series data from SiriDB and the analyzing power of Enodo, we can create better understanding of the data that we collect and store. So we can learn from the past and create forecasts for the future.

@@ -1,14 +1,13 @@
 ---
-title: "set tee pipe name"
-weight: 87
+title: "set tee"
+weight: 107
 ---
 
 Some projects like [Enodo project](../../../related_projects/enodo) may benefit from receiving all SiriDB data. Because these projects usually experience the same scaling problems as SiriDB does, we have chosen to support a *tee* option on each SiriDB server.
-Using this feature makes it possible to install a service on at least one SiriDB server in each pool. Such a service should install a UNIX Pipe server which accepts SiriDB data in [QPack](https://github.com/cesbit/qpack) format.
 
-SiriDB will then try to connect to the pipe, and once a connection is established, all SiriDB data points with the SiriDB pool as target, will be forwarded to the pipe.
+Once a tee is configured, SiriDB will try to connect to the tee, and once a connection is established, all SiriDB data points will be forwarded to the tee. Note that each SiriDB server in a cluster must be able to access the tee.
 
-A package send to the pipe will have a header like:
+A package send to the tee will have a header like:
 
 ```none
 ┌───────────┬───────────┬───────────┬───────────┬───────────┐
@@ -36,5 +35,8 @@ If you like to disable the `tee`, then use `false` instead of a string.
 
 ### Example
 
-    # Change the log-level to "debug"
-    alter server f851c6a4-820e-11e5-9661-080027f37001 set tee_pipe_name '/tmp/data.sock'
+    # Configure a tee, in this example enodo.listener.local
+    alter database set tee 'enodo.listener.local'
+
+    # Disable the tee
+    alter database set tee false

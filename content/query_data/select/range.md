@@ -1,11 +1,10 @@
 ---
-title: "time range"
-weight: 26
+title: "range"
+weight: 27
 ---
 
-An optional time range can be given to select only a part of the series data.
-If no time range is provided SiriDB returns all the data available. As a time
-range we can use *before*, *after* or *between .. and ..*
+An optional time, or head/tail range can be given to select only a part of the series data.
+If no range is provided SiriDB returns all the data available. As a range we can use *before*, *after*, *between .. and ..*, *head* or *tail*.
 
 When using `after` you basically set a *start* time, with `before` an *end* time
 and when using `between .. and ..` you set both a *start* and *end* time.
@@ -27,6 +26,8 @@ The allowed formats for time ranges are:
 >time while processing a query. This way you can be sure that *now* has the
 >same value.
 
+It is also possible to ask for the first or last *X* points from series by using `head` and `tail` respectively followed by an integer value.
+
 ### Examples
 
     # Select all points from "series-001" in the last 24h
@@ -37,3 +38,9 @@ The allowed formats for time ranges are:
 
     # Select all points from "series-001" before November, 2015
     select * from "series-001" before "2015-11"
+
+    # Select the last 10 points from "series-001"
+    select * from "series-001" tail 10
+
+    # Select the first 5 points from "series-001"
+    select * from "series-001" head 5

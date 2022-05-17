@@ -1,6 +1,6 @@
 ---
 title: "Grafana SiriDB HTTP datasource"
-weight: 15
+weight: 16
 ---
 
 A SiriDB data source plugin for Grafana.

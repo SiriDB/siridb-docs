@@ -1,6 +1,6 @@
 ---
 title: "list series"
-weight: 50
+weight: 51
 ---
 
 Lists series in the SiriDB cluster.

@@ -1,6 +1,6 @@
 ---
 title: "Database user"
-weight: 8
+weight: 9
 ---
 
 Database users have access to a SiriDB database and can insert and query data.

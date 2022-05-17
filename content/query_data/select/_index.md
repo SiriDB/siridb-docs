@@ -1,13 +1,13 @@
 ---
 title: "Select"
-weight: 25
+weight: 26
 ---
 
 Selecting data from SiriDB.
 
 ### Syntax
 
-    select <points/functions> from <match_series [<where>]> [<time_range>] [<merge_data>]
+    select <points/functions> from <match_series [<where>]> [<range>] [<merge_data>]
 
 ### Example
 

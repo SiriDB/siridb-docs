@@ -1,6 +1,6 @@
 ---
 title: "Java"
-weight: 21
+weight: 22
 ---
 
 The SiriDB Connector for Java is a self-contained Java driver for communicating with SiriDB servers.

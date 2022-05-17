@@ -1,6 +1,6 @@
 ---
 title: "drop tag"
-weight: 78
+weight: 79
 ---
 
 Drops an existing tag.

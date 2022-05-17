@@ -1,6 +1,6 @@
 ---
 title: "list tags"
-weight: 74
+weight: 75
 ---
 
 Lists tags in the SiriDB cluster.

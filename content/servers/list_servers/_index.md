@@ -1,6 +1,6 @@
 ---
 title: "list servers"
-weight: 81
+weight: 82
 ---
 
 List servers in a SiriDB Cluster. This command can be useful to view status

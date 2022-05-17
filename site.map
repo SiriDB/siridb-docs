@@ -3,6 +3,7 @@ getting_started
     docker
     configuration
     start_up_server
+    example_database
 overview
     service_account
     database_user
@@ -23,7 +24,7 @@ connect
     r
 query_data
     select
-        time_range
+        range
         merge_data
     aggregate_functions
         count
@@ -84,7 +85,6 @@ servers
         backup_mode
         log_level
         set_address_port
-        set_tee_pipe_name
     alter_servers
     drop_servers
 pools
@@ -104,6 +104,7 @@ database
         expiration_num
         list_limit
         select_points_limit
+        set_tee
         set_timezone
     timezones
     status_information

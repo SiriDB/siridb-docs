@@ -1,6 +1,6 @@
 ---
 title: "Aggregate functions"
-weight: 28
+weight: 29
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: "difference"
-weight: 31
+weight: 32
 ---
 
 The difference between the first value and the last value within the time window.

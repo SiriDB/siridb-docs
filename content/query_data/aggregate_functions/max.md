@@ -1,6 +1,6 @@
 ---
 title: "max"
-weight: 37
+weight: 38
 ---
 
 Max can be used to identify the highest value in the selected time window. If no time window is provided it returns the highest value of the series.

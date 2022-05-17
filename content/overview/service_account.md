@@ -1,6 +1,6 @@
 ---
 title: "Service account"
-weight: 7
+weight: 8
 ---
 
 Service accounts are used for managing databases. A service account is a user on a SiriDB server, which should not be confused with a [database user](../database_user). A service account has no access to a SiriDB database. The reason for separating these accounts is that a database can extend over multiple servers, while a service account only gives access to a single server.

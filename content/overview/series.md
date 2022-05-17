@@ -1,6 +1,6 @@
 ---
 title: "Series"
-weight: 9
+weight: 10
 ---
 
 **Series** or **time series** can be seen as lists of data points. Time series in SiriDB are uniquely identified by name and can have any number of points. A single point consists of a timestamp and value. SiriDB allows you to insert points in any order. That way it is possible to backfill the database with old data while new values are coming in as well.

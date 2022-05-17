@@ -1,6 +1,6 @@
 ---
 title: "Golang"
-weight: 17
+weight: 18
 ---
 
 A SiriDB-Connector for the Go language

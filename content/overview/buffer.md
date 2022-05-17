@@ -1,6 +1,6 @@
 ---
 title: "Buffer"
-weight: 11
+weight: 12
 ---
 
 When a server receives data it stores this in a buffer. The buffer is immediately saved on disk and is also kept in memory. The buffer can store a fixed number of points for each time series. This number depends on the buffer size which can be configured when creating a database. Since SiriDB does not read from the buffer-file, it does not matter in which order the points are saved. In memory the points are saved in order so queries can return the points from the buffer very fast.
