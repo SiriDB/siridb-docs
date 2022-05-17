@@ -6,17 +6,17 @@
 <meta name=description content="SiriDB documentation">
 <link rel="shortcut icon" href=/images/favicon.ico type=image/x-icon>
 <title>alter user :: SiriDB documentation</title>
-<link href=/css/nucleus.css?1648126615 rel=stylesheet>
-<link href=/css/fontawesome-all.min.css?1648126615 rel=stylesheet>
-<link href=/css/hybrid.css?1648126615 rel=stylesheet>
-<link href=/css/featherlight.min.css?1648126615 rel=stylesheet>
-<link href=/css/perfect-scrollbar.min.css?1648126615 rel=stylesheet>
-<link href=/css/auto-complete.css?1648126615 rel=stylesheet>
-<link href=/css/atom-one-dark-reasonable.css?1648126615 rel=stylesheet>
-<link href=/css/theme.css?1648126615 rel=stylesheet>
-<link href=/css/hugo-theme.css?1648126615 rel=stylesheet>
-<link href=/css/theme-mine.css?1648126615 rel=stylesheet>
-<script src=/js/jquery-3.3.1.min.js?1648126615></script>
+<link href=/css/nucleus.css?1652784771 rel=stylesheet>
+<link href=/css/fontawesome-all.min.css?1652784771 rel=stylesheet>
+<link href=/css/hybrid.css?1652784771 rel=stylesheet>
+<link href=/css/featherlight.min.css?1652784771 rel=stylesheet>
+<link href=/css/perfect-scrollbar.min.css?1652784771 rel=stylesheet>
+<link href=/css/auto-complete.css?1652784771 rel=stylesheet>
+<link href=/css/atom-one-dark-reasonable.css?1652784771 rel=stylesheet>
+<link href=/css/theme.css?1652784771 rel=stylesheet>
+<link href=/css/hugo-theme.css?1652784771 rel=stylesheet>
+<link href=/css/theme-mine.css?1652784771 rel=stylesheet>
+<script src=/js/jquery-3.3.1.min.js?1652784771></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}:not(pre)>code+span.copy-to-clipboard{display:none}</style>
 </head>
 <body data-url=/users/alter_user/>
@@ -32,10 +32,10 @@
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=/js/lunr.min.js?1648126615></script>
-<script type=text/javascript src=/js/auto-complete.js?1648126615></script>
+<script type=text/javascript src=/js/lunr.min.js?1652784771></script>
+<script type=text/javascript src=/js/auto-complete.js?1652784771></script>
 <script type=text/javascript>var baseurl="https://docs.siridb.net/"</script>
-<script type=text/javascript src=/js/search.js?1648126615></script>
+<script type=text/javascript src=/js/search.js?1652784771></script>
 </div>
 <div class=highlightable>
 <ul class=topics>
@@ -62,6 +62,11 @@ Configuration
 <li data-nav-id=/getting_started/start_up_server/ title="Start up server" class=dd-item>
 <a href=/getting_started/start_up_server/>
 Start up server
+</a>
+</li>
+<li data-nav-id=/getting_started/example_database/ title="Example database" class=dd-item>
+<a href=/getting_started/example_database/>
+Example database
 </a>
 </li>
 </ul>
@@ -172,9 +177,9 @@ Query data
 Select
 </a>
 <ul>
-<li data-nav-id=/query_data/select/time_range/ title="time range" class=dd-item>
-<a href=/query_data/select/time_range/>
-time range
+<li data-nav-id=/query_data/select/range/ title=range class=dd-item>
+<a href=/query_data/select/range/>
+range
 </a>
 </li>
 <li data-nav-id=/query_data/select/merge_data/ title="merge data" class=dd-item>
@@ -507,11 +512,6 @@ set log level
 set address/port
 </a>
 </li>
-<li data-nav-id=/servers/alter_server/set_tee_pipe_name/ title="set tee pipe name" class=dd-item>
-<a href=/servers/alter_server/set_tee_pipe_name/>
-set tee pipe name
-</a>
-</li>
 </ul>
 </li>
 <li data-nav-id=/servers/alter_servers/ title="alter servers" class=dd-item>
@@ -618,6 +618,11 @@ list limit
 <li data-nav-id=/database/alter_database/select_points_limit/ title="select points limit" class=dd-item>
 <a href=/database/alter_database/select_points_limit/>
 select points limit
+</a>
+</li>
+<li data-nav-id=/database/alter_database/set_tee/ title="set tee" class=dd-item>
+<a href=/database/alter_database/set_tee/>
+set tee
 </a>
 </li>
 <li data-nav-id=/database/alter_database/set_timezone/ title="set timezone" class=dd-item>
@@ -773,18 +778,18 @@ alter user 'iris' set password 'siri'
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/js/clipboard.min.js?1648126615></script>
-<script src=/js/perfect-scrollbar.min.js?1648126615></script>
-<script src=/js/perfect-scrollbar.jquery.min.js?1648126615></script>
-<script src=/js/jquery.sticky.js?1648126615></script>
-<script src=/js/featherlight.min.js?1648126615></script>
-<script src=/js/highlight.pack.js?1648126615></script>
+<script src=/js/clipboard.min.js?1652784771></script>
+<script src=/js/perfect-scrollbar.min.js?1652784771></script>
+<script src=/js/perfect-scrollbar.jquery.min.js?1652784771></script>
+<script src=/js/jquery.sticky.js?1652784771></script>
+<script src=/js/featherlight.min.js?1652784771></script>
+<script src=/js/highlight.pack.js?1652784771></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/js/modernizr.custom-3.6.0.js?1648126615></script>
-<script src=/js/learn.js?1648126615></script>
-<script src=/js/hugo-learn.js?1648126615></script>
-<link href=/mermaid/mermaid.css?1648126615 rel=stylesheet>
-<script src=/mermaid/mermaid.js?1648126615></script>
+<script src=/js/modernizr.custom-3.6.0.js?1652784771></script>
+<script src=/js/learn.js?1652784771></script>
+<script src=/js/hugo-learn.js?1652784771></script>
+<link href=/mermaid/mermaid.css?1652784771 rel=stylesheet>
+<script src=/mermaid/mermaid.js?1652784771></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>

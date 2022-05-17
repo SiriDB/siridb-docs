@@ -5,21 +5,21 @@
 <meta name=generator content="Hugo 0.90.0">
 <meta name=description content="SiriDB documentation">
 <link rel="shortcut icon" href=/images/favicon.ico type=image/x-icon>
-<title>time range :: SiriDB documentation</title>
-<link href=/css/nucleus.css?1648126615 rel=stylesheet>
-<link href=/css/fontawesome-all.min.css?1648126615 rel=stylesheet>
-<link href=/css/hybrid.css?1648126615 rel=stylesheet>
-<link href=/css/featherlight.min.css?1648126615 rel=stylesheet>
-<link href=/css/perfect-scrollbar.min.css?1648126615 rel=stylesheet>
-<link href=/css/auto-complete.css?1648126615 rel=stylesheet>
-<link href=/css/atom-one-dark-reasonable.css?1648126615 rel=stylesheet>
-<link href=/css/theme.css?1648126615 rel=stylesheet>
-<link href=/css/hugo-theme.css?1648126615 rel=stylesheet>
-<link href=/css/theme-mine.css?1648126615 rel=stylesheet>
-<script src=/js/jquery-3.3.1.min.js?1648126615></script>
+<title>Example database :: SiriDB documentation</title>
+<link href=/css/nucleus.css?1652784771 rel=stylesheet>
+<link href=/css/fontawesome-all.min.css?1652784771 rel=stylesheet>
+<link href=/css/hybrid.css?1652784771 rel=stylesheet>
+<link href=/css/featherlight.min.css?1652784771 rel=stylesheet>
+<link href=/css/perfect-scrollbar.min.css?1652784771 rel=stylesheet>
+<link href=/css/auto-complete.css?1652784771 rel=stylesheet>
+<link href=/css/atom-one-dark-reasonable.css?1652784771 rel=stylesheet>
+<link href=/css/theme.css?1652784771 rel=stylesheet>
+<link href=/css/hugo-theme.css?1652784771 rel=stylesheet>
+<link href=/css/theme-mine.css?1652784771 rel=stylesheet>
+<script src=/js/jquery-3.3.1.min.js?1652784771></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}:not(pre)>code+span.copy-to-clipboard{display:none}</style>
 </head>
-<body data-url=/query_data/select/time_range/>
+<body data-url=/getting_started/example_database/>
 <nav id=sidebar>
 <div id=header-wrapper>
 <div id=header>
@@ -32,14 +32,15 @@
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=/js/lunr.min.js?1648126615></script>
-<script type=text/javascript src=/js/auto-complete.js?1648126615></script>
+<script type=text/javascript src=/js/lunr.min.js?1652784771></script>
+<script type=text/javascript src=/js/auto-complete.js?1652784771></script>
 <script type=text/javascript>var baseurl="https://docs.siridb.net/"</script>
-<script type=text/javascript src=/js/search.js?1648126615></script>
+<script type=text/javascript src=/js/search.js?1652784771></script>
 </div>
 <div class=highlightable>
 <ul class=topics>
-<li data-nav-id=/getting_started/ title="Getting started" class=dd-item>
+<li data-nav-id=/getting_started/ title="Getting started" class="dd-item
+parent">
 <a href=/getting_started/>
 Getting started
 </a>
@@ -62,6 +63,11 @@ Configuration
 <li data-nav-id=/getting_started/start_up_server/ title="Start up server" class=dd-item>
 <a href=/getting_started/start_up_server/>
 Start up server
+</a>
+</li>
+<li data-nav-id=/getting_started/example_database/ title="Example database" class="dd-item active">
+<a href=/getting_started/example_database/>
+Example database
 </a>
 </li>
 </ul>
@@ -162,21 +168,19 @@ R
 </li>
 </ul>
 </li>
-<li data-nav-id=/query_data/ title="Query data" class="dd-item
-parent">
+<li data-nav-id=/query_data/ title="Query data" class=dd-item>
 <a href=/query_data/>
 Query data
 </a>
 <ul>
-<li data-nav-id=/query_data/select/ title=Select class="dd-item
-parent">
+<li data-nav-id=/query_data/select/ title=Select class=dd-item>
 <a href=/query_data/select/>
 Select
 </a>
 <ul>
-<li data-nav-id=/query_data/select/time_range/ title="time range" class="dd-item active">
-<a href=/query_data/select/time_range/>
-time range
+<li data-nav-id=/query_data/select/range/ title=range class=dd-item>
+<a href=/query_data/select/range/>
+range
 </a>
 </li>
 <li data-nav-id=/query_data/select/merge_data/ title="merge data" class=dd-item>
@@ -509,11 +513,6 @@ set log level
 set address/port
 </a>
 </li>
-<li data-nav-id=/servers/alter_server/set_tee_pipe_name/ title="set tee pipe name" class=dd-item>
-<a href=/servers/alter_server/set_tee_pipe_name/>
-set tee pipe name
-</a>
-</li>
 </ul>
 </li>
 <li data-nav-id=/servers/alter_servers/ title="alter servers" class=dd-item>
@@ -621,6 +620,11 @@ list limit
 select points limit
 </a>
 </li>
+<li data-nav-id=/database/alter_database/set_tee/ title="set tee" class=dd-item>
+<a href=/database/alter_database/set_tee/>
+set tee
+</a>
+</li>
 <li data-nav-id=/database/alter_database/set_timezone/ title="set timezone" class=dd-item>
 <a href=/database/alter_database/set_timezone/>
 set timezone
@@ -711,30 +715,23 @@ Enodo
 <ol class=links itemscope itemtype=http://schema.org/BreadcrumbList>
 <meta itemprop=itemListOrder content="Descending">
 <li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement>
-<meta itemprop=position content="4">
+<meta itemprop=position content="3">
 <a itemprop=item href=/>
 <span itemprop=name>SiriDB</span>
 </a>
 </li>
 >
 <li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement>
-<meta itemprop=position content="3">
-<a itemprop=item href=/query_data/>
-<span itemprop=name>Query data</span>
-</a>
-</li>
->
-<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement>
 <meta itemprop=position content="2">
-<a itemprop=item href=/query_data/select/>
-<span itemprop=name>Select</span>
+<a itemprop=item href=/getting_started/>
+<span itemprop=name>Getting started</span>
 </a>
 </li>
 >
 <li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement>
 <meta itemprop=position content="1">
-<a itemprop=item href=/query_data/select/time_range/ aria-disabled=true>
-<span itemprop=name>time range</span>
+<a itemprop=item href=/getting_started/example_database/ aria-disabled=true>
+<span itemprop=name>Example database</span>
 </a>
 </li>
 </ol>
@@ -743,12 +740,15 @@ Enodo
 <div class=wrapper>
 <nav id=TableOfContents>
 <ul>
-<li>
+<li><a href=#before-we-start>Before we start&mldr;</a>
 <ul>
-<li><a href=#allowed-formats>Allowed formats</a></li>
-<li><a href=#examples>Examples</a></li>
+<li></li>
 </ul>
 </li>
+<li><a href=#create-a-new-database>Create a new database</a></li>
+<li><a href=#insert-data>Insert data</a></li>
+<li><a href=#query-data>Query data</a></li>
+<li><a href=#more>More</a></li>
 </ul>
 </nav>
 </div>
@@ -759,63 +759,114 @@ Enodo
 </div>
 <div id=body-inner>
 <h1>
-time range
+Example database
 </h1>
-<p>An optional time range can be given to select only a part of the series data.
-If no time range is provided SiriDB returns all the data available. As a time
-range we can use <em>before</em>, <em>after</em> or <em>between .. and ..</em></p>
-<p>When using <code>after</code> you basically set a <em>start</em> time, with <code>before</code> an <em>end</em> time
-and when using <code>between .. and ..</code> you set both a <em>start</em> and <em>end</em> time.
-Points that have the exact start time are <em>included</em> in the result, points
-with the exact end time are <em>excluded</em> from the result.</p>
-<h3 id=allowed-formats>Allowed formats</h3>
-<p>The allowed formats for time ranges are:</p>
-<ul>
-<li><strong>Integer values</strong>: Number of time units after 1970-01-01. The time unit depends on the database time precision. For example, seconds.</li>
-<li><strong>Time values</strong>: <code>w</code> (week), <code>d</code> (day), <code>h</code> (hour), <code>m</code> (minute) and <code>s</code> (second). For example, <code>2w</code> is equal to two weeks.</li>
-<li><strong>Date/time strings</strong>: For example <code>"2021"</code>, <code>"2021-01-30"</code>, <code>"2021-01-30 12:00"</code>, <code>"2021-01-30 14:31:45Z"</code>, <code>"2021-01-30T14:31:45+0200"</code>.</li>
-<li><strong>now</strong>: A keyword referring to the current date/time.</li>
-</ul>
-<blockquote>
-<p><strong>Note</strong></p>
-<p>It&rsquo;s safe to use <em>now</em> multiple times in a query. SiriDB only calculates <em>now</em> one
-time while processing a query. This way you can be sure that <em>now</em> has the
-same value.</p>
+<h2 id=before-we-start>Before we start&mldr;</h2>
+<p>Once at least one SiriDB server is running, you are ready to create your first SiriDB database.</p>
+<p>Creating and managing SiriDB is done with a <a href=http://localhost:1313/overview/service_account/>Service account</a>. (Default <strong>sa</strong> with password <strong>siri</strong>)</p>
+<p>SiriDB can listen to both a socket connection (<code>SIRIDB_LISTEN_CLIENT_PORT</code>) and, if <em>enabled</em>, to HTTP API (<code>SIRIDB_HTTP_API_PORT</code>) requests.
+For managing SiriDB with a socket connection, a <a href=https://github.com/SiriDB/siridb-admin>SiriDB Admin tool</a> is created but in this example we assume that <code>SIRIDB_HTTP_API_PORT</code> is configured to port <strong>9020</strong>.</p>
+<p>When creating a database there are a few options to keep in mind.</p>
+<h4 id=dbname>dbname</h4>
+<p>Name of the database. It is not possible to change the name of a database once it has been created.</p>
+<h4 id=time_precision>time_precision</h4>
+<p>Each record in a time series database is called a point and each points consists of both a <em>value</em> and a <em>time-stamp</em>. This <em>time-stamp</em> can be in <em>seconds</em> (<code>s</code>), <em>milliseconds</em> (<code>ms</code>), <em>microseconds</em> (<code>us</code>) or <em>nanoseconds</em> (<code>ns</code>). Every point in a database is stored with the same time-precision so this precision needs to be defined while creating a new database.</p>
+<p><em>buffer_size</em>
+For <em>integer</em> and <em>float</em> values, SiriDB uses a buffer before writing points to a shard. Every point in the buffer is also kept in memory thus the larger the buffer, the more memory is required. The chosen buffer size is the memory required in bytes for a single series. A buffer will only be created for series for series within the same pool. The buffer size will be set in <code>database.conf</code> and can be adjusted at some later time.</p>
+<h4 id=duration_num>duration_num</h4>
+<p>SiriDB will eventually store points in shards. One shard contains points for a specific time window. The duration_num value is the default time window for numeric series. If a <code>SIRIDB_ENABLE_SHARD_AUTO_DURATION</code> is turned off, then this value will always be used. With auto duration on, SiriDB first tries to calculate an optimal time window for each series before sharding. A &ldquo;good&rdquo; duration value is should on average store approximately ~2000-10000 points in a shard. For example, if you expect ~5 minute samples, a value of <code>1w</code> (one week) is a good value. (7 (days) * 24 (hours) * 12 ()=2016).</p>
+<h4 id=duration_log>duration_log</h4>
+<p>The same as duration_num, but for log values instead of numeric values. Since the behavior of log series might be significantly different it is possible to set a different shard duration for these values.</p>
+<h2 id=create-a-new-database>Create a new database</h2>
+<p>With the knowledge from above in mind, we can create a database named <code>sampledb</code> using a second (<code>s</code>) time precision and an <code>8Kb</code> buffer size. We expect a one points at a minute interval to as a default we chose a <code>4d</code> interval for both our numeric and log values. In this example I&rsquo;m using curl to make the HTTP request:</p>
+<p>The authorization field contains <code>c2E6c2lyaQ==</code> which is the base64 encoding for <code>sa:siri</code>, the default service account.</p>
+<pre tabindex=0><code>curl --location --request POST 'http://localhost:9020/new-database' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Basic c2E6c2lyaQ==' \
+--header 'Content-Type: text/plain' \
+--data-raw '{
+	&quot;dbname&quot;: &quot;sampledb&quot;,
+	&quot;time_precision&quot;: &quot;s&quot;,
+	&quot;buffer_size&quot;: 8192,
+	&quot;duration_num&quot;: &quot;4d&quot;,
+	&quot;duration_log&quot;: &quot;4d&quot;
+}'
+</code></pre><p>If everything when fine, you should have received a message &ldquo;OK&rdquo;.</p>
+<h2 id=insert-data>Insert data</h2>
+<p>The database now is empty. Time series will be created automatically when inserting data. The type of the time series will be defined by the first point by looking at the value.</p>
+<p>In this example we just insert a single series with 20 data points with integer values.</p>
+<p>The authorization field contains <code>aXJpczpzaXJp</code> which is the base64 encoding for <code>iris:siri</code>, the default database user.</p>
+<pre tabindex=0><code>curl --location --request POST 'http://localhost:9020/insert/sampledb' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Basic aXJpczpzaXJp' \
+--header 'Content-Type: text/plain' \
+--data-raw '{
+    &quot;my-series&quot;: [
+        [1652704834, 93],
+        [1652704894, 14],
+        [1652704954, 46],
+        [1652705014, 42],
+        [1652705074, 21],
+        [1652705134, 80],
+        [1652705194, 3],
+        [1652705254, 46],
+        [1652705314, 29],
+        [1652705374, 23],
+        [1652705434, 17],
+        [1652705494, 32],
+        [1652705554, 79],
+        [1652705614, 3],
+        [1652705674, 14],
+        [1652705734, 65],
+        [1652705794, 98],
+        [1652705854, 32],
+        [1652705914, 38],
+        [1652705974, 29]
+    ]
+}'
+</code></pre><blockquote>
+<p>Note that this example contains perfectly ordered points but this is not required for SiriDB.</p>
 </blockquote>
-<h3 id=examples>Examples</h3>
-<pre><code># Select all points from &quot;series-001&quot; in the last 24h
-select * from &quot;series-001&quot; after now - 1d
-
-# Select all points from &quot;series-001&quot; today
-select * from &quot;series-001&quot; between now - (now % 1d) and now - (now % 1d) + 1d
-
-# Select all points from &quot;series-001&quot; before November, 2015
-select * from &quot;series-001&quot; before &quot;2015-11&quot;
-</code></pre>
+<p>You should receive a JSON response:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{<span style=color:#f92672>&#34;success_msg&#34;</span>:<span style=color:#e6db74>&#34;Successfully inserted 20 point(s).&#34;</span>}
+</code></pre></div><h2 id=query-data>Query data</h2>
+<p>Perform a query to see if we can get any data back. The following query should return the last 10 points from our time series.</p>
+<pre tabindex=0><code>curl --location --request POST 'http://localhost:9020/query/sampledb' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Basic aXJpczpzaXJp' \
+--header 'Content-Type: text/plain' \
+--data-raw '{
+	&quot;q&quot;: &quot;select * from '\''my-series'\'' tail 10&quot;
+}'
+</code></pre><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{<span style=color:#f92672>&#34;my-series&#34;</span>:[[<span style=color:#ae81ff>1652705434</span>,<span style=color:#ae81ff>17</span>],[<span style=color:#ae81ff>1652705494</span>,<span style=color:#ae81ff>32</span>],[<span style=color:#ae81ff>1652705554</span>,<span style=color:#ae81ff>79</span>],[<span style=color:#ae81ff>1652705614</span>,<span style=color:#ae81ff>3</span>],[<span style=color:#ae81ff>1652705674</span>,<span style=color:#ae81ff>14</span>],[<span style=color:#ae81ff>1652705734</span>,<span style=color:#ae81ff>65</span>],[<span style=color:#ae81ff>1652705794</span>,<span style=color:#ae81ff>98</span>],[<span style=color:#ae81ff>1652705854</span>,<span style=color:#ae81ff>32</span>],[<span style=color:#ae81ff>1652705914</span>,<span style=color:#ae81ff>38</span>],[<span style=color:#ae81ff>1652705974</span>,<span style=color:#ae81ff>29</span>]]}
+</code></pre></div><h2 id=more>More</h2>
+<p>With the HTTP API you can also change passwords, create new accounts, expand a SiriDB cluster across multiple pools, add replica&rsquo;s and more.</p>
+<p>Visit the <a href=https://docs.siridb.net/connect/http_api/>documentation HTTP API site</a> for more information.</p>
+<p>Besides the HTTP API, you can also look at <a href=https://docs.siridb.net/connect/>native connectors</a>, especially for fast inserting and querying data this can be useful.</p>
 <footer class=footline>
 </footer>
 </div>
 </div>
 <div id=navigation>
-<a class="nav nav-prev" href=/query_data/select/ title=Select> <i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/query_data/select/merge_data/ title="merge data" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-prev" href=/getting_started/start_up_server/ title="Start up server"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/overview/ title=Overview style=margin-right:0><i class="fa fa-chevron-right"></i></a>
 </div>
 </section>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/js/clipboard.min.js?1648126615></script>
-<script src=/js/perfect-scrollbar.min.js?1648126615></script>
-<script src=/js/perfect-scrollbar.jquery.min.js?1648126615></script>
-<script src=/js/jquery.sticky.js?1648126615></script>
-<script src=/js/featherlight.min.js?1648126615></script>
-<script src=/js/highlight.pack.js?1648126615></script>
+<script src=/js/clipboard.min.js?1652784771></script>
+<script src=/js/perfect-scrollbar.min.js?1652784771></script>
+<script src=/js/perfect-scrollbar.jquery.min.js?1652784771></script>
+<script src=/js/jquery.sticky.js?1652784771></script>
+<script src=/js/featherlight.min.js?1652784771></script>
+<script src=/js/highlight.pack.js?1652784771></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/js/modernizr.custom-3.6.0.js?1648126615></script>
-<script src=/js/learn.js?1648126615></script>
-<script src=/js/hugo-learn.js?1648126615></script>
-<link href=/mermaid/mermaid.css?1648126615 rel=stylesheet>
-<script src=/mermaid/mermaid.js?1648126615></script>
+<script src=/js/modernizr.custom-3.6.0.js?1652784771></script>
+<script src=/js/learn.js?1652784771></script>
+<script src=/js/hugo-learn.js?1652784771></script>
+<link href=/mermaid/mermaid.css?1652784771 rel=stylesheet>
+<script src=/mermaid/mermaid.js?1652784771></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>

@@ -5,7 +5,7 @@
 <meta name=generator content="Hugo 0.90.0">
 <meta name=description content="SiriDB documentation">
 <link rel="shortcut icon" href=/images/favicon.ico type=image/x-icon>
-<title>Enodo :: SiriDB documentation</title>
+<title>range :: SiriDB documentation</title>
 <link href=/css/nucleus.css?1652784771 rel=stylesheet>
 <link href=/css/fontawesome-all.min.css?1652784771 rel=stylesheet>
 <link href=/css/hybrid.css?1652784771 rel=stylesheet>
@@ -19,7 +19,7 @@
 <script src=/js/jquery-3.3.1.min.js?1652784771></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}:not(pre)>code+span.copy-to-clipboard{display:none}</style>
 </head>
-<body data-url=/related_projects/enodo/>
+<body data-url=/query_data/select/range/>
 <nav id=sidebar>
 <div id=header-wrapper>
 <div id=header>
@@ -167,17 +167,19 @@ R
 </li>
 </ul>
 </li>
-<li data-nav-id=/query_data/ title="Query data" class=dd-item>
+<li data-nav-id=/query_data/ title="Query data" class="dd-item
+parent">
 <a href=/query_data/>
 Query data
 </a>
 <ul>
-<li data-nav-id=/query_data/select/ title=Select class=dd-item>
+<li data-nav-id=/query_data/select/ title=Select class="dd-item
+parent">
 <a href=/query_data/select/>
 Select
 </a>
 <ul>
-<li data-nav-id=/query_data/select/range/ title=range class=dd-item>
+<li data-nav-id=/query_data/select/range/ title=range class="dd-item active">
 <a href=/query_data/select/range/>
 range
 </a>
@@ -670,13 +672,12 @@ restore access
 </li>
 </ul>
 </li>
-<li data-nav-id=/related_projects/ title="Related projects" class="dd-item
-parent">
+<li data-nav-id=/related_projects/ title="Related projects" class=dd-item>
 <a href=/related_projects/>
 Related projects
 </a>
 <ul>
-<li data-nav-id=/related_projects/enodo/ title=Enodo class="dd-item active">
+<li data-nav-id=/related_projects/enodo/ title=Enodo class=dd-item>
 <a href=/related_projects/enodo/>
 Enodo
 </a>
@@ -715,23 +716,30 @@ Enodo
 <ol class=links itemscope itemtype=http://schema.org/BreadcrumbList>
 <meta itemprop=itemListOrder content="Descending">
 <li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement>
-<meta itemprop=position content="3">
+<meta itemprop=position content="4">
 <a itemprop=item href=/>
 <span itemprop=name>SiriDB</span>
 </a>
 </li>
 >
 <li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement>
+<meta itemprop=position content="3">
+<a itemprop=item href=/query_data/>
+<span itemprop=name>Query data</span>
+</a>
+</li>
+>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement>
 <meta itemprop=position content="2">
-<a itemprop=item href=/related_projects/>
-<span itemprop=name>Related projects</span>
+<a itemprop=item href=/query_data/select/>
+<span itemprop=name>Select</span>
 </a>
 </li>
 >
 <li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement>
 <meta itemprop=position content="1">
-<a itemprop=item href=/related_projects/enodo/ aria-disabled=true>
-<span itemprop=name>Enodo</span>
+<a itemprop=item href=/query_data/select/range/ aria-disabled=true>
+<span itemprop=name>range</span>
 </a>
 </li>
 </ol>
@@ -742,7 +750,8 @@ Enodo
 <ul>
 <li>
 <ul>
-<li></li>
+<li><a href=#allowed-formats>Allowed formats</a></li>
+<li><a href=#examples>Examples</a></li>
 </ul>
 </li>
 </ul>
@@ -755,28 +764,52 @@ Enodo
 </div>
 <div id=body-inner>
 <h1>
-Enodo
+range
 </h1>
-<p>Enodo is a time series data analysis platform made for SiriDB. Combining the power of storing and querying time series data from SiriDB and the analyzing power of Enodo, we can create better understanding of the data that we collect and store. So we can learn from the past and create forecasts for the future.</p>
-<p>The Enodo platform is build in modules to create scalability. The Hub will control and organize the data that we have collected and the questions we want to ask about the data. The Worker will perform the analyzing jobs and the Listener will stay on top of the latest data points. Together these components will make sure we can monitor the data in realtime, adjust our expectations for the future and watch for sudden unexpected changes in the data that we collect.</p>
-<h4 id=listener>Listener</h4>
-<p>The Enodo listener listens to a pipe socket with SiriDB server. The listener only keeps track of series that are registered via the hub. It sums up the added data points to each of these series and it sends periodically an update to the hub, or when a serie is monitored in realtime, it will notify the Hub immediately. The listener is separated from the Enodo hub, so that it can be placed close to the SiriDB server to gain local access to the pipe socket.</p>
-<h4 id=worker>Worker</h4>
+<p>An optional time, or head/tail range can be given to select only a part of the series data.
+If no range is provided SiriDB returns all the data available. As a range we can use <em>before</em>, <em>after</em>, <em>between .. and ..</em>, <em>head</em> or <em>tail</em>.</p>
+<p>When using <code>after</code> you basically set a <em>start</em> time, with <code>before</code> an <em>end</em> time
+and when using <code>between .. and ..</code> you set both a <em>start</em> and <em>end</em> time.
+Points that have the exact start time are <em>included</em> in the result, points
+with the exact end time are <em>excluded</em> from the result.</p>
+<h3 id=allowed-formats>Allowed formats</h3>
+<p>The allowed formats for time ranges are:</p>
+<ul>
+<li><strong>Integer values</strong>: Number of time units after 1970-01-01. The time unit depends on the database time precision. For example, seconds.</li>
+<li><strong>Time values</strong>: <code>w</code> (week), <code>d</code> (day), <code>h</code> (hour), <code>m</code> (minute) and <code>s</code> (second). For example, <code>2w</code> is equal to two weeks.</li>
+<li><strong>Date/time strings</strong>: For example <code>"2021"</code>, <code>"2021-01-30"</code>, <code>"2021-01-30 12:00"</code>, <code>"2021-01-30 14:31:45Z"</code>, <code>"2021-01-30T14:31:45+0200"</code>.</li>
+<li><strong>now</strong>: A keyword referring to the current date/time.</li>
+</ul>
 <blockquote>
-<p><strong>Note</strong> : A worker uses significant CPU and thus should be placed on a machine that has low CPU usage.</p>
+<p><strong>Note</strong></p>
+<p>It&rsquo;s safe to use <em>now</em> multiple times in a query. SiriDB only calculates <em>now</em> one
+time while processing a query. This way you can be sure that <em>now</em> has the
+same value.</p>
 </blockquote>
-<p>The Enodo worker executes fitting and forecasting models/algorithms. It can create different models like MA/RA/ARIMA, but also use Prophet, for analyzing series, training models with new data, flagging anomalies and calculate forecasts for a certain series. A worker can implement multiple models. This can be different per worker version. The implemented models should be communicated to the hub during the handshake.</p>
-<h4 id=hub>Hub</h4>
-<p>The Enodo hub communicates and guides both the listener and the worker. It tells the listener to which series it needs to pay attention to, and it tells the worker which series should be analysed.
-Clients can connect to the hub for receiving updates, and polling for data. Also a client can use the hub to alter the data about which series should be watched.</p>
-<p><img src=../../images/enodo-overview.png alt="Enodo overview"></p>
+<p>It is also possible to ask for the first or last <em>X</em> points from series by using <code>head</code> and <code>tail</code> respectively followed by an integer value.</p>
+<h3 id=examples>Examples</h3>
+<pre><code># Select all points from &quot;series-001&quot; in the last 24h
+select * from &quot;series-001&quot; after now - 1d
+
+# Select all points from &quot;series-001&quot; today
+select * from &quot;series-001&quot; between now - (now % 1d) and now - (now % 1d) + 1d
+
+# Select all points from &quot;series-001&quot; before November, 2015
+select * from &quot;series-001&quot; before &quot;2015-11&quot;
+
+# Select the last 10 points from &quot;series-001&quot;
+select * from &quot;series-001&quot; tail 10
+
+# Select the first 5 points from &quot;series-001&quot;
+select * from &quot;series-001&quot; head 5
+</code></pre>
 <footer class=footline>
 </footer>
 </div>
 </div>
 <div id=navigation>
-<a class="nav nav-prev" href=/related_projects/ title="Related projects"> <i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/categories/ title=Categories style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-prev" href=/query_data/select/ title=Select> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/query_data/select/merge_data/ title="merge data" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
 </div>
 </section>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>

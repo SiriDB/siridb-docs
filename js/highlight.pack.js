@@ -1,5 +1,5 @@
 /*
-  Highlight.js 10.0.0-beta.0 (036b4f8e)
+  Highlight.js 10.0.0-beta.0 (44d6a663)
   License: BSD-3-Clause
   Copyright (c) 2006-2020, Ivan Sagalaev
 */
@@ -35,7 +35,7 @@
   }
 
 
-
+  
   function inherit(parent) {  // inherit(parent, override_obj, override_obj, ...)
     var key;
     var result = {};
@@ -1856,13 +1856,13 @@ hljs.registerLanguage('siridb', function () {
             keywords: {
                 keyword:
                     'timeit alter count create drop list select grant revoke ' +
-                    'from between before after and or merge as using where set to',
+                    'from between before after head tail and or merge as using where set to',
                 literal:
                     'true false all now debug info warning error critical read write full',
                 built_in:
-                    'server servers shard shards series pool pools group groups tag tags ' +
+                    'database server servers shard shards series pool pools group groups tag tags ' +
                     'access name active_handles time_precision received_points selected_points ' +
-                    'sync_progress tee_pipe_name uptime reindex_progress ' +
+                    'sync_progress tee timezone uptime reindex_progress ' +
                     'open_files mem_usage max_open_files log_level idle_time idle_percentage ' +
                     'fifo_files active_tasks status shard_duration startup_time online version ' +
                     'uuid port libuv ip_support dbpath buffer_size buffer_path address ' +

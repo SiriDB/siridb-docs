@@ -5,21 +5,21 @@
 <meta name=generator content="Hugo 0.90.0">
 <meta name=description content="SiriDB documentation">
 <link rel="shortcut icon" href=/images/favicon.ico type=image/x-icon>
-<title>set tee pipe name :: SiriDB documentation</title>
-<link href=/css/nucleus.css?1648126615 rel=stylesheet>
-<link href=/css/fontawesome-all.min.css?1648126615 rel=stylesheet>
-<link href=/css/hybrid.css?1648126615 rel=stylesheet>
-<link href=/css/featherlight.min.css?1648126615 rel=stylesheet>
-<link href=/css/perfect-scrollbar.min.css?1648126615 rel=stylesheet>
-<link href=/css/auto-complete.css?1648126615 rel=stylesheet>
-<link href=/css/atom-one-dark-reasonable.css?1648126615 rel=stylesheet>
-<link href=/css/theme.css?1648126615 rel=stylesheet>
-<link href=/css/hugo-theme.css?1648126615 rel=stylesheet>
-<link href=/css/theme-mine.css?1648126615 rel=stylesheet>
-<script src=/js/jquery-3.3.1.min.js?1648126615></script>
+<title>set tee :: SiriDB documentation</title>
+<link href=/css/nucleus.css?1652784771 rel=stylesheet>
+<link href=/css/fontawesome-all.min.css?1652784771 rel=stylesheet>
+<link href=/css/hybrid.css?1652784771 rel=stylesheet>
+<link href=/css/featherlight.min.css?1652784771 rel=stylesheet>
+<link href=/css/perfect-scrollbar.min.css?1652784771 rel=stylesheet>
+<link href=/css/auto-complete.css?1652784771 rel=stylesheet>
+<link href=/css/atom-one-dark-reasonable.css?1652784771 rel=stylesheet>
+<link href=/css/theme.css?1652784771 rel=stylesheet>
+<link href=/css/hugo-theme.css?1652784771 rel=stylesheet>
+<link href=/css/theme-mine.css?1652784771 rel=stylesheet>
+<script src=/js/jquery-3.3.1.min.js?1652784771></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}:not(pre)>code+span.copy-to-clipboard{display:none}</style>
 </head>
-<body data-url=/servers/alter_server/set_tee_pipe_name/>
+<body data-url=/database/alter_database/set_tee/>
 <nav id=sidebar>
 <div id=header-wrapper>
 <div id=header>
@@ -32,10 +32,10 @@
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=/js/lunr.min.js?1648126615></script>
-<script type=text/javascript src=/js/auto-complete.js?1648126615></script>
+<script type=text/javascript src=/js/lunr.min.js?1652784771></script>
+<script type=text/javascript src=/js/auto-complete.js?1652784771></script>
 <script type=text/javascript>var baseurl="https://docs.siridb.net/"</script>
-<script type=text/javascript src=/js/search.js?1648126615></script>
+<script type=text/javascript src=/js/search.js?1652784771></script>
 </div>
 <div class=highlightable>
 <ul class=topics>
@@ -62,6 +62,11 @@ Configuration
 <li data-nav-id=/getting_started/start_up_server/ title="Start up server" class=dd-item>
 <a href=/getting_started/start_up_server/>
 Start up server
+</a>
+</li>
+<li data-nav-id=/getting_started/example_database/ title="Example database" class=dd-item>
+<a href=/getting_started/example_database/>
+Example database
 </a>
 </li>
 </ul>
@@ -172,9 +177,9 @@ Query data
 Select
 </a>
 <ul>
-<li data-nav-id=/query_data/select/time_range/ title="time range" class=dd-item>
-<a href=/query_data/select/time_range/>
-time range
+<li data-nav-id=/query_data/select/range/ title=range class=dd-item>
+<a href=/query_data/select/range/>
+range
 </a>
 </li>
 <li data-nav-id=/query_data/select/merge_data/ title="merge data" class=dd-item>
@@ -465,8 +470,7 @@ drop tag
 </li>
 </ul>
 </li>
-<li data-nav-id=/servers/ title=Servers class="dd-item
-parent">
+<li data-nav-id=/servers/ title=Servers class=dd-item>
 <a href=/servers/>
 Servers
 </a>
@@ -488,8 +492,7 @@ columns
 </li>
 </ul>
 </li>
-<li data-nav-id=/servers/alter_server/ title="alter server" class="dd-item
-parent">
+<li data-nav-id=/servers/alter_server/ title="alter server" class=dd-item>
 <a href=/servers/alter_server/>
 alter server
 </a>
@@ -507,11 +510,6 @@ set log level
 <li data-nav-id=/servers/alter_server/set_address_port/ title="set address/port" class=dd-item>
 <a href=/servers/alter_server/set_address_port/>
 set address/port
-</a>
-</li>
-<li data-nav-id=/servers/alter_server/set_tee_pipe_name/ title="set tee pipe name" class="dd-item active">
-<a href=/servers/alter_server/set_tee_pipe_name/>
-set tee pipe name
 </a>
 </li>
 </ul>
@@ -586,12 +584,14 @@ alter user
 </li>
 </ul>
 </li>
-<li data-nav-id=/database/ title=Database class=dd-item>
+<li data-nav-id=/database/ title=Database class="dd-item
+parent">
 <a href=/database/>
 Database
 </a>
 <ul>
-<li data-nav-id=/database/alter_database/ title="alter database" class=dd-item>
+<li data-nav-id=/database/alter_database/ title="alter database" class="dd-item
+parent">
 <a href=/database/alter_database/>
 alter database
 </a>
@@ -619,6 +619,11 @@ list limit
 <li data-nav-id=/database/alter_database/select_points_limit/ title="select points limit" class=dd-item>
 <a href=/database/alter_database/select_points_limit/>
 select points limit
+</a>
+</li>
+<li data-nav-id=/database/alter_database/set_tee/ title="set tee" class="dd-item active">
+<a href=/database/alter_database/set_tee/>
+set tee
 </a>
 </li>
 <li data-nav-id=/database/alter_database/set_timezone/ title="set timezone" class=dd-item>
@@ -719,22 +724,22 @@ Enodo
 >
 <li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement>
 <meta itemprop=position content="3">
-<a itemprop=item href=/servers/>
-<span itemprop=name>Servers</span>
+<a itemprop=item href=/database/>
+<span itemprop=name>Database</span>
 </a>
 </li>
 >
 <li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement>
 <meta itemprop=position content="2">
-<a itemprop=item href=/servers/alter_server/>
-<span itemprop=name>alter server</span>
+<a itemprop=item href=/database/alter_database/>
+<span itemprop=name>alter database</span>
 </a>
 </li>
 >
 <li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement>
 <meta itemprop=position content="1">
-<a itemprop=item href=/servers/alter_server/set_tee_pipe_name/ aria-disabled=true>
-<span itemprop=name>set tee pipe name</span>
+<a itemprop=item href=/database/alter_database/set_tee/ aria-disabled=true>
+<span itemprop=name>set tee</span>
 </a>
 </li>
 </ol>
@@ -758,12 +763,11 @@ Enodo
 </div>
 <div id=body-inner>
 <h1>
-set tee pipe name
+set tee
 </h1>
-<p>Some projects like <a href=../../../related_projects/enodo>Enodo project</a> may benefit from receiving all SiriDB data. Because these projects usually experience the same scaling problems as SiriDB does, we have chosen to support a <em>tee</em> option on each SiriDB server.
-Using this feature makes it possible to install a service on at least one SiriDB server in each pool. Such a service should install a UNIX Pipe server which accepts SiriDB data in <a href=https://github.com/cesbit/qpack>QPack</a> format.</p>
-<p>SiriDB will then try to connect to the pipe, and once a connection is established, all SiriDB data points with the SiriDB pool as target, will be forwarded to the pipe.</p>
-<p>A package send to the pipe will have a header like:</p>
+<p>Some projects like <a href=../../../related_projects/enodo>Enodo project</a> may benefit from receiving all SiriDB data. Because these projects usually experience the same scaling problems as SiriDB does, we have chosen to support a <em>tee</em> option on each SiriDB server.</p>
+<p>Once a tee is configured, SiriDB will try to connect to the tee, and once a connection is established, all SiriDB data points will be forwarded to the tee. Note that each SiriDB server in a cluster must be able to access the tee.</p>
+<p>A package send to the tee will have a header like:</p>
 <pre tabindex=0><code class=language-none data-lang=none>┌───────────┬───────────┬───────────┬───────────┬───────────┐
 │ LEN (4)   │ ID (2)    │ TYPE (1)  │ CHK (1)   │ DATA (..) │
 └───────────┴───────────┴───────────┴───────────┴───────────┘
@@ -800,33 +804,36 @@ Using this feature makes it possible to install a service on at least one SiriDB
 }
 </code></pre><p>If you like to disable the <code>tee</code>, then use <code>false</code> instead of a string.</p>
 <h3 id=example>Example</h3>
-<pre><code># Change the log-level to &quot;debug&quot;
-alter server f851c6a4-820e-11e5-9661-080027f37001 set tee_pipe_name '/tmp/data.sock'
+<pre><code># Configure a tee, in this example enodo.listener.local
+alter database set tee 'enodo.listener.local'
+
+# Disable the tee
+alter database set tee false
 </code></pre>
 <footer class=footline>
 </footer>
 </div>
 </div>
 <div id=navigation>
-<a class="nav nav-prev" href=/servers/alter_server/set_address_port/ title="set address/port"> <i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/servers/alter_servers/ title="alter servers" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-prev" href=/database/alter_database/select_points_limit/ title="select points limit"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/database/alter_database/set_timezone/ title="set timezone" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
 </div>
 </section>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/js/clipboard.min.js?1648126615></script>
-<script src=/js/perfect-scrollbar.min.js?1648126615></script>
-<script src=/js/perfect-scrollbar.jquery.min.js?1648126615></script>
-<script src=/js/jquery.sticky.js?1648126615></script>
-<script src=/js/featherlight.min.js?1648126615></script>
-<script src=/js/highlight.pack.js?1648126615></script>
+<script src=/js/clipboard.min.js?1652784771></script>
+<script src=/js/perfect-scrollbar.min.js?1652784771></script>
+<script src=/js/perfect-scrollbar.jquery.min.js?1652784771></script>
+<script src=/js/jquery.sticky.js?1652784771></script>
+<script src=/js/featherlight.min.js?1652784771></script>
+<script src=/js/highlight.pack.js?1652784771></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/js/modernizr.custom-3.6.0.js?1648126615></script>
-<script src=/js/learn.js?1648126615></script>
-<script src=/js/hugo-learn.js?1648126615></script>
-<link href=/mermaid/mermaid.css?1648126615 rel=stylesheet>
-<script src=/mermaid/mermaid.js?1648126615></script>
+<script src=/js/modernizr.custom-3.6.0.js?1652784771></script>
+<script src=/js/learn.js?1652784771></script>
+<script src=/js/hugo-learn.js?1652784771></script>
+<link href=/mermaid/mermaid.css?1652784771 rel=stylesheet>
+<script src=/mermaid/mermaid.js?1652784771></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>

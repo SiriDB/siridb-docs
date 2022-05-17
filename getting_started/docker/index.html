@@ -6,17 +6,17 @@
 <meta name=description content="SiriDB documentation">
 <link rel="shortcut icon" href=/images/favicon.ico type=image/x-icon>
 <title>Docker :: SiriDB documentation</title>
-<link href=/css/nucleus.css?1648126614 rel=stylesheet>
-<link href=/css/fontawesome-all.min.css?1648126614 rel=stylesheet>
-<link href=/css/hybrid.css?1648126614 rel=stylesheet>
-<link href=/css/featherlight.min.css?1648126614 rel=stylesheet>
-<link href=/css/perfect-scrollbar.min.css?1648126614 rel=stylesheet>
-<link href=/css/auto-complete.css?1648126614 rel=stylesheet>
-<link href=/css/atom-one-dark-reasonable.css?1648126614 rel=stylesheet>
-<link href=/css/theme.css?1648126614 rel=stylesheet>
-<link href=/css/hugo-theme.css?1648126614 rel=stylesheet>
-<link href=/css/theme-mine.css?1648126614 rel=stylesheet>
-<script src=/js/jquery-3.3.1.min.js?1648126614></script>
+<link href=/css/nucleus.css?1652784771 rel=stylesheet>
+<link href=/css/fontawesome-all.min.css?1652784771 rel=stylesheet>
+<link href=/css/hybrid.css?1652784771 rel=stylesheet>
+<link href=/css/featherlight.min.css?1652784771 rel=stylesheet>
+<link href=/css/perfect-scrollbar.min.css?1652784771 rel=stylesheet>
+<link href=/css/auto-complete.css?1652784771 rel=stylesheet>
+<link href=/css/atom-one-dark-reasonable.css?1652784771 rel=stylesheet>
+<link href=/css/theme.css?1652784771 rel=stylesheet>
+<link href=/css/hugo-theme.css?1652784771 rel=stylesheet>
+<link href=/css/theme-mine.css?1652784771 rel=stylesheet>
+<script src=/js/jquery-3.3.1.min.js?1652784771></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}:not(pre)>code+span.copy-to-clipboard{display:none}</style>
 </head>
 <body data-url=/getting_started/docker/>
@@ -32,10 +32,10 @@
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=/js/lunr.min.js?1648126614></script>
-<script type=text/javascript src=/js/auto-complete.js?1648126614></script>
+<script type=text/javascript src=/js/lunr.min.js?1652784771></script>
+<script type=text/javascript src=/js/auto-complete.js?1652784771></script>
 <script type=text/javascript>var baseurl="https://docs.siridb.net/"</script>
-<script type=text/javascript src=/js/search.js?1648126614></script>
+<script type=text/javascript src=/js/search.js?1652784771></script>
 </div>
 <div class=highlightable>
 <ul class=topics>
@@ -63,6 +63,11 @@ Configuration
 <li data-nav-id=/getting_started/start_up_server/ title="Start up server" class=dd-item>
 <a href=/getting_started/start_up_server/>
 Start up server
+</a>
+</li>
+<li data-nav-id=/getting_started/example_database/ title="Example database" class=dd-item>
+<a href=/getting_started/example_database/>
+Example database
 </a>
 </li>
 </ul>
@@ -173,9 +178,9 @@ Query data
 Select
 </a>
 <ul>
-<li data-nav-id=/query_data/select/time_range/ title="time range" class=dd-item>
-<a href=/query_data/select/time_range/>
-time range
+<li data-nav-id=/query_data/select/range/ title=range class=dd-item>
+<a href=/query_data/select/range/>
+range
 </a>
 </li>
 <li data-nav-id=/query_data/select/merge_data/ title="merge data" class=dd-item>
@@ -508,11 +513,6 @@ set log level
 set address/port
 </a>
 </li>
-<li data-nav-id=/servers/alter_server/set_tee_pipe_name/ title="set tee pipe name" class=dd-item>
-<a href=/servers/alter_server/set_tee_pipe_name/>
-set tee pipe name
-</a>
-</li>
 </ul>
 </li>
 <li data-nav-id=/servers/alter_servers/ title="alter servers" class=dd-item>
@@ -618,6 +618,11 @@ list limit
 <li data-nav-id=/database/alter_database/select_points_limit/ title="select points limit" class=dd-item>
 <a href=/database/alter_database/select_points_limit/>
 select points limit
+</a>
+</li>
+<li data-nav-id=/database/alter_database/set_tee/ title="set tee" class=dd-item>
+<a href=/database/alter_database/set_tee/>
+set tee
 </a>
 </li>
 <li data-nav-id=/database/alter_database/set_timezone/ title="set timezone" class=dd-item>
@@ -769,21 +774,22 @@ Docker
 <p>The pull command fetches the latest siridb-server image from the GitHub Container Registry and saves it in your system.</p>
 <h4 id=running>Running</h4>
 <p>Great! Let&rsquo;s now run a Docker container based on this image. To do that you are going to use the <code>docker run</code> command.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ docker run -d -p 9000:9000 siridb/siridb-server
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ docker run --name siridb -d -p 9000:9000 -v ~/siridb-data:/var/lib/siridb ghcr.io/siridb/siridb-server
 </code></pre></div><p>You’ll notice a few flags being used. Here’s some more info on them:</p>
 <ul>
 <li><code>-d</code> - Run the container in detached mode (in the background).</li>
 <li><code>-p 9000:9000</code> - Map port 9000 of the host to port 9000 (SiriDB port for client socket connections) in the container.</li>
-<li><code>siridb/siridb-server</code> - The image to use.</li>
+<li><code>-v ~/siridb-data:/var/lib/siridb</code> - Mount a volume for SiriDB data. (For data persistence)</li>
+<li><code>ghcr.io/siridb/siridb-server</code> - The image to use.</li>
 </ul>
 <p>To verify that the container is running, you can use the <code>docker ps</code> command.</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ docker ps
 </code></pre></div><p>This command shows you all containers that are currently running and should display a similar output as this:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>CONTAINER ID   IMAGE                  COMMAND                  CREATED          STATUS         PORTS                                                                     NAMES
-f0169c9e7939   siridb/siridb-server   <span style=color:#e6db74>&#34;/usr/local/bin/siri…&#34;</span>   <span style=color:#ae81ff>11</span> seconds ago   Up <span style=color:#ae81ff>9</span> seconds   8080/tcp, 9010/tcp, 9080/tcp, 0.0.0.0:9000-&gt;9000/tcp, :::9000-&gt;9000/tcp   objective_tu
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>CONTAINER ID   IMAGE                          COMMAND                  CREATED         STATUS         PORTS                                                                     NAMES
+a57597077abb   ghcr.io/siridb/siridb-server   <span style=color:#e6db74>&#34;/usr/local/bin/siri…&#34;</span>   <span style=color:#ae81ff>4</span> seconds ago   Up <span style=color:#ae81ff>3</span> seconds   8080/tcp, 9010/tcp, 9080/tcp, 0.0.0.0:9000-&gt;9000/tcp, :::9000-&gt;9000/tcp   siridb
 </code></pre></div><h4 id=stopping>Stopping</h4>
 <p>To stop the active SiriDB container, run the <code>docker stop</code> command.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ docker stop siridb/siridb-server
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>$ docker stop siridb
 </code></pre></div>
 <footer class=footline>
 </footer>
@@ -797,18 +803,18 @@ f0169c9e7939   siridb/siridb-server   <span style=color:#e6db74>&#34;/usr/local/
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/js/clipboard.min.js?1648126614></script>
-<script src=/js/perfect-scrollbar.min.js?1648126614></script>
-<script src=/js/perfect-scrollbar.jquery.min.js?1648126614></script>
-<script src=/js/jquery.sticky.js?1648126614></script>
-<script src=/js/featherlight.min.js?1648126614></script>
-<script src=/js/highlight.pack.js?1648126614></script>
+<script src=/js/clipboard.min.js?1652784771></script>
+<script src=/js/perfect-scrollbar.min.js?1652784771></script>
+<script src=/js/perfect-scrollbar.jquery.min.js?1652784771></script>
+<script src=/js/jquery.sticky.js?1652784771></script>
+<script src=/js/featherlight.min.js?1652784771></script>
+<script src=/js/highlight.pack.js?1652784771></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/js/modernizr.custom-3.6.0.js?1648126614></script>
-<script src=/js/learn.js?1648126614></script>
-<script src=/js/hugo-learn.js?1648126614></script>
-<link href=/mermaid/mermaid.css?1648126614 rel=stylesheet>
-<script src=/mermaid/mermaid.js?1648126614></script>
+<script src=/js/modernizr.custom-3.6.0.js?1652784771></script>
+<script src=/js/learn.js?1652784771></script>
+<script src=/js/hugo-learn.js?1652784771></script>
+<link href=/mermaid/mermaid.css?1652784771 rel=stylesheet>
+<script src=/mermaid/mermaid.js?1652784771></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>
