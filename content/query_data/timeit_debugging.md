@@ -15,11 +15,11 @@ Can be placed in front of any query and will return information about the time i
         "__timeit__": [
              {
                 "time": 0.001156334212755393,
-                "server": "server04.siridb.net:9010"
+                "server": "server04.siridb.com:9010"
             },
             {
                 "time": 0.001481771469116211,
-                "server": "server01.siridb.net:9010"
+                "server": "server01.siridb.com:9010"
             }
         ]
     }

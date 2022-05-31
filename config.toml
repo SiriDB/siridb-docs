@@ -1,4 +1,4 @@
-baseURL = "https://docs.siridb.net/"
+baseURL = "https://docs.siridb.com/"
 languageCode = "en-us"
 title = "SiriDB documentation"
 publishDir = "docs"

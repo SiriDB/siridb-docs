@@ -122,6 +122,6 @@ curl --location --request POST 'http://localhost:9020/query/sampledb' \
 
 With the HTTP API you can also change passwords, create new accounts, expand a SiriDB cluster across multiple pools, add replica's and more.
 
-Visit the [documentation HTTP API site](https://docs.siridb.net/connect/http_api/) for more information.
+Visit the [documentation HTTP API site](https://docs.siridb.com/connect/http_api/) for more information.
 
-Besides the HTTP API, you can also look at [native connectors](https://docs.siridb.net/connect/), especially for fast inserting and querying data this can be useful.
+Besides the HTTP API, you can also look at [native connectors](https://docs.siridb.com/connect/), especially for fast inserting and querying data this can be useful.
