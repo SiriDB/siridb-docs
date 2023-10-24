@@ -22,6 +22,7 @@ List of the supported aggregation and filter functions:
 - [median_high](./median_high)
 - [median_low](./median_low)
 - [min](./min)
+- [offset](./offset)
 - [pvariance](./pvariance)
 - [stddev](./stddev)
 - [sum](./sum)

@@ -41,6 +41,7 @@ query_data
         median_high
         median_low
         min
+        offset
         pvariance
         stddev
         sum
