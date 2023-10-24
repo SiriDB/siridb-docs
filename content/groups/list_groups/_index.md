@@ -1,6 +1,6 @@
 ---
 title: "list groups"
-weight: 67
+weight: 68
 ---
 
 Lists groups in the SiriDB cluster.

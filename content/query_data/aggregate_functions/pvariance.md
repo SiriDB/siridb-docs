@@ -1,6 +1,6 @@
 ---
 title: "pvariance"
-weight: 44
+weight: 45
 ---
 
 Returns the population variance of data, a non-empty iterable of real-valued numbers. Variance is a measure of the variability (spread or dispersion) of data. A large variance indicates that the data is spread out; a small variance indicates it is clustered closely around the mean.

@@ -1,6 +1,6 @@
 ---
 title: "match series"
-weight: 53
+weight: 54
 ---
 
 Series can be matched using different methods. [Groups](../../../groups) can help to quickly get the required series even in a database with millions of unique series.

@@ -1,6 +1,6 @@
 ---
 title: "set tee"
-weight: 107
+weight: 108
 ---
 
 Some projects like [Enodo project](../../../related_projects/enodo) may benefit from receiving all SiriDB data. Because these projects usually experience the same scaling problems as SiriDB does, we have chosen to support a *tee* option on each SiriDB server.

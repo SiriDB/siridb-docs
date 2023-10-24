@@ -1,6 +1,6 @@
 ---
 title: "set log level"
-weight: 86
+weight: 87
 ---
 
 With the argument *--log-level* it's possible to start with a certain log level.

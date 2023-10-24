@@ -1,6 +1,6 @@
 ---
 title: "count users"
-weight: 96
+weight: 97
 ---
 
 Count users returns the number of users.

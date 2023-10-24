@@ -1,6 +1,6 @@
 ---
 title: "columns"
-weight: 83
+weight: 84
 ---
 
 Valid columns are:

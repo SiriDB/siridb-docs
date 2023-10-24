@@ -1,6 +1,6 @@
 ---
 title: "alter tag"
-weight: 77
+weight: 78
 ---
 
 Alter the name of a tag.

@@ -1,6 +1,6 @@
 ---
 title: "stddev"
-weight: 45
+weight: 46
 ---
 
 Returns the standard deviation which is the square root of its variance. If no time window is provided it returns the standard deviation of the series.

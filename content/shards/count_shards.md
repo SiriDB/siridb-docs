@@ -1,6 +1,6 @@
 ---
 title: "count shards"
-weight: 62
+weight: 63
 ---
 
 Count shards returns the number of shards on all *online* servers in a SiriDB

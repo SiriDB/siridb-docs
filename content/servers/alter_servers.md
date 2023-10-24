@@ -1,6 +1,6 @@
 ---
 title: "alter servers"
-weight: 88
+weight: 89
 ---
 
 You can alter the *log_level* for *n* servers at once. Changing the log level is explained in more detail at [alter server](../alter_server).

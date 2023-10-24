@@ -1,6 +1,6 @@
 ---
 title: "list pools"
-weight: 92
+weight: 93
 ---
 
 Lists pools in the SiriDB cluster.
