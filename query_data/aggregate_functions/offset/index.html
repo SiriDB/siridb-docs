@@ -5,7 +5,7 @@
 <meta name=generator content="Hugo 0.90.0">
 <meta name=description content="SiriDB documentation">
 <link rel="shortcut icon" href=/images/favicon.ico type=image/x-icon>
-<title>count series :: SiriDB documentation</title>
+<title>offset :: SiriDB documentation</title>
 <link href=/css/nucleus.css?1698157338 rel=stylesheet>
 <link href=/css/fontawesome-all.min.css?1698157338 rel=stylesheet>
 <link href=/css/hybrid.css?1698157338 rel=stylesheet>
@@ -19,7 +19,7 @@
 <script src=/js/jquery-3.3.1.min.js?1698157338></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}:not(pre)>code+span.copy-to-clipboard{display:none}</style>
 </head>
-<body data-url=/series/count_series/>
+<body data-url=/query_data/aggregate_functions/offset/>
 <nav id=sidebar>
 <div id=header-wrapper>
 <div id=header>
@@ -167,7 +167,8 @@ R
 </li>
 </ul>
 </li>
-<li data-nav-id=/query_data/ title="Query data" class=dd-item>
+<li data-nav-id=/query_data/ title="Query data" class="dd-item
+parent">
 <a href=/query_data/>
 Query data
 </a>
@@ -189,7 +190,8 @@ merge data
 </li>
 </ul>
 </li>
-<li data-nav-id=/query_data/aggregate_functions/ title="Aggregate functions" class=dd-item>
+<li data-nav-id=/query_data/aggregate_functions/ title="Aggregate functions" class="dd-item
+parent">
 <a href=/query_data/aggregate_functions/>
 Aggregate functions
 </a>
@@ -264,7 +266,7 @@ median low
 min
 </a>
 </li>
-<li data-nav-id=/query_data/aggregate_functions/offset/ title=offset class=dd-item>
+<li data-nav-id=/query_data/aggregate_functions/offset/ title=offset class="dd-item active">
 <a href=/query_data/aggregate_functions/offset/>
 offset
 </a>
@@ -303,8 +305,7 @@ timeit (debugging)
 </li>
 </ul>
 </li>
-<li data-nav-id=/series/ title=Series class="dd-item
-parent">
+<li data-nav-id=/series/ title=Series class=dd-item>
 <a href=/series/>
 Series
 </a>
@@ -326,7 +327,7 @@ match series
 </li>
 </ul>
 </li>
-<li data-nav-id=/series/count_series/ title="count series" class="dd-item active">
+<li data-nav-id=/series/count_series/ title="count series" class=dd-item>
 <a href=/series/count_series/>
 count series
 </a>
@@ -720,23 +721,30 @@ Enodo
 <ol class=links itemscope itemtype=http://schema.org/BreadcrumbList>
 <meta itemprop=itemListOrder content="Descending">
 <li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement>
-<meta itemprop=position content="3">
+<meta itemprop=position content="4">
 <a itemprop=item href=/>
 <span itemprop=name>SiriDB</span>
 </a>
 </li>
 >
 <li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement>
+<meta itemprop=position content="3">
+<a itemprop=item href=/query_data/>
+<span itemprop=name>Query data</span>
+</a>
+</li>
+>
+<li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement>
 <meta itemprop=position content="2">
-<a itemprop=item href=/series/>
-<span itemprop=name>Series</span>
+<a itemprop=item href=/query_data/aggregate_functions/>
+<span itemprop=name>Aggregate functions</span>
 </a>
 </li>
 >
 <li itemscope itemtype=https://schema.org/ListItem itemprop=itemListElement>
 <meta itemprop=position content="1">
-<a itemprop=item href=/series/count_series/ aria-disabled=true>
-<span itemprop=name>count series</span>
+<a itemprop=item href=/query_data/aggregate_functions/offset/ aria-disabled=true>
+<span itemprop=name>offset</span>
 </a>
 </li>
 </ol>
@@ -747,8 +755,10 @@ Enodo
 <ul>
 <li>
 <ul>
-<li><a href=#syntax>Syntax</a></li>
-<li><a href=#examples>Examples</a></li>
+<li><a href=#function>Function</a></li>
+<li><a href=#arguments>Arguments</a></li>
+<li><a href=#return-value>Return value</a></li>
+<li><a href=#example>Example</a></li>
 </ul>
 </li>
 </ul>
@@ -761,43 +771,40 @@ Enodo
 </div>
 <div id=body-inner>
 <h1>
-count series
+offset
 </h1>
-<p>Count series in the SiriDB cluster. For more information about how to select
-series see <a href=../list_series>list series</a>.</p>
-<p>Count series length gives the total number of points for the selected series.</p>
-<h3 id=syntax>Syntax</h3>
-<pre><code>count series [length] [match_series] [where ...]
+<p>Set a different offset for the time window in the previous aggregation. This aggregation mush therefore be used after an aggregation function like mean, min, max etc.</p>
+<h3 id=function>Function</h3>
+<pre><code>offset(ts)
 </code></pre>
-<h3 id=examples>Examples</h3>
-<pre><code># Get number of series
-count series
-
-# Get the total number of points in the database
-count series length
-
-# Get number of series in group `group_server01`
-count series `group_server01`
-
-# Get number of points for series in pool 0
-count series length where pool == 0
-
-# Get the number of series which started in the last week
-count series where start &gt; now - 1w and start &lt;= now
-</code></pre>
-<p>Example output (series):</p>
-<pre><code>{&quot;series&quot;: 1105946}
-</code></pre>
-<p>Example output (series length):</p>
-<pre><code>{&quot;series_length&quot;: 77450345251}
+<h3 id=arguments>Arguments</h3>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ts</td>
+<td>Offset.</td>
+</tr>
+</tbody>
+</table>
+<h3 id=return-value>Return value</h3>
+<p>A float value.</p>
+<h3 id=example>Example</h3>
+<pre><code># Select the mean grouped by 1 day using a two hours offset
+select mean(1d) =&gt; offset(2h) from &quot;series-001&quot;
 </code></pre>
 <footer class=footline>
 </footer>
 </div>
 </div>
 <div id=navigation>
-<a class="nav nav-prev" href=/series/list_series/match_series/ title="match series"> <i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/series/alter_series/ title="alter series" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-prev" href=/query_data/aggregate_functions/min/ title=min> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/query_data/aggregate_functions/pvariance/ title=pvariance style=margin-right:0><i class="fa fa-chevron-right"></i></a>
 </div>
 </section>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
