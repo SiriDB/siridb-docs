@@ -1,5 +1,5 @@
 /*
-  Highlight.js 10.0.0-beta.0 (44d6a663)
+  Highlight.js 10.0.0-beta.0 (95e538f4)
   License: BSD-3-Clause
   Copyright (c) 2006-2020, Ivan Sagalaev
 */
@@ -35,7 +35,7 @@
   }
 
 
-
+  
   function inherit(parent) {  // inherit(parent, override_obj, override_obj, ...)
     var key;
     var result = {};
@@ -1773,7 +1773,7 @@ hljs.registerLanguage('siridb', function () {
     Language: SiriDB
     Author: Jeroen van der Heijden <jeroen@cesbit.com>
     Category: common
-    Website: https://siridb.com
+    Website: https://siridb.net
     */
 
     function siridb(hljs) {
@@ -1849,7 +1849,7 @@ hljs.registerLanguage('siridb', function () {
                         '\\b(' +
                         'count|derivative|difference|filter|first|interval|' +
                         'last|limit|max|mean|median|median_high|\median_low|min|pvariance|' +
-                        'stddev|sum|timeval|variance)\\s*(?=\\()'
+                        'offset|stddev|sum|timeval|variance)\\s*(?=\\()'
                     ),
                 },
             ],
